@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Class UGKSharedBlueprint &mdash; Gamekit  documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/collapsible-lists\css\tree_view.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/collapsible-lists\js\CollapsibleLists.compressed.js"></script>
+        <script src="../../../_static/collapsible-lists\js\apply-collapsible-lists.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Class UGKTransformerStrategy" href="classUGKTransformerStrategy.html" />
+    <link rel="prev" title="Class UGKShadowCasting" href="classUGKShadowCasting.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> Gamekit
+          </a>
+              <div class="version">
+                6c15b89
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Welcome</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../Welcome/Roadmap.html">RoadMap</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Plugins</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Fog of War</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../index.html#features">Features</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#useful-links">Useful Links</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../Welcome/Installations.html">Installations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Welcome/GettingStarted.html">Getting Started</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Welcome/FrequentQuestions.html">Frequently Asked Questions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Welcome/Changelog.html">Changelog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAGKFogOfWarCharacter.html">Class AGKFogOfWarCharacter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAGKFogOfWarGameMode.html">Class AGKFogOfWarGameMode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAGKFogOfWarGameState.html">Class AGKFogOfWarGameState</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAGKFogOfWarObstacle.html">Class AGKFogOfWarObstacle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAGKFogOfWarPawn.html">Class AGKFogOfWarPawn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAGKFogOfWarPlayerController.html">Class AGKFogOfWarPlayerController</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAGKFogOfWarPlayerState.html">Class AGKFogOfWarPlayerState</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAGKFogOfWarPrivatePlayerState.html">Class AGKFogOfWarPrivatePlayerState</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAGKFogOfWarTeam.html">Class AGKFogOfWarTeam</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAGKFogOfWarVolume.html">Class AGKFogOfWarVolume</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classFGKFogOfWarModule.html">Class FGKFogOfWarModule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classFGKFogOfWarShaderModule.html">Class FGKFogOfWarShaderModule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classIGKFogOfWarAgentInterface.html">Class IGKFogOfWarAgentInterface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classIGKFogOfWarGameStateInterface.html">Class IGKFogOfWarGameStateInterface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classIGKFogOfWarTestModule.html">Class IGKFogOfWarTestModule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKCanvasUpscaler.html">Class UGKCanvasUpscaler</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKCPUUpscalerStrategy.html">Class UGKCPUUpscalerStrategy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKExplorationTransform.html">Class UGKExplorationTransform</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKFogOfWarComponent.html">Class UGKFogOfWarComponent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKFogOfWarLibrary.html">Class UGKFogOfWarLibrary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKFogOfWarStrategy.html">Class UGKFogOfWarStrategy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKGPUUpscalerStrategy.html">Class UGKGPUUpscalerStrategy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKRayCasting__Less.html">Class UGKRayCasting_Less</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKRayCasting__Line.html">Class UGKRayCasting_Line</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKRayCasting__Triangle.html">Class UGKRayCasting_Triangle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKShadowCasting.html">Class UGKShadowCasting</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Class UGKSharedBlueprint</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#inheritance-relationships">Inheritance Relationships</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKTransformerStrategy.html">Class UGKTransformerStrategy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKTransformerStrategyCanvas.html">Class UGKTransformerStrategyCanvas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKTransformerStrategyTexture2D.html">Class UGKTransformerStrategyTexture2D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#indices-and-tables">Indices and tables</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../GKAbility/index.html">Ability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../GKLobby/index.html">Lobby</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../GKChat/index.html">Chat</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../GKMinimap/index.html">Minimap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../GKML/index.html">Machine Learning</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">UnrealEngine</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../UnrealEngine/index.html">Developer Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../UnrealEngine/index.html#game">Game</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../UnrealEngine/index.html#online">Online</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../UnrealEngine/index.html#others">Others</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../Tools/uetools.html">uetools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Tools/ranked.html">ranked</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Tools/resources.html">Resources</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Gamekit</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">&lt;no title&gt;</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Fog of War</a></li>
+      <li class="breadcrumb-item active">Class UGKSharedBlueprint</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/Plugins/GKFogOfWar/API/classUGKSharedBlueprint.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="class-ugksharedblueprint">
+<span id="exhale-class-classugksharedblueprint"></span><h1>Class UGKSharedBlueprint<a class="headerlink" href="#class-ugksharedblueprint" title="Permalink to this headline"></a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="../../../_build/exhale/file_Source_GKFogOfWar_Public_Shared_GKShared_Blueprint.h.html#file-source-gkfogofwar-public-shared-gkshared-blueprint-h"><span class="std std-ref">File GKShared_Blueprint.h</span></a></p></li>
+</ul>
+<section id="inheritance-relationships">
+<h2>Inheritance Relationships<a class="headerlink" href="#inheritance-relationships" title="Permalink to this headline"></a></h2>
+<section id="base-type">
+<h3>Base Type<a class="headerlink" href="#base-type" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">UBlueprintFunctionLibrary</span></code></p></li>
+</ul>
+</section>
+</section>
+<section id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this headline"></a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv418UGKSharedBlueprint">
+<span id="_CPPv318UGKSharedBlueprint"></span><span id="_CPPv218UGKSharedBlueprint"></span><span id="UGKSharedBlueprint"></span><span class="target" id="classUGKSharedBlueprint"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">UGKSharedBlueprint</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">UBlueprintFunctionLibrary</span></span><a class="headerlink" href="#_CPPv418UGKSharedBlueprint" title="Permalink to this definition"></a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-static-functions">Public Static Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N18UGKSharedBlueprint17GetNetworkMetricsEPK7UObjectR5int32RfRfRf">
+<span id="_CPPv3N18UGKSharedBlueprint17GetNetworkMetricsEPK7UObjectR5int32RfRfRf"></span><span id="_CPPv2N18UGKSharedBlueprint17GetNetworkMetricsEPK7UObjectR5int32RfRfRf"></span><span id="UGKSharedBlueprint::GetNetworkMetrics__UObjectCP.int32R.floatR.floatR.floatR"></span><span class="target" id="classUGKSharedBlueprint_1a72e8248e1b46afa3f81f8064a0e7db9c"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GetNetworkMetrics</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">UObject</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">WorldContext</span></span>, <span class="n"><span class="pre">int32</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">PacketLoss</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">DownKiB</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">UpKiB</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">PingMs</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N18UGKSharedBlueprint17GetNetworkMetricsEPK7UObjectR5int32RfRfRf" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Fetch metric stats from the UNetDriver. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N18UGKSharedBlueprint10GetNetModeEPK6AActor">
+<span id="_CPPv3N18UGKSharedBlueprint10GetNetModeEPK6AActor"></span><span id="_CPPv2N18UGKSharedBlueprint10GetNetModeEPK6AActor"></span><span id="UGKSharedBlueprint::GetNetMode__AActorCP"></span><span class="target" id="classUGKSharedBlueprint_1ab3a6044f3f8b943a7cf61871fb2ca226"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="n"><span class="pre">FString</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GetNetMode</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">AActor</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">Actor</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N18UGKSharedBlueprint10GetNetModeEPK6AActor" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Return the NetMode as a string. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N18UGKSharedBlueprint18GetFramePerSecondsEv">
+<span id="_CPPv3N18UGKSharedBlueprint18GetFramePerSecondsEv"></span><span id="_CPPv2N18UGKSharedBlueprint18GetFramePerSecondsEv"></span><span id="UGKSharedBlueprint::GetFramePerSeconds"></span><span class="target" id="classUGKSharedBlueprint_1a7827d8e647e313e1a6e6bf2c655f3662"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GetFramePerSeconds</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N18UGKSharedBlueprint18GetFramePerSecondsEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N18UGKSharedBlueprint22EnableEngineStatisticsEPK7UObject">
+<span id="_CPPv3N18UGKSharedBlueprint22EnableEngineStatisticsEPK7UObject"></span><span id="_CPPv2N18UGKSharedBlueprint22EnableEngineStatisticsEPK7UObject"></span><span id="UGKSharedBlueprint::EnableEngineStatistics__UObjectCP"></span><span class="target" id="classUGKSharedBlueprint_1af3217e98aa3c1907f52816d77226c8f5"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">EnableEngineStatistics</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">UObject</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">WorldContext</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N18UGKSharedBlueprint22EnableEngineStatisticsEPK7UObject" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N18UGKSharedBlueprint19GetEngineStatisticsEPK7UObjectRfRfRfRfRfRf">
+<span id="_CPPv3N18UGKSharedBlueprint19GetEngineStatisticsEPK7UObjectRfRfRfRfRfRf"></span><span id="_CPPv2N18UGKSharedBlueprint19GetEngineStatisticsEPK7UObjectRfRfRfRfRfRf"></span><span id="UGKSharedBlueprint::GetEngineStatistics__UObjectCP.floatR.floatR.floatR.floatR.floatR.floatR"></span><span class="target" id="classUGKSharedBlueprint_1a5033ce332fc51a331827233e88882c54"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GetEngineStatistics</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">UObject</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">WorldContext</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">RenderThreadTime</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">GameThreadTime</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">GPUFrameTime</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">FrameTime</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">RHITTime</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">InputLatencyTime</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N18UGKSharedBlueprint19GetEngineStatisticsEPK7UObjectRfRfRfRfRfRf" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N18UGKSharedBlueprint12FixLandscapeEP7UObjectP17APlayerController">
+<span id="_CPPv3N18UGKSharedBlueprint12FixLandscapeEP7UObjectP17APlayerController"></span><span id="_CPPv2N18UGKSharedBlueprint12FixLandscapeEP7UObjectP17APlayerController"></span><span id="UGKSharedBlueprint::FixLandscape__UObjectP.APlayerControllerP"></span><span class="target" id="classUGKSharedBlueprint_1a065654547e49ddf1109bd4f86971e130"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FixLandscape</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">UObject</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">WorldCtx</span></span>, <span class="n"><span class="pre">APlayerController</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">Player</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N18UGKSharedBlueprint12FixLandscapeEP7UObjectP17APlayerController" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Currently the only way to fix jagged landscape. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="classUGKShadowCasting.html" class="btn btn-neutral float-left" title="Class UGKShadowCasting" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="classUGKTransformerStrategy.html" class="btn btn-neutral float-right" title="Class UGKTransformerStrategy" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

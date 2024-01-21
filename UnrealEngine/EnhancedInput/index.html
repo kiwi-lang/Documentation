@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enhanced Input &mdash; Gamekit  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/collapsible-lists\css\tree_view.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/collapsible-lists\js\CollapsibleLists.compressed.js"></script>
+        <script src="../../_static/collapsible-lists\js\apply-collapsible-lists.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> Gamekit
+          </a>
+              <div class="version">
+                6c15b89
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Welcome</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Welcome/Roadmap.html">RoadMap</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Plugins</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Plugins/GKFogOfWar/index.html">Fog of War</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Plugins/GKAbility/index.html">Ability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Plugins/GKLobby/index.html">Lobby</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Plugins/GKChat/index.html">Chat</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Plugins/GKMinimap/index.html">Minimap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Plugins/GKML/index.html">Machine Learning</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">UnrealEngine</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Developer Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html#game">Game</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html#online">Online</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html#others">Others</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Tools/uetools.html">uetools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Tools/ranked.html">ranked</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Tools/resources.html">Resources</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Gamekit</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Enhanced Input</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/UnrealEngine/EnhancedInput/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="enhanced-input">
+<h1>Enhanced Input<a class="headerlink" href="#enhanced-input" title="Permalink to this headline"></a></h1>
+<p>Advantages:</p>
+<ul class="simple">
+<li><p>Reusable Input Set</p></li>
+<li><p>Context Specific Inputs</p></li>
+<li><p>Takes away input logic out of the Controller/Pawn which can focus on the actual gameplay</p></li>
+</ul>
+<section id="triggers">
+<h2>Triggers<a class="headerlink" href="#triggers" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p>UInputTriggerDown</p></li>
+</ul>
+<p>Triggered on Press, keeps firing when down</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 14%" />
+<col style="width: 19%" />
+<col style="width: 14%" />
+<col style="width: 16%" />
+<col style="width: 19%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Trigger</p></td>
+<td><p>Events</p></td>
+<td><p>Name</p></td>
+<td><p>Action</p></td>
+<td><p>Elapsed</p></td>
+<td><p>Triggered</p></td>
+</tr>
+<tr class="row-even"><td rowspan="5"><p>Down</p></td>
+<td><p>1</p></td>
+<td><p>Started</p></td>
+<td><p>true</p></td>
+<td><p>0.01</p></td>
+<td><p>0.01</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>Triggered</p></td>
+<td><p>true</p></td>
+<td><p>0.02</p></td>
+<td><p>0.02</p></td>
+</tr>
+<tr class="row-even"><td colspan="5"><p>Repeating until release</p></td>
+</tr>
+<tr class="row-odd"><td><p>n</p></td>
+<td><p>Triggered</p></td>
+<td><p>true</p></td>
+<td><p>0.03</p></td>
+<td><p>0.03</p></td>
+</tr>
+<tr class="row-even"><td><p>n + 1</p></td>
+<td><p>Completed</p></td>
+<td><p>false</p></td>
+<td><p>0.03</p></td>
+<td><p>0.03</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>UInputTriggerPressed</p></li>
+</ul>
+<p>Triggered on press, ignore, down and release event</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 14%" />
+<col style="width: 19%" />
+<col style="width: 14%" />
+<col style="width: 16%" />
+<col style="width: 19%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Trigger</p></td>
+<td><p>Events</p></td>
+<td><p>Name</p></td>
+<td><p>Action</p></td>
+<td><p>Elapsed</p></td>
+<td><p>Triggered</p></td>
+</tr>
+<tr class="row-even"><td rowspan="3"><p>Pressed</p></td>
+<td><p>1</p></td>
+<td><p>Triggered</p></td>
+<td><p>true</p></td>
+<td><p>0.01</p></td>
+<td><p>0.01</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>Started</p></td>
+<td><p>true</p></td>
+<td><p>0.01</p></td>
+<td><p>0.01</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>Completed</p></td>
+<td><p>false</p></td>
+<td><p>0.01</p></td>
+<td><p>0.01</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>UInputTriggerReleased</p></li>
+</ul>
+<p>Triggered on release, broadcast <cite>Started</cite> on press and <cite>Ongoing</cite> until release</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 14%" />
+<col style="width: 19%" />
+<col style="width: 14%" />
+<col style="width: 16%" />
+<col style="width: 19%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Trigger</p></td>
+<td><p>Events</p></td>
+<td><p>Name</p></td>
+<td><p>Action</p></td>
+<td><p>Elapsed</p></td>
+<td><p>Triggered</p></td>
+</tr>
+<tr class="row-even"><td rowspan="6"><p>Released</p></td>
+<td><p>1</p></td>
+<td><p>Started</p></td>
+<td><p>false</p></td>
+<td><p>0.01</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>OnGoing</p></td>
+<td><p>false</p></td>
+<td><p>0.02</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-even"><td colspan="5"><p>Repeating until release</p></td>
+</tr>
+<tr class="row-odd"><td><p>n - 1</p></td>
+<td><p>OnGoing</p></td>
+<td><p>false</p></td>
+<td><p>0.03</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-even"><td><p>n</p></td>
+<td><p>Triggered</p></td>
+<td><p>false</p></td>
+<td><p>0.04</p></td>
+<td><p>0.01</p></td>
+</tr>
+<tr class="row-odd"><td><p>n + 1</p></td>
+<td><p>Completed</p></td>
+<td><p>false</p></td>
+<td><p>0.04</p></td>
+<td><p>0.01</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>UInputTriggerChordAction</p></li>
+</ul>
+<section id="timed-triggers">
+<h3>Timed Triggers<a class="headerlink" href="#timed-triggers" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>UInputTriggerHold</p></li>
+</ul>
+<p>Triggered after the input has been pressed for a given amount of time.
+broadcast <cite>Started</cite> on press, then <cite>Ongoing</cite> until the threshold time is met,
+then <cite>Triggered</cite> until release.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 14%" />
+<col style="width: 19%" />
+<col style="width: 14%" />
+<col style="width: 16%" />
+<col style="width: 19%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Trigger</p></td>
+<td><p>Events</p></td>
+<td><p>Name</p></td>
+<td><p>Action</p></td>
+<td><p>Elapsed</p></td>
+<td><p>Triggered</p></td>
+</tr>
+<tr class="row-even"><td rowspan="9"><p>Hold</p></td>
+<td><p>1</p></td>
+<td><p>Started</p></td>
+<td><p>false</p></td>
+<td><p>0.01</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>OnGoing</p></td>
+<td><p>false</p></td>
+<td><p>0.02</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-even"><td colspan="5"><p>Repeating until time threshold <code class="docutils literal notranslate"><span class="pre">t</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>n - 1</p></td>
+<td><p>OnGoing</p></td>
+<td><p>false</p></td>
+<td><p>t - d</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-even"><td><p>n</p></td>
+<td><p>Triggered</p></td>
+<td><p>true</p></td>
+<td><p>t</p></td>
+<td><p>0.01</p></td>
+</tr>
+<tr class="row-odd"><td><p>n + 1</p></td>
+<td><p>Triggered</p></td>
+<td><p>true</p></td>
+<td><p>t + d</p></td>
+<td><p>0.02</p></td>
+</tr>
+<tr class="row-even"><td colspan="5"><p>Repeating until release</p></td>
+</tr>
+<tr class="row-odd"><td><p>m</p></td>
+<td><p>Triggered</p></td>
+<td><p>true</p></td>
+<td><p>0.03</p></td>
+<td><p>0.03</p></td>
+</tr>
+<tr class="row-even"><td><p>m + 1</p></td>
+<td><p>Completed</p></td>
+<td><p>false</p></td>
+<td><p>0.03</p></td>
+<td><p>0.03</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>UInputTriggerTap</p></li>
+</ul>
+<p>Triggers only if the input gets released before the deadline.
+If the the input gets released late <code class="docutils literal notranslate"><span class="pre">OnGoing</span></code> will the last event the engine will send</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 14%" />
+<col style="width: 19%" />
+<col style="width: 14%" />
+<col style="width: 16%" />
+<col style="width: 19%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Trigger</p></td>
+<td><p>Events</p></td>
+<td><p>Name</p></td>
+<td><p>Action</p></td>
+<td><p>Elapsed</p></td>
+<td><p>Triggered</p></td>
+</tr>
+<tr class="row-even"><td rowspan="6"><p>Tap</p></td>
+<td><p>1</p></td>
+<td><p>Started</p></td>
+<td><p>false</p></td>
+<td><p>0.01</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>OnGoing</p></td>
+<td><p>false</p></td>
+<td><p>0.02</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-even"><td colspan="5"><p>Repeating until release</p></td>
+</tr>
+<tr class="row-odd"><td><p>n - 1</p></td>
+<td><p>OnGoing</p></td>
+<td><p>false</p></td>
+<td><p>0.03</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-even"><td><p>n</p></td>
+<td><p>Triggered</p></td>
+<td><p>false</p></td>
+<td><p>0.04</p></td>
+<td><p>0.01</p></td>
+</tr>
+<tr class="row-odd"><td><p>n + 1</p></td>
+<td><p>Completed</p></td>
+<td><p>false</p></td>
+<td><p>0.04</p></td>
+<td><p>0.01</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>UInputTriggerHoldAndRelease</p></li>
+</ul>
+<p>Same as release but needs to be held for a minimum amout of time
+before being released</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 14%" />
+<col style="width: 19%" />
+<col style="width: 14%" />
+<col style="width: 16%" />
+<col style="width: 19%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Trigger</p></td>
+<td><p>Events</p></td>
+<td><p>Name</p></td>
+<td><p>Action</p></td>
+<td><p>Elapsed</p></td>
+<td><p>Triggered</p></td>
+</tr>
+<tr class="row-even"><td rowspan="6"><p>Hold</p></td>
+<td><p>1</p></td>
+<td><p>Started</p></td>
+<td><p>false</p></td>
+<td><p>0.01</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>OnGoing</p></td>
+<td><p>false</p></td>
+<td><p>0.02</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-even"><td colspan="5"><p>Repeating until release</p></td>
+</tr>
+<tr class="row-odd"><td><p>n - 1</p></td>
+<td><p>OnGoing</p></td>
+<td><p>false</p></td>
+<td><p>t - d</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-even"><td><p>n</p></td>
+<td><p>Triggered</p></td>
+<td><p>false</p></td>
+<td><p>t</p></td>
+<td><p>0.01</p></td>
+</tr>
+<tr class="row-odd"><td><p>n + 1</p></td>
+<td><p>Completed</p></td>
+<td><p>false</p></td>
+<td><p>t</p></td>
+<td><p>0.01</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>UInputTriggerPulse</p></li>
+</ul>
+<p>Triggered periodically as long as the input is pressed.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 14%" />
+<col style="width: 19%" />
+<col style="width: 14%" />
+<col style="width: 16%" />
+<col style="width: 19%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Trigger</p></td>
+<td><p>Events</p></td>
+<td><p>Name</p></td>
+<td><p>Action</p></td>
+<td><p>Elapsed</p></td>
+<td><p>Triggered</p></td>
+</tr>
+<tr class="row-even"><td rowspan="7"><p>Pulse</p></td>
+<td><p>1</p></td>
+<td><p>Triggered</p></td>
+<td><p>true</p></td>
+<td><p>0.01</p></td>
+<td><p>0.01</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>Started</p></td>
+<td><p>true</p></td>
+<td><p>0.01</p></td>
+<td><p>0.01</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>OnGoing</p></td>
+<td><p>false</p></td>
+<td><p>0.02</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-odd"><td><p>n - 1</p></td>
+<td><p>OnGoing</p></td>
+<td><p>false</p></td>
+<td><p>1 - d</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-even"><td><p>n</p></td>
+<td><p>Triggered</p></td>
+<td><p>true</p></td>
+<td><p>1</p></td>
+<td><p>0.01</p></td>
+</tr>
+<tr class="row-odd"><td><p>n + 1</p></td>
+<td><p>OnGoing</p></td>
+<td><p>false</p></td>
+<td><p>1 + d</p></td>
+<td><p>0.01</p></td>
+</tr>
+<tr class="row-even"><td><p>n + 2</p></td>
+<td><p>OnGoing</p></td>
+<td><p>false</p></td>
+<td><p>1 + 2d</p></td>
+<td><p>0</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="limitations">
+<h2>Limitations<a class="headerlink" href="#limitations" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p>If you require an input event to tick for every frame or periodically this will not work
+An event must occur or an input needs to be actuated to the entire Input system to be triggered.
+Which means if an input is only Mouse-XY then it will only get triggered when something else
+gets triggered.
+Mouse movement alone does not trigger the input system.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Gameplay Ablities have their own input mechanism which is not compatible with Enhanced Input
+You can use EnhancedInput and GameplayAbilities since GameplayAbilities is not using the input component.</p>
+</div>
+</section>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

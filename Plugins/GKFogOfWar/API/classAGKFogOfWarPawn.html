@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Class AGKFogOfWarPawn &mdash; Gamekit  documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/collapsible-lists\css\tree_view.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/collapsible-lists\js\CollapsibleLists.compressed.js"></script>
+        <script src="../../../_static/collapsible-lists\js\apply-collapsible-lists.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Class AGKFogOfWarPlayerController" href="classAGKFogOfWarPlayerController.html" />
+    <link rel="prev" title="Class AGKFogOfWarObstacle" href="classAGKFogOfWarObstacle.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> Gamekit
+          </a>
+              <div class="version">
+                6c15b89
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Welcome</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../Welcome/Roadmap.html">RoadMap</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Plugins</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Fog of War</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../index.html#features">Features</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#useful-links">Useful Links</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../Welcome/Installations.html">Installations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Welcome/GettingStarted.html">Getting Started</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Welcome/FrequentQuestions.html">Frequently Asked Questions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Welcome/Changelog.html">Changelog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAGKFogOfWarCharacter.html">Class AGKFogOfWarCharacter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAGKFogOfWarGameMode.html">Class AGKFogOfWarGameMode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAGKFogOfWarGameState.html">Class AGKFogOfWarGameState</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAGKFogOfWarObstacle.html">Class AGKFogOfWarObstacle</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Class AGKFogOfWarPawn</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#inheritance-relationships">Inheritance Relationships</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="classAGKFogOfWarPlayerController.html">Class AGKFogOfWarPlayerController</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAGKFogOfWarPlayerState.html">Class AGKFogOfWarPlayerState</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAGKFogOfWarPrivatePlayerState.html">Class AGKFogOfWarPrivatePlayerState</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAGKFogOfWarTeam.html">Class AGKFogOfWarTeam</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAGKFogOfWarVolume.html">Class AGKFogOfWarVolume</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classFGKFogOfWarModule.html">Class FGKFogOfWarModule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classFGKFogOfWarShaderModule.html">Class FGKFogOfWarShaderModule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classIGKFogOfWarAgentInterface.html">Class IGKFogOfWarAgentInterface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classIGKFogOfWarGameStateInterface.html">Class IGKFogOfWarGameStateInterface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classIGKFogOfWarTestModule.html">Class IGKFogOfWarTestModule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKCanvasUpscaler.html">Class UGKCanvasUpscaler</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKCPUUpscalerStrategy.html">Class UGKCPUUpscalerStrategy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKExplorationTransform.html">Class UGKExplorationTransform</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKFogOfWarComponent.html">Class UGKFogOfWarComponent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKFogOfWarLibrary.html">Class UGKFogOfWarLibrary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKFogOfWarStrategy.html">Class UGKFogOfWarStrategy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKGPUUpscalerStrategy.html">Class UGKGPUUpscalerStrategy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKRayCasting__Less.html">Class UGKRayCasting_Less</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKRayCasting__Line.html">Class UGKRayCasting_Line</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKRayCasting__Triangle.html">Class UGKRayCasting_Triangle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKShadowCasting.html">Class UGKShadowCasting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKSharedBlueprint.html">Class UGKSharedBlueprint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKTransformerStrategy.html">Class UGKTransformerStrategy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKTransformerStrategyCanvas.html">Class UGKTransformerStrategyCanvas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKTransformerStrategyTexture2D.html">Class UGKTransformerStrategyTexture2D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#indices-and-tables">Indices and tables</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../GKAbility/index.html">Ability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../GKLobby/index.html">Lobby</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../GKChat/index.html">Chat</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../GKMinimap/index.html">Minimap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../GKML/index.html">Machine Learning</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">UnrealEngine</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../UnrealEngine/index.html">Developer Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../UnrealEngine/index.html#game">Game</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../UnrealEngine/index.html#online">Online</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../UnrealEngine/index.html#others">Others</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../Tools/uetools.html">uetools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Tools/ranked.html">ranked</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Tools/resources.html">Resources</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Gamekit</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">&lt;no title&gt;</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Fog of War</a></li>
+      <li class="breadcrumb-item active">Class AGKFogOfWarPawn</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/Plugins/GKFogOfWar/API/classAGKFogOfWarPawn.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="class-agkfogofwarpawn">
+<span id="exhale-class-classagkfogofwarpawn"></span><h1>Class AGKFogOfWarPawn<a class="headerlink" href="#class-agkfogofwarpawn" title="Permalink to this headline"></a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="../../../_build/exhale/file_Source_GKFogOfWar_Public_GKFogOfWarPawn.h.html#file-source-gkfogofwar-public-gkfogofwarpawn-h"><span class="std std-ref">File GKFogOfWarPawn.h</span></a></p></li>
+</ul>
+<section id="inheritance-relationships">
+<h2>Inheritance Relationships<a class="headerlink" href="#inheritance-relationships" title="Permalink to this headline"></a></h2>
+<section id="base-types">
+<h3>Base Types<a class="headerlink" href="#base-types" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">APawn</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">IGKFogOfWarAgentInterface</span></code> (<a class="reference internal" href="../../../_build/exhale/classIGKFogOfWarAgentInterface.html#exhale-class-classigkfogofwaragentinterface"><span class="std std-ref">Class IGKFogOfWarAgentInterface</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">IGenericTeamAgentInterface</span></code></p></li>
+</ul>
+</section>
+</section>
+<section id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this headline"></a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv415AGKFogOfWarPawn">
+<span id="_CPPv315AGKFogOfWarPawn"></span><span id="_CPPv215AGKFogOfWarPawn"></span><span id="AGKFogOfWarPawn"></span><span class="target" id="classAGKFogOfWarPawn"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AGKFogOfWarPawn</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">APawn</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><a class="reference internal" href="classIGKFogOfWarAgentInterface.html#_CPPv425IGKFogOfWarAgentInterface" title="IGKFogOfWarAgentInterface"><span class="n"><span class="pre">IGKFogOfWarAgentInterface</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">IGenericTeamAgentInterface</span></span><a class="headerlink" href="#_CPPv415AGKFogOfWarPawn" title="Permalink to this definition"></a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N15AGKFogOfWarPawn15AGKFogOfWarPawnERK18FObjectInitializer">
+<span id="_CPPv3N15AGKFogOfWarPawn15AGKFogOfWarPawnERK18FObjectInitializer"></span><span id="_CPPv2N15AGKFogOfWarPawn15AGKFogOfWarPawnERK18FObjectInitializer"></span><span id="AGKFogOfWarPawn::AGKFogOfWarPawn__FObjectInitializerCR"></span><span class="target" id="classAGKFogOfWarPawn_1aa40debb274d4276ae8681ae7ad892eae"></span><span class="sig-name descname"><span class="n"><span class="pre">AGKFogOfWarPawn</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">FObjectInitializer</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">ObjectInitializer</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15AGKFogOfWarPawn15AGKFogOfWarPawnERK18FObjectInitializer" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N15AGKFogOfWarPawn4TickEf">
+<span id="_CPPv3N15AGKFogOfWarPawn4TickEf"></span><span id="_CPPv2N15AGKFogOfWarPawn4TickEf"></span><span id="AGKFogOfWarPawn::Tick__float"></span><span class="target" id="classAGKFogOfWarPawn_1a92d972fbf738008a74b9ef70d92b6a0d"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Tick</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">DeltaTime</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N15AGKFogOfWarPawn4TickEf" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N15AGKFogOfWarPawn25SetupPlayerInputComponentEP15UInputComponent">
+<span id="_CPPv3N15AGKFogOfWarPawn25SetupPlayerInputComponentEP15UInputComponent"></span><span id="_CPPv2N15AGKFogOfWarPawn25SetupPlayerInputComponentEP15UInputComponent"></span><span id="AGKFogOfWarPawn::SetupPlayerInputComponent__UInputComponentP"></span><span class="target" id="classAGKFogOfWarPawn_1ad7f84e143bce500ed27402fba50b1396"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SetupPlayerInputComponent</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="n"><span class="pre">UInputComponent</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">PlayerInputComponent</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N15AGKFogOfWarPawn25SetupPlayerInputComponentEP15UInputComponent" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N15AGKFogOfWarPawn35GetFogOfWarComponent_ImplementationEv">
+<span id="_CPPv3N15AGKFogOfWarPawn35GetFogOfWarComponent_ImplementationEv"></span><span id="_CPPv2N15AGKFogOfWarPawn35GetFogOfWarComponent_ImplementationEv"></span><span id="AGKFogOfWarPawn::GetFogOfWarComponent_Implementation"></span><span class="target" id="classAGKFogOfWarPawn_1adb291d0f28d7cc57f20fe20cc9c02a62"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span><a class="reference internal" href="classUGKFogOfWarComponent.html#_CPPv420UGKFogOfWarComponent" title="UGKFogOfWarComponent"><span class="n"><span class="pre">UGKFogOfWarComponent</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">GetFogOfWarComponent_Implementation</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">final</span></span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N15AGKFogOfWarPawn35GetFogOfWarComponent_ImplementationEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK15AGKFogOfWarPawn26GetLifetimeReplicatedPropsER6TArrayI17FLifetimePropertyE">
+<span id="_CPPv3NK15AGKFogOfWarPawn26GetLifetimeReplicatedPropsER6TArrayI17FLifetimePropertyE"></span><span id="_CPPv2NK15AGKFogOfWarPawn26GetLifetimeReplicatedPropsER6TArrayI17FLifetimePropertyE"></span><span id="AGKFogOfWarPawn::GetLifetimeReplicatedProps__TArray:FLifetimeProperty:RC"></span><span class="target" id="classAGKFogOfWarPawn_1a5180da3912efccf177563bf85b3da12e"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GetLifetimeReplicatedProps</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">TArray</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">FLifetimeProperty</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">OutLifetimeProps</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4NK15AGKFogOfWarPawn26GetLifetimeReplicatedPropsER6TArrayI17FLifetimePropertyE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N15AGKFogOfWarPawn32IsReplicationPausedForConnectionERK10FNetViewer">
+<span id="_CPPv3N15AGKFogOfWarPawn32IsReplicationPausedForConnectionERK10FNetViewer"></span><span id="_CPPv2N15AGKFogOfWarPawn32IsReplicationPausedForConnectionERK10FNetViewer"></span><span id="AGKFogOfWarPawn::IsReplicationPausedForConnection__FNetViewerCR"></span><span class="target" id="classAGKFogOfWarPawn_1a98acd0fb92a147cff080c00f5d57bf33"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">IsReplicationPausedForConnection</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">FNetViewer</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">ConnectionOwnerNetViewer</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15AGKFogOfWarPawn32IsReplicationPausedForConnectionERK10FNetViewer" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK15AGKFogOfWarPawn16GetGenericTeamIdEv">
+<span id="_CPPv3NK15AGKFogOfWarPawn16GetGenericTeamIdEv"></span><span id="_CPPv2NK15AGKFogOfWarPawn16GetGenericTeamIdEv"></span><span id="AGKFogOfWarPawn::GetGenericTeamIdC"></span><span class="target" id="classAGKFogOfWarPawn_1a1a070083b39418f969321adb3afabfb3"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">FGenericTeamId</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GetGenericTeamId</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4NK15AGKFogOfWarPawn16GetGenericTeamIdEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Retrieve team identifier in form of FGenericTeamId. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N15AGKFogOfWarPawn26OnReplicationPausedChangedEb">
+<span id="_CPPv3N15AGKFogOfWarPawn26OnReplicationPausedChangedEb"></span><span id="_CPPv2N15AGKFogOfWarPawn26OnReplicationPausedChangedEb"></span><span id="AGKFogOfWarPawn::OnReplicationPausedChanged__b"></span><span class="target" id="classAGKFogOfWarPawn_1acafb9e6bad6612d4c899f7bd620f079a"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">OnReplicationPausedChanged</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">bIsReplicationPaused</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15AGKFogOfWarPawn26OnReplicationPausedChangedEb" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15AGKFogOfWarPawn4TeamE">
+<span id="_CPPv3N15AGKFogOfWarPawn4TeamE"></span><span id="_CPPv2N15AGKFogOfWarPawn4TeamE"></span><span id="AGKFogOfWarPawn::Team__FGenericTeamId"></span><span class="target" id="classAGKFogOfWarPawn_1aac890f8ad8d14ed6067ec43f6b452871"></span><span class="n"><span class="pre">FGenericTeamId</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Team</span></span></span><a class="headerlink" href="#_CPPv4N15AGKFogOfWarPawn4TeamE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>This is set by the Player Controller on possession. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-protected-functions">Protected Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N15AGKFogOfWarPawn9BeginPlayEv">
+<span id="_CPPv3N15AGKFogOfWarPawn9BeginPlayEv"></span><span id="_CPPv2N15AGKFogOfWarPawn9BeginPlayEv"></span><span id="AGKFogOfWarPawn::BeginPlay"></span><span class="target" id="classAGKFogOfWarPawn_1ad782415b15519fd48f90502f3af6a03d"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BeginPlay</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N15AGKFogOfWarPawn9BeginPlayEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-protected-attributes">Protected Attributes</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15AGKFogOfWarPawn12FoWComponentE">
+<span id="_CPPv3N15AGKFogOfWarPawn12FoWComponentE"></span><span id="_CPPv2N15AGKFogOfWarPawn12FoWComponentE"></span><span id="AGKFogOfWarPawn::FoWComponent__UGKFogOfWarComponentP"></span><span class="target" id="classAGKFogOfWarPawn_1a44a9c5ac659d470f220998133d923c19"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><a class="reference internal" href="classUGKFogOfWarComponent.html#_CPPv420UGKFogOfWarComponent" title="UGKFogOfWarComponent"><span class="n"><span class="pre">UGKFogOfWarComponent</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">FoWComponent</span></span></span><a class="headerlink" href="#_CPPv4N15AGKFogOfWarPawn12FoWComponentE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="classAGKFogOfWarObstacle.html" class="btn btn-neutral float-left" title="Class AGKFogOfWarObstacle" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="classAGKFogOfWarPlayerController.html" class="btn btn-neutral float-right" title="Class AGKFogOfWarPlayerController" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

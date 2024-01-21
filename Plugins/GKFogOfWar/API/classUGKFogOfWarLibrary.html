@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Class UGKFogOfWarLibrary &mdash; Gamekit  documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/collapsible-lists\css\tree_view.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/collapsible-lists\js\CollapsibleLists.compressed.js"></script>
+        <script src="../../../_static/collapsible-lists\js\apply-collapsible-lists.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Class UGKFogOfWarStrategy" href="classUGKFogOfWarStrategy.html" />
+    <link rel="prev" title="Class UGKFogOfWarComponent" href="classUGKFogOfWarComponent.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> Gamekit
+          </a>
+              <div class="version">
+                6c15b89
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Welcome</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../Welcome/Roadmap.html">RoadMap</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Plugins</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Fog of War</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../index.html#features">Features</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#useful-links">Useful Links</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../Welcome/Installations.html">Installations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Welcome/GettingStarted.html">Getting Started</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Welcome/FrequentQuestions.html">Frequently Asked Questions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Welcome/Changelog.html">Changelog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAGKFogOfWarCharacter.html">Class AGKFogOfWarCharacter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAGKFogOfWarGameMode.html">Class AGKFogOfWarGameMode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAGKFogOfWarGameState.html">Class AGKFogOfWarGameState</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAGKFogOfWarObstacle.html">Class AGKFogOfWarObstacle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAGKFogOfWarPawn.html">Class AGKFogOfWarPawn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAGKFogOfWarPlayerController.html">Class AGKFogOfWarPlayerController</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAGKFogOfWarPlayerState.html">Class AGKFogOfWarPlayerState</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAGKFogOfWarPrivatePlayerState.html">Class AGKFogOfWarPrivatePlayerState</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAGKFogOfWarTeam.html">Class AGKFogOfWarTeam</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAGKFogOfWarVolume.html">Class AGKFogOfWarVolume</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classFGKFogOfWarModule.html">Class FGKFogOfWarModule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classFGKFogOfWarShaderModule.html">Class FGKFogOfWarShaderModule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classIGKFogOfWarAgentInterface.html">Class IGKFogOfWarAgentInterface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classIGKFogOfWarGameStateInterface.html">Class IGKFogOfWarGameStateInterface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classIGKFogOfWarTestModule.html">Class IGKFogOfWarTestModule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKCanvasUpscaler.html">Class UGKCanvasUpscaler</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKCPUUpscalerStrategy.html">Class UGKCPUUpscalerStrategy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKExplorationTransform.html">Class UGKExplorationTransform</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKFogOfWarComponent.html">Class UGKFogOfWarComponent</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Class UGKFogOfWarLibrary</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#inheritance-relationships">Inheritance Relationships</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKFogOfWarStrategy.html">Class UGKFogOfWarStrategy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKGPUUpscalerStrategy.html">Class UGKGPUUpscalerStrategy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKRayCasting__Less.html">Class UGKRayCasting_Less</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKRayCasting__Line.html">Class UGKRayCasting_Line</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKRayCasting__Triangle.html">Class UGKRayCasting_Triangle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKShadowCasting.html">Class UGKShadowCasting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKSharedBlueprint.html">Class UGKSharedBlueprint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKTransformerStrategy.html">Class UGKTransformerStrategy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKTransformerStrategyCanvas.html">Class UGKTransformerStrategyCanvas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKTransformerStrategyTexture2D.html">Class UGKTransformerStrategyTexture2D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#indices-and-tables">Indices and tables</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../GKAbility/index.html">Ability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../GKLobby/index.html">Lobby</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../GKChat/index.html">Chat</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../GKMinimap/index.html">Minimap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../GKML/index.html">Machine Learning</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">UnrealEngine</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../UnrealEngine/index.html">Developer Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../UnrealEngine/index.html#game">Game</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../UnrealEngine/index.html#online">Online</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../UnrealEngine/index.html#others">Others</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../Tools/uetools.html">uetools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Tools/ranked.html">ranked</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Tools/resources.html">Resources</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Gamekit</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">&lt;no title&gt;</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Fog of War</a></li>
+      <li class="breadcrumb-item active">Class UGKFogOfWarLibrary</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/Plugins/GKFogOfWar/API/classUGKFogOfWarLibrary.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="class-ugkfogofwarlibrary">
+<span id="exhale-class-classugkfogofwarlibrary"></span><h1>Class UGKFogOfWarLibrary<a class="headerlink" href="#class-ugkfogofwarlibrary" title="Permalink to this headline"></a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="../../../_build/exhale/file_Source_GKFogOfWar_Public_GKFogOfWarLibrary.h.html#file-source-gkfogofwar-public-gkfogofwarlibrary-h"><span class="std std-ref">File GKFogOfWarLibrary.h</span></a></p></li>
+</ul>
+<section id="inheritance-relationships">
+<h2>Inheritance Relationships<a class="headerlink" href="#inheritance-relationships" title="Permalink to this headline"></a></h2>
+<section id="base-type">
+<h3>Base Type<a class="headerlink" href="#base-type" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">UBlueprintFunctionLibrary</span></code></p></li>
+</ul>
+</section>
+</section>
+<section id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this headline"></a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv418UGKFogOfWarLibrary">
+<span id="_CPPv318UGKFogOfWarLibrary"></span><span id="_CPPv218UGKFogOfWarLibrary"></span><span id="UGKFogOfWarLibrary"></span><span class="target" id="classUGKFogOfWarLibrary"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">UGKFogOfWarLibrary</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">UBlueprintFunctionLibrary</span></span><a class="headerlink" href="#_CPPv418UGKFogOfWarLibrary" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Helper functions </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-static-functions">Public Static Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N18UGKFogOfWarLibrary19ConvertToObjectTypeE17ECollisionChannelR6TArrayI11TEnumAsByteI16EObjectTypeQueryEE">
+<span id="_CPPv3N18UGKFogOfWarLibrary19ConvertToObjectTypeE17ECollisionChannelR6TArrayI11TEnumAsByteI16EObjectTypeQueryEE"></span><span id="_CPPv2N18UGKFogOfWarLibrary19ConvertToObjectTypeE17ECollisionChannelR6TArrayI11TEnumAsByteI16EObjectTypeQueryEE"></span><span id="UGKFogOfWarLibrary::ConvertToObjectType__ECollisionChannel.TArray:TEnumAsByte:EObjectTypeQuery::R"></span><span class="target" id="classUGKFogOfWarLibrary_1a01f257fb6f840d2900f6a744fb166759"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ConvertToObjectType</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">ECollisionChannel</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">CollisionChannel</span></span>, <span class="n"><span class="pre">TArray</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">TEnumAsByte</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">EObjectTypeQuery</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">ObjectTypes</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N18UGKFogOfWarLibrary19ConvertToObjectTypeE17ECollisionChannelR6TArrayI11TEnumAsByteI16EObjectTypeQueryEE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N18UGKFogOfWarLibrary9IsVisibleEP7UObjectPK6AActor">
+<span id="_CPPv3N18UGKFogOfWarLibrary9IsVisibleEP7UObjectPK6AActor"></span><span id="_CPPv2N18UGKFogOfWarLibrary9IsVisibleEP7UObjectPK6AActor"></span><span id="UGKFogOfWarLibrary::IsVisible__UObjectP.AActorCP"></span><span class="target" id="classUGKFogOfWarLibrary_1ab5afecb96903ddc8bd89c804f45f289d"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">IsVisible</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">UObject</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">WorldCtx</span></span>, <span class="n"><span class="pre">AActor</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">Target</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N18UGKFogOfWarLibrary9IsVisibleEP7UObjectPK6AActor" title="Permalink to this definition"></a><br /></dt>
+<dd><p>return true if the actor is visible by current client This is based off the clients own drawing of the fog so in case of cheating this method would be incorrect but that would only mean that the client is seeing the latest known position of the enemies since the enemies replicate only if visible (according to the server) </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N18UGKFogOfWarLibrary17GetFogOfWarVolumeEP7UObject">
+<span id="_CPPv3N18UGKFogOfWarLibrary17GetFogOfWarVolumeEP7UObject"></span><span id="_CPPv2N18UGKFogOfWarLibrary17GetFogOfWarVolumeEP7UObject"></span><span id="UGKFogOfWarLibrary::GetFogOfWarVolume__UObjectP"></span><span class="target" id="classUGKFogOfWarLibrary_1a2be6c85665ae2f69ba988d9526b5420c"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span><a class="reference internal" href="classAGKFogOfWarVolume.html#_CPPv417AGKFogOfWarVolume" title="AGKFogOfWarVolume"><span class="n"><span class="pre">AGKFogOfWarVolume</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">GetFogOfWarVolume</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">UObject</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">WorldCtx</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N18UGKFogOfWarLibrary17GetFogOfWarVolumeEP7UObject" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Retrieve the fog of war volume in the current level. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N18UGKFogOfWarLibrary18SampleRenderTargetEP22UTextureRenderTarget2D9FVector2D">
+<span id="_CPPv3N18UGKFogOfWarLibrary18SampleRenderTargetEP22UTextureRenderTarget2D9FVector2D"></span><span id="_CPPv2N18UGKFogOfWarLibrary18SampleRenderTargetEP22UTextureRenderTarget2D9FVector2D"></span><span id="UGKFogOfWarLibrary::SampleRenderTarget__UTextureRenderTarget2DP.FVector2D"></span><span class="target" id="classUGKFogOfWarLibrary_1a4a77198c070c8437227d8863ae5fd37c"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="n"><span class="pre">FLinearColor</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SampleRenderTarget</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="n"><span class="pre">UTextureRenderTarget2D</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">InRenderTarget</span></span>, <span class="n"><span class="pre">FVector2D</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">UV</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N18UGKFogOfWarLibrary18SampleRenderTargetEP22UTextureRenderTarget2D9FVector2D" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Try to fetch the closest pixel by rounding the final coordinate UV is [0, 1] </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N18UGKFogOfWarLibrary23SamplePixelRenderTargetEP22UTextureRenderTarget2D9FVector2D">
+<span id="_CPPv3N18UGKFogOfWarLibrary23SamplePixelRenderTargetEP22UTextureRenderTarget2D9FVector2D"></span><span id="_CPPv2N18UGKFogOfWarLibrary23SamplePixelRenderTargetEP22UTextureRenderTarget2D9FVector2D"></span><span id="UGKFogOfWarLibrary::SamplePixelRenderTarget__UTextureRenderTarget2DP.FVector2D"></span><span class="target" id="classUGKFogOfWarLibrary_1aed26e6eaea1b0313514b643ea08aa044"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="n"><span class="pre">FLinearColor</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SamplePixelRenderTarget</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="n"><span class="pre">UTextureRenderTarget2D</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">InRenderTarget</span></span>, <span class="n"><span class="pre">FVector2D</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">Pixel</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N18UGKFogOfWarLibrary23SamplePixelRenderTargetEP22UTextureRenderTarget2D9FVector2D" title="Permalink to this definition"></a><br /></dt>
+<dd><p>The pixel is not even the closest in term of distance as the pixel coord gets truncated Pixel is [0, TextureSize] interpolation is not done, only one pixel is fetched </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N18UGKFogOfWarLibrary19ToTextureCoordinateE7FVector9FVector2D">
+<span id="_CPPv3N18UGKFogOfWarLibrary19ToTextureCoordinateE7FVector9FVector2D"></span><span id="_CPPv2N18UGKFogOfWarLibrary19ToTextureCoordinateE7FVector9FVector2D"></span><span id="UGKFogOfWarLibrary::ToTextureCoordinate__FVector.FVector2D"></span><span class="target" id="classUGKFogOfWarLibrary_1ac4ddfb808ad0951c85609b6b4745c380"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">FVector2D</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ToTextureCoordinate</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">FVector</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">WorldLocation</span></span>, <span class="n"><span class="pre">FVector2D</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">MapSize</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N18UGKFogOfWarLibrary19ToTextureCoordinateE7FVector9FVector2D" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Coordinate system change. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N18UGKFogOfWarLibrary21ToTextureCoordinate2DE9FVector2D9FVector2D">
+<span id="_CPPv3N18UGKFogOfWarLibrary21ToTextureCoordinate2DE9FVector2D9FVector2D"></span><span id="_CPPv2N18UGKFogOfWarLibrary21ToTextureCoordinate2DE9FVector2D9FVector2D"></span><span id="UGKFogOfWarLibrary::ToTextureCoordinate2D__FVector2D.FVector2D"></span><span class="target" id="classUGKFogOfWarLibrary_1a630a921d457858d40357354d4f2a3dd7"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">FVector2D</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ToTextureCoordinate2D</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">FVector2D</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">WorldLocation</span></span>, <span class="n"><span class="pre">FVector2D</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">MapSize</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N18UGKFogOfWarLibrary21ToTextureCoordinate2DE9FVector2D9FVector2D" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Coordinate system change. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N18UGKFogOfWarLibrary6GetYawE7FVector7FVector">
+<span id="_CPPv3N18UGKFogOfWarLibrary6GetYawE7FVector7FVector"></span><span id="_CPPv2N18UGKFogOfWarLibrary6GetYawE7FVector7FVector"></span><span id="UGKFogOfWarLibrary::GetYaw__FVector.FVector"></span><span class="target" id="classUGKFogOfWarLibrary_1ac615e9674720faf994bc24b01d126758"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GetYaw</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">FVector</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">Origin</span></span>, <span class="n"><span class="pre">FVector</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">Target</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N18UGKFogOfWarLibrary6GetYawE7FVector7FVector" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Normalized Look At Rotation. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N18UGKFogOfWarLibrary16GetVisibleBoundsE7FVectorP6AActorR7FVectorR7FVector">
+<span id="_CPPv3N18UGKFogOfWarLibrary16GetVisibleBoundsE7FVectorP6AActorR7FVectorR7FVector"></span><span id="_CPPv2N18UGKFogOfWarLibrary16GetVisibleBoundsE7FVectorP6AActorR7FVectorR7FVector"></span><span id="UGKFogOfWarLibrary::GetVisibleBounds__FVector.AActorP.FVectorR.FVectorR"></span><span class="target" id="classUGKFogOfWarLibrary_1a32a99fdd45548f5abab9cee6f38fa8bb"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GetVisibleBounds</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">FVector</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">Location</span></span>, <span class="n"><span class="pre">AActor</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">Actor</span></span>, <span class="n"><span class="pre">FVector</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">OutMin</span></span>, <span class="n"><span class="pre">FVector</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">OutMax</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N18UGKFogOfWarLibrary16GetVisibleBoundsE7FVectorP6AActorR7FVectorR7FVector" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns the two points of an actor that are visible from Location This uses a lookup table to know which points are visible </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N18UGKFogOfWarLibrary11WorldToGridE7FVector7FVector">
+<span id="_CPPv3N18UGKFogOfWarLibrary11WorldToGridE7FVector7FVector"></span><span id="_CPPv2N18UGKFogOfWarLibrary11WorldToGridE7FVector7FVector"></span><span id="UGKFogOfWarLibrary::WorldToGrid__FVector.FVector"></span><span class="target" id="classUGKFogOfWarLibrary_1aa522c514d053397b3d09377f40a3fcc2"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">FIntVector</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">WorldToGrid</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">FVector</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">GridSize</span></span>, <span class="n"><span class="pre">FVector</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">World</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N18UGKFogOfWarLibrary11WorldToGridE7FVector7FVector" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Coordinate system change. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N18UGKFogOfWarLibrary10SnapToGridE7FVector7FVector">
+<span id="_CPPv3N18UGKFogOfWarLibrary10SnapToGridE7FVector7FVector"></span><span id="_CPPv2N18UGKFogOfWarLibrary10SnapToGridE7FVector7FVector"></span><span id="UGKFogOfWarLibrary::SnapToGrid__FVector.FVector"></span><span class="target" id="classUGKFogOfWarLibrary_1a5b7d7c6c3e239ae37fb1df3303911b7f"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">FVector</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SnapToGrid</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">FVector</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">GridSize</span></span>, <span class="n"><span class="pre">FVector</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">World</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N18UGKFogOfWarLibrary10SnapToGridE7FVector7FVector" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Snap coordinate to a grid. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N18UGKFogOfWarLibrary11GridToWorldE7FVector10FIntVector">
+<span id="_CPPv3N18UGKFogOfWarLibrary11GridToWorldE7FVector10FIntVector"></span><span id="_CPPv2N18UGKFogOfWarLibrary11GridToWorldE7FVector10FIntVector"></span><span id="UGKFogOfWarLibrary::GridToWorld__FVector.FIntVector"></span><span class="target" id="classUGKFogOfWarLibrary_1a82a7f7068bdfb98cfbff30c9b2c602eb"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">FVector</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GridToWorld</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">FVector</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">GridSize</span></span>, <span class="n"><span class="pre">FIntVector</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">Grid</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N18UGKFogOfWarLibrary11GridToWorldE7FVector10FIntVector" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Coordinate system change. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N18UGKFogOfWarLibrary18GetLocalControllerEP7UObject">
+<span id="_CPPv3N18UGKFogOfWarLibrary18GetLocalControllerEP7UObject"></span><span id="_CPPv2N18UGKFogOfWarLibrary18GetLocalControllerEP7UObject"></span><span id="UGKFogOfWarLibrary::GetLocalController__UObjectP"></span><span class="target" id="classUGKFogOfWarLibrary_1a7fca9417194d37eade7105865978d620"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="n"><span class="pre">APlayerController</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">GetLocalController</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">UObject</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">WorldCtx</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N18UGKFogOfWarLibrary18GetLocalControllerEP7UObject" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Retrieve local controller. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N18UGKFogOfWarLibrary12GetLocalTeamEP7UObject">
+<span id="_CPPv3N18UGKFogOfWarLibrary12GetLocalTeamEP7UObject"></span><span id="_CPPv2N18UGKFogOfWarLibrary12GetLocalTeamEP7UObject"></span><span id="UGKFogOfWarLibrary::GetLocalTeam__UObjectP"></span><span class="target" id="classUGKFogOfWarLibrary_1a34ad182f33b0392ed5248b67a4e95e7e"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">FGenericTeamId</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GetLocalTeam</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">UObject</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">WorldCtx</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N18UGKFogOfWarLibrary12GetLocalTeamEP7UObject" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Retrieve the team of the local controller. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N18UGKFogOfWarLibrary11GetTeamInfoEP7UObject">
+<span id="_CPPv3N18UGKFogOfWarLibrary11GetTeamInfoEP7UObject"></span><span id="_CPPv2N18UGKFogOfWarLibrary11GetTeamInfoEP7UObject"></span><span id="UGKFogOfWarLibrary::GetTeamInfo__UObjectP"></span><span class="target" id="classUGKFogOfWarLibrary_1ad1778e777db789d32e457ce1649333ed"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="n"><span class="pre">TArray</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../../../_build/exhale/structFGKFogTeamInfo.html#_CPPv414FGKFogTeamInfo" title="FGKFogTeamInfo"><span class="n"><span class="pre">FGKFogTeamInfo</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">GetTeamInfo</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">UObject</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">WorldCtx</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N18UGKFogOfWarLibrary11GetTeamInfoEP7UObject" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Retrieve the team infos from the Game state. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N18UGKFogOfWarLibrary12GetTeamCountEP7UObject">
+<span id="_CPPv3N18UGKFogOfWarLibrary12GetTeamCountEP7UObject"></span><span id="_CPPv2N18UGKFogOfWarLibrary12GetTeamCountEP7UObject"></span><span id="UGKFogOfWarLibrary::GetTeamCount__UObjectP"></span><span class="target" id="classUGKFogOfWarLibrary_1a207e5d9a3b0c621ef3dc006a8ec792ac"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GetTeamCount</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">UObject</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">WorldCtx</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N18UGKFogOfWarLibrary12GetTeamCountEP7UObject" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Retrieve the number of teams from the Game state. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp">
+<span class="target" id="classUGKFogOfWarLibrary_1a89d750ac1ce539933b50d30b417a98d1"></span><span class="sig-name descname"><span class="pre">static</span> <span class="pre">struct</span> <span class="pre">FGKFogOfWarTeamsInfoHandle</span> <span class="pre">MakeFogOfWarTeamsHandle</span> <span class="pre">(UPARAM(ref)</span> <span class="pre">TArray&lt;</span> <span class="pre">FGKFogTeamInfo</span> <span class="pre">&gt;</span> <span class="pre">&amp;Teams)</span></span></dt>
+<dd><p>Build a new handle to an array of TeamInfo. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp">
+<span class="target" id="classUGKFogOfWarLibrary_1ae6010aef84a4ff84c19966612f9591a2"></span><span class="sig-name descname"><span class="pre">static</span> <span class="pre">struct</span> <span class="pre">FGKFogOfWarTeamInfoHandle</span> <span class="pre">MakeFogOfWarTeamHandle</span> <span class="pre">(UPARAM(ref)</span> <span class="pre">TArray&lt;</span> <span class="pre">FGKFogTeamInfo</span> <span class="pre">&gt;</span> <span class="pre">&amp;Teams,</span> <span class="pre">FGenericTeamId</span> <span class="pre">TeamId)</span></span></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N18UGKFogOfWarLibrary25GetFogOfWarTeamFromHandleE26FGKFogOfWarTeamsInfoHandle">
+<span id="_CPPv3N18UGKFogOfWarLibrary25GetFogOfWarTeamFromHandleE26FGKFogOfWarTeamsInfoHandle"></span><span id="_CPPv2N18UGKFogOfWarLibrary25GetFogOfWarTeamFromHandleE26FGKFogOfWarTeamsInfoHandle"></span><span id="UGKFogOfWarLibrary::GetFogOfWarTeamFromHandle__FGKFogOfWarTeamsInfoHandle"></span><span class="target" id="classUGKFogOfWarLibrary_1aed1bd452aef71d5bd884988ad98602c8"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="n"><span class="pre">TArray</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../../../_build/exhale/structFGKFogTeamInfo.html#_CPPv414FGKFogTeamInfo" title="FGKFogTeamInfo"><span class="n"><span class="pre">FGKFogTeamInfo</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GetFogOfWarTeamFromHandle</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../../../_build/exhale/structFGKFogOfWarTeamsInfoHandle.html#_CPPv426FGKFogOfWarTeamsInfoHandle" title="FGKFogOfWarTeamsInfoHandle"><span class="n"><span class="pre">FGKFogOfWarTeamsInfoHandle</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">Handle</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N18UGKFogOfWarLibrary25GetFogOfWarTeamFromHandleE26FGKFogOfWarTeamsInfoHandle" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Retrieve the team infos from an Handle. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N18UGKFogOfWarLibrary18GetMutableTeamInfoEP7UObjectRb">
+<span id="_CPPv3N18UGKFogOfWarLibrary18GetMutableTeamInfoEP7UObjectRb"></span><span id="_CPPv2N18UGKFogOfWarLibrary18GetMutableTeamInfoEP7UObjectRb"></span><span id="UGKFogOfWarLibrary::GetMutableTeamInfo__UObjectP.bR"></span><span class="target" id="classUGKFogOfWarLibrary_1a61ff6c40229c0cdab34909dfa86305a2"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="n"><span class="pre">TArray</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../../../_build/exhale/structFGKFogTeamInfo.html#_CPPv414FGKFogTeamInfo" title="FGKFogTeamInfo"><span class="n"><span class="pre">FGKFogTeamInfo</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">GetMutableTeamInfo</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">UObject</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">WorldCtx</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">bSuccess</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N18UGKFogOfWarLibrary18GetMutableTeamInfoEP7UObjectRb" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N18UGKFogOfWarLibrary19GetFogOfWarTeamInfoE16TScriptInterfaceI29IGKFogOfWarGameStateInterfaceE14FGenericTeamIdR14FGKFogTeamInfo">
+<span id="_CPPv3N18UGKFogOfWarLibrary19GetFogOfWarTeamInfoE16TScriptInterfaceI29IGKFogOfWarGameStateInterfaceE14FGenericTeamIdR14FGKFogTeamInfo"></span><span id="_CPPv2N18UGKFogOfWarLibrary19GetFogOfWarTeamInfoE16TScriptInterfaceI29IGKFogOfWarGameStateInterfaceE14FGenericTeamIdR14FGKFogTeamInfo"></span><span id="UGKFogOfWarLibrary::GetFogOfWarTeamInfo__TScriptInterface:IGKFogOfWarGameStateInterface:.FGenericTeamId.FGKFogTeamInfoR"></span><span class="target" id="classUGKFogOfWarLibrary_1af6a289504114464197adc7331df6d567"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GetFogOfWarTeamInfo</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">TScriptInterface</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="classIGKFogOfWarGameStateInterface.html#_CPPv429IGKFogOfWarGameStateInterface" title="IGKFogOfWarGameStateInterface"><span class="n"><span class="pre">IGKFogOfWarGameStateInterface</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">GameState</span></span>, <span class="n"><span class="pre">FGenericTeamId</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">TeamId</span></span>, <span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="../../../_build/exhale/structFGKFogTeamInfo.html#_CPPv414FGKFogTeamInfo" title="FGKFogTeamInfo"><span class="n"><span class="pre">FGKFogTeamInfo</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">TeamInfo</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N18UGKFogOfWarLibrary19GetFogOfWarTeamInfoE16TScriptInterfaceI29IGKFogOfWarGameStateInterfaceE14FGenericTeamIdR14FGKFogTeamInfo" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N18UGKFogOfWarLibrary24GetGKFogOfWarVersionInfoEv">
+<span id="_CPPv3N18UGKFogOfWarLibrary24GetGKFogOfWarVersionInfoEv"></span><span id="_CPPv2N18UGKFogOfWarLibrary24GetGKFogOfWarVersionInfoEv"></span><span id="UGKFogOfWarLibrary::GetGKFogOfWarVersionInfo"></span><span class="target" id="classUGKFogOfWarLibrary_1a1bac84bb8748a20d27ad83aa6305022a"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><a class="reference internal" href="../../../_build/exhale/structFGKFogOfWarVersionInfo.html#_CPPv422FGKFogOfWarVersionInfo" title="FGKFogOfWarVersionInfo"><span class="n"><span class="pre">FGKFogOfWarVersionInfo</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GetGKFogOfWarVersionInfo</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N18UGKFogOfWarLibrary24GetGKFogOfWarVersionInfoEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N18UGKFogOfWarLibrary19GetFogOfWarTeamNameE25FGKFogOfWarTeamInfoHandle">
+<span id="_CPPv3N18UGKFogOfWarLibrary19GetFogOfWarTeamNameE25FGKFogOfWarTeamInfoHandle"></span><span id="_CPPv2N18UGKFogOfWarLibrary19GetFogOfWarTeamNameE25FGKFogOfWarTeamInfoHandle"></span><span id="UGKFogOfWarLibrary::GetFogOfWarTeamName__FGKFogOfWarTeamInfoHandle"></span><span class="target" id="classUGKFogOfWarLibrary_1a66d02315f66d70a7f96c3cc8754748be"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">FName</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GetFogOfWarTeamName</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../../../_build/exhale/structFGKFogOfWarTeamInfoHandle.html#_CPPv425FGKFogOfWarTeamInfoHandle" title="FGKFogOfWarTeamInfoHandle"><span class="n"><span class="pre">FGKFogOfWarTeamInfoHandle</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">Handle</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N18UGKFogOfWarLibrary19GetFogOfWarTeamNameE25FGKFogOfWarTeamInfoHandle" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N18UGKFogOfWarLibrary26GetFogOfWarTeamDescriptionE25FGKFogOfWarTeamInfoHandle">
+<span id="_CPPv3N18UGKFogOfWarLibrary26GetFogOfWarTeamDescriptionE25FGKFogOfWarTeamInfoHandle"></span><span id="_CPPv2N18UGKFogOfWarLibrary26GetFogOfWarTeamDescriptionE25FGKFogOfWarTeamInfoHandle"></span><span id="UGKFogOfWarLibrary::GetFogOfWarTeamDescription__FGKFogOfWarTeamInfoHandle"></span><span class="target" id="classUGKFogOfWarLibrary_1a348c2ad7a58e75a5ef3c9214287007e5"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">FText</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GetFogOfWarTeamDescription</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../../../_build/exhale/structFGKFogOfWarTeamInfoHandle.html#_CPPv425FGKFogOfWarTeamInfoHandle" title="FGKFogOfWarTeamInfoHandle"><span class="n"><span class="pre">FGKFogOfWarTeamInfoHandle</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">Handle</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N18UGKFogOfWarLibrary26GetFogOfWarTeamDescriptionE25FGKFogOfWarTeamInfoHandle" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N18UGKFogOfWarLibrary24GetFogOfWarTeamLocalNameE25FGKFogOfWarTeamInfoHandle">
+<span id="_CPPv3N18UGKFogOfWarLibrary24GetFogOfWarTeamLocalNameE25FGKFogOfWarTeamInfoHandle"></span><span id="_CPPv2N18UGKFogOfWarLibrary24GetFogOfWarTeamLocalNameE25FGKFogOfWarTeamInfoHandle"></span><span id="UGKFogOfWarLibrary::GetFogOfWarTeamLocalName__FGKFogOfWarTeamInfoHandle"></span><span class="target" id="classUGKFogOfWarLibrary_1a2202aa8223d7735491e800c927158e10"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">FText</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GetFogOfWarTeamLocalName</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../../../_build/exhale/structFGKFogOfWarTeamInfoHandle.html#_CPPv425FGKFogOfWarTeamInfoHandle" title="FGKFogOfWarTeamInfoHandle"><span class="n"><span class="pre">FGKFogOfWarTeamInfoHandle</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">Handle</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N18UGKFogOfWarLibrary24GetFogOfWarTeamLocalNameE25FGKFogOfWarTeamInfoHandle" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N18UGKFogOfWarLibrary20GetFogOfWarTeamColorE25FGKFogOfWarTeamInfoHandle">
+<span id="_CPPv3N18UGKFogOfWarLibrary20GetFogOfWarTeamColorE25FGKFogOfWarTeamInfoHandle"></span><span id="_CPPv2N18UGKFogOfWarLibrary20GetFogOfWarTeamColorE25FGKFogOfWarTeamInfoHandle"></span><span id="UGKFogOfWarLibrary::GetFogOfWarTeamColor__FGKFogOfWarTeamInfoHandle"></span><span class="target" id="classUGKFogOfWarLibrary_1a7a2c8c9aaae567873e2eb4a63a5bbfd5"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">FLinearColor</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GetFogOfWarTeamColor</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../../../_build/exhale/structFGKFogOfWarTeamInfoHandle.html#_CPPv425FGKFogOfWarTeamInfoHandle" title="FGKFogOfWarTeamInfoHandle"><span class="n"><span class="pre">FGKFogOfWarTeamInfoHandle</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">Handle</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N18UGKFogOfWarLibrary20GetFogOfWarTeamColorE25FGKFogOfWarTeamInfoHandle" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N18UGKFogOfWarLibrary27GetFogOfWarTeamInfoFromNameEP7UObject5FName">
+<span id="_CPPv3N18UGKFogOfWarLibrary27GetFogOfWarTeamInfoFromNameEP7UObject5FName"></span><span id="_CPPv2N18UGKFogOfWarLibrary27GetFogOfWarTeamInfoFromNameEP7UObject5FName"></span><span id="UGKFogOfWarLibrary::GetFogOfWarTeamInfoFromName__UObjectP.FName"></span><span class="target" id="classUGKFogOfWarLibrary_1ae8ac496d1cb4b21de500dc493f6b5a2b"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><a class="reference internal" href="../../../_build/exhale/structFGKFogTeamInfo.html#_CPPv414FGKFogTeamInfo" title="FGKFogTeamInfo"><span class="n"><span class="pre">FGKFogTeamInfo</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GetFogOfWarTeamInfoFromName</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">UObject</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">WorldCtx</span></span>, <span class="n"><span class="pre">FName</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">TeamName</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N18UGKFogOfWarLibrary27GetFogOfWarTeamInfoFromNameEP7UObject5FName" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="classUGKFogOfWarComponent.html" class="btn btn-neutral float-left" title="Class UGKFogOfWarComponent" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="classUGKFogOfWarStrategy.html" class="btn btn-neutral float-right" title="Class UGKFogOfWarStrategy" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

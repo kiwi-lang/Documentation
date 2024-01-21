@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Continuous Integration &mdash; Gamekit  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/collapsible-lists\css\tree_view.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/collapsible-lists\js\CollapsibleLists.compressed.js"></script>
+        <script src="../../_static/collapsible-lists\js\apply-collapsible-lists.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="GameFlow" href="../Game/GameFlow.html" />
+    <link rel="prev" title="Command Line" href="CommandLine.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> Gamekit
+          </a>
+              <div class="version">
+                6c15b89
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Welcome</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Welcome/Roadmap.html">RoadMap</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Plugins</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Plugins/GKFogOfWar/index.html">Fog of War</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Plugins/GKAbility/index.html">Ability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Plugins/GKLobby/index.html">Lobby</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Plugins/GKChat/index.html">Chat</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Plugins/GKMinimap/index.html">Minimap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Plugins/GKML/index.html">Machine Learning</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">UnrealEngine</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Developer Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Docs.html">Documentation Generation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Compilation.html">Compilation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Shaders/index.html">Shaders</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Doxygen.html">Doxygen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Contribution.html">Contributions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CommandLine.html">Command Line</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Continuous Integration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#gitlab-runner">Gitlab Runner</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#windows">Windows</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#linux">Linux</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#github-actions">Github Actions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html#game">Game</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html#online">Online</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html#others">Others</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Tools/uetools.html">uetools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Tools/ranked.html">ranked</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Tools/resources.html">Resources</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Gamekit</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Developer Guide</a></li>
+      <li class="breadcrumb-item active">Continuous Integration</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/UnrealEngine/Developer/ci.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="continuous-integration">
+<h1>Continuous Integration<a class="headerlink" href="#continuous-integration" title="Permalink to this headline"></a></h1>
+<p>You can setup a CI using github actions.
+Epic Games release UnrealEngine containers you can use if you are authenticated.
+You will need to use the slim version as the regular version is too big and will not download.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Using the free runner provided by github is extremely slow.
+Cooking a simple project can take up to 3h.
+The runner has only 2 cpus and 500 Mo of RAM.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Resources on the github action worker is limited.
+You might need to consider <a class="reference external" href="https://docs.github.com/en/actions/hosting-your-own-runners/about-self-hosted-runners">self-hosting it</a>.
+If your project is open source you need to be cautious about its running policy
+as it might be configured to run arbitrary code from any contributors.</p>
+</div>
+<section id="gitlab-runner">
+<h2>Gitlab Runner<a class="headerlink" href="#gitlab-runner" title="Permalink to this headline"></a></h2>
+<section id="windows">
+<h3>Windows<a class="headerlink" href="#windows" title="Permalink to this headline"></a></h3>
+</section>
+<section id="linux">
+<h3>Linux<a class="headerlink" href="#linux" title="Permalink to this headline"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo curl -L --output gitlab-runner https://gitlab-runner-downloads.s3.amazonaws.com/latest/binaries/gitlab-runner-linux-amd64
+
+sudo chmod +x gitlab-runner
+
+sudo useradd --comment <span class="s1">&#39;GitLab Runner&#39;</span> --create-home gitlab-runner --shell /bin/bash
+
+<span class="c1"># Remove logout script</span>
+sudo su gitlab-runner
+mv ~/.bash_logout ~/.bash_logout.bak
+<span class="nb">exit</span>
+
+<span class="c1"># Create the build directory</span>
+mkdir -p /opt/runner/bulds
+chown ./gitlab-runner:gitlab-runner /opt/runner/bulds
+
+<span class="c1"># Setup the runner</span>
+sudo ./gitlab-runner install --user<span class="o">=</span>gitlab-runner --working-directory<span class="o">=</span>/opt/runner
+sudo ./gitlab-runner start
+sudo ./gitlab-runner register --url https://gitlab.com/ --registration-token <span class="nv">$REGISTRATION_TOKEN</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>if you are using directory with different kind of owner you will need
+<cite>git config –global –add safe.directory /opt/Projects/GamekitDev/Plugins/Gamekit</cite></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can crosscompile to Linux from windows, but you will be able to run
+the compiled version. (Maybe WSL could be setup to make it work)</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When it comes to running the editor Linux is slower than windows.</p>
+</div>
+</section>
+</section>
+<section id="github-actions">
+<h2>Github Actions<a class="headerlink" href="#github-actions" title="Permalink to this headline"></a></h2>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tests</span><span class="w"></span>
+
+<span class="nt">on</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">push</span><span class="p p-Indicator">]</span><span class="w"></span>
+
+<span class="c1"># see https://docs.unrealengine.com/4.27/en-US/SharingAndReleasing/Containers/ContainersQuickStart/</span><span class="w"></span>
+<span class="nt">jobs</span><span class="p">:</span><span class="w"></span>
+<span class="nt">cooking</span><span class="p">:</span><span class="w"></span>
+<span class="w">   </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span><span class="w"></span>
+<span class="w">   </span><span class="nt">container</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ghcr.io/epicgames/unreal-engine:dev-slim-4.27</span><span class="w"></span>
+<span class="w">      </span><span class="nt">credentials</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">username</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ github.actor }}</span><span class="w"></span>
+<span class="w">      </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ secrets.CONTAINER_REGISTRY_PAT }}</span><span class="w"></span>
+
+<span class="w">      </span><span class="c1"># Github expects us to be root, not ue4</span><span class="w"></span>
+<span class="w">      </span><span class="c1"># ue4 wont be able to write anything anywhere</span><span class="w"></span>
+<span class="w">      </span><span class="c1"># NB: Cooking refuse to work as root</span><span class="w"></span>
+<span class="w">      </span><span class="nt">options</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;-u</span><span class="nv"> </span><span class="s">root&quot;</span><span class="w"></span>
+
+<span class="w">   </span><span class="nt">steps</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Update Git</span><span class="w"></span>
+<span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span><span class="w"></span>
+<span class="w">          </span><span class="no">sudo add-apt-repository ppa:git-core/ppa -y</span><span class="w"></span>
+<span class="w">          </span><span class="no">sudo apt-get update</span><span class="w"></span>
+<span class="w">          </span><span class="no">sudo apt-get install git -y</span><span class="w"></span>
+<span class="w">          </span><span class="no">git --version</span><span class="w"></span>
+
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v2</span><span class="w"></span>
+<span class="w">        </span><span class="nt">with</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">submodules</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
+
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Cook</span><span class="w"></span>
+<span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span><span class="w"></span>
+<span class="w">          </span><span class="no"># Paths need to be absolute or they are considered relative to the Engine</span><span class="w"></span>
+<span class="w">          </span><span class="no">export PROJECT=&quot;$(pwd)/Chessy.uproject&quot;</span><span class="w"></span>
+<span class="w">          </span><span class="no">export COOKED=&quot;$(pwd)/Cooked&quot;</span><span class="w"></span>
+<span class="w">          </span><span class="no">export LOGS=&quot;$(pwd)/Saved/UAT&quot;</span><span class="w"></span>
+
+<span class="w">          </span><span class="no"># As root we can change ownership of everything</span><span class="w"></span>
+<span class="w">          </span><span class="no">chown -R ue4 $(pwd)</span><span class="w"></span>
+
+<span class="w">          </span><span class="no"># Set a writable log location</span><span class="w"></span>
+<span class="w">          </span><span class="no">export uebp_LogFolder=$LOGS</span><span class="w"></span>
+
+<span class="w">          </span><span class="no"># Run as ue4 since it refuses to run as root</span><span class="w"></span>
+<span class="w">          </span><span class="no">runuser -u ue4 -- /home/ue4/UnrealEngine/Engine/Build/BatchFiles/RunUAT.sh \</span><span class="w"></span>
+<span class="w">            </span><span class="no">BuildCookRun                                           \</span><span class="w"></span>
+<span class="w">            </span><span class="no">-unattended                                            \</span><span class="w"></span>
+<span class="w">            </span><span class="no">-utf8output                                            \</span><span class="w"></span>
+<span class="w">            </span><span class="no">-platform=Linux                                        \</span><span class="w"></span>
+<span class="w">            </span><span class="no">-clientconfig=Shipping                                 \</span><span class="w"></span>
+<span class="w">            </span><span class="no">-serverconfig=Shipping                                 \</span><span class="w"></span>
+<span class="w">            </span><span class="no">-project=$PROJECT                                      \</span><span class="w"></span>
+<span class="w">            </span><span class="no">-noP4 -nodebuginfo -allmaps                            \</span><span class="w"></span>
+<span class="w">            </span><span class="no">-cook -build -stage -prereqs -pak -archive             \</span><span class="w"></span>
+<span class="w">            </span><span class="no">-archivedirectory=$COOKED</span><span class="w"></span>
+
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Upload</span><span class="w"></span>
+<span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/upload-artifact@v2</span><span class="w"></span>
+<span class="w">        </span><span class="nt">with</span><span class="p">:</span><span class="w"></span>
+<span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cooked-chessy-linux</span><span class="w"></span>
+<span class="w">          </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Cooked/*</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code class="docutils literal notranslate"><span class="pre">CONTAINER_REGISTRY_PAT</span></code> is a github personnal access token with read package permission</p>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="CommandLine.html" class="btn btn-neutral float-left" title="Command Line" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../Game/GameFlow.html" class="btn btn-neutral float-right" title="GameFlow" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

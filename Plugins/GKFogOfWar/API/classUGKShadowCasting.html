@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Class UGKShadowCasting &mdash; Gamekit  documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/collapsible-lists\css\tree_view.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/collapsible-lists\js\CollapsibleLists.compressed.js"></script>
+        <script src="../../../_static/collapsible-lists\js\apply-collapsible-lists.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Class UGKSharedBlueprint" href="classUGKSharedBlueprint.html" />
+    <link rel="prev" title="Class UGKRayCasting_Triangle" href="classUGKRayCasting__Triangle.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> Gamekit
+          </a>
+              <div class="version">
+                6c15b89
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Welcome</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../Welcome/Roadmap.html">RoadMap</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Plugins</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Fog of War</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../index.html#features">Features</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#useful-links">Useful Links</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../Welcome/Installations.html">Installations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Welcome/GettingStarted.html">Getting Started</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Welcome/FrequentQuestions.html">Frequently Asked Questions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Welcome/Changelog.html">Changelog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAGKFogOfWarCharacter.html">Class AGKFogOfWarCharacter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAGKFogOfWarGameMode.html">Class AGKFogOfWarGameMode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAGKFogOfWarGameState.html">Class AGKFogOfWarGameState</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAGKFogOfWarObstacle.html">Class AGKFogOfWarObstacle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAGKFogOfWarPawn.html">Class AGKFogOfWarPawn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAGKFogOfWarPlayerController.html">Class AGKFogOfWarPlayerController</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAGKFogOfWarPlayerState.html">Class AGKFogOfWarPlayerState</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAGKFogOfWarPrivatePlayerState.html">Class AGKFogOfWarPrivatePlayerState</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAGKFogOfWarTeam.html">Class AGKFogOfWarTeam</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAGKFogOfWarVolume.html">Class AGKFogOfWarVolume</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classFGKFogOfWarModule.html">Class FGKFogOfWarModule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classFGKFogOfWarShaderModule.html">Class FGKFogOfWarShaderModule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classIGKFogOfWarAgentInterface.html">Class IGKFogOfWarAgentInterface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classIGKFogOfWarGameStateInterface.html">Class IGKFogOfWarGameStateInterface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classIGKFogOfWarTestModule.html">Class IGKFogOfWarTestModule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKCanvasUpscaler.html">Class UGKCanvasUpscaler</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKCPUUpscalerStrategy.html">Class UGKCPUUpscalerStrategy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKExplorationTransform.html">Class UGKExplorationTransform</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKFogOfWarComponent.html">Class UGKFogOfWarComponent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKFogOfWarLibrary.html">Class UGKFogOfWarLibrary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKFogOfWarStrategy.html">Class UGKFogOfWarStrategy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKGPUUpscalerStrategy.html">Class UGKGPUUpscalerStrategy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKRayCasting__Less.html">Class UGKRayCasting_Less</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKRayCasting__Line.html">Class UGKRayCasting_Line</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKRayCasting__Triangle.html">Class UGKRayCasting_Triangle</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Class UGKShadowCasting</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#inheritance-relationships">Inheritance Relationships</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKSharedBlueprint.html">Class UGKSharedBlueprint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKTransformerStrategy.html">Class UGKTransformerStrategy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKTransformerStrategyCanvas.html">Class UGKTransformerStrategyCanvas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKTransformerStrategyTexture2D.html">Class UGKTransformerStrategyTexture2D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#indices-and-tables">Indices and tables</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../GKAbility/index.html">Ability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../GKLobby/index.html">Lobby</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../GKChat/index.html">Chat</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../GKMinimap/index.html">Minimap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../GKML/index.html">Machine Learning</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">UnrealEngine</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../UnrealEngine/index.html">Developer Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../UnrealEngine/index.html#game">Game</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../UnrealEngine/index.html#online">Online</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../UnrealEngine/index.html#others">Others</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../Tools/uetools.html">uetools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Tools/ranked.html">ranked</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Tools/resources.html">Resources</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Gamekit</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">&lt;no title&gt;</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Fog of War</a></li>
+      <li class="breadcrumb-item active">Class UGKShadowCasting</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/Plugins/GKFogOfWar/API/classUGKShadowCasting.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="class-ugkshadowcasting">
+<span id="exhale-class-classugkshadowcasting"></span><h1>Class UGKShadowCasting<a class="headerlink" href="#class-ugkshadowcasting" title="Permalink to this headline"></a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="../../../_build/exhale/file_Source_GKFogOfWar_Public_Strategy_GK_FoW_ShadowCasting.h.html#file-source-gkfogofwar-public-strategy-gk-fow-shadowcasting-h"><span class="std std-ref">File GK_FoW_ShadowCasting.h</span></a></p></li>
+</ul>
+<section id="inheritance-relationships">
+<h2>Inheritance Relationships<a class="headerlink" href="#inheritance-relationships" title="Permalink to this headline"></a></h2>
+<section id="base-type">
+<h3>Base Type<a class="headerlink" href="#base-type" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">UGKFogOfWarStrategy</span></code> (<a class="reference internal" href="../../../_build/exhale/classUGKFogOfWarStrategy.html#exhale-class-classugkfogofwarstrategy"><span class="std std-ref">Class UGKFogOfWarStrategy</span></a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this headline"></a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv416UGKShadowCasting">
+<span id="_CPPv316UGKShadowCasting"></span><span id="_CPPv216UGKShadowCasting"></span><span id="UGKShadowCasting"></span><span class="target" id="classUGKShadowCasting"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">UGKShadowCasting</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><a class="reference internal" href="classUGKFogOfWarStrategy.html#_CPPv419UGKFogOfWarStrategy" title="UGKFogOfWarStrategy"><span class="n"><span class="pre">UGKFogOfWarStrategy</span></span></a><a class="headerlink" href="#_CPPv416UGKShadowCasting" title="Permalink to this definition"></a><br /></dt>
+<dd><p>/rst</p>
+<p><em>Notes </em></p>
+<p>Maybe we can use this version to run on the dedicated server &amp; client. In addition the client could generate rendering data to display a more appealing fog of war.</p>
+<p><em>References </em></p>
+<p>.. [1] <code class="docutils literal notranslate"><span class="pre">Roguelike</span> <span class="pre">Vision</span> <span class="pre">Algorithms</span> <span class="pre">&lt;</span><span class="pre">&gt;</span></code>_ .. [2] <code class="docutils literal notranslate"><span class="pre">Symmetric</span> <span class="pre">Shadowcasting</span> <span class="pre">&lt;</span><span class="pre">&gt;</span></code>_</p>
+<p>/endrst </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16UGKShadowCasting16UGKShadowCastingEv">
+<span id="_CPPv3N16UGKShadowCasting16UGKShadowCastingEv"></span><span id="_CPPv2N16UGKShadowCasting16UGKShadowCastingEv"></span><span id="UGKShadowCasting::UGKShadowCasting"></span><span class="target" id="classUGKShadowCasting_1a328f7d95099f28916c47ce409bfe1f7e"></span><span class="sig-name descname"><span class="n"><span class="pre">UGKShadowCasting</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16UGKShadowCasting16UGKShadowCastingEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK16UGKShadowCasting21SupportVisbilityQueryEv">
+<span id="_CPPv3NK16UGKShadowCasting21SupportVisbilityQueryEv"></span><span id="_CPPv2NK16UGKShadowCasting21SupportVisbilityQueryEv"></span><span id="UGKShadowCasting::SupportVisbilityQueryC"></span><span class="target" id="classUGKShadowCasting_1a4b12d7e6eeb39ea79f3504c8e82f4fa8"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SupportVisbilityQuery</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4NK16UGKShadowCasting21SupportVisbilityQueryEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>return true when <code class="docutils literal notranslate"><span class="pre">IsVisible</span></code> is implemented </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK16UGKShadowCasting9IsVisibleE14FGenericTeamId7FVector">
+<span id="_CPPv3NK16UGKShadowCasting9IsVisibleE14FGenericTeamId7FVector"></span><span id="_CPPv2NK16UGKShadowCasting9IsVisibleE14FGenericTeamId7FVector"></span><span id="UGKShadowCasting::IsVisible__FGenericTeamId.FVectorC"></span><span class="target" id="classUGKShadowCasting_1a226d243b45d14f01284fb86dadbb23e8"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">IsVisible</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">FGenericTeamId</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">SeerTeam</span></span>, <span class="n"><span class="pre">FVector</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">Loc</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4NK16UGKShadowCasting9IsVisibleE14FGenericTeamId7FVector" title="Permalink to this definition"></a><br /></dt>
+<dd><p>return true if the Seer team sees the location </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK16UGKShadowCasting20IsVisible3x3ExtendedE14FGenericTeamId7FVector">
+<span id="_CPPv3NK16UGKShadowCasting20IsVisible3x3ExtendedE14FGenericTeamId7FVector"></span><span id="_CPPv2NK16UGKShadowCasting20IsVisible3x3ExtendedE14FGenericTeamId7FVector"></span><span id="UGKShadowCasting::IsVisible3x3Extended__FGenericTeamId.FVectorC"></span><span class="target" id="classUGKShadowCasting_1a895cb1e620f3a570c488693eb82133d1"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">IsVisible3x3Extended</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">FGenericTeamId</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">SeerTeam</span></span>, <span class="n"><span class="pre">FVector</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">Loc</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK16UGKShadowCasting20IsVisible3x3ExtendedE14FGenericTeamId7FVector" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16UGKShadowCasting10InitializeEP17AGKFogOfWarVolume">
+<span id="_CPPv3N16UGKShadowCasting10InitializeEP17AGKFogOfWarVolume"></span><span id="_CPPv2N16UGKShadowCasting10InitializeEP17AGKFogOfWarVolume"></span><span id="UGKShadowCasting::Initialize__AGKFogOfWarVolumeP"></span><span class="target" id="classUGKShadowCasting_1a88f55f20ef62088feef109fdc680a80b"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Initialize</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">class</span></span><span class="w"> </span><a class="reference internal" href="classAGKFogOfWarVolume.html#_CPPv417AGKFogOfWarVolume" title="AGKFogOfWarVolume"><span class="n"><span class="pre">AGKFogOfWarVolume</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">Volume</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N16UGKShadowCasting10InitializeEP17AGKFogOfWarVolume" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Initialize the strategy internal data given its fog volume. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16UGKShadowCasting17PreFactionFogDrawEv">
+<span id="_CPPv3N16UGKShadowCasting17PreFactionFogDrawEv"></span><span id="_CPPv2N16UGKShadowCasting17PreFactionFogDrawEv"></span><span id="UGKShadowCasting::PreFactionFogDraw"></span><span class="target" id="classUGKShadowCasting_1a0d55a1b364b7fec1be9800deddbc7843"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PreFactionFogDraw</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N16UGKShadowCasting17PreFactionFogDrawEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16UGKShadowCasting19DrawFactionFogDebugEP15AGKFogOfWarTeam">
+<span id="_CPPv3N16UGKShadowCasting19DrawFactionFogDebugEP15AGKFogOfWarTeam"></span><span id="_CPPv2N16UGKShadowCasting19DrawFactionFogDebugEP15AGKFogOfWarTeam"></span><span id="UGKShadowCasting::DrawFactionFogDebug__AGKFogOfWarTeamP"></span><span class="target" id="classUGKShadowCasting_1aac29b96712f585812ca9c22127df3853"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DrawFactionFogDebug</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">class</span></span><span class="w"> </span><a class="reference internal" href="classAGKFogOfWarTeam.html#_CPPv415AGKFogOfWarTeam" title="AGKFogOfWarTeam"><span class="n"><span class="pre">AGKFogOfWarTeam</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">FactionFog</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N16UGKShadowCasting19DrawFactionFogDebugEP15AGKFogOfWarTeam" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16UGKShadowCasting14DrawFactionFogEP15AGKFogOfWarTeam">
+<span id="_CPPv3N16UGKShadowCasting14DrawFactionFogEP15AGKFogOfWarTeam"></span><span id="_CPPv2N16UGKShadowCasting14DrawFactionFogEP15AGKFogOfWarTeam"></span><span id="UGKShadowCasting::DrawFactionFog__AGKFogOfWarTeamP"></span><span class="target" id="classUGKShadowCasting_1a36bfb4f8b4fb4f1ed0ddb09a3f8768b3"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DrawFactionFog</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">class</span></span><span class="w"> </span><a class="reference internal" href="classAGKFogOfWarTeam.html#_CPPv415AGKFogOfWarTeam" title="AGKFogOfWarTeam"><span class="n"><span class="pre">AGKFogOfWarTeam</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">FactionFog</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N16UGKShadowCasting14DrawFactionFogEP15AGKFogOfWarTeam" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Draw the fog of war for each factions. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16UGKShadowCasting26DrawFactionFogSingleThreadEP15AGKFogOfWarTeam">
+<span id="_CPPv3N16UGKShadowCasting26DrawFactionFogSingleThreadEP15AGKFogOfWarTeam"></span><span id="_CPPv2N16UGKShadowCasting26DrawFactionFogSingleThreadEP15AGKFogOfWarTeam"></span><span id="UGKShadowCasting::DrawFactionFogSingleThread__AGKFogOfWarTeamP"></span><span class="target" id="classUGKShadowCasting_1ac4746f8e2c91e499f1abbced7d964208"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DrawFactionFogSingleThread</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">class</span></span><span class="w"> </span><a class="reference internal" href="classAGKFogOfWarTeam.html#_CPPv415AGKFogOfWarTeam" title="AGKFogOfWarTeam"><span class="n"><span class="pre">AGKFogOfWarTeam</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">FactionFog</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16UGKShadowCasting26DrawFactionFogSingleThreadEP15AGKFogOfWarTeam" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16UGKShadowCasting22DrawFactionFogParallelEP15AGKFogOfWarTeam">
+<span id="_CPPv3N16UGKShadowCasting22DrawFactionFogParallelEP15AGKFogOfWarTeam"></span><span id="_CPPv2N16UGKShadowCasting22DrawFactionFogParallelEP15AGKFogOfWarTeam"></span><span id="UGKShadowCasting::DrawFactionFogParallel__AGKFogOfWarTeamP"></span><span class="target" id="classUGKShadowCasting_1ac4e0a4da73dee093500800a456cfa3e2"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DrawFactionFogParallel</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">class</span></span><span class="w"> </span><a class="reference internal" href="classAGKFogOfWarTeam.html#_CPPv415AGKFogOfWarTeam" title="AGKFogOfWarTeam"><span class="n"><span class="pre">AGKFogOfWarTeam</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">FactionFog</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16UGKShadowCasting22DrawFactionFogParallelEP15AGKFogOfWarTeam" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16UGKShadowCasting32DrawFactionFogParallel_AsyncTaskEP15AGKFogOfWarTeam">
+<span id="_CPPv3N16UGKShadowCasting32DrawFactionFogParallel_AsyncTaskEP15AGKFogOfWarTeam"></span><span id="_CPPv2N16UGKShadowCasting32DrawFactionFogParallel_AsyncTaskEP15AGKFogOfWarTeam"></span><span id="UGKShadowCasting::DrawFactionFogParallel_AsyncTask__AGKFogOfWarTeamP"></span><span class="target" id="classUGKShadowCasting_1ae0310e61ee8d58a9e545bc4c3b9f1302"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DrawFactionFogParallel_AsyncTask</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">class</span></span><span class="w"> </span><a class="reference internal" href="classAGKFogOfWarTeam.html#_CPPv415AGKFogOfWarTeam" title="AGKFogOfWarTeam"><span class="n"><span class="pre">AGKFogOfWarTeam</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">FactionFog</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16UGKShadowCasting32DrawFactionFogParallel_AsyncTaskEP15AGKFogOfWarTeam" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16UGKShadowCasting18PostFactionFogDrawEP15AGKFogOfWarTeam">
+<span id="_CPPv3N16UGKShadowCasting18PostFactionFogDrawEP15AGKFogOfWarTeam"></span><span id="_CPPv2N16UGKShadowCasting18PostFactionFogDrawEP15AGKFogOfWarTeam"></span><span id="UGKShadowCasting::PostFactionFogDraw__AGKFogOfWarTeamP"></span><span class="target" id="classUGKShadowCasting_1a424bd2a79059418472616acc76860ddd"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PostFactionFogDraw</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">class</span></span><span class="w"> </span><a class="reference internal" href="classAGKFogOfWarTeam.html#_CPPv415AGKFogOfWarTeam" title="AGKFogOfWarTeam"><span class="n"><span class="pre">AGKFogOfWarTeam</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">FactionFog</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16UGKShadowCasting18PostFactionFogDrawEP15AGKFogOfWarTeam" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16UGKShadowCasting25SupportsParallelExecutionEv">
+<span id="_CPPv3N16UGKShadowCasting25SupportsParallelExecutionEv"></span><span id="_CPPv2N16UGKShadowCasting25SupportsParallelExecutionEv"></span><span id="UGKShadowCasting::SupportsParallelExecution"></span><span class="target" id="classUGKShadowCasting_1a07f869b27d048a8b934f791557056419"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SupportsParallelExecution</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N16UGKShadowCasting25SupportsParallelExecutionEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16UGKShadowCasting4StopEv">
+<span id="_CPPv3N16UGKShadowCasting4StopEv"></span><span id="_CPPv2N16UGKShadowCasting4StopEv"></span><span id="UGKShadowCasting::Stop"></span><span class="target" id="classUGKShadowCasting_1a475ace7fb496e59ebb77b341409659e1"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Stop</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N16UGKShadowCasting4StopEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Stop fog of war drawing. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16UGKShadowCasting15DrawLineOfSightEP15AGKFogOfWarTeamP20UGKFogOfWarComponent">
+<span id="_CPPv3N16UGKShadowCasting15DrawLineOfSightEP15AGKFogOfWarTeamP20UGKFogOfWarComponent"></span><span id="_CPPv2N16UGKShadowCasting15DrawLineOfSightEP15AGKFogOfWarTeamP20UGKFogOfWarComponent"></span><span id="UGKShadowCasting::DrawLineOfSight__AGKFogOfWarTeamP.UGKFogOfWarComponentP"></span><span class="target" id="classUGKShadowCasting_1af8c9d7375401c97e984017e9b84d64c2"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DrawLineOfSight</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">class</span></span><span class="w"> </span><a class="reference internal" href="classAGKFogOfWarTeam.html#_CPPv415AGKFogOfWarTeam" title="AGKFogOfWarTeam"><span class="n"><span class="pre">AGKFogOfWarTeam</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">FactionFog</span></span>, <span class="k"><span class="pre">class</span></span><span class="w"> </span><a class="reference internal" href="classUGKFogOfWarComponent.html#_CPPv420UGKFogOfWarComponent" title="UGKFogOfWarComponent"><span class="n"><span class="pre">UGKFogOfWarComponent</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">c</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N16UGKShadowCasting15DrawLineOfSightEP15AGKFogOfWarTeamP20UGKFogOfWarComponent" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Draw the line of sight using the right method. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16UGKShadowCasting14UpdateBlockingEP20UGKFogOfWarComponent">
+<span id="_CPPv3N16UGKShadowCasting14UpdateBlockingEP20UGKFogOfWarComponent"></span><span id="_CPPv2N16UGKShadowCasting14UpdateBlockingEP20UGKFogOfWarComponent"></span><span id="UGKShadowCasting::UpdateBlocking__UGKFogOfWarComponentP"></span><span class="target" id="classUGKShadowCasting_1a91739d44e900a4fdfaefe1116c121393"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">UpdateBlocking</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">class</span></span><span class="w"> </span><a class="reference internal" href="classUGKFogOfWarComponent.html#_CPPv420UGKFogOfWarComponent" title="UGKFogOfWarComponent"><span class="n"><span class="pre">UGKFogOfWarComponent</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">c</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16UGKShadowCasting14UpdateBlockingEP20UGKFogOfWarComponent" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16UGKShadowCasting14UpdateTexturesEP15AGKFogOfWarTeam">
+<span id="_CPPv3N16UGKShadowCasting14UpdateTexturesEP15AGKFogOfWarTeam"></span><span id="_CPPv2N16UGKShadowCasting14UpdateTexturesEP15AGKFogOfWarTeam"></span><span id="UGKShadowCasting::UpdateTextures__AGKFogOfWarTeamP"></span><span class="target" id="classUGKShadowCasting_1afb7b392d09b05c0e3021c1bbde673d2e"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">UpdateTextures</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">class</span></span><span class="w"> </span><a class="reference internal" href="classAGKFogOfWarTeam.html#_CPPv415AGKFogOfWarTeam" title="AGKFogOfWarTeam"><span class="n"><span class="pre">AGKFogOfWarTeam</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">TeamFog</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16UGKShadowCasting14UpdateTexturesEP15AGKFogOfWarTeam" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16UGKShadowCasting23RetrieveBlockingTextureEP10UTexture2D">
+<span id="_CPPv3N16UGKShadowCasting23RetrieveBlockingTextureEP10UTexture2D"></span><span id="_CPPv2N16UGKShadowCasting23RetrieveBlockingTextureEP10UTexture2D"></span><span id="UGKShadowCasting::RetrieveBlockingTexture__UTexture2DP"></span><span class="target" id="classUGKShadowCasting_1aa2fb0b13a8be6316e5907408d61d5bed"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">UTexture2D</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">RetrieveBlockingTexture</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">UTexture2D</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">DestTexture</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">nullptr</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N16UGKShadowCasting23RetrieveBlockingTextureEP10UTexture2D" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16UGKShadowCasting25ExtractLandscapeHeightMapEv">
+<span id="_CPPv3N16UGKShadowCasting25ExtractLandscapeHeightMapEv"></span><span id="_CPPv2N16UGKShadowCasting25ExtractLandscapeHeightMapEv"></span><span id="UGKShadowCasting::ExtractLandscapeHeightMap"></span><span class="target" id="classUGKShadowCasting_1a064a5d0ff77177570dd36cbde6134cbd"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ExtractLandscapeHeightMap</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16UGKShadowCasting25ExtractLandscapeHeightMapEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16UGKShadowCasting17GetFactionTextureE5FNameb">
+<span id="_CPPv3N16UGKShadowCasting17GetFactionTextureE5FNameb"></span><span id="_CPPv2N16UGKShadowCasting17GetFactionTextureE5FNameb"></span><span id="UGKShadowCasting::GetFactionTexture__FName.b"></span><span class="target" id="classUGKShadowCasting_1a37787bc1f4cdc0e76b0ccc8ac5bee6a9"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="n"><span class="pre">UTexture</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">GetFactionTexture</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">FName</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">name</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">CreateRenderTarget</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">true</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N16UGKShadowCasting17GetFactionTextureE5FNameb" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Retrieve the Texture used to draw the fog of war for a given faction. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16UGKShadowCasting19GetFactionTexture2DE5FNameb">
+<span id="_CPPv3N16UGKShadowCasting19GetFactionTexture2DE5FNameb"></span><span id="_CPPv2N16UGKShadowCasting19GetFactionTexture2DE5FNameb"></span><span id="UGKShadowCasting::GetFactionTexture2D__FName.b"></span><span class="target" id="classUGKShadowCasting_1ad0d9dd3dbc3067101bbce6e3416e4ccd"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="n"><span class="pre">UTexture2D</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">GetFactionTexture2D</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">FName</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">name</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">CreateRenderTarget</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">true</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16UGKShadowCasting19GetFactionTexture2DE5FNameb" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16UGKShadowCasting32GetPreviousFrameFactionTexture2DE5FNameb">
+<span id="_CPPv3N16UGKShadowCasting32GetPreviousFrameFactionTexture2DE5FNameb"></span><span id="_CPPv2N16UGKShadowCasting32GetPreviousFrameFactionTexture2DE5FNameb"></span><span id="UGKShadowCasting::GetPreviousFrameFactionTexture2D__FName.b"></span><span class="target" id="classUGKShadowCasting_1a39836b2335e6b10a5b65f410d25d5ba0"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="n"><span class="pre">UTexture2D</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">GetPreviousFrameFactionTexture2D</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">FName</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">name</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">bCreateRenderTarget</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">true</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16UGKShadowCasting32GetPreviousFrameFactionTexture2DE5FNameb" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16UGKShadowCasting15CreateTexture2DEv">
+<span id="_CPPv3N16UGKShadowCasting15CreateTexture2DEv"></span><span id="_CPPv2N16UGKShadowCasting15CreateTexture2DEv"></span><span id="UGKShadowCasting::CreateTexture2D"></span><span class="target" id="classUGKShadowCasting_1a2e0ce232a96ce359356b0bfe00946b37"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="n"><span class="pre">UTexture2D</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">CreateTexture2D</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16UGKShadowCasting15CreateTexture2DEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16UGKShadowCasting30GetPreviousFrameFactionTextureE5FNameb">
+<span id="_CPPv3N16UGKShadowCasting30GetPreviousFrameFactionTextureE5FNameb"></span><span id="_CPPv2N16UGKShadowCasting30GetPreviousFrameFactionTextureE5FNameb"></span><span id="UGKShadowCasting::GetPreviousFrameFactionTexture__FName.b"></span><span class="target" id="classUGKShadowCasting_1a000d1a9c8ecbaf6a8a5c1565dc5eec89"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="n"><span class="pre">UTexture</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">GetPreviousFrameFactionTexture</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">FName</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">name</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">CreateRenderTarget</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">true</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16UGKShadowCasting30GetPreviousFrameFactionTextureE5FNameb" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Retrieve the Texture used to draw the fog of war for a given faction. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16UGKShadowCasting30UpdatePreviousFrameTexturesTexEP15AGKFogOfWarTeam">
+<span id="_CPPv3N16UGKShadowCasting30UpdatePreviousFrameTexturesTexEP15AGKFogOfWarTeam"></span><span id="_CPPv2N16UGKShadowCasting30UpdatePreviousFrameTexturesTexEP15AGKFogOfWarTeam"></span><span id="UGKShadowCasting::UpdatePreviousFrameTexturesTex__AGKFogOfWarTeamP"></span><span class="target" id="classUGKShadowCasting_1a31975e62d4712c5cd8fd9c79f11a30f5"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">UpdatePreviousFrameTexturesTex</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">class</span></span><span class="w"> </span><a class="reference internal" href="classAGKFogOfWarTeam.html#_CPPv415AGKFogOfWarTeam" title="AGKFogOfWarTeam"><span class="n"><span class="pre">AGKFogOfWarTeam</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">TeamFog</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16UGKShadowCasting30UpdatePreviousFrameTexturesTexEP15AGKFogOfWarTeam" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16UGKShadowCasting27UpdatePreviousFrameTexturesEP15AGKFogOfWarTeam">
+<span id="_CPPv3N16UGKShadowCasting27UpdatePreviousFrameTexturesEP15AGKFogOfWarTeam"></span><span id="_CPPv2N16UGKShadowCasting27UpdatePreviousFrameTexturesEP15AGKFogOfWarTeam"></span><span id="UGKShadowCasting::UpdatePreviousFrameTextures__AGKFogOfWarTeamP"></span><span class="target" id="classUGKShadowCasting_1a3289b3743cdf1c4ceb58bf21feefe53a"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">UpdatePreviousFrameTextures</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">class</span></span><span class="w"> </span><a class="reference internal" href="classAGKFogOfWarTeam.html#_CPPv415AGKFogOfWarTeam" title="AGKFogOfWarTeam"><span class="n"><span class="pre">AGKFogOfWarTeam</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">TeamFog</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16UGKShadowCasting27UpdatePreviousFrameTexturesEP15AGKFogOfWarTeam" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16UGKShadowCasting10SetVisibleE10FIntVector5uint8">
+<span id="_CPPv3N16UGKShadowCasting10SetVisibleE10FIntVector5uint8"></span><span id="_CPPv2N16UGKShadowCasting10SetVisibleE10FIntVector5uint8"></span><span id="UGKShadowCasting::SetVisible__FIntVector.uint8"></span><span class="target" id="classUGKShadowCasting_1aa5f341fcbf37a5fbb22b981d0eb1d0ae"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SetVisible</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">FIntVector</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">Location</span></span>, <span class="n"><span class="pre">uint8</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">TeamId</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16UGKShadowCasting10SetVisibleE10FIntVector5uint8" title="Permalink to this definition"></a><br /></dt>
+<dd><p>SetVisible marks a tile as visible, given its X and Y coordinates. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16UGKShadowCasting15IsBlockingLightE10FIntVector">
+<span id="_CPPv3N16UGKShadowCasting15IsBlockingLightE10FIntVector"></span><span id="_CPPv2N16UGKShadowCasting15IsBlockingLightE10FIntVector"></span><span id="UGKShadowCasting::IsBlockingLight__FIntVector"></span><span class="target" id="classUGKShadowCasting_1a2cd9dbdbe7f2f0cbf1f0354a9f812b66"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">IsBlockingLight</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">FIntVector</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">Location</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16UGKShadowCasting15IsBlockingLightE10FIntVector" title="Permalink to this definition"></a><br /></dt>
+<dd><p>BlocksLight takes X and Y coordinates of a tile and determines whether the given tile blocks the passage of light. The function must be able to accept coordinates that are out of bounds. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16UGKShadowCasting11GetDistanceE10FIntVector10FIntVector">
+<span id="_CPPv3N16UGKShadowCasting11GetDistanceE10FIntVector10FIntVector"></span><span id="_CPPv2N16UGKShadowCasting11GetDistanceE10FIntVector10FIntVector"></span><span id="UGKShadowCasting::GetDistance__FIntVector.FIntVector"></span><span class="target" id="classUGKShadowCasting_1a564d466b260fbc32cf45183c61bdf1c2"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GetDistance</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">FIntVector</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">Origin</span></span>, <span class="n"><span class="pre">FIntVector</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">Diff</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16UGKShadowCasting11GetDistanceE10FIntVector10FIntVector" title="Permalink to this definition"></a><br /></dt>
+<dd><p>GetDistance returns the distance from the point to the origin. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16UGKShadowCasting18GetDistanceSquaredE10FIntVector10FIntVector">
+<span id="_CPPv3N16UGKShadowCasting18GetDistanceSquaredE10FIntVector10FIntVector"></span><span id="_CPPv2N16UGKShadowCasting18GetDistanceSquaredE10FIntVector10FIntVector"></span><span id="UGKShadowCasting::GetDistanceSquared__FIntVector.FIntVector"></span><span class="target" id="classUGKShadowCasting_1ad861e3efe40fdabfbaea134ad2fbc944"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GetDistanceSquared</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">FIntVector</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">Origin</span></span>, <span class="n"><span class="pre">FIntVector</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">Diff</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16UGKShadowCasting18GetDistanceSquaredE10FIntVector10FIntVector" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK16UGKShadowCasting15IsPositionValidE10FIntVector">
+<span id="_CPPv3NK16UGKShadowCasting15IsPositionValidE10FIntVector"></span><span id="_CPPv2NK16UGKShadowCasting15IsPositionValidE10FIntVector"></span><span id="UGKShadowCasting::IsPositionValid__FIntVectorC"></span><span class="target" id="classUGKShadowCasting_1a771f56dee00d623277f475c0fa732e2e"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">IsPositionValid</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">FIntVector</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">Pos</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK16UGKShadowCasting15IsPositionValidE10FIntVector" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N16UGKShadowCasting9LandscapeE">
+<span id="_CPPv3N16UGKShadowCasting9LandscapeE"></span><span id="_CPPv2N16UGKShadowCasting9LandscapeE"></span><span id="UGKShadowCasting::Landscape__ALandscapeP"></span><span class="target" id="classUGKShadowCasting_1aa1c3c2c042ac07702bcfbe7a44cdb8da"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="n"><span class="pre">ALandscape</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">Landscape</span></span></span><a class="headerlink" href="#_CPPv4N16UGKShadowCasting9LandscapeE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Landscape we use to extract landscape height. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-protected-functions">Protected Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK16UGKShadowCasting22TextureQuery_IsVisibleE14FGenericTeamId10FIntVector">
+<span id="_CPPv3NK16UGKShadowCasting22TextureQuery_IsVisibleE14FGenericTeamId10FIntVector"></span><span id="_CPPv2NK16UGKShadowCasting22TextureQuery_IsVisibleE14FGenericTeamId10FIntVector"></span><span id="UGKShadowCasting::TextureQuery_IsVisible__FGenericTeamId.FIntVectorC"></span><span class="target" id="classUGKShadowCasting_1abb89c8e6485b4dae20ae499d505ce2b1"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">TextureQuery_IsVisible</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">FGenericTeamId</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">SeerTeam</span></span>, <span class="n"><span class="pre">FIntVector</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">BufferPos</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK16UGKShadowCasting22TextureQuery_IsVisibleE14FGenericTeamId10FIntVector" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="classUGKRayCasting__Triangle.html" class="btn btn-neutral float-left" title="Class UGKRayCasting_Triangle" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="classUGKSharedBlueprint.html" class="btn btn-neutral float-right" title="Class UGKSharedBlueprint" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

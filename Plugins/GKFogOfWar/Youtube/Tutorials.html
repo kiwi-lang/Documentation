@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tutorials &mdash; Gamekit  documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/collapsible-lists\css\tree_view.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/collapsible-lists\js\CollapsibleLists.compressed.js"></script>
+        <script src="../../../_static/collapsible-lists\js\apply-collapsible-lists.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> Gamekit
+          </a>
+              <div class="version">
+                6c15b89
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Welcome</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../Welcome/Roadmap.html">RoadMap</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Plugins</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Fog of War</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../GKAbility/index.html">Ability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../GKLobby/index.html">Lobby</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../GKChat/index.html">Chat</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../GKMinimap/index.html">Minimap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../GKML/index.html">Machine Learning</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">UnrealEngine</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../UnrealEngine/index.html">Developer Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../UnrealEngine/index.html#game">Game</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../UnrealEngine/index.html#online">Online</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../UnrealEngine/index.html#others">Others</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../Tools/uetools.html">uetools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Tools/ranked.html">ranked</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Tools/resources.html">Resources</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Gamekit</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Tutorials</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/Plugins/GKFogOfWar/Youtube/Tutorials.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="tutorials">
+<h1>Tutorials<a class="headerlink" href="#tutorials" title="Permalink to this headline"></a></h1>
+</section>
+<section id="getting-started">
+<h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline"></a></h1>
+<blockquote>
+<div><p>The plugin provides everything out of the box so you can get started right away
+with minimal amount of setting up.</p>
+<p>Just use the <cite>GKFoW_GameMode</cite>.</p>
+</div></blockquote>
+<ul>
+<li><p>Installation</p>
+<blockquote>
+<div><p>Once you are ready to experiment, you can start by inheriting from the plugin own blueprint</p>
+<p>NOTE: you do not need a CPP project to use this but for packaging purposes it is better to use one
+to turn a Blueprint project into a C++ project you can use uetools to do the conversion seamlessly</p>
+</div></blockquote>
+</li>
+</ul>
+<ol class="arabic">
+<li><p>Create a Landscape for the base terrain</p></li>
+<li><p>Create a new GameState</p>
+<p>This hold the team info of the game</p>
+</li>
+<li><p>Tag starting point with the right team</p></li>
+<li><p>Add A fog of War volume</p>
+<p>The volume is used to manage the extent of the fog as well as managing the replication
+of each actors that belong to the fog of war</p>
+<ol class="arabic">
+<li><p>Configure the Fog of war</p>
+<ol class="arabic">
+<li><p>Strategy: ShadowCasting</p></li>
+<li><p>Grid: Square size used to represent the fog</p></li>
+<li><p>Transform
+#.  GPU Upscaler Fast</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>With Smoothing</p></li>
+</ol>
+</div></blockquote>
+<dl class="simple">
+<dt># Exploration Transform</dt><dd><ol class="arabic simple">
+<li><p>Use Upscaled Version</p></li>
+<li><p>Use Materials</p></li>
+<li><p>Texture Size</p></li>
+</ol>
+</dd>
+</dl>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>Create a new character that inherit from GKFoW_Character
+NOTE: this is important for network games because the underlying implementation in C++
+it what drives the replication and it cannot be done in blueprint</p></li>
+<li><p>Create obstacles that block vision</p>
+<p>Default behaviour is to use the collision bounding box to render the obstacle on the fog of war
+You can use a more precise shape by implementing the FogOfWarAgent interface and provide the collision shape
+to use to render the obstacle</p>
+<p>NOTE: for better result make sure you align your obstacles to the grid</p>
+</li>
+<li><p>Play</p></li>
+</ol>
+</section>
+<section id="replication">
+<h1>Replication<a class="headerlink" href="#replication" title="Permalink to this headline"></a></h1>
+<p>The FogOfWarVolume authority draws the fog of war and use it to determine which character is visible by whom.
+If the enemy character is visible it gets replicated. Allies always get replicated.</p>
+<p>On the client side only the components that are visible gets replicated and only those components are drawn on the fog
+of the client.</p>
+<p>This means clients only have a limited amount of information, this is important for competitive games;
+If it was not the case acheater could try to modify the RAM to expose enemies that should be invisible.
+In our case the data is not even on the client and the attack would fail.</p>
+</section>
+<section id="performance">
+<h1>Performance<a class="headerlink" href="#performance" title="Permalink to this headline"></a></h1>
+<ul>
+<li><p>To increase performance you can</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Increase the Grid Size</p></li>
+<li><p>Decrease the Volume Size</p></li>
+<li><p>Decrease the number of units</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</section>
+<section id="debugging">
+<h1>Debugging<a class="headerlink" href="#debugging" title="Permalink to this headline"></a></h1>
+<ul class="simple">
+<li><p>To help users see the fog and how to obstacles are drawn on the map,</p></li>
+</ul>
+<p>we can drag <cite>GKFoW_DecalView</cite> which will render the obstacles, vision and exploration texture on different channel.
+This can help users detect misconfiguration</p>
+</section>
+<section id="styling">
+<h1>Styling<a class="headerlink" href="#styling" title="Permalink to this headline"></a></h1>
+<blockquote>
+<div><p>Because the fog is replicated and it needs to be drawn on the server we cannot rely on GPU
+to draw the fog, it needs to leverage the CPU alone.</p>
+<p>To make sure the fog is fast has to be drawn and on very low resolution texture.
+If we were to use this texture directly the resutling effect would be very distracting.</p>
+<ul class="simple">
+<li><p>Show Fog Without Upscaling</p></li>
+</ul>
+<p>To remediate this shortcoming the low resolution texture undergoes 2 main transformations;
+an 4x upscaling that will smooth out the edges of the fog and temporal smoothing that will
+soften the transition between frames when the character is moving.</p>
+<ul class="simple">
+<li><p>Show Fog With Upscaling - Without Smoothing</p></li>
+<li><p>Show Fog With Upscaling &amp; Smoothing</p></li>
+</ul>
+<p>While it is recommended to use Upscaling with Smothing the original texture is available.</p>
+</div></blockquote>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

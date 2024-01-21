@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tips &amp; Tricks &mdash; Gamekit  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/collapsible-lists\css\tree_view.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/collapsible-lists\js\CollapsibleLists.compressed.js"></script>
+        <script src="../../_static/collapsible-lists\js\apply-collapsible-lists.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Controllers" href="Controllers/index.html" />
+    <link rel="prev" title="Cheating" href="../Online/Cheating.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> Gamekit
+          </a>
+              <div class="version">
+                6c15b89
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Welcome</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Welcome/Roadmap.html">RoadMap</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Plugins</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Plugins/GKFogOfWar/index.html">Fog of War</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Plugins/GKAbility/index.html">Ability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Plugins/GKLobby/index.html">Lobby</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Plugins/GKChat/index.html">Chat</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Plugins/GKMinimap/index.html">Minimap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Plugins/GKML/index.html">Machine Learning</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">UnrealEngine</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Developer Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html#game">Game</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html#online">Online</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html#others">Others</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Tips &amp; Tricks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#logging-values">Logging values</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#doxygen-friendly">Doxygen Friendly</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#generating-textures">Generating Textures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#others">Others</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Controllers/index.html">Controllers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Cameras/index.html">Cameras</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Cameras/configure.html">Cameras</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Modding/index.html">Modding &amp; DLC</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Tools/uetools.html">uetools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Tools/ranked.html">ranked</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Tools/resources.html">Resources</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Gamekit</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Developer Guide</a></li>
+      <li class="breadcrumb-item active">Tips &amp; Tricks</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/UnrealEngine/Tips/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="tips-tricks">
+<h1>Tips &amp; Tricks<a class="headerlink" href="#tips-tricks" title="Permalink to this headline"></a></h1>
+<p>Useful examples <a class="reference external" href="https://www.ue4community.wiki/logging-lgpidy6i">https://www.ue4community.wiki/logging-lgpidy6i</a></p>
+<ul class="simple">
+<li><p>Prefer Implementable Event of Delegate Assignment
+Users can receive the event right away in the case of implementable event
+Blueprint Assignable have to be assigned first during begin play
+which might happen after the event is fired!</p></li>
+</ul>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">UFUNCTION</span><span class="p">(</span><span class="n">BlueprintImplementableEvent</span><span class="p">,</span><span class="w"> </span><span class="n">Category</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Team&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">meta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">DisplayName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;OnTeamAssigned&quot;</span><span class="p">))</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="n">ReceiveTeamAssigned</span><span class="p">(</span><span class="n">FGenericTeamId</span><span class="w"> </span><span class="n">NewTeam</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">static</span><span class="w"> </span><span class="n">FName</span><span class="w"> </span><span class="n">NAME_AGKCharacterBase_ReceiveTeamAssigned</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">FName</span><span class="p">(</span><span class="n">TEXT</span><span class="p">(</span><span class="s">&quot;ReceiveTeamAssigned&quot;</span><span class="p">));</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">AGKCharacterBase::ReceiveTeamAssigned</span><span class="p">(</span><span class="n">FGenericTeamId</span><span class="w"> </span><span class="n">NewTeam</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">GKCharacterBase_eventReceiveTeamAssigned_Parms</span><span class="w"> </span><span class="n">Parms</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">Parms</span><span class="p">.</span><span class="n">NewTeam</span><span class="o">=</span><span class="n">NewTeam</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">ProcessEvent</span><span class="p">(</span><span class="n">FindFunctionChecked</span><span class="p">(</span><span class="n">NAME_AGKCharacterBase_ReceiveTeamAssigned</span><span class="p">),</span><span class="o">&amp;</span><span class="n">Parms</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<section id="logging-values">
+<h2>Logging values<a class="headerlink" href="#logging-values" title="Permalink to this headline"></a></h2>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">FName</span><span class="w"> </span><span class="n">name</span><span class="p">;</span><span class="w"></span>
+<span class="n">UE_LOG</span><span class="p">(</span><span class="n">LogChessy</span><span class="p">,</span><span class="w"> </span><span class="n">Verbose</span><span class="p">,</span><span class="w"> </span><span class="n">TEXT</span><span class="p">(</span><span class="s">&quot;Creating a new render target for %s&quot;</span><span class="p">),</span><span class="w"> </span><span class="o">*</span><span class="n">name</span><span class="p">.</span><span class="n">ToString</span><span class="p">());</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Finding an instance by type/class</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">TSubclassOf</span><span class="o">&lt;</span><span class="n">AFogOfWarVolume</span><span class="o">&gt;</span><span class="w"> </span><span class="n">classToFind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AFogOfWarVolume</span><span class="o">::</span><span class="n">StaticClass</span><span class="p">();</span><span class="w"></span>
+<span class="n">UGameplayStatics</span><span class="o">::</span><span class="n">GetAllActorsOfClass</span><span class="p">(</span><span class="n">GetWorld</span><span class="p">(),</span><span class="w"> </span><span class="n">classToFind</span><span class="p">,</span><span class="w"> </span><span class="n">OutActors</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="doxygen-friendly">
+<h2>Doxygen Friendly<a class="headerlink" href="#doxygen-friendly" title="Permalink to this headline"></a></h2>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Do not put arguments to UCLASS, doxygen does not like it, the whole header file will get ignored</span>
+<span class="n">UCLASS</span><span class="p">(</span><span class="w"> </span><span class="n">ClassGroup</span><span class="o">=</span><span class="p">(</span><span class="n">Custom</span><span class="p">),</span><span class="w"> </span><span class="n">meta</span><span class="o">=</span><span class="p">(</span><span class="n">BlueprintSpawnableComponent</span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
+<span class="k">class</span><span class="w"> </span><span class="nc">GAMEKIT_API</span><span class="w"> </span><span class="n">UFogOfWarComponent</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">UActorComponent</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">//</span>
+<span class="p">};</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="c1">// UE_LOG(LogTemp, Warning, TEXT(&quot;%fx%f&quot;), CamDir.X, CamDir.Y);</span>
+
+
+<span class="w">    </span><span class="n">InputComponent</span><span class="o">-&gt;</span><span class="n">BindAction</span><span class="p">(</span><span class="s">&quot;SetDestination&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">IE_Pressed</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">AChessyPlayerController</span><span class="o">::</span><span class="n">OnSetDestinationPressed</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">InputComponent</span><span class="o">-&gt;</span><span class="n">BindAction</span><span class="p">(</span><span class="s">&quot;SetDestination&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">IE_Released</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">AChessyPlayerController</span><span class="o">::</span><span class="n">OnSetDestinationReleased</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// support touch devices</span>
+<span class="w">    </span><span class="n">InputComponent</span><span class="o">-&gt;</span><span class="n">BindTouch</span><span class="p">(</span><span class="n">EInputEvent</span><span class="o">::</span><span class="n">IE_Pressed</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">AChessyPlayerController</span><span class="o">::</span><span class="n">MoveToTouchLocation</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">InputComponent</span><span class="o">-&gt;</span><span class="n">BindTouch</span><span class="p">(</span><span class="n">EInputEvent</span><span class="o">::</span><span class="n">IE_Repeat</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">AChessyPlayerController</span><span class="o">::</span><span class="n">MoveToTouchLocation</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">InputComponent</span><span class="o">-&gt;</span><span class="n">BindAction</span><span class="p">(</span><span class="s">&quot;ResetVR&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">IE_Pressed</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">AChessyPlayerController</span><span class="o">::</span><span class="n">OnResetVR</span><span class="p">);</span><span class="w"></span>
+
+<span class="n">UFUNCTION</span><span class="p">(</span><span class="n">BlueprintCallable</span><span class="p">)</span><span class="w"></span>
+
+<span class="n">UPROPERTY</span><span class="p">(</span><span class="n">EditAnywhere</span><span class="p">,</span><span class="w"> </span><span class="n">BlueprintReadWrite</span><span class="p">,</span><span class="w"> </span><span class="n">Category</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GameSpeed</span><span class="p">)</span><span class="w"></span>
+
+<span class="n">CameraBoom</span><span class="o">-&gt;</span><span class="n">SetupAttachment</span><span class="p">(</span><span class="n">RootScene</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="generating-textures">
+<h2>Generating Textures<a class="headerlink" href="#generating-textures" title="Permalink to this headline"></a></h2>
+<p>You can use blender to generate texture and use an orthographic camera to export the render as texture.</p>
+<ul class="simple">
+<li><p>Create square plan with the material we want to export</p></li>
+<li><p>Set Output Resolution to 1024x1024</p></li>
+<li><p>Set Camera Type to Orthographic</p></li>
+<li><p>Set Camera Orthographic scale to match the plan</p></li>
+<li><p>Render (F12), save render to file</p></li>
+</ul>
+<img alt="../../_images/Blender.png" src="../../_images/Blender.png" />
+<img alt="../../_images/OrthographicRender.png" src="../../_images/OrthographicRender.png" />
+</section>
+<section id="others">
+<h2>Others<a class="headerlink" href="#others" title="Permalink to this headline"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Controllers/index.html">Controllers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Cameras/index.html">Cameras</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Cameras/configure.html">Cameras</a></li>
+</ul>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../Online/Cheating.html" class="btn btn-neutral float-left" title="Cheating" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Controllers/index.html" class="btn btn-neutral float-right" title="Controllers" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

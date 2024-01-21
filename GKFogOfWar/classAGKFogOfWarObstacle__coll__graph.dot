@@ -1,0 +1,42 @@
+digraph "AGKFogOfWarObstacle"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="AGKFogOfWarObstacle",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="APawn",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",tooltip=" "];
+  Node3 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="IGKFogOfWarAgentInterface",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classIGKFogOfWarAgentInterface.html",tooltip=" "];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" FoWComponent" ,fontname="Helvetica"];
+  Node4 [label="UGKFogOfWarComponent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classUGKFogOfWarComponent.html",tooltip=" "];
+  Node5 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="UActorComponent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",tooltip=" "];
+  Node6 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" ObstacleConfig" ,fontname="Helvetica"];
+  Node6 [label="FGKObstacleConfig",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structFGKObstacleConfig.html",tooltip=" "];
+  Node7 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" ConeConfig" ,fontname="Helvetica"];
+  Node7 [label="FGKConeConfiguration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structFGKConeConfiguration.html",tooltip=" "];
+  Node8 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" Bot\nMid\nTop" ,fontname="Helvetica"];
+  Node8 [label="FGKConeRow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structFGKConeRow.html",tooltip=" "];
+  Node9 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" FogOfWarVolume" ,fontname="Helvetica"];
+  Node9 [label="AGKFogOfWarVolume",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classAGKFogOfWarVolume.html",tooltip=" "];
+  Node10 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="AVolume",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",tooltip=" "];
+  Node11 -> Node9 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" Strategy" ,fontname="Helvetica"];
+  Node11 [label="UGKFogOfWarStrategy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classUGKFogOfWarStrategy.html",tooltip=" "];
+  Node12 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="UObject",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",tooltip=" "];
+  Node9 -> Node11 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" FogOfWarVolume" ,fontname="Helvetica"];
+  Node13 -> Node9 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" Upscaler" ,fontname="Helvetica"];
+  Node13 [label="UGKTransformerStrategy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classUGKTransformerStrategy.html",tooltip=" "];
+  Node12 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 -> Node13 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" FogOfWarVolume" ,fontname="Helvetica"];
+  Node14 -> Node9 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" Exploration" ,fontname="Helvetica"];
+  Node14 [label="UGKExplorationTransform",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classUGKExplorationTransform.html",tooltip=" "];
+  Node15 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="UGKTransformerStrategyCanvas",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classUGKTransformerStrategyCanvas.html",tooltip=" "];
+  Node13 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 -> Node9 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" Stats" ,fontname="Helvetica"];
+  Node16 [label="FGKFogStats",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structFGKFogStats.html",tooltip=" "];
+}

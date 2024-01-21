@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Troubleshooting &mdash; Gamekit  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/collapsible-lists\css\tree_view.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/collapsible-lists\js\CollapsibleLists.compressed.js"></script>
+        <script src="../../_static/collapsible-lists\js\apply-collapsible-lists.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> Gamekit
+          </a>
+              <div class="version">
+                6c15b89
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Welcome</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Welcome/Roadmap.html">RoadMap</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Plugins</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Plugins/GKFogOfWar/index.html">Fog of War</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Plugins/GKAbility/index.html">Ability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Plugins/GKLobby/index.html">Lobby</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Plugins/GKChat/index.html">Chat</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Plugins/GKMinimap/index.html">Minimap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Plugins/GKML/index.html">Machine Learning</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">UnrealEngine</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Developer Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html#game">Game</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html#online">Online</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html#others">Others</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Tools/uetools.html">uetools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Tools/ranked.html">ranked</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Tools/resources.html">Resources</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Gamekit</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Troubleshooting</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/UnrealEngine/Developer/Troubleshooting.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="troubleshooting">
+<h1>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline"></a></h1>
+<ul class="simple">
+<li><dl class="simple">
+<dt>GameplayCues are not playing:</dt><dd><ul>
+<li><p>Make sure the GameplayTag for each cues exist</p></li>
+<li><p>Make sure the GameplayCue lookup path is set correctly</p></li>
+<li><p>Recompile each gamecue to force the engine to pick them up</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Cooldowns are not blocking:</dt><dd><ul>
+<li><p>Make sure the GameplayTag are setup</p></li>
+<li><p>Recompile each Abilities to force the engine to pick them up</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Gamekit Content is not found during cooking</dt><dd><ul>
+<li><p>Make sure Gamekit Engine version match the engine version you are using; UAT skip mouting content folder that have mismatched engine versions.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Input are not responding:</dt><dd><ul>
+<li><p>Make sure enhanced input plugin is enabled</p></li>
+<li><dl class="simple">
+<dt>Make sure project config use enhanced input Component class as default</dt><dd><ul>
+<li><p>Default Player Input Class: EnhancedPlayerInput</p></li>
+<li><p>Default Input Component Class: EnhancedInputComponent</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Materials are defaulting to UE placeholder</dt><dd><ul>
+<li><p>Recompile shaders</p></li>
+<li><p>Make sure the constructor sets the Materials</p></li>
+<li><p>For decals it is better to call its own CreateDynamicMaterial method than the Blueprint callable.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Experience &amp; Levels are not updated</dt><dd><ul>
+<li><p>Make sure the experience datatable is set in the project settings (<code class="docutils literal notranslate"><span class="pre">Project</span> <span class="pre">&gt;</span> <span class="pre">Plugin</span> <span class="pre">&gt;</span> <span class="pre">Gamekit</span> <span class="pre">&gt;</span> <span class="pre">Experience</span> <span class="pre">Data</span> <span class="pre">Table</span></code>)</p></li>
+<li><p>Restart the editor</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Actor Target abilities are not able to acquire a valid target or the target is marked as invalid</dt><dd><ul>
+<li><p>make sure the team table is set in the project settings (<code class="docutils literal notranslate"><span class="pre">Project</span> <span class="pre">&gt;</span> <span class="pre">Plugin</span> <span class="pre">&gt;</span> <span class="pre">Gamekit</span> <span class="pre">&gt;</span> <span class="pre">Team</span> <span class="pre">Table</span></code>)</p></li>
+<li><p>Restart the editor</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Path finding is not working on movement abilities:</dt><dd><ul>
+<li><p>Log shows: <code class="docutils literal notranslate"><span class="pre">LogGKNav:</span> <span class="pre">Error:</span> <span class="pre">No</span> <span class="pre">NavSystem</span> <span class="pre">found</span></code></p></li>
+<li><p>Make sure you have a <code class="docutils literal notranslate"><span class="pre">NavMeshBoundsVolume</span></code> in your level</p></li>
+<li><p>Delete <code class="docutils literal notranslate"><span class="pre">RecastNavMesh-Default</span></code> in your level to force its regeneration</p></li>
+<li><p>For multiplayer games; make sure you enabled client side navigation</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Pawn is not rotating toward movement</dt><dd><ul>
+<li><p>Character Movement Component &gt; Orient Rotation To Movement <code class="docutils literal notranslate"><span class="pre">[x]</span></code></p></li>
+<li><p>Pawn Class Defaults &gt; Use Controller Rotation &gt; <code class="docutils literal notranslate"><span class="pre">[</span> <span class="pre">]</span></code> Pitch, <code class="docutils literal notranslate"><span class="pre">[</span> <span class="pre">]</span></code> Yaw  <code class="docutils literal notranslate"><span class="pre">[</span> <span class="pre">]</span></code> Roll</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Unreal Engien crash because of <cite>Assertion failed: !bInitializedSerializationHistory</cite></dt><dd><ul>
+<li><p>Your platform was not whitelisted by Gamekit</p></li>
+<li><p>To enable it regardless you can add you platform name inside <cite>Gamekit.uplugin</cite></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

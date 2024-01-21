@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Release Procedure &mdash; Gamekit  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/collapsible-lists\css\tree_view.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/collapsible-lists\js\CollapsibleLists.compressed.js"></script>
+        <script src="../../_static/collapsible-lists\js\apply-collapsible-lists.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> Gamekit
+          </a>
+              <div class="version">
+                6c15b89
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Welcome</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Welcome/Roadmap.html">RoadMap</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Plugins</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Plugins/GKFogOfWar/index.html">Fog of War</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Plugins/GKAbility/index.html">Ability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Plugins/GKLobby/index.html">Lobby</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Plugins/GKChat/index.html">Chat</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Plugins/GKMinimap/index.html">Minimap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Plugins/GKML/index.html">Machine Learning</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">UnrealEngine</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Developer Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html#game">Game</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html#online">Online</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html#others">Others</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Tools/uetools.html">uetools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Tools/ranked.html">ranked</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Tools/resources.html">Resources</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Gamekit</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Release Procedure</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/UnrealEngine/Developer/release.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="release-procedure">
+<h1>Release Procedure<a class="headerlink" href="#release-procedure" title="Permalink to this headline"></a></h1>
+<ol class="arabic simple">
+<li><p>Package the plugin</p></li>
+</ol>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>../UnrealEngine/Engine/Build/BatchFiles/RunUAT.bat BuildPlugin -Plugin<span class="o">=</span>../Gamekit2/Plugins/Gamekit/Gamekit.uplugin -Package<span class="o">=</span>Gamekit -Rocket
+</pre></div>
+</div>
+</div></blockquote>
+<ol class="arabic simple">
+<li><p>Remove unwanted files like the Intermediate folder and the Gamekit.pbd</p></li>
+<li><p>Send the packaged plugin as a zipfile</p></li>
+</ol>
+<blockquote>
+<div><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Size limit is around 10 MB for Gitlab, use Google Drive for larger files</p>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl --request POST --header <span class="s2">&quot;PRIVATE-TOKEN: &lt;your_access_token&gt;&quot;</span> <span class="se">\</span>
+     --form <span class="s2">&quot;file=@Gamekit.zip&quot;</span> <span class="s2">&quot;https://gitlab.com/api/v4/projects/28227915/uploads&quot;</span>
+
+<span class="o">{</span>
+    <span class="s2">&quot;alt&quot;</span>:<span class="s2">&quot;Gamekit-release.zip&quot;</span>,
+    <span class="s2">&quot;url&quot;</span>:<span class="s2">&quot;/uploads/e7e99f9852d83c94dd38c5e5bf9db6e3/Gamekit-release.zip&quot;</span>,
+    <span class="s2">&quot;full_path&quot;</span>:<span class="s2">&quot;/Delaunay/gamekit/uploads/e7e99f9852d83c94dd38c5e5bf9db6e3/Gamekit-release.zip&quot;</span>,
+    <span class="s2">&quot;markdown&quot;</span>:<span class="s2">&quot;[Gamekit-release.zip](/uploads/e7e99f9852d83c94dd38c5e5bf9db6e3/Gamekit-release.zip)&quot;</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<ol class="arabic simple">
+<li><p>Create new release</p></li>
+</ol>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frequently Asked Questions &mdash; Gamekit  documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/collapsible-lists\css\tree_view.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/collapsible-lists\js\CollapsibleLists.compressed.js"></script>
+        <script src="../../../_static/collapsible-lists\js\apply-collapsible-lists.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Changelog" href="Changelog.html" />
+    <link rel="prev" title="Getting Started" href="GettingStarted.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> Gamekit
+          </a>
+              <div class="version">
+                6c15b89
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Welcome</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../Welcome/Roadmap.html">RoadMap</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Plugins</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Fog of War</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../index.html#features">Features</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#useful-links">Useful Links</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="Installations.html">Installations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GettingStarted.html">Getting Started</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Frequently Asked Questions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#destroyed-obstacle-persist-on-the-navmesh">Destroyed obstacle persist on the navmesh</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#missing-fog-of-war-plugin-on-shipping-builds">Missing Fog of War Plugin on shipping builds</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#after-spawning-a-few-100-units-my-fps-drops">After spawning a few 100 units my FPS drops</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#disable-exploration">Disable exploration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#increase-performance">Increase performance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#create-pawn-with-an-assigned-team-without-player-start">Create Pawn with an assigned Team without player start</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#can-you-create-an-actor-that-is-visible-on-both-teams">Can you create an actor that is visible on both teams ?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#i-only-want-heroes-to-have-vision-and-not-shared-with-their-allies-is-that-possible">I only want heroes to have vision, and not shared with their allies is that possible ?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#can-we-also-make-allied-units-not-replicating-when-invisible">Can we also make allied units not replicating when invisible ?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#are-hp-bars-widgets-visible-in-the-fog-or-not">Are hp bars (widgets) visible in the fog or not ?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#can-you-save-out-the-explored-region-of-the-fog-of-war-and-load-it-back-in-later">Can you save out the explored region of the fog of war and load it back in later?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#what-are-the-limits-of-the-fog-of-war-in-terms-of-map-size">What are the limits of the fog of war in terms of map size ?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#for-a-game-where-the-map-is-gigantic">For a game where the map is gigantic</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#do-you-plan-to-put-the-plugin-on-sale-in-the-future">Do you plan to put the plugin on sale in the future ?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#packaging-issue">Packaging issue</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#where-do-we-adjust-the-fog-color">Where do we adjust the fog color ?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#combining-plugins-assets">Combining Plugins/Assets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#characters-0-controller-0-get-assigned-to-different-teams-on-clients">Characters_0/Controller_0 get assigned to different teams on clients</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sometimes-when-coming-out-of-the-fog-the-unit-slides-from-the-position-it-entered-the-fog-to-its-actual-position">Sometimes when coming out of the fog, the unit slides from the position it entered the fog to its actual position</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#only-yaw-rotation-is-handled">Only Yaw Rotation is handled</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#the-fog-of-war-is-not-centered">The fog of war is not centered</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#linking-error">Linking Error</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#loglinker-warning">LogLinker Warning</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Changelog.html">Changelog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../API/classAGKFogOfWarCharacter.html">Class AGKFogOfWarCharacter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../API/classAGKFogOfWarGameMode.html">Class AGKFogOfWarGameMode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../API/classAGKFogOfWarGameState.html">Class AGKFogOfWarGameState</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../API/classAGKFogOfWarObstacle.html">Class AGKFogOfWarObstacle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../API/classAGKFogOfWarPawn.html">Class AGKFogOfWarPawn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../API/classAGKFogOfWarPlayerController.html">Class AGKFogOfWarPlayerController</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../API/classAGKFogOfWarPlayerState.html">Class AGKFogOfWarPlayerState</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../API/classAGKFogOfWarPrivatePlayerState.html">Class AGKFogOfWarPrivatePlayerState</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../API/classAGKFogOfWarTeam.html">Class AGKFogOfWarTeam</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../API/classAGKFogOfWarVolume.html">Class AGKFogOfWarVolume</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../API/classFGKFogOfWarModule.html">Class FGKFogOfWarModule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../API/classFGKFogOfWarShaderModule.html">Class FGKFogOfWarShaderModule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../API/classIGKFogOfWarAgentInterface.html">Class IGKFogOfWarAgentInterface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../API/classIGKFogOfWarGameStateInterface.html">Class IGKFogOfWarGameStateInterface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../API/classIGKFogOfWarTestModule.html">Class IGKFogOfWarTestModule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../API/classUGKCanvasUpscaler.html">Class UGKCanvasUpscaler</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../API/classUGKCPUUpscalerStrategy.html">Class UGKCPUUpscalerStrategy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../API/classUGKExplorationTransform.html">Class UGKExplorationTransform</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../API/classUGKFogOfWarComponent.html">Class UGKFogOfWarComponent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../API/classUGKFogOfWarLibrary.html">Class UGKFogOfWarLibrary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../API/classUGKFogOfWarStrategy.html">Class UGKFogOfWarStrategy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../API/classUGKGPUUpscalerStrategy.html">Class UGKGPUUpscalerStrategy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../API/classUGKRayCasting__Less.html">Class UGKRayCasting_Less</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../API/classUGKRayCasting__Line.html">Class UGKRayCasting_Line</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../API/classUGKRayCasting__Triangle.html">Class UGKRayCasting_Triangle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../API/classUGKShadowCasting.html">Class UGKShadowCasting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../API/classUGKSharedBlueprint.html">Class UGKSharedBlueprint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../API/classUGKTransformerStrategy.html">Class UGKTransformerStrategy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../API/classUGKTransformerStrategyCanvas.html">Class UGKTransformerStrategyCanvas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../API/classUGKTransformerStrategyTexture2D.html">Class UGKTransformerStrategyTexture2D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#indices-and-tables">Indices and tables</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../GKAbility/index.html">Ability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../GKLobby/index.html">Lobby</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../GKChat/index.html">Chat</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../GKMinimap/index.html">Minimap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../GKML/index.html">Machine Learning</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">UnrealEngine</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../UnrealEngine/index.html">Developer Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../UnrealEngine/index.html#game">Game</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../UnrealEngine/index.html#online">Online</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../UnrealEngine/index.html#others">Others</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../Tools/uetools.html">uetools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Tools/ranked.html">ranked</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Tools/resources.html">Resources</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Gamekit</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">&lt;no title&gt;</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Fog of War</a></li>
+      <li class="breadcrumb-item active">Frequently Asked Questions</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/Plugins/GKFogOfWar/Welcome/FrequentQuestions.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="frequently-asked-questions">
+<h1>Frequently Asked Questions<a class="headerlink" href="#frequently-asked-questions" title="Permalink to this headline"></a></h1>
+<div class="contents local topic" id="table-of-contents">
+<p class="topic-title">Table of contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#destroyed-obstacle-persist-on-the-navmesh" id="id3">Destroyed obstacle persist on the navmesh</a></p></li>
+<li><p><a class="reference internal" href="#missing-fog-of-war-plugin-on-shipping-builds" id="id4">Missing Fog of War Plugin on shipping builds</a></p></li>
+<li><p><a class="reference internal" href="#after-spawning-a-few-100-units-my-fps-drops" id="id5">After spawning a few 100 units my FPS drops</a></p></li>
+<li><p><a class="reference internal" href="#disable-exploration" id="id6">Disable exploration</a></p></li>
+<li><p><a class="reference internal" href="#increase-performance" id="id7">Increase performance</a></p></li>
+<li><p><a class="reference internal" href="#create-pawn-with-an-assigned-team-without-player-start" id="id8">Create Pawn with an assigned Team without player start</a></p></li>
+<li><p><a class="reference internal" href="#can-you-create-an-actor-that-is-visible-on-both-teams" id="id9">Can you create an actor that is visible on both teams ?</a></p></li>
+<li><p><a class="reference internal" href="#i-only-want-heroes-to-have-vision-and-not-shared-with-their-allies-is-that-possible" id="id10">I only want heroes to have vision, and not shared with their allies is that possible ?</a></p></li>
+<li><p><a class="reference internal" href="#can-we-also-make-allied-units-not-replicating-when-invisible" id="id11">Can we also make allied units not replicating when invisible ?</a></p></li>
+<li><p><a class="reference internal" href="#are-hp-bars-widgets-visible-in-the-fog-or-not" id="id12">Are hp bars (widgets) visible in the fog or not ?</a></p></li>
+<li><p><a class="reference internal" href="#can-you-save-out-the-explored-region-of-the-fog-of-war-and-load-it-back-in-later" id="id13">Can you save out the explored region of the fog of war and load it back in later?</a></p></li>
+<li><p><a class="reference internal" href="#what-are-the-limits-of-the-fog-of-war-in-terms-of-map-size" id="id14">What are the limits of the fog of war in terms of map size ?</a></p></li>
+<li><p><a class="reference internal" href="#for-a-game-where-the-map-is-gigantic" id="id15">For a game where the map is gigantic</a></p></li>
+<li><p><a class="reference internal" href="#do-you-plan-to-put-the-plugin-on-sale-in-the-future" id="id16">Do you plan to put the plugin on sale in the future ?</a></p></li>
+<li><p><a class="reference internal" href="#packaging-issue" id="id17">Packaging issue</a></p></li>
+<li><p><a class="reference internal" href="#where-do-we-adjust-the-fog-color" id="id18">Where do we adjust the fog color ?</a></p></li>
+<li><p><a class="reference internal" href="#combining-plugins-assets" id="id19">Combining Plugins/Assets</a></p></li>
+<li><p><a class="reference internal" href="#characters-0-controller-0-get-assigned-to-different-teams-on-clients" id="id20">Characters_0/Controller_0 get assigned to different teams on clients</a></p></li>
+<li><p><a class="reference internal" href="#sometimes-when-coming-out-of-the-fog-the-unit-slides-from-the-position-it-entered-the-fog-to-its-actual-position" id="id21">Sometimes when coming out of the fog, the unit slides from the position it entered the fog to its actual position</a></p></li>
+<li><p><a class="reference internal" href="#only-yaw-rotation-is-handled" id="id22">Only Yaw Rotation is handled</a></p></li>
+<li><p><a class="reference internal" href="#the-fog-of-war-is-not-centered" id="id23">The fog of war is not centered</a></p></li>
+<li><p><a class="reference internal" href="#linking-error" id="id24">Linking Error</a></p></li>
+<li><p><a class="reference internal" href="#loglinker-warning" id="id25">LogLinker Warning</a></p></li>
+</ul>
+</div>
+<section id="destroyed-obstacle-persist-on-the-navmesh">
+<h2><a class="toc-backref" href="#id3">Destroyed obstacle persist on the navmesh</a><a class="headerlink" href="#destroyed-obstacle-persist-on-the-navmesh" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p>Project Settings -&gt; Navigation Mesh -&gt; Runtime -&gt; Runtime Generation -&gt; Dynamic</p></li>
+</ul>
+</section>
+<section id="missing-fog-of-war-plugin-on-shipping-builds">
+<h2><a class="toc-backref" href="#id4">Missing Fog of War Plugin on shipping builds</a><a class="headerlink" href="#missing-fog-of-war-plugin-on-shipping-builds" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p>Make sure your base project has a C++ module</p></li>
+<li><p>You can use <a class="reference external" href="https://github.com/kiwi-lang/uetools">uetools</a> to transform a blueprint project to a C++ one</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">uecli</span> <span class="pre">cpp</span> <span class="pre">--project</span> <span class="pre">&lt;MyProjectName&gt;</span></code></p></li>
+</ul>
+</section>
+<section id="after-spawning-a-few-100-units-my-fps-drops">
+<h2><a class="toc-backref" href="#id5">After spawning a few 100 units my FPS drops</a><a class="headerlink" href="#after-spawning-a-few-100-units-my-fps-drops" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p>UE meshes and animations are often overkill for RTS and hog a lot of performance</p></li>
+<li><p>UE movement component is slow and quite expensive</p></li>
+<li><dl class="simple">
+<dt>Profile your game to find the bottleneck</dt><dd><ul>
+<li><p>Using unreal console start profile <code class="docutils literal notranslate"><span class="pre">stat</span> <span class="pre">startfile</span></code> and let it run for 1 minute, then stop “stat stopfile”.</p></li>
+<li><p>It will generate a file inside <code class="docutils literal notranslate"><span class="pre">GKFogOfWarDemo_Win64\GKFogOfWarDemo\Saved\Profiling\UnrealStats\FogOfWar-Windows-01.05-10.17.55</span></code></p></li>
+<li><p>Open the profile with the UnrealEditor to see what took time <a href="#id1"><span class="problematic" id="id2">``</span></a>Tools &gt; Session FrontEnd &gt; Profiler &gt; Load`</p></li>
+<li><p>Select the Game Thread and you will be able to see something like below</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<img alt="_static/FAQ/GKFogOfWar_Profiling.PNG" src="_static/FAQ/GKFogOfWar_Profiling.PNG" />
+</section>
+<section id="disable-exploration">
+<h2><a class="toc-backref" href="#id6">Disable exploration</a><a class="headerlink" href="#disable-exploration" title="Permalink to this headline"></a></h2>
+<ul>
+<li><dl>
+<dt>You can disable the Exploration directly by simply removing the Exploration transform in the GKFogOfWarVolume;</dt><dd><p>that way no GPU time is wasted on the exploration.</p>
+<p><code class="docutils literal notranslate"><span class="pre">GKFogOfWarVolume</span> <span class="pre">&gt;</span> <span class="pre">Fog</span> <span class="pre">Of</span> <span class="pre">War</span> <span class="pre">&gt;</span> <span class="pre">Transform</span> <span class="pre">&gt;</span> <span class="pre">Exploration</span> <span class="pre">&gt;</span> <span class="pre">None</span></code></p>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+<section id="increase-performance">
+<h2><a class="toc-backref" href="#id7">Increase performance</a><a class="headerlink" href="#increase-performance" title="Permalink to this headline"></a></h2>
+<ul>
+<li><p>Decrease vision radius size</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">GKFogOfWarComponent</span> <span class="pre">&gt;</span> <span class="pre">Fog</span> <span class="pre">of</span> <span class="pre">War</span> <span class="pre">&gt;</span> <span class="pre">Radius</span></code></p>
+</div></blockquote>
+</li>
+<li><p>Increase FogOfWarVolume Grid Size</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">GKFogOfWarVolume</span> <span class="pre">&gt;</span> <span class="pre">Fog</span> <span class="pre">Of</span> <span class="pre">War</span> <span class="pre">&gt;</span> <span class="pre">Grid</span> <span class="pre">&gt;</span> <span class="pre">(X,</span> <span class="pre">Y)</span></code></p>
+</div></blockquote>
+</li>
+</ul>
+</section>
+<section id="create-pawn-with-an-assigned-team-without-player-start">
+<h2><a class="toc-backref" href="#id8">Create Pawn with an assigned Team without player start</a><a class="headerlink" href="#create-pawn-with-an-assigned-team-without-player-start" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p>You need to implement the <code class="docutils literal notranslate"><span class="pre">IGenericTeamAgentInterface</span></code> that is built in UnrealEngine</p></li>
+<li><p>You can use <code class="docutils literal notranslate"><span class="pre">GKFogOfWarChararacter</span></code> which implements the interface as base;</p></li>
+</ul>
+</section>
+<section id="can-you-create-an-actor-that-is-visible-on-both-teams">
+<h2><a class="toc-backref" href="#id9">Can you create an actor that is visible on both teams ?</a><a class="headerlink" href="#can-you-create-an-actor-that-is-visible-on-both-teams" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p>This is not possible, You can overlay the actor with a dummy actor for each time to give them vision</p></li>
+</ul>
+</section>
+<section id="i-only-want-heroes-to-have-vision-and-not-shared-with-their-allies-is-that-possible">
+<h2><a class="toc-backref" href="#id10">I only want heroes to have vision, and not shared with their allies is that possible ?</a><a class="headerlink" href="#i-only-want-heroes-to-have-vision-and-not-shared-with-their-allies-is-that-possible" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p>You can do that by creating a team for each hero</p></li>
+<li><p>Inside the Fog of War Volume set <code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::VisionSharingSetting</span></code> to <code class="docutils literal notranslate"><span class="pre">UseBoth</span></code>.
+This configure the Volume to use a separate system for vision sharing and TeamAttitude.
+i.e Teams can be friendly without <a class="reference external" href="https://mischievousgame.gitlab.io/gkfogofwar/Welcome/Changelog.html#id1">sharing visions</a></p></li>
+</ul>
+</section>
+<section id="can-we-also-make-allied-units-not-replicating-when-invisible">
+<h2><a class="toc-backref" href="#id11">Can we also make allied units not replicating when invisible ?</a><a class="headerlink" href="#can-we-also-make-allied-units-not-replicating-when-invisible" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p>Replication is driven by vision first by default; you can use <code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::VisionSharingSetting</span> <span class="pre">=</span> <span class="pre">UseBoth</span></code>
+to decouple team attitude and vision sharing.</p></li>
+</ul>
+</section>
+<section id="are-hp-bars-widgets-visible-in-the-fog-or-not">
+<h2><a class="toc-backref" href="#id12">Are hp bars (widgets) visible in the fog or not ?</a><a class="headerlink" href="#are-hp-bars-widgets-visible-in-the-fog-or-not" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p>The HP bars shouldn’t be visible in the fog if they are tied to the AActor</p></li>
+<li><p>You can use the <code class="docutils literal notranslate"><span class="pre">AGKFogOfWarCharacter::OnVisilityChanged</span></code> event to control how the AActor should display on the clients.</p></li>
+</ul>
+</section>
+<section id="can-you-save-out-the-explored-region-of-the-fog-of-war-and-load-it-back-in-later">
+<h2><a class="toc-backref" href="#id13">Can you save out the explored region of the fog of war and load it back in later?</a><a class="headerlink" href="#can-you-save-out-the-explored-region-of-the-fog-of-war-and-load-it-back-in-later" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p>The explored region of the fog of war is just a texture. it is created at runtime
+but you could copy it to a permanent texture or save it inside the game state to load for later</p></li>
+</ul>
+</section>
+<section id="what-are-the-limits-of-the-fog-of-war-in-terms-of-map-size">
+<h2><a class="toc-backref" href="#id14">What are the limits of the fog of war in terms of map size ?</a><a class="headerlink" href="#what-are-the-limits-of-the-fog-of-war-in-terms-of-map-size" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p>The fog of war is drawn on a texture, unreal engine texture size limit is 8192 (keep in mind that by default the texture is upscaled 4x),
+so the limit is more around 2048. The map size given the texture will be 2048 * GridSize that you choose.
+As an example League of Legend and Dota2 use grid sizes of ~128 units so the max map size would be around 262144 x 262144 units in this case.</p></li>
+</ul>
+</section>
+<section id="for-a-game-where-the-map-is-gigantic">
+<h2><a class="toc-backref" href="#id15">For a game where the map is gigantic</a><a class="headerlink" href="#for-a-game-where-the-map-is-gigantic" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p>You can attach the fog of war to your main actor so it follows the actor around,
+the areas not covered by the fog volume will be dark</p></li>
+<li><p>Only one fog of war per map is supported right now.</p></li>
+</ul>
+</section>
+<section id="do-you-plan-to-put-the-plugin-on-sale-in-the-future">
+<h2><a class="toc-backref" href="#id16">Do you plan to put the plugin on sale in the future ?</a><a class="headerlink" href="#do-you-plan-to-put-the-plugin-on-sale-in-the-future" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p>I am not sure how sales work on Epic, if it can advertise and such, for now there are no plans for sales</p></li>
+</ul>
+</section>
+<section id="packaging-issue">
+<h2><a class="toc-backref" href="#id17">Packaging issue</a><a class="headerlink" href="#packaging-issue" title="Permalink to this headline"></a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Missing precompiled manifest <span class="k">for</span> <span class="s1">&#39;GKFogOfWar&#39;</span>, <span class="s1">&#39;D:\UE_5.1\Engine\Plugins\Marketplace\GKFogOfWar\Intermediate\Build\Win64\UnrealGame\Shipping\GKFogOfWar\GKFogOfWar.precompiled&#39;</span>. This module was most likely not flagged <span class="k">for</span> being included <span class="k">in</span> a precompiled build - <span class="nb">set</span> <span class="s1">&#39;PrecompileForTargets = PrecompileTargetsType.Any;&#39;</span> <span class="k">in</span> GKFogOfWar.build.cs to override. If part of a plugin, also check <span class="k">if</span> its <span class="s1">&#39;Type&#39;</span> is correct.
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>This is a recurring problem for other plugins</p></li>
+<li><p>The only solution right now is to copy the plugin to the project folder</p></li>
+</ul>
+</section>
+<section id="where-do-we-adjust-the-fog-color">
+<h2><a class="toc-backref" href="#id18">Where do we adjust the fog color ?</a><a class="headerlink" href="#where-do-we-adjust-the-fog-color" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><dl class="simple">
+<dt>I want to make the unexplored areas of the map fully black</dt><dd><ul>
+<li><p>You can create a new instance of the FogOfWarPostProcess material and tweak the values inside.
+Do not forget to update the Fog of War volume to use the newly created material instance.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+<section id="combining-plugins-assets">
+<h2><a class="toc-backref" href="#id19">Combining Plugins/Assets</a><a class="headerlink" href="#combining-plugins-assets" title="Permalink to this headline"></a></h2>
+<ul>
+<li><p>Can I use this asset in conjunction with another plug-in which may have its own GameMode, etc?
+* Yes, you can, the GameMode and other provided classes are only examples.</p>
+<blockquote>
+<div><p>You can create your own. The FogOfWar use the interface system to extend GameMode and other classes.
+You simply need to implement the interfaces in your own custom GameMode to make them comptabile</p>
+</div></blockquote>
+</li>
+</ul>
+</section>
+<section id="characters-0-controller-0-get-assigned-to-different-teams-on-clients">
+<h2><a class="toc-backref" href="#id20">Characters_0/Controller_0 get assigned to different teams on clients</a><a class="headerlink" href="#characters-0-controller-0-get-assigned-to-different-teams-on-clients" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p>The Characters_0 and Controller_0 are always the client main character/controller.
+that is why they get assigned to different teams.</p></li>
+</ul>
+</section>
+<section id="sometimes-when-coming-out-of-the-fog-the-unit-slides-from-the-position-it-entered-the-fog-to-its-actual-position">
+<h2><a class="toc-backref" href="#id21">Sometimes when coming out of the fog, the unit slides from the position it entered the fog to its actual position</a><a class="headerlink" href="#sometimes-when-coming-out-of-the-fog-the-unit-slides-from-the-position-it-entered-the-fog-to-its-actual-position" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p>This is how UE handles the resume replication on the movement side,
+it will do a linear interpolate to smooth out the transition.
+The movement code is not really tuned for RTS games.
+You can tweak the Chracter Movement Component &gt; Networking &gt; No Smooth Update Distance  and set it to something small
+to prevent smoothing when the character is far away.</p></li>
+</ul>
+</section>
+<section id="only-yaw-rotation-is-handled">
+<h2><a class="toc-backref" href="#id22">Only Yaw Rotation is handled</a><a class="headerlink" href="#only-yaw-rotation-is-handled" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p>I get a warning about <cite>Only Yaw Rotation is handled</cite>
+* An obstacle object has an x or y rotation but only the z rotation is taken into account when drawing the obstacle.</p></li>
+</ul>
+</section>
+<section id="the-fog-of-war-is-not-centered">
+<h2><a class="toc-backref" href="#id23">The fog of war is not centered</a><a class="headerlink" href="#the-fog-of-war-is-not-centered" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p>Make sure your fog of war volume is scaled uniformly and that the grid has the same size on the x and y axis.</p></li>
+</ul>
+</section>
+<section id="linking-error">
+<h2><a class="toc-backref" href="#id24">Linking Error</a><a class="headerlink" href="#linking-error" title="Permalink to this headline"></a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>MyGKFogOfWarCharacter.gen.cpp.obj : error LNK2001: symbole externe non résolu <span class="s2">&quot;public: virtual enum ETeamAttitude::Type cdecl IGenericTeamAgentInterface::GetTeamAttitudeTowards(class AActor const &amp;)const &quot;</span> <span class="o">(</span>?GetTeamAttitudeTowards@IGenericTeamAgentInterface@@UEBA?AW4Type@ETeamAttitude@@AEBVAActor@@@Z<span class="o">)</span>
+MyGKFOWCharacter.gen.cpp.obj : error LNK2001: symbole externe non résolu <span class="s2">&quot;public: virtual enum ETeamAttitude::Type cdecl IGenericTeamAgentInterface::GetTeamAttitudeTowards(class AActor const &amp;)const &quot;</span> <span class="o">(</span>?GetTeamAttitudeTowards@IGenericTeamAgentInterface@@UEBA?AW4Type@ETeamAttitude@@AEBVAActor@@@Z<span class="o">)</span>
+MyGKFogOfWarCharacter.cpp.obj : error LNK2001: symbole externe non résolu <span class="s2">&quot;public: virtual enum ETeamAttitude::Type cdecl IGenericTeamAgentInterface::GetTeamAttitudeTowards(class AActor const &amp;)const &quot;</span> <span class="o">(</span>?GetTeamAttitudeTowards@IGenericTeamAgentInterface@@UEBA?AW4Type@ETeamAttitude@@AEBVAActor@@@Z<span class="o">)</span>
+MyGKFOWCharacter.cpp.obj : error LNK2001: symbole externe non résolu <span class="s2">&quot;public: virtual enum ETeamAttitude::Type cdecl IGenericTeamAgentInterface::GetTeamAttitudeTowards(class AActor const &amp;)const &quot;</span> <span class="o">(</span>?GetTeamAttitudeTowards@IGenericTeamAgentInterface@@UEBA?AW4Type@ETeamAttitude@@AEBVAActor@@@Z<span class="o">)</span>
+D:<span class="se">\U</span>E_Projects<span class="se">\G</span>KFOG_TEST_03<span class="se">\B</span>inaries<span class="se">\W</span>in64<span class="se">\U</span>nrealEditor-GKFOG_TEST_03.patch_0.exe : fatal error LNK1120: <span class="m">1</span> externes non résolus
+Failed to link patch <span class="o">(</span><span class="m">0</span>.000s<span class="o">)</span> <span class="o">(</span>Exit code: 0x460<span class="o">)</span>
+---------- Finished <span class="o">(</span><span class="m">0</span>.000s<span class="o">)</span> ----------
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Linking errors usually means a dependency is missing</p></li>
+<li><p>Update your game modules to include the following modules <code class="docutils literal notranslate"><span class="pre">AIModule</span></code>, <code class="docutils literal notranslate"><span class="pre">Landscape</span></code>, <code class="docutils literal notranslate"><span class="pre">RenderCore</span></code>, <code class="docutils literal notranslate"><span class="pre">RHI</span></code></p></li>
+</ul>
+</section>
+<section id="loglinker-warning">
+<h2><a class="toc-backref" href="#id25">LogLinker Warning</a><a class="headerlink" href="#loglinker-warning" title="Permalink to this headline"></a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>LogLinker: Warning: <span class="o">[</span>AssetLog<span class="o">]</span> C:<span class="se">\D</span>ocuments<span class="se">\U</span>nreal<span class="se">\F</span>PTemplate <span class="m">5</span>.1<span class="se">\P</span>lugins<span class="se">\G</span>KFogOfWar<span class="se">\C</span>ontent<span class="se">\U</span>pscaling<span class="se">\M</span>T_Upscaling.uasset: Asset has been saved with empty engine version. The asset will be loaded but may be incompatible.
+</pre></div>
+</div>
+<p>&gt; This warning exists to warn when engineers who are working with local changes save assets that may not be compatible with your team’s “promoted” build.
+&gt; Probably 95% of the time even in large teams, it is benign and if you are a developer who is working on their own pretty much guaranteed to be ignorable.
+&gt; It can be disabled in DefaultEngine.ini by adding if you are certain you don’t need it (at least one of internal game teams do have it disabled):</p>
+<p>To Disable the warning the the lines below inside <code class="docutils literal notranslate"><span class="pre">DefaultEngine.ini</span></code></p>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[Core.System]</span><span class="w"></span>
+<span class="na">ZeroEngineVersionWarning</span><span class="o">=</span><span class="s">False</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="GettingStarted.html" class="btn btn-neutral float-left" title="Getting Started" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Changelog.html" class="btn btn-neutral float-right" title="Changelog" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
