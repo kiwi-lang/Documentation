@@ -1,0 +1,122 @@
+Getting Started
+===============
+
+First Steps
+-----------
+
+The plugin comes with a sample map and base blueprint you can inherit from;
+they are located in ``/GKFogOfWar/Example/FogOfWar``.
+
+.. note::
+
+   Plugin content might not be visible by default; you can enable it from the content drawer settings.
+   ``Content Drawer -> Settings -> Show Plugin Content``
+
+
+Make your own
+-------------
+
+* Add a :cpp:class:`AGKFogOfWarVolume`, the volume needs to cover the area.
+  Only one volume can be created per map
+   * Configure the volume
+      #. Set the landscape ``AGKFogOfWarVolume > Strategy > ShadowCasting > Landscape``
+
+* Create a new GameState using :cpp:class:`AGKFogOfWarGameState`
+   * Insert teams ``AGKFogOfWarGameState > Teams > Fog Of War Teams``
+
+* Create a new GameMode using :cpp:class:`AGKFogOfWarGameMode`
+   * The game mode is used to initialize the Fog Of War before the game starts,
+   * You can override ``AssignTeamFor`` to customize how teams are assigned to player controller
+
+* Create a new Player Controller using :cpp:class:`AGKFogOfWarPlayerController`
+
+* Create a new Character using :cpp:class:`AGKFogOfWarCharacter`
+   * Add a :cpp:class:`UGKFogOfWarComponent`
+      * ``UGKFogOfWarComponent > GivesVision [X]``
+      * ``UGKFogOfWarComponent > BlocksVision [ ]``
+      * ``UGKFogOfWarComponent > Radius = 1200``
+
+* Create a new APlayerStart
+   * Set the ``PlayerStartTag`` to the team name
+
+* Create a new Blocking APawn
+   * Add a ``UGKFogOfWarComponent``
+      * ``UGKFogOfWarComponent > GivesVision [ ]``
+      * ``UGKFogOfWarComponent > BlocksVision [X]``
+
+
+.. note::
+
+   The of of war discretize the space into blocks to get the best result you should make sure
+   to align your actors to the grid as much as possible.
+
+.. note::
+
+   The fog of war will darken your screen, it is advised to disable UE default auto exposure using a Post Process
+   Volume and enabling ``Exposure > Metering Mode > Auto Exposure Basic`` as well as setting min and max brightness
+   to 1
+
+
+.. note::
+
+   Only rectangle obstacle are supported.
+   For "complex" shapes you should rely on the landscape
+
+.. note::
+
+   Only Yaw rotation is handled for obstacles
+
+.. note::
+
+   To help placing actors on the map you might want to enable `Actor snapping <https://docs.unrealengine.com/4.27/en-US/Basics/Actors/ActorSnapping/>`_
+
+Details
+-------
+
+Classes
+^^^^^^^
+
+* :cpp:class:`AGKFogOfWarGameState`:
+   * implements :cpp:class:`IGKFogOfWarGameStateInterface`
+   * provides a list of teams that will participate in the game
+
+* :cpp:class:`AGKFogOfWarGameMode`:
+   * extends AGameMode
+   * expose new blueprint event ``AssignTeamFor`` used to assign a team to each player controller
+
+* :cpp:class:`AGKFogOfWarPlayerController`:
+   * extends the base PlayerController to make it belong a given team; it handles dynamic team change.
+
+* :cpp:class:`AGKFogOfWarCharacter`:
+   * extends the base Character
+   * implements fog of war conditional replication, it is only replicated to enemies if it is seen by them.
+
+* :cpp:class:`AGKFogOfWarPlayerState`:
+   * extends ``APlayerState``
+   * expose a new attribute ``AGKFogOfWarPrivatePlayerState`` which is only replicated to allies.
+
+* :cpp:class:`AGKFogOfWarVolume`:
+   * Draws the fog of war periodically
+
+* :cpp:class:`UGKFogOfWarComponent`:
+   * Register itself to the Fog of War volume
+   * Specify how the actor fog of war should behave (blocks light, provide vision, vision radius)
+
+* :cpp:class:`UGKFogOfWarStrategy`:
+   * Implements how the fog is drawn
+
+* :cpp:class:`UGKTransformerStrategyCanvas`:
+   * Implements material based transformation on the vision texture
+   * this is used to implement upscaling and exploration (blending of previous & current vision)
+
+
+Initialization Flow
+^^^^^^^^^^^^^^^^^^
+
+.. image:: /_static/InitializationFlow.png
+
+
+Replication Flow
+^^^^^^^^^^^^^^^^
+
+.. image:: /_static/ReplicationFlow.png
