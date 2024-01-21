@@ -4,34 +4,34 @@
    :caption: Welcome
    :maxdepth: 1
 
+   Welcome/index
+
 .. toctree::
    :caption: Plugins
    :maxdepth: 1
 
-   Plugins/GKFogOfWar/index
-
-..
-
-   Plugins/GKAbility/index
-   Plugins/GKLobby/index
-   Plugins/GKChat/index
-   Plugins/GKMinimap/index
+   Plugins/index
 
 .. toctree::
    :caption: UnrealEngine
+   :maxdepth: 1
+
+   UnrealEngine/index
+
+.. toctree::
+   :caption: Gameplay
    :maxdepth: 1
 
 .. toctree::
    :caption: Tools
    :maxdepth: 1
 
+   Tools/index
 
-.. toctree::
-   :caption: Gameplay
-   :maxdepth: 1
 
-Indices and tables
-~~~~~~~~~~~~~~~~~~
+
+Index
+=====
 
 * :ref:`genindex`
 * :ref:`modindex`

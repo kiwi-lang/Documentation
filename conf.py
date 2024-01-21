@@ -21,39 +21,41 @@ import subprocess
 # sys.path.insert(0, os.path.abspath('.'))
 
 docs_src_path = os.path.dirname(os.path.abspath(__file__))
-project_root = os.path.abspath(os.path.join(docs_src_path, ".."))
-doxygen_out = os.path.join(project_root, "Build")
-doxygen_out_xml = os.path.join(doxygen_out, "xml")
-doxygen_version_file = os.path.join(doxygen_out_xml, "version.txt")
+base = "E:/Examples/Acaraceim/Plugins"
+build_dir = os.path.join(docs_src_path, "_build")
 
-# Generate the HTML in the sphinx folder so it will be made
-# available in read the docs
-doxygen_out_html = os.path.join(project_root, "Docs", "_build", "doxygen", "doxygen")
-os.makedirs(doxygen_out_html, exist_ok=True)
+def plugin(name, plugin_base=None):
+    if plugin_base is None:
+        plugin_base = base
 
 
+    return {
+        "docs": f"Plugins/{name}",
+        "root": os.path.join(plugin_base, str(name)),
+        "out": os.path.join(build_dir, "temp", str(name)),
+        "html": os.path.join(build_dir, "doxygen", str(name)),
+        "xml": os.path.join(build_dir, "temp", str(name), "xml")
+    }
+
+projects = {
+    "GKFogOfWar": plugin("GKFogOfWar"),
+    #"GKMinimap": plugin("GKMinimap"),
+    "GKML": plugin("GKML", "E:/Examples")
+}
 
 
-def generate_doxygen_xml(app):
-    print("hello")
-
-
-def setup(app):
-    # Add hook for building doxygen xml when needed
-    app.connect("builder-inited", generate_doxygen_xml)
-
-
-def get_versions():
+def get_versions(cwd=None):
+    print(cwd)
     try:
         version_tag = subprocess.check_output(
-            'git describe --tags --abbrev=0', shell=True
-        ).decode('utf-8')
+            'git describe --tags --abbrev=0', shell=True, cwd=cwd
+        ).decode('utf-8').strip()
     except:
         version_tag = ''
 
     commit = subprocess.check_output(
-        'git rev-parse --short HEAD', shell=True
-    ).decode('utf-8')
+        'git rev-parse --short HEAD --always', shell=True, cwd=cwd
+    ).decode('utf-8').strip()
 
     if version_tag == '':
         version_identifier = commit
@@ -63,69 +65,68 @@ def get_versions():
     return version_tag, version_identifier, commit
 
 
-version_tag, version_identifier, commit = get_versions()
-
-def is_new_version():
-    os.makedirs(doxygen_out_xml, exist_ok=True)
-
-    if os.name.startswith('nt'):
-        return True
-
-    # TODO: only go it for C++ files
-    version_match = False
-    version_hash = subprocess.check_output(
-        'echo -n $"$(git rev-parse HEAD) $(git diff)" | sha256sum', shell=True
-    )
-
-    if os.path.exists(doxygen_version_file):
-        with open(doxygen_version_file, "br") as v:
-            saved_version = v.read()
-
-        version_match = saved_version == version_hash
-
-    if not version_match:
-        with open(doxygen_version_file, "bw") as v:
-            v.write(version_hash)
-
-    return not version_match
-
-
 def configure_doxyfile(project):
     with open("Doxyfile.in", "r") as file:
         filedata = file.read()
 
+    configured = projects.get(project, {})
+
+    out  = configured["out"]
+    html = configured["html"]
+    root  = configured["root"]
+
+    version_tag, version_identifier, commit = get_versions(root)
+
+    os.makedirs(out, exist_ok=True)
+    os.makedirs(html, exist_ok=True)
+
     filedata = (
-        filedata.replace("@DOXYGEN_OUTPUT_DIR@", doxygen_out)
-        .replace("@CMAKE_SOURCE_DIR@", project_root)
-        .replace("@PROJECT_NAME@", "GKFogOfWar")
-        .replace("@STRIP_PATH@", project_root)
+        filedata.replace("@DOXYGEN_OUTPUT_DIR@", out)
+        .replace("@CMAKE_SOURCE_DIR@", root)
+        .replace("@PROJECT_NAME@", project)
+        .replace("@STRIP_PATH@", root)
         .replace("@rev_branch@", version_identifier)
-        .replace("@HTML_OUTPUT@", doxygen_out_html)
+        .replace("@HTML_OUTPUT@", html)
     )
 
-    with open("Doxyfile", "w") as file:
+    filename = f"_build/Doxyfile.{project}"
+    with open(filename, "w") as file:
         file.write(filedata)
 
+    return filename
 
-def is_rtd_build():
-    return os.environ.get("READTHEDOCS") is not None
 
-def is_github_build():
-    return  os.environ.get("GITHUB_ACTIONS") is not None
+def run_doxygen(project):
+    """Run the doxygen make command in the designated folder"""
 
-read_the_docs_build = is_rtd_build() or is_github_build()
+    config = configure_doxyfile(project)
 
-doxygen_xml = os.path.join(doxygen_out_xml, "index.xml")
+    try:
+        retcode = subprocess.call(["doxygen", config], shell=True)
+        if retcode < 0:
+            sys.stderr.write("doxygen terminated by signal %s" % (-retcode))
+    except OSError as e:
+        sys.stderr.write("doxygen execution failed: %s" % e)
 
-if read_the_docs_build:
-    if is_new_version() or (not os.path.exists(doxygen_xml)):
-        os.makedirs(doxygen_out_html, exist_ok=True)
-        configure_doxyfile()
-        subprocess.call("doxygen", shell=True)
-    else:
-        print("Not running doxygen, result already there")
-else:
-    print("Skipping")
+
+def generate_doxygen_xml(app=None):
+
+    should_run_doxygen = not bool(int(os.getenv("SKIP_DOXYGEN", '0')))
+
+    if should_run_doxygen:
+        for k in projects.keys():
+            run_doxygen(k)
+
+
+def setup(app):
+    # THIS DOES NOT WORK
+    # Add hook for building doxygen xml when needed
+    app.connect("builder-inited", generate_doxygen_xml)
+
+
+generate_doxygen_xml()
+version_tag, version_identifier, commit = get_versions()
+
 
 # -- General configuration ------------------------------------------------
 
@@ -153,18 +154,27 @@ breathe_default_members = (
 )
 breathe_show_define_initializer = True
 breathe_show_enumvalue_initializer = True
-breathe_build_directory = doxygen_out
 breathe_projects = {
-    "GKFogOfWar": doxygen_out_xml
+    k: v["xml"] for k, v in projects.items()
 }
 breathe_domain_by_extension = {
     "usf": "cpp",
 }
+# breathe_build_directory = os.path.join(build_dir, "breathe")
+
+# breathe_projects_source = {
+#    "myprojectsource" :
+#        ( "/some/long/path/to/myproject", [ "file.c", "subfolder/otherfile.c" ] )
+#    }
+
+# Exhale
+# ------
+# Exhale only works for a single C++ project
 exhale_args = {
     # These arguments are required
-    "containmentFolder": "generated_api",
-    "rootFileName": "GKFogOfWarAPI.rst",
-    "rootFileTitle": "GKFogOfWar API",
+    "containmentFolder": "_build/exhale",   # We put exhale ioutside because we just use it as scafolding
+    "rootFileName": "GamekitAPI.rst",
+    "rootFileTitle": "Gamekit API",
     "doxygenStripFromPath": "..",
     # Suggested optional arguments
     "createTreeView": True,
@@ -173,16 +183,12 @@ exhale_args = {
     # "generateBreatheFileDirectives": False
 }
 
+
 # Tell sphinx what the primary language being documented is.
 primary_domain = "cpp"
 
 # Tell sphinx what the pygments highlight language should be.
 highlight_language = "cpp"
-
-# breathe_projects_source = {
-#    "myprojectsource" :
-#        ( "/some/long/path/to/myproject", [ "file.c", "subfolder/otherfile.c" ] )
-#    }
 
 # =================
 
@@ -201,8 +207,8 @@ source_suffix = ".rst"
 master_doc = "index"
 
 # General information about the project.
-project = u"GKFogOfWar"
-copyright = u"2022"
+project = u"Gamekit"
+copyright = u"2024"
 author = u"Pierre Delaunay"
 
 # The version info for the project you're documenting, acts as replacement for
@@ -355,7 +361,7 @@ html_extra_path = ["_build/doxygen"]
 # html_search_scorer = 'scorer.js'
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = "GKFogOfWardoc"
+htmlhelp_basename = "GamekitDoc"
 
 # -- Options for LaTeX output ---------------------------------------------
 
@@ -374,7 +380,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, "GKFogOfWar.tex", u"GKFogOfWar Documentation", u"Pierre Delaunay", "manual"),
+    (master_doc, "Gamekit.tex", u"Gamekit Documentation", u"Pierre Delaunay", "manual"),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -402,7 +408,7 @@ latex_documents = [
 
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
-man_pages = [(master_doc, "GKFogOfWar", u"GKFogOfWar Documentation", [author], 1)]
+man_pages = [(master_doc, "Gamekit", u"Gamekit Documentation", [author], 1)]
 
 # If true, show URL addresses after external links.
 # man_show_urls = False
@@ -416,11 +422,11 @@ man_pages = [(master_doc, "GKFogOfWar", u"GKFogOfWar Documentation", [author], 1
 texinfo_documents = [
     (
         master_doc,
-        "GKFogOfWar",
-        u"GKFogOfWar Documentation",
+        "Gamekit",
+        u"Gamekit Documentation",
         author,
-        "GKFogOfWar",
-        "Unreal Engine GKFogOfWar",
+        "Gamekit",
+        "Unreal Engine Gamekit",
         "Miscellaneous",
     ),
 ]

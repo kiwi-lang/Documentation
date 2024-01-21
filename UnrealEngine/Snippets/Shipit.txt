@@ -1,0 +1,4 @@
+$PROJECT_NAME = "GamekitDev"
+$OUTPUT = "E:/Temporary/GamekitExample"
+$ARCHIVE = "E:/Temporary/Archive/"
+gkcli cook $PROJECT_NAME Win64 --profile shipping --output $OUTPUT | gkcli format --profile cook
