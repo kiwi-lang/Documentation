@@ -1,0 +1,11 @@
+digraph "Source/GKAbility/Public/Interface"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  compound=true
+  subgraph clusterdir_9b2858cc452508f4e514ff18cb2eb58e {
+    graph [ bgcolor="#edf0f7", pencolor="grey50", style="filled,dashed,", label="Public", fontname="Helvetica", fontsize="10", URL="dir_9b2858cc452508f4e514ff18cb2eb58e.html"]
+  dir_536d185efcfd12af1b53bc09e993a4d2 [shape=box, label="Interface", style="filled,bold,", fillcolor="#edf0f7", color="grey25", URL="dir_536d185efcfd12af1b53bc09e993a4d2.html"];
+  }
+}

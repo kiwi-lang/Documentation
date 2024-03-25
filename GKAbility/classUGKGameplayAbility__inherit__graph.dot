@@ -1,0 +1,24 @@
+digraph "UGKGameplayAbility"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="UGKGameplayAbility",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="UGameplayAbility",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",tooltip=" "];
+  Node3 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="IGKDataDrivenInterface",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classIGKDataDrivenInterface.html",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="UGKAbilityQueueAbility",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classUGKAbilityQueueAbility.html",tooltip=" "];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="UGKAttackAbility",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classUGKAttackAbility.html",tooltip=" "];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="UGKCancelAbility",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classUGKCancelAbility.html",tooltip=" "];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="UGKItemAbility",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classUGKItemAbility.html",tooltip=" "];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="UGKMovementAbility",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classUGKMovementAbility.html",tooltip=" "];
+  Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="UGKSkillAbility",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classUGKSkillAbility.html",tooltip=" "];
+}

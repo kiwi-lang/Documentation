@@ -1,0 +1,15 @@
+digraph "Source/GKMinimapEd"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  compound=true
+  subgraph clusterdir_74389ed8173ad57b461b9d623a1f3867 {
+    graph [ bgcolor="#edf0f7", pencolor="grey25", style="filled,dashed,", label="Source", fontname="Helvetica", fontsize="10", URL="dir_74389ed8173ad57b461b9d623a1f3867.html"]
+  subgraph clusterdir_ec2f7a26abf92c33bec1fb6d06f7e16c {
+    graph [ bgcolor="#edf0f7", pencolor="grey25", style="filled,bold,", label="", fontname="Helvetica", fontsize="10", URL="dir_ec2f7a26abf92c33bec1fb6d06f7e16c.html"]
+    dir_ec2f7a26abf92c33bec1fb6d06f7e16c [shape=plaintext, label="GKMinimapEd"];
+  dir_ac4ceb919596db7242151201965b6fb5 [shape=box, label="Public", style="filled,", fillcolor="#a2b4d6", color="grey25", URL="dir_ac4ceb919596db7242151201965b6fb5.html"];
+  }
+  }
+}

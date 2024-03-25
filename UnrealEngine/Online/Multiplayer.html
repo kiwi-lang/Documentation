@@ -1,124 +1,475 @@
-<!DOCTYPE html>
-<html class="writer-html5" lang="en" >
-<head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Multiplayer &mdash; Gamekit  documentation</title>
-      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/collapsible-lists\css\tree_view.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Multiplayer &#8212; Gamekit</title>
   
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/underscore.js"></script>
-        <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/collapsible-lists\js\CollapsibleLists.compressed.js"></script>
-        <script src="../../_static/collapsible-lists\js\apply-collapsible-lists.js"></script>
-    <script src="../../_static/js/theme.js"></script>
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/collapsible-lists\css\tree_view.css?v=a885cde7" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=71c9e0a5" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="../../_static/collapsible-lists\js\CollapsibleLists.compressed.js?v=73120307"></script>
+    <script src="../../_static/collapsible-lists\js\apply-collapsible-lists.js?v=660e4f45"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'UnrealEngine/Online/Multiplayer';</script>
+    <link rel="icon" href="../../_static/GamekitDev.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Massively Multiplayer" href="MMO.html" />
-    <link rel="prev" title="Procedural Level Generation" href="../Level/procedural.html" /> 
-</head>
+    <link rel="prev" title="Online" href="../Online.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
 
-<body class="wy-body-for-nav"> 
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
-            <a href="../../index.html" class="icon icon-home"> Gamekit
-          </a>
-              <div class="version">
-                6c15b89
-              </div>
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Welcome</span></p>
-<ul>
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+    
+    <img src="../../_static/GamekitDev.png" class="logo__image only-light" alt="Gamekit - Home"/>
+    <script>document.write(`<img src="../../_static/GamekitDev.png" class="logo__image only-dark" alt="Gamekit - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Welcome</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../Welcome/Roadmap.html">RoadMap</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Plugins</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../Plugins/GKFogOfWar/index.html">Fog of War</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Plugins/GKAbility/index.html">Ability</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Plugins/GKLobby/index.html">Lobby</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Plugins/GKChat/index.html">Chat</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Plugins/GKMinimap/index.html">Minimap</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Plugins/GKML/index.html">Machine Learning</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">UnrealEngine</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../index.html">Developer Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../index.html#game">Game</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html#online">Online</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Multiplayer</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#important-classes">Important Classes</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#common-actor-configurations">Common Actor Configurations</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#code-snippet">Code Snippet</a></li>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Plugins</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Plugins/GKFogOfWar/index.html">Fog of War</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Plugins/GKFogOfWar/Welcome/Installations.html">Installations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Plugins/GKFogOfWar/Welcome/GettingStarted.html">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Plugins/GKFogOfWar/Welcome/FrequentQuestions.html">Frequently Asked Questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Plugins/GKFogOfWar/Welcome/Changelog.html">Changelog</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../Plugins/GKFogOfWar/api.html">API</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Plugins/GKFogOfWar/API/classAGKFogOfWarCharacter.html">AGKFogOfWarCharacter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Plugins/GKFogOfWar/API/classAGKFogOfWarGameMode.html">AGKFogOfWarGameMode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Plugins/GKFogOfWar/API/classAGKFogOfWarGameState.html">AGKFogOfWarGameState</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Plugins/GKFogOfWar/API/classAGKFogOfWarObstacle.html">AGKFogOfWarObstacle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Plugins/GKFogOfWar/API/classAGKFogOfWarPawn.html">AGKFogOfWarPawn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Plugins/GKFogOfWar/API/classAGKFogOfWarPlayerController.html">AGKFogOfWarPlayerController</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Plugins/GKFogOfWar/API/classAGKFogOfWarPlayerState.html">AGKFogOfWarPlayerState</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Plugins/GKFogOfWar/API/classAGKFogOfWarPrivatePlayerState.html">AGKFogOfWarPrivatePlayerState</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Plugins/GKFogOfWar/API/classAGKFogOfWarTeam.html">AGKFogOfWarTeam</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Plugins/GKFogOfWar/API/classAGKFogOfWarVolume.html">AGKFogOfWarVolume</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Plugins/GKFogOfWar/API/classFGKFogOfWarModule.html">FGKFogOfWarModule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Plugins/GKFogOfWar/API/classFGKFogOfWarShaderModule.html">FGKFogOfWarShaderModule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Plugins/GKFogOfWar/API/classIGKFogOfWarAgentInterface.html">IGKFogOfWarAgentInterface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Plugins/GKFogOfWar/API/classIGKFogOfWarGameStateInterface.html">IGKFogOfWarGameStateInterface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Plugins/GKFogOfWar/API/classIGKFogOfWarTestModule.html">IGKFogOfWarTestModule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Plugins/GKFogOfWar/API/classUGKCanvasUpscaler.html">UGKCanvasUpscaler</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Plugins/GKFogOfWar/API/classUGKCPUUpscalerStrategy.html">UGKCPUUpscalerStrategy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Plugins/GKFogOfWar/API/classUGKExplorationTransform.html">UGKExplorationTransform</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Plugins/GKFogOfWar/API/classUGKFogOfWarComponent.html">UGKFogOfWarComponent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Plugins/GKFogOfWar/API/classUGKFogOfWarLibrary.html">UGKFogOfWarLibrary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Plugins/GKFogOfWar/API/classUGKFogOfWarStrategy.html">UGKFogOfWarStrategy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Plugins/GKFogOfWar/API/classUGKGPUUpscalerStrategy.html">UGKGPUUpscalerStrategy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Plugins/GKFogOfWar/API/classUGKRayCasting__Less.html">UGKRayCasting_Less</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Plugins/GKFogOfWar/API/classUGKRayCasting__Line.html">UGKRayCasting_Line</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Plugins/GKFogOfWar/API/classUGKRayCasting__Triangle.html">UGKRayCasting_Triangle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Plugins/GKFogOfWar/API/classUGKShadowCasting.html">UGKShadowCasting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Plugins/GKFogOfWar/API/classUGKSharedBlueprint.html">UGKSharedBlueprint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Plugins/GKFogOfWar/API/classUGKTransformerStrategy.html">UGKTransformerStrategy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Plugins/GKFogOfWar/API/classUGKTransformerStrategyCanvas.html">UGKTransformerStrategyCanvas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Plugins/GKFogOfWar/API/classUGKTransformerStrategyTexture2D.html">UGKTransformerStrategyTexture2D</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#server-only-code-blocks">Server Only code blocks</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#client-only-code-blocks">Client only code blocks</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#actor-network-configuration">Actor Network configuration</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#conditionnal-execution-of-some-code">Conditionnal execution of some code</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#network-conditions">Network Conditions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#replication">Replication</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#advanced-replication">Advanced Replication</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#testing">Testing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#references">References</a></li>
 </ul>
 </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Plugins/GKAbility/index.html">GKAbility</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Plugins/GKAbility/Welcome/Installations.html">Installations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Plugins/GKAbility/Welcome/GettingStarted.html">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Plugins/GKAbility/Welcome/FrequentQuestions.html">Frequently Asked Questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Plugins/GKAbility/Welcome/Changelog.html">Changelog</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../Plugins/GKAbility/api.html">API</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Plugins/GKLobby/index.html">Lobby</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Plugins/GKLobby/Welcome/Installations.html">Installations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Plugins/GKLobby/Welcome/GettingStarted.html">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Plugins/GKLobby/Welcome/FrequentQuestions.html">Frequently Asked Questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Plugins/GKLobby/Welcome/Changelog.html">Changelog</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../Plugins/GKLobby/api.html">API</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Plugins/GKChat/index.html">Chat</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Plugins/GKChat/Welcome/Installations.html">Installations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Plugins/GKChat/Welcome/GettingStarted.html">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Plugins/GKChat/Welcome/FrequentQuestions.html">Frequently Asked Questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Plugins/GKChat/Welcome/Changelog.html">Changelog</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../Plugins/GKChat/api.html">API</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Plugins/GKMinimap/index.html">Minimap</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Plugins/GKMinimap/Welcome/Installations.html">Installations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Plugins/GKMinimap/Welcome/GettingStarted.html">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Plugins/GKMinimap/Welcome/FrequentQuestions.html">Frequently Asked Questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Plugins/GKMinimap/Welcome/Changelog.html">Changelog</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../Plugins/GKMinimap/api.html">API</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Plugins/GKML/index.html">Machine Learning</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Plugins/GKML/cartpole/1_Introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Plugins/GKML/cartpole/2_Setup.html">Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Plugins/GKML/cartpole/3_MLAdapter.html">MLAdapter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Plugins/GKML/cartpole/4_Game.html">Make the game</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Plugins/GKML/cartpole/5_Launching.html">Cartpole as a gym environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Plugins/GKML/cartpole/6_Training.html">Training</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Plugins/GKML/cartpole/7_Packaging.html">Packaging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Plugins/GKML/issues.html">Known Issues</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">UnrealEngine</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Developer.html">Developer Guide</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Developer/Docs.html">Documentation Generation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Developer/Compilation.html">Compilation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Developer/Shaders/index.html">Shaders</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Developer/Doxygen.html">Doxygen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Developer/Contribution.html">Contributions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Developer/ci.html">Continuous Integration</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Game.html">Game</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Game/GameFlow.html">GameFlow</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../Level/index.html">Level</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Level/landscape.html">Landscape Creation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Level/procedural.html">Procedural Level Generation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../Online.html">Online</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Multiplayer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="MMO.html">Massively Multiplayer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Competitive.html">Competitive</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Cheating.html">Cheating</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../index.html#others">Others</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Others.html">Others</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-16"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../Tips/index.html">Tips &amp; Tricks</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-17"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Tips/Controllers/index.html">Controllers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tips/Cameras/index.html">Cameras</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tips/Cameras/configure.html">Cameras</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Tools</span></p>
-<ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Modding/index.html">Modding &amp; DLC</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Tools</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../Tools/uetools.html">uetools</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Tools/ranked.html">ranked</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Tools/resources.html">Resources</a></li>
 </ul>
 
-        </div>
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
       </div>
-    </nav>
+      
+      <main id="main-content" class="bd-main">
+        
+        
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Gamekit</a>
-      </nav>
+<div class="sbt-scroll-pixel-helper"></div>
 
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
-  <ul class="wy-breadcrumbs">
-      <li><a href="../../index.html" class="icon icon-home"></a></li>
-          <li class="breadcrumb-item"><a href="../index.html">Developer Guide</a></li>
-      <li class="breadcrumb-item active">Multiplayer</li>
-      <li class="wy-breadcrumbs-aside">
-            <a href="../../_sources/UnrealEngine/Online/Multiplayer.rst.txt" rel="nofollow"> View page source</a>
-      </li>
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/UnrealEngine/Online/Multiplayer.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
   </ul>
-  <hr/>
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-             
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Multiplayer</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#important-classes">Important Classes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#common-actor-configurations">Common Actor Configurations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#code-snippet">Code Snippet</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#server-only-code-blocks">Server Only code blocks</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#client-only-code-blocks">Client only code blocks</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#actor-network-configuration">Actor Network configuration</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conditionnal-execution-of-some-code">Conditionnal execution of some code</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#network-conditions">Network Conditions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#replication">Replication</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-replication">Advanced Replication</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#testing">Testing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
   <section id="multiplayer">
-<h1>Multiplayer<a class="headerlink" href="#multiplayer" title="Permalink to this headline"></a></h1>
+<h1>Multiplayer<a class="headerlink" href="#multiplayer" title="Link to this heading">#</a></h1>
 <p>The games are truely only running on the server. Clients forwards their inputs to the server
 and render the state of the game. The state of the game between the clients and the server is
 kept in sync through replication.</p>
@@ -151,16 +502,11 @@ The client will experience extreme jittering due to the server trying to correct
 <p>Ultimatly cheating by altering the simulation would degrate the gaming ExperienceLevels</p>
 </div>
 <section id="important-classes">
-<h2>Important Classes<a class="headerlink" href="#important-classes" title="Permalink to this headline"></a></h2>
+<h2>Important Classes<a class="headerlink" href="#important-classes" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>How classes are used inside a multiplayer game</p></li>
 </ul>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 58%" />
-<col style="width: 19%" />
-<col style="width: 23%" />
-</colgroup>
+<table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Class</p></th>
 <th class="head"><p>Location</p></th>
@@ -211,7 +557,7 @@ The client will experience extreme jittering due to the server trying to correct
 <li><p>ACharacter are setup for replications</p></li>
 </ul>
 <section id="common-actor-configurations">
-<h3>Common Actor Configurations<a class="headerlink" href="#common-actor-configurations" title="Permalink to this headline"></a></h3>
+<h3>Common Actor Configurations<a class="headerlink" href="#common-actor-configurations" title="Link to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p>Local Play: No server, one player</p></li>
 <li><p>Hosting Client: Host is both a server &amp; and a client</p></li>
@@ -219,13 +565,7 @@ The client will experience extreme jittering due to the server trying to correct
 <li><p>Remote Client: player connected to a server (Hosting Client or dedicated server)</p></li>
 <li><p>Predicted Client: Remote player simulated on another client</p></li>
 </ol>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 45%" />
-<col style="width: 18%" />
-<col style="width: 18%" />
-<col style="width: 19%" />
-</colgroup>
+<table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Actor</p></th>
 <th class="head"><p>Net Mode</p></th>
@@ -268,16 +608,16 @@ The client will experience extreme jittering due to the server trying to correct
 </table>
 </section>
 <section id="code-snippet">
-<h3>Code Snippet<a class="headerlink" href="#code-snippet" title="Permalink to this headline"></a></h3>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">HasAuthority</span><span class="w">           </span><span class="o">=</span><span class="w"> </span><span class="n">GetNetMode</span><span class="p">()</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">ENetMode</span><span class="o">::</span><span class="n">NM_Client</span><span class="w"></span>
-<span class="n">ShouldShowUI</span><span class="w">           </span><span class="o">=</span><span class="w"> </span><span class="n">GetNetMode</span><span class="p">()</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">ENetMode</span><span class="o">::</span><span class="n">NM_DedicatedServer</span><span class="w"></span>
-<span class="n">AcceptRemoteConnection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GetNetMode</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">NM_DedicatedServer</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">GetNetMode</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">NM_ListenServer</span><span class="w"></span>
+<h3>Code Snippet<a class="headerlink" href="#code-snippet" title="Link to this heading">#</a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">HasAuthority</span><span class="w">           </span><span class="o">=</span><span class="w"> </span><span class="n">GetNetMode</span><span class="p">()</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">ENetMode</span><span class="o">::</span><span class="n">NM_Client</span>
+<span class="n">ShouldShowUI</span><span class="w">           </span><span class="o">=</span><span class="w"> </span><span class="n">GetNetMode</span><span class="p">()</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">ENetMode</span><span class="o">::</span><span class="n">NM_DedicatedServer</span>
+<span class="n">AcceptRemoteConnection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GetNetMode</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">NM_DedicatedServer</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">GetNetMode</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">NM_ListenServer</span>
 </pre></div>
 </div>
 </section>
 </section>
 <section id="server-only-code-blocks">
-<h2>Server Only code blocks<a class="headerlink" href="#server-only-code-blocks" title="Permalink to this headline"></a></h2>
+<h2>Server Only code blocks<a class="headerlink" href="#server-only-code-blocks" title="Link to this heading">#</a></h2>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#if WITH_SERVER_CODE</span>
 
 <span class="c1">// code to load up your mananger and stuff here</span>
@@ -287,7 +627,7 @@ The client will experience extreme jittering due to the server trying to correct
 </div>
 </section>
 <section id="client-only-code-blocks">
-<h2>Client only code blocks<a class="headerlink" href="#client-only-code-blocks" title="Permalink to this headline"></a></h2>
+<h2>Client only code blocks<a class="headerlink" href="#client-only-code-blocks" title="Link to this heading">#</a></h2>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#if !UE_SERVER</span>
 
 <span class="cp">#endif</span>
@@ -295,7 +635,7 @@ The client will experience extreme jittering due to the server trying to correct
 </div>
 </section>
 <section id="actor-network-configuration">
-<h2>Actor Network configuration<a class="headerlink" href="#actor-network-configuration" title="Permalink to this headline"></a></h2>
+<h2>Actor Network configuration<a class="headerlink" href="#actor-network-configuration" title="Link to this heading">#</a></h2>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">AActor</span><span class="o">::</span><span class="n">GetNetMode</span><span class="p">()</span><span class="w">    </span><span class="c1">// Standalone | Dedicated  | Listen | Client</span>
 <span class="n">AActor</span><span class="o">::</span><span class="n">GetLocalRole</span><span class="p">()</span><span class="w">  </span><span class="c1">// Simulated  | Autonomous | Authority</span>
 <span class="n">AActor</span><span class="o">::</span><span class="n">GetRemoteRole</span><span class="p">()</span><span class="w"> </span><span class="c1">// Simulated  | Autonomous | Authority</span>
@@ -303,18 +643,18 @@ The client will experience extreme jittering due to the server trying to correct
 </div>
 </section>
 <section id="conditionnal-execution-of-some-code">
-<h2>Conditionnal execution of some code<a class="headerlink" href="#conditionnal-execution-of-some-code" title="Permalink to this headline"></a></h2>
+<h2>Conditionnal execution of some code<a class="headerlink" href="#conditionnal-execution-of-some-code" title="Link to this heading">#</a></h2>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// HasAuthority in blueprints:</span>
-<span class="n">HasAuthority</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AActor</span><span class="o">::</span><span class="n">GetLocalRole</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">ROLE_Authority</span><span class="p">);</span><span class="w"></span>
+<span class="n">HasAuthority</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AActor</span><span class="o">::</span><span class="n">GetLocalRole</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">ROLE_Authority</span><span class="p">);</span>
 
 <span class="c1">// CanExecute Cosmetic Events</span>
 <span class="c1">//    Used when working with HUD/Widget</span>
-<span class="o">!</span><span class="n">UKismetSystemLibrary</span><span class="o">::</span><span class="n">IsDedicatedServer</span><span class="p">(</span><span class="n">World</span><span class="p">)</span><span class="w"></span>
+<span class="o">!</span><span class="n">UKismetSystemLibrary</span><span class="o">::</span><span class="n">IsDedicatedServer</span><span class="p">(</span><span class="n">World</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
 <section id="network-conditions">
-<h2>Network Conditions<a class="headerlink" href="#network-conditions" title="Permalink to this headline"></a></h2>
+<h2>Network Conditions<a class="headerlink" href="#network-conditions" title="Link to this heading">#</a></h2>
 <p>Netowrk conditions metrics are stored inside the <code class="docutils literal notranslate"><span class="pre">UNetDriver</span></code> stored inside the world.
 In addition you can hook yourself to the <code class="docutils literal notranslate"><span class="pre">FOnNetworkProcessingCausingSlowFrame</span></code> delegate inside <code class="docutils literal notranslate"><span class="pre">IpNetDriver</span></code>
 to display warning to users when network is being slow.</p>
@@ -323,11 +663,7 @@ to display warning to users when network is being slow.</p>
 <li><p>The ping is store in <code class="docutils literal notranslate"><span class="pre">PlayerController-&gt;PlayerState-&gt;ExactPing</span></code></p></li>
 <li><p>Checkout <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">UGKUtilityLibrary::GetNetworkMetrics()</span></code> and <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">FGKNetworkMetrics</span></code></p></li>
 </ul>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 80%" />
-</colgroup>
+<table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Type</p></th>
 <th class="head"><p>Metric Name</p></th>
@@ -488,121 +824,205 @@ to display warning to users when network is being slow.</p>
 </table>
 </section>
 <section id="replication">
-<h2>Replication<a class="headerlink" href="#replication" title="Permalink to this headline"></a></h2>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Net/Core/PushModel/PushModel.h&quot;</span><span class="cp"></span>
+<h2>Replication<a class="headerlink" href="#replication" title="Link to this heading">#</a></h2>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Net/Core/PushModel/PushModel.h&quot;</span>
 
-<span class="w">     </span><span class="n">FDoRepLifetimeParams</span><span class="w"> </span><span class="n">SharedParams</span><span class="p">;</span><span class="w"></span>
-<span class="w">     </span><span class="n">SharedParams</span><span class="p">.</span><span class="n">bIsPushBased</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
+<span class="w">     </span><span class="n">FDoRepLifetimeParams</span><span class="w"> </span><span class="n">SharedParams</span><span class="p">;</span>
+<span class="w">     </span><span class="n">SharedParams</span><span class="p">.</span><span class="n">bIsPushBased</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
 
-<span class="w">     </span><span class="n">DOREPLIFETIME_WITH_PARAMS_FAST</span><span class="p">(</span><span class="n">APlayerState</span><span class="p">,</span><span class="w"> </span><span class="n">Score</span><span class="p">,</span><span class="w"> </span><span class="n">SharedParams</span><span class="p">);</span><span class="w"></span>
-<span class="w">     </span><span class="n">DOREPLIFETIME_WITH_PARAMS_FAST</span><span class="p">(</span><span class="n">APlayerState</span><span class="p">,</span><span class="w"> </span><span class="n">bIsSpectator</span><span class="p">,</span><span class="w"> </span><span class="n">SharedParams</span><span class="p">);</span><span class="w"></span>
-<span class="w">     </span><span class="n">DOREPLIFETIME_WITH_PARAMS_FAST</span><span class="p">(</span><span class="n">APlayerState</span><span class="p">,</span><span class="w"> </span><span class="n">bOnlySpectator</span><span class="p">,</span><span class="w"> </span><span class="n">SharedParams</span><span class="p">);</span><span class="w"></span>
-<span class="w">     </span><span class="n">DOREPLIFETIME_WITH_PARAMS_FAST</span><span class="p">(</span><span class="n">APlayerState</span><span class="p">,</span><span class="w"> </span><span class="n">bFromPreviousLevel</span><span class="p">,</span><span class="w"> </span><span class="n">SharedParams</span><span class="p">);</span><span class="w"></span>
-<span class="w">     </span><span class="n">DOREPLIFETIME_WITH_PARAMS_FAST</span><span class="p">(</span><span class="n">APlayerState</span><span class="p">,</span><span class="w"> </span><span class="n">StartTime</span><span class="p">,</span><span class="w"> </span><span class="n">SharedParams</span><span class="p">);</span><span class="w"></span>
-<span class="w">     </span><span class="n">DOREPLIFETIME_WITH_PARAMS_FAST</span><span class="p">(</span><span class="n">APlayerState</span><span class="p">,</span><span class="w"> </span><span class="n">PlayerNamePrivate</span><span class="p">,</span><span class="w"> </span><span class="n">SharedParams</span><span class="p">);</span><span class="w"></span>
+<span class="w">     </span><span class="n">DOREPLIFETIME_WITH_PARAMS_FAST</span><span class="p">(</span><span class="n">APlayerState</span><span class="p">,</span><span class="w"> </span><span class="n">Score</span><span class="p">,</span><span class="w"> </span><span class="n">SharedParams</span><span class="p">);</span>
+<span class="w">     </span><span class="n">DOREPLIFETIME_WITH_PARAMS_FAST</span><span class="p">(</span><span class="n">APlayerState</span><span class="p">,</span><span class="w"> </span><span class="n">bIsSpectator</span><span class="p">,</span><span class="w"> </span><span class="n">SharedParams</span><span class="p">);</span>
+<span class="w">     </span><span class="n">DOREPLIFETIME_WITH_PARAMS_FAST</span><span class="p">(</span><span class="n">APlayerState</span><span class="p">,</span><span class="w"> </span><span class="n">bOnlySpectator</span><span class="p">,</span><span class="w"> </span><span class="n">SharedParams</span><span class="p">);</span>
+<span class="w">     </span><span class="n">DOREPLIFETIME_WITH_PARAMS_FAST</span><span class="p">(</span><span class="n">APlayerState</span><span class="p">,</span><span class="w"> </span><span class="n">bFromPreviousLevel</span><span class="p">,</span><span class="w"> </span><span class="n">SharedParams</span><span class="p">);</span>
+<span class="w">     </span><span class="n">DOREPLIFETIME_WITH_PARAMS_FAST</span><span class="p">(</span><span class="n">APlayerState</span><span class="p">,</span><span class="w"> </span><span class="n">StartTime</span><span class="p">,</span><span class="w"> </span><span class="n">SharedParams</span><span class="p">);</span>
+<span class="w">     </span><span class="n">DOREPLIFETIME_WITH_PARAMS_FAST</span><span class="p">(</span><span class="n">APlayerState</span><span class="p">,</span><span class="w"> </span><span class="n">PlayerNamePrivate</span><span class="p">,</span><span class="w"> </span><span class="n">SharedParams</span><span class="p">);</span>
 
-<span class="n">MARK_PROPERTY_DIRTY_FROM_NAME</span><span class="p">(</span><span class="n">APlayerState</span><span class="p">,</span><span class="w"> </span><span class="n">Score</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">);</span><span class="w"></span>
+<span class="n">MARK_PROPERTY_DIRTY_FROM_NAME</span><span class="p">(</span><span class="n">APlayerState</span><span class="p">,</span><span class="w"> </span><span class="n">Score</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">);</span>
 </pre></div>
 </div>
 </section>
 <section id="advanced-replication">
-<h2>Advanced Replication<a class="headerlink" href="#advanced-replication" title="Permalink to this headline"></a></h2>
+<h2>Advanced Replication<a class="headerlink" href="#advanced-replication" title="Link to this heading">#</a></h2>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// this seems to work well, channel does not close</span>
-<span class="kt">bool</span><span class="w"> </span><span class="n">AGKCharacterBase</span><span class="o">::</span><span class="n">IsReplicationPausedForConnection</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">FNetViewer</span><span class="o">&amp;</span><span class="w"> </span><span class="n">ConnectionOwnerNetViewer</span><span class="p">)</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">AGKCharacterBase</span><span class="o">::</span><span class="n">IsReplicationPausedForConnection</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">FNetViewer</span><span class="o">&amp;</span><span class="w"> </span><span class="n">ConnectionOwnerNetViewer</span><span class="p">)</span>
 
 <span class="c1">// use this to stop simulation on remote clients</span>
-<span class="n">AGKCharacterBase</span><span class="o">::</span><span class="n">OnReplicationPausedChanged</span><span class="w"></span>
+<span class="n">AGKCharacterBase</span><span class="o">::</span><span class="n">OnReplicationPausedChanged</span>
 
 <span class="c1">// What is the purpose of this</span>
 <span class="c1">// NetDormancy seems hard to get right</span>
-<span class="n">NetDormancy</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">DORM_DormantPartial</span><span class="p">;</span><span class="w"></span>
+<span class="n">NetDormancy</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">DORM_DormantPartial</span><span class="p">;</span>
 <span class="kt">bool</span><span class="w"> </span><span class="n">AGKCharacterBase</span><span class="o">::</span><span class="n">GetNetDormancy</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">FVector</span><span class="o">&amp;</span><span class="w"> </span><span class="n">ViewPos</span><span class="p">,</span><span class="w">    </span><span class="c1">// ConnectionViewers[viewerIdx].ViewLocation</span>
 <span class="w">                                      </span><span class="k">const</span><span class="w"> </span><span class="n">FVector</span><span class="o">&amp;</span><span class="w"> </span><span class="n">ViewDir</span><span class="p">,</span><span class="w">    </span><span class="c1">// ConnectionViewers[viewerIdx].ViewDir</span>
 <span class="w">                                      </span><span class="k">class</span><span class="w"> </span><span class="nc">AActor</span><span class="o">*</span><span class="w">  </span><span class="n">Viewer</span><span class="p">,</span><span class="w">     </span><span class="c1">// ConnectionViewers[viewerIdx].InViewer</span>
 <span class="w">                                      </span><span class="n">AActor</span><span class="o">*</span><span class="w">        </span><span class="n">ViewTarget</span><span class="p">,</span><span class="w"> </span><span class="c1">// ConnectionViewers[viewerIdx].ViewTarget</span>
-<span class="w">                                      </span><span class="n">UActorChannel</span><span class="o">*</span><span class="w"> </span><span class="n">InChannel</span><span class="p">,</span><span class="w"></span>
-<span class="w">                                      </span><span class="kt">float</span><span class="w">          </span><span class="n">Time</span><span class="p">,</span><span class="w"></span>
-<span class="w">                                      </span><span class="kt">bool</span><span class="w">           </span><span class="n">bLowBandwidth</span><span class="p">)</span><span class="w"></span>
+<span class="w">                                      </span><span class="n">UActorChannel</span><span class="o">*</span><span class="w"> </span><span class="n">InChannel</span><span class="p">,</span>
+<span class="w">                                      </span><span class="kt">float</span><span class="w">          </span><span class="n">Time</span><span class="p">,</span>
+<span class="w">                                      </span><span class="kt">bool</span><span class="w">           </span><span class="n">bLowBandwidth</span><span class="p">)</span>
 
 <span class="c1">// When tweaking this method, the replication does not stop right away</span>
 <span class="c1">// the channel closes after a few seconds</span>
 <span class="c1">// LogNetDormancy: Verbose: UChannel::Close: Sending CloseBunch. Reason: Relevancy</span>
 <span class="kt">bool</span><span class="w"> </span><span class="n">AGKCharacterBase</span><span class="o">::</span><span class="n">IsNetRelevantFor</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">AActor</span><span class="w">  </span><span class="o">*</span><span class="n">RealViewer</span><span class="p">,</span><span class="w">  </span><span class="c1">// InViewer</span>
 <span class="w">                                        </span><span class="k">const</span><span class="w"> </span><span class="n">AActor</span><span class="w">  </span><span class="o">*</span><span class="n">ViewTarget</span><span class="p">,</span><span class="w">  </span><span class="c1">// ViewTarget</span>
-<span class="w">                                        </span><span class="k">const</span><span class="w"> </span><span class="n">FVector</span><span class="w"> </span><span class="o">&amp;</span><span class="n">ViewLocation</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
+<span class="w">                                        </span><span class="k">const</span><span class="w"> </span><span class="n">FVector</span><span class="w"> </span><span class="o">&amp;</span><span class="n">ViewLocation</span><span class="p">)</span><span class="w"> </span><span class="k">const</span>
 </pre></div>
 </div>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">You</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="n">play</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">FNetworkObjectList</span><span class="p">,</span><span class="w"> </span><span class="n">but</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">bit</span><span class="w"> </span><span class="n">finicky</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">You</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="n">play</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">FNetworkObjectList</span><span class="p">,</span><span class="w"> </span><span class="n">but</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">bit</span><span class="w"> </span><span class="n">finicky</span>
 
-<span class="kt">bool</span><span class="w"> </span><span class="n">FNetworkObjectList</span><span class="o">::</span><span class="n">MarkActive</span><span class="p">(</span><span class="w"></span>
-<span class="w">      </span><span class="n">AActor</span><span class="o">*</span><span class="k">const</span><span class="w"> </span><span class="n">Actor</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="n">UNetConnection</span><span class="o">*</span><span class="k">const</span><span class="w"> </span><span class="n">Connection</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="n">UNetDriver</span><span class="o">*</span><span class="w"> </span><span class="n">NetDriver</span><span class="p">)</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">FNetworkObjectList</span><span class="o">::</span><span class="n">MarkActive</span><span class="p">(</span>
+<span class="w">      </span><span class="n">AActor</span><span class="o">*</span><span class="k">const</span><span class="w"> </span><span class="n">Actor</span><span class="p">,</span>
+<span class="w">      </span><span class="n">UNetConnection</span><span class="o">*</span><span class="k">const</span><span class="w"> </span><span class="n">Connection</span><span class="p">,</span>
+<span class="w">      </span><span class="n">UNetDriver</span><span class="o">*</span><span class="w"> </span><span class="n">NetDriver</span><span class="p">)</span>
 
-<span class="kt">void</span><span class="w"> </span><span class="n">FNetworkObjectList</span><span class="o">::</span><span class="n">MarkDormant</span><span class="p">(</span><span class="w"></span>
-<span class="w">      </span><span class="n">AActor</span><span class="o">*</span><span class="k">const</span><span class="w"> </span><span class="n">Actor</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="n">UNetConnection</span><span class="o">*</span><span class="k">const</span><span class="w"> </span><span class="n">Connection</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="k">const</span><span class="w"> </span><span class="n">int32</span><span class="w"> </span><span class="n">NumConnections</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="n">UNetDriver</span><span class="o">*</span><span class="w"> </span><span class="n">NetDriver</span><span class="p">)</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="n">FNetworkObjectList</span><span class="o">::</span><span class="n">MarkDormant</span><span class="p">(</span>
+<span class="w">      </span><span class="n">AActor</span><span class="o">*</span><span class="k">const</span><span class="w"> </span><span class="n">Actor</span><span class="p">,</span>
+<span class="w">      </span><span class="n">UNetConnection</span><span class="o">*</span><span class="k">const</span><span class="w"> </span><span class="n">Connection</span><span class="p">,</span>
+<span class="w">      </span><span class="k">const</span><span class="w"> </span><span class="n">int32</span><span class="w"> </span><span class="n">NumConnections</span><span class="p">,</span>
+<span class="w">      </span><span class="n">UNetDriver</span><span class="o">*</span><span class="w"> </span><span class="n">NetDriver</span><span class="p">)</span>
 </pre></div>
 </div>
-<dl class="footnote brackets">
-<dt class="label" id="id1"><span class="brackets">1</span></dt>
-<dd><p><a class="reference external" href="https://docs.unrealengine.com/4.26/en-US/API/Runtime/Engine/Engine/FNetworkObjectList/">https://docs.unrealengine.com/4.26/en-US/API/Runtime/Engine/Engine/FNetworkObjectList/</a></p>
-</dd>
-</dl>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id1" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://docs.unrealengine.com/4.26/en-US/API/Runtime/Engine/Engine/FNetworkObjectList/">https://docs.unrealengine.com/4.26/en-US/API/Runtime/Engine/Engine/FNetworkObjectList/</a></p>
+</aside>
+</aside>
 </section>
 <section id="testing">
-<h2>Testing<a class="headerlink" href="#testing" title="Permalink to this headline"></a></h2>
-<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="c1"># DefaultEngine.ini</span><span class="w"></span>
-<span class="k">[PacketSimulationSettings]</span><span class="w"></span>
-<span class="na">PktLag</span><span class="o">=</span><span class="s">10</span><span class="w"></span>
-<span class="na">PktLagVariance</span><span class="o">=</span><span class="s">10</span><span class="w"></span>
-<span class="na">PktLoss</span><span class="o">=</span><span class="s">0</span><span class="w"></span>
-<span class="na">PktOrder</span><span class="o">=</span><span class="s">0</span><span class="w"></span>
-<span class="na">PktDup</span><span class="o">=</span><span class="s">0</span><span class="w"></span>
+<h2>Testing<a class="headerlink" href="#testing" title="Link to this heading">#</a></h2>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="c1"># DefaultEngine.ini</span>
+<span class="k">[PacketSimulationSettings]</span>
+<span class="na">PktLag</span><span class="o">=</span><span class="s">10</span>
+<span class="na">PktLagVariance</span><span class="o">=</span><span class="s">10</span>
+<span class="na">PktLoss</span><span class="o">=</span><span class="s">0</span>
+<span class="na">PktOrder</span><span class="o">=</span><span class="s">0</span>
+<span class="na">PktDup</span><span class="o">=</span><span class="s">0</span>
 </pre></div>
 </div>
 </section>
 <section id="references">
-<h2>References<a class="headerlink" href="#references" title="Permalink to this headline"></a></h2>
-<dl class="footnote brackets">
-<dt class="label" id="id2"><span class="brackets">1</span></dt>
-<dd><p><a class="reference external" href="https://www.unrealengine.com/en-US/blog/finding-network-based-exploits?sessionInvalidated=true">Simulate Network Conditions</a></p>
-</dd>
-</dl>
+<h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id2" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://www.unrealengine.com/en-US/blog/finding-network-based-exploits?sessionInvalidated=true">Simulate Network Conditions</a></p>
+</aside>
+</aside>
 </section>
 </section>
 
 
-           </div>
-          </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../Level/procedural.html" class="btn btn-neutral float-left" title="Procedural Level Generation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="MMO.html" class="btn btn-neutral float-right" title="Massively Multiplayer" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
+                </article>
+              
 
-  <hr/>
-
-  <div role="contentinfo">
-    <p>&#169; Copyright 2024.</p>
-  </div>
-
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   
-
-</footer>
-        </div>
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../Online.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Online</p>
       </div>
-    </section>
-  </div>
-  <script>
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script> 
+    </a>
+    <a class="right-next"
+       href="MMO.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Massively Multiplayer</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
-</body>
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#important-classes">Important Classes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#common-actor-configurations">Common Actor Configurations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#code-snippet">Code Snippet</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#server-only-code-blocks">Server Only code blocks</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#client-only-code-blocks">Client only code blocks</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#actor-network-configuration">Actor Network configuration</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conditionnal-execution-of-some-code">Conditionnal execution of some code</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#network-conditions">Network Conditions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#replication">Replication</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-replication">Advanced Replication</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#testing">Testing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Pierre Delaunay
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
 </html>

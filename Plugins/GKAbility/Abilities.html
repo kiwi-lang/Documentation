@@ -1,625 +1,521 @@
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
-<head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Abilities &mdash; Gamekit  documentation</title>
-      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/collapsible-lists\css\tree_view.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+
+<html lang="en" data-content_root="../../" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Abilities &#8212; Gamekit</title>
   
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/underscore.js"></script>
-        <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/collapsible-lists\js\CollapsibleLists.compressed.js"></script>
-        <script src="../../_static/collapsible-lists\js\apply-collapsible-lists.js"></script>
-    <script src="../../_static/js/theme.js"></script>
-    <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" /> 
-</head>
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
-<body class="wy-body-for-nav"> 
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
-            <a href="../../index.html" class="icon icon-home"> Gamekit
-          </a>
-              <div class="version">
-                6c15b89
-              </div>
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Welcome</span></p>
-<ul>
+  
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/collapsible-lists\css\tree_view.css?v=a885cde7" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=71c9e0a5" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="../../_static/collapsible-lists\js\CollapsibleLists.compressed.js?v=73120307"></script>
+    <script src="../../_static/collapsible-lists\js\apply-collapsible-lists.js?v=660e4f45"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Plugins/GKAbility/Abilities';</script>
+    <link rel="icon" href="../../_static/GamekitDev.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+    
+    <img src="../../_static/GamekitDev.png" class="logo__image only-light" alt="Gamekit - Home"/>
+    <script>document.write(`<img src="../../_static/GamekitDev.png" class="logo__image only-dark" alt="Gamekit - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Welcome</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../Welcome/Roadmap.html">RoadMap</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Plugins</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../GKFogOfWar/index.html">Fog of War</a></li>
-<li class="toctree-l1"><a class="reference internal" href="index.html">Ability</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../GKLobby/index.html">Lobby</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../GKChat/index.html">Chat</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../GKMinimap/index.html">Minimap</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../GKML/index.html">Machine Learning</a></li>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Plugins</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../GKFogOfWar/index.html">Fog of War</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../GKFogOfWar/Welcome/Installations.html">Installations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GKFogOfWar/Welcome/GettingStarted.html">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GKFogOfWar/Welcome/FrequentQuestions.html">Frequently Asked Questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GKFogOfWar/Welcome/Changelog.html">Changelog</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../GKFogOfWar/api.html">API</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../GKFogOfWar/API/classAGKFogOfWarCharacter.html">AGKFogOfWarCharacter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../GKFogOfWar/API/classAGKFogOfWarGameMode.html">AGKFogOfWarGameMode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../GKFogOfWar/API/classAGKFogOfWarGameState.html">AGKFogOfWarGameState</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../GKFogOfWar/API/classAGKFogOfWarObstacle.html">AGKFogOfWarObstacle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../GKFogOfWar/API/classAGKFogOfWarPawn.html">AGKFogOfWarPawn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../GKFogOfWar/API/classAGKFogOfWarPlayerController.html">AGKFogOfWarPlayerController</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../GKFogOfWar/API/classAGKFogOfWarPlayerState.html">AGKFogOfWarPlayerState</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../GKFogOfWar/API/classAGKFogOfWarPrivatePlayerState.html">AGKFogOfWarPrivatePlayerState</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../GKFogOfWar/API/classAGKFogOfWarTeam.html">AGKFogOfWarTeam</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../GKFogOfWar/API/classAGKFogOfWarVolume.html">AGKFogOfWarVolume</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../GKFogOfWar/API/classFGKFogOfWarModule.html">FGKFogOfWarModule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../GKFogOfWar/API/classFGKFogOfWarShaderModule.html">FGKFogOfWarShaderModule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../GKFogOfWar/API/classIGKFogOfWarAgentInterface.html">IGKFogOfWarAgentInterface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../GKFogOfWar/API/classIGKFogOfWarGameStateInterface.html">IGKFogOfWarGameStateInterface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../GKFogOfWar/API/classIGKFogOfWarTestModule.html">IGKFogOfWarTestModule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../GKFogOfWar/API/classUGKCanvasUpscaler.html">UGKCanvasUpscaler</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../GKFogOfWar/API/classUGKCPUUpscalerStrategy.html">UGKCPUUpscalerStrategy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../GKFogOfWar/API/classUGKExplorationTransform.html">UGKExplorationTransform</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../GKFogOfWar/API/classUGKFogOfWarComponent.html">UGKFogOfWarComponent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../GKFogOfWar/API/classUGKFogOfWarLibrary.html">UGKFogOfWarLibrary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../GKFogOfWar/API/classUGKFogOfWarStrategy.html">UGKFogOfWarStrategy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../GKFogOfWar/API/classUGKGPUUpscalerStrategy.html">UGKGPUUpscalerStrategy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../GKFogOfWar/API/classUGKRayCasting__Less.html">UGKRayCasting_Less</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../GKFogOfWar/API/classUGKRayCasting__Line.html">UGKRayCasting_Line</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../GKFogOfWar/API/classUGKRayCasting__Triangle.html">UGKRayCasting_Triangle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../GKFogOfWar/API/classUGKShadowCasting.html">UGKShadowCasting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../GKFogOfWar/API/classUGKSharedBlueprint.html">UGKSharedBlueprint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../GKFogOfWar/API/classUGKTransformerStrategy.html">UGKTransformerStrategy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../GKFogOfWar/API/classUGKTransformerStrategyCanvas.html">UGKTransformerStrategyCanvas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../GKFogOfWar/API/classUGKTransformerStrategyTexture2D.html">UGKTransformerStrategyTexture2D</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">UnrealEngine</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../UnrealEngine/index.html">Developer Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../UnrealEngine/index.html#game">Game</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../UnrealEngine/index.html#online">Online</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../UnrealEngine/index.html#others">Others</a></li>
+</li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Tools</span></p>
-<ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="index.html">GKAbility</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Welcome/Installations.html">Installations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Welcome/GettingStarted.html">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Welcome/FrequentQuestions.html">Frequently Asked Questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Welcome/Changelog.html">Changelog</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="api.html">API</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../GKLobby/index.html">Lobby</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../GKLobby/Welcome/Installations.html">Installations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GKLobby/Welcome/GettingStarted.html">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GKLobby/Welcome/FrequentQuestions.html">Frequently Asked Questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GKLobby/Welcome/Changelog.html">Changelog</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../GKLobby/api.html">API</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../GKChat/index.html">Chat</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../GKChat/Welcome/Installations.html">Installations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GKChat/Welcome/GettingStarted.html">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GKChat/Welcome/FrequentQuestions.html">Frequently Asked Questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GKChat/Welcome/Changelog.html">Changelog</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../GKChat/api.html">API</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../GKMinimap/index.html">Minimap</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../GKMinimap/Welcome/Installations.html">Installations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GKMinimap/Welcome/GettingStarted.html">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GKMinimap/Welcome/FrequentQuestions.html">Frequently Asked Questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GKMinimap/Welcome/Changelog.html">Changelog</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../GKMinimap/api.html">API</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../GKML/index.html">Machine Learning</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../GKML/cartpole/1_Introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GKML/cartpole/2_Setup.html">Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GKML/cartpole/3_MLAdapter.html">MLAdapter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GKML/cartpole/4_Game.html">Make the game</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GKML/cartpole/5_Launching.html">Cartpole as a gym environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GKML/cartpole/6_Training.html">Training</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GKML/cartpole/7_Packaging.html">Packaging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GKML/issues.html">Known Issues</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">UnrealEngine</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../UnrealEngine/Developer.html">Developer Guide</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../UnrealEngine/Developer/Docs.html">Documentation Generation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../UnrealEngine/Developer/Compilation.html">Compilation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../UnrealEngine/Developer/Shaders/index.html">Shaders</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../UnrealEngine/Developer/Doxygen.html">Doxygen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../UnrealEngine/Developer/Contribution.html">Contributions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../UnrealEngine/Developer/ci.html">Continuous Integration</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../UnrealEngine/Game.html">Game</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../UnrealEngine/Game/GameFlow.html">GameFlow</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../UnrealEngine/Level/index.html">Level</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../UnrealEngine/Level/landscape.html">Landscape Creation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../UnrealEngine/Level/procedural.html">Procedural Level Generation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../UnrealEngine/Online.html">Online</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../UnrealEngine/Online/Multiplayer.html">Multiplayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../UnrealEngine/Online/MMO.html">Massively Multiplayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../UnrealEngine/Online/Competitive.html">Competitive</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../UnrealEngine/Online/Cheating.html">Cheating</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../UnrealEngine/Others.html">Others</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-16"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../UnrealEngine/Tips/index.html">Tips &amp; Tricks</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-17"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../UnrealEngine/Tips/Controllers/index.html">Controllers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../UnrealEngine/Tips/Cameras/index.html">Cameras</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../UnrealEngine/Tips/Cameras/configure.html">Cameras</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../UnrealEngine/Modding/index.html">Modding &amp; DLC</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Tools</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../Tools/uetools.html">uetools</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Tools/ranked.html">ranked</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Tools/resources.html">Resources</a></li>
 </ul>
 
-        </div>
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
       </div>
-    </nav>
+      
+      <main id="main-content" class="bd-main">
+        
+        
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Gamekit</a>
-      </nav>
+<div class="sbt-scroll-pixel-helper"></div>
 
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
-  <ul class="wy-breadcrumbs">
-      <li><a href="../../index.html" class="icon icon-home"></a></li>
-      <li class="breadcrumb-item active">Abilities</li>
-      <li class="wy-breadcrumbs-aside">
-            <a href="../../_sources/Plugins/GKAbility/Abilities.rst.txt" rel="nofollow"> View page source</a>
-      </li>
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/Plugins/GKAbility/Abilities.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
   </ul>
-  <hr/>
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-             
-  <section id="abilities">
-<h1>Abilities<a class="headerlink" href="#abilities" title="Permalink to this headline"></a></h1>
-<p>Relevant classes:</p>
-<ul class="simple">
-<li><p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">UGKGameplayAbility</span></code>: basic Gameplay Ability for skills and items, implements a few top down casting options</p></li>
-<li><p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">FGKAbilityStatic</span></code>: configurable settings for abilities</p></li>
-<li><p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">AGKAbilityTarget_Actor</span></code>: used to select a target for a given ability</p></li>
-<li><p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">UGKAbilitySystemComponent</span></code></p></li>
-<li><p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">UGKCastPointAnimNotify</span></code>: used to notify the ability when the animation reached a given point</p></li>
-<li><p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">UGKAttributeSet</span></code>: defines a set of attributes for characters (Health, Mana, Stamina, etc…)</p></li>
-<li><p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">UGKAbilityWidget</span></code>: defines a basic interface for widget representing an ability state</p></li>
-</ul>
-<section id="features">
-<h2>Features<a class="headerlink" href="#features" title="Permalink to this headline"></a></h2>
-<ul class="simple">
-<li><p><strong>Data-Driven</strong>: Ability can generate their own GameplayEffect at runtime</p></li>
-<li><p><strong>Generic</strong>: Ability does not assume a specific Character/Skeleton</p></li>
-<li><p><strong>Multiplayer ready</strong></p></li>
-<li><p><strong>Basic UI</strong>: easier debugging</p></li>
-</ul>
-</section>
-<section id="get-started">
-<h2>Get Started<a class="headerlink" href="#get-started" title="Permalink to this headline"></a></h2>
-<section id="setup">
-<h3>Setup<a class="headerlink" href="#setup" title="Permalink to this headline"></a></h3>
-<ol class="arabic">
-<li><dl class="simple">
-<dt>Create inputs use an EnhancedInputContext</dt><dd><ul class="simple">
-<li><p>Gamekit provided a few predefine action you can reuse including <cite>ConfirmTarget</cite> &amp; <cite>CancelTarget</cite> input/Action</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><p>Create a new enum with the same action/input names (see <code class="xref cpp cpp-enum docutils literal notranslate"><span class="pre">EGK_MOBA_AbilityInputID</span></code> as an example)</p></li>
-<li><p>Create a Character from <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">GKCharacterBase</span></code></p></li>
-<li><p>Extend the On Setup Player Input Component event, use to register your input to the ability system component
-(See <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">AGKCharacterBase::BindAbilityActivationFromInputEnum()</span></code>)</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p><code class="xref cpp cpp-member docutils literal notranslate"><span class="pre">FGKGameplayAbilityInputBinds::CancelCommand</span></code> and <code class="xref cpp cpp-member docutils literal notranslate"><span class="pre">FGKGameplayAbilityInputBinds::ConfirmCommand</span></code>
-are the named defined in the input’s project setting NOT the enum name.</p>
-</div>
-</li>
-<li><p>You are ready to grant abilities using <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">AGKCharacterBase::GrantAbility()</span></code>
-In Gamekit abilities are granted to a character for a given slot, each ability populates a slot.
-Slots can then be assigned an input. Gamekit defines 22 default slots (6 Skills, 8 Items, 7 Basic Abilities).
-Under the hood slots are simple integer, users can add as many slots as they want.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Granting ablities can only be done by the authority</p>
-</div>
-</li>
-<li><p>During Gameplay, you can press inputs and the abilities will activate.</p></li>
-</ol>
-</section>
-<section id="example">
-<h3>Example<a class="headerlink" href="#example" title="Permalink to this headline"></a></h3>
-<ul class="simple">
-<li><p>‘Legacy’ Player Input</p></li>
-</ul>
-<iframe width="100%" height="500px" src="https://blueprintue.com/render/_rsbezu-/" scrolling="no" allowfullscreen></iframe><ul class="simple">
-<li><p>Enhanced Player Input</p></li>
-</ul>
-<iframe width="100%" height="500px" src="https://blueprintue.com/render/-vzz0tb5/" scrolling="no" allowfullscreen></iframe></section>
-<section id="creating-abilities">
-<h3>Creating Abilities<a class="headerlink" href="#creating-abilities" title="Permalink to this headline"></a></h3>
-<ul class="simple">
-<li><p>Create a new DataTable using the <cite>GKAbilityStatic</cite> struct</p></li>
-<li><p>Insert a row, give the row a name (the row name is used to generate the ability asset)</p></li>
-<li><p>Click the generate button</p></li>
-</ul>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Python Editor Scripting plugin needs to be enabled &amp; configured</p>
-</div>
-</section>
-</section>
-<section id="gametags">
-<h2>GameTags<a class="headerlink" href="#gametags" title="Permalink to this headline"></a></h2>
-<p>Gametags are used to mark the current state of a player/ability/effect, it is used to control
-transition between different states. It is the core of the gameplay ability system, some effects
-are exclusively implemented through gameplaytags.</p>
-<p>For example, Stun, Silences, Roots are all gameplay effects that simply prevent the character
-from using certain abilities, they can all be implemented using gameplaytag alone.</p>
-<p>Gamekit automatically defines base gametags for its abilities.</p>
-<ul class="simple">
-<li><dl class="simple">
-<dt>Ability: use to tag abilities</dt><dd><ul>
-<li><p>Exclusive: Used to prevent activation of multiple abilities witht the <cite>Exclusive</cite> tag</p></li>
-<li><p>Move: Used to tag abilities performing movement operation</p></li>
-<li><p>Passive: tag passive abilities</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt>Animation: used to tag animation</dt><dd><ul>
-<li><p>CastPoint: Tag is sent when the animation reach the point where projectile/effect should be
-spawned.</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt>Cooldown: used to tag cooldowns</dt><dd><ul>
-<li><p>Prevents the same ability from being casted all the time</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt>Buff: Improves the effectiveness of a character</dt><dd><ul>
-<li><p>Immunity: protects against debuff and disables</p></li>
-<li><p>Armor increase</p></li>
-<li><p>Damage</p></li>
-<li><p>Health bonus</p></li>
-<li><p>Haste: increase movement speed</p></li>
-<li><dl class="simple">
-<dt>Level: level of the buff</dt><dd><ul>
-<li><p>Minor</p></li>
-<li><p>Medium</p></li>
-<li><p>Strong</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt>Debuff: reduce the effectiveness of a character</dt><dd><ul>
-<li><dl class="simple">
-<dt>Level: level of the debuff</dt><dd><ul>
-<li><p>Minor</p></li>
-<li><p>Medium</p></li>
-<li><p>Strong</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><p>Armor reduction</p></li>
-<li><p>Health Penalty</p></li>
-<li><p>Damage decrease</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt>Disable: prevent character for performing certain actions</dt><dd><ul>
-<li><dl class="simple">
-<dt>Level: level of the disable</dt><dd><ul>
-<li><p>Minor</p></li>
-<li><p>Medium</p></li>
-<li><p>Strong</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><p>Stun: prevents movement, spell casting and item usage</p></li>
-<li><p>Silence: prevents spell casting</p></li>
-<li><p>Mute: prevent item usage</p></li>
-<li><p>Root: prevent all movements</p></li>
-<li><p>Break: disable passive abilities</p></li>
-<li><dl class="simple">
-<dt>Dead: removes all buffs, debuffs and disables</dt><dd><ul>
-<li><p>Death is both a disable and a dispel, on depth all active effects are removed
-but all actions are disabled.</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><p>Etheral: cannot do physical damage, cannot be damaged by physical attacks [TODO]</p></li>
-<li><p>Disarmed: cannot do physical attacks [TODO]</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt>Dispel: removes debuff and disables</dt><dd><ul>
-<li><dl class="simple">
-<dt>Level: level of the dispel</dt><dd><ul>
-<li><p>Minor</p></li>
-<li><p>Medium</p></li>
-<li><p>Strong</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt>Failure: used to report errors back to the users</dt><dd><ul>
-<li><p>Blocked:  Ability is blocked by a disable</p></li>
-<li><p>Cost: Resource level does not meet the ability cost</p></li>
-<li><p>Missing:  Ability has missing requirement</p></li>
-<li><p>Network: Internal error due to networking</p></li>
-<li><p>NotLearned: Ability was not learned yet</p></li>
-<li><p>Cooldown: Ability is still in cooldown</p></li>
-<li><p>Dead: Character is dead</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt>GameplayCue: used to spawn effect in reseponse to gameplay effects, all disables will have an effect so players can see it easily</dt><dd><ul>
-<li><p>Immunity</p></li>
-<li><p>Stun</p></li>
-<li><p>Silence</p></li>
-<li><p>Mute</p></li>
-<li><p>Root</p></li>
-<li><p>Break</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><p>Quest: used to tag objectives for the quest system</p></li>
-</ul>
-<section id="creating-gameplayeffect">
-<h3>Creating GameplayEffect<a class="headerlink" href="#creating-gameplayeffect" title="Permalink to this headline"></a></h3>
-<ul class="simple">
-<li><p>For simple gameplay effect that modify attributes you should configure the magniture to be set by caller
-using the tag “Ability.Magnitude”. By default, <cite>UGKGameplayAbility</cite> will populate the data from the <cite>FGKAbilityStatic</cite> data.</p></li>
-</ul>
-</section>
-</section>
-<section id="define-abilities">
-<h2>Define Abilities<a class="headerlink" href="#define-abilities" title="Permalink to this headline"></a></h2>
-<p>Abilities are define inside a json file.
-The list of customizable properties can be found here <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">FGKAbilityStatic</span></code>.
-Gameplay designer can create new abilities by simply adding new abilities inside the ability data file.
-To create the new abilities in unreal engine you need to generate them using a python script.</p>
-<ol class="arabic simple">
-<li><p>Enable python scripting for UnrealEngine</p></li>
-<li><p>Add <code class="docutils literal notranslate"><span class="pre">Gamekit/Script</span></code> to your python path</p></li>
-<li><p>Go to <code class="docutils literal notranslate"><span class="pre">Gamekit/Content/Editor/Ability_Generator</span></code> right click on it and <code class="docutils literal notranslate"><span class="pre">Run</span> <span class="pre">Editor</span> <span class="pre">Utility</span> <span class="pre">Widget</span></code>.
-A widget should pop up with a bit “Generate Default Abilities” button</p></li>
-<li><p>Click on the button, this will generate all the missing abilities</p></li>
-</ol>
-<section id="id1">
-<h3>Example<a class="headerlink" href="#id1" title="Permalink to this headline"></a></h3>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Fireball&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;AbilityKind&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Skill&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;LocalName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;NSLOCTEXT(\&quot;[0A85C43C484A243EF7B6B7B642AD2ACB]\&quot;, \&quot;EC9BA0DD417F0C07C07E3DBB00F88785\&quot;, \&quot;Fire Ball\&quot;)&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;LocalDescription&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;NSLOCTEXT(\&quot;[0A85C43C484A243EF7B6B7B642AD2ACB]\&quot;, \&quot;9CB2744E447BF19F751B929142E6F484\&quot;, \&quot;Launch a roaring ball of fire in a straight line\&quot;)&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;Icon&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Texture2D&#39;/Gamekit/Textures/IconsSkills/fireball-red-1.fireball-red-1&#39;&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;MaxLevel&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;Duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;AbilityEffects&quot;</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="p">},</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;Cost&quot;</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="p">{</span><span class="w"></span>
-<span class="w">                </span><span class="nt">&quot;Attribute&quot;</span><span class="p">:</span><span class="w"></span>
-<span class="w">                </span><span class="p">{</span><span class="w"></span>
-<span class="w">                        </span><span class="nt">&quot;AttributeName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Mana&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">                        </span><span class="nt">&quot;Attribute&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/Script/Gamekit.GKAttributeSet:Mana&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">                        </span><span class="nt">&quot;AttributeOwner&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Class&#39;/Script/Gamekit.GKAttributeSet&#39;&quot;</span><span class="w"></span>
-<span class="w">                </span><span class="p">},</span><span class="w"></span>
-<span class="w">                </span><span class="nt">&quot;Value&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="w"> </span><span class="p">]</span><span class="w"></span>
-<span class="w">        </span><span class="p">},</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;Cooldown&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="mf">0.5</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="p">],</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;Price&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;MaxStack&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;AreaOfEffect&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;CastMaxRange&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">500</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;CastMinRange&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;AbilityBehavior&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;PointTarget&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;AbilityTargetActorClass&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;BlueprintGeneratedClass&#39;/Game/Abilities/TargetActors/ControllerTrace.ControllerTrace_C&#39;&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;TargetObjectTypes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;CastTime&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.20000000298023224</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;ChannelTime&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;AbilityAnimation&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Attack&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;ProjectileActorClass&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;BlueprintGeneratedClass&#39;/Game/Abilities/Projectiles/BP_GA_Projectile.BP_GA_Projectile_C&#39;&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;ProjectileSpeed&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1000</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;ProjectileBehavior&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Directional&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;ProjectileRange&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1600</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;AOEActorClass&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;None&quot;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-</pre></div>
-</div>
-</section>
-</section>
-<section id="ability-kinds">
-<h2>Ability Kinds<a class="headerlink" href="#ability-kinds" title="Permalink to this headline"></a></h2>
-<p>MaxLevel = HeroLevel / 2
-UltimateMaxLevel = HeroLevel / 6</p>
-<ul class="simple">
-<li><dl class="simple">
-<dt>Standard Ability</dt><dd><ul>
-<li><p>4 Levels, Every 2 level character increase their maximum basic level ability by 1</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt>Ultimate Ability</dt><dd><ul>
-<li><p>3 Levels, every 6 level</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt>Abilities with charges</dt><dd><ul>
-<li><p>Ability consume charges, charges are given by an effect periodically</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt>Passive abilities</dt><dd><ul>
-<li><p>Ability simply provide a permanent effect that can be temporarlly disabled with breaks</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><p>Linked Abilities [TODO]</p></li>
-<li><p>Sub abilities [TODO]</p></li>
-<li><p>Autocast abilities [TODO]</p></li>
-<li><p>Modifier abilities [TODO]</p></li>
-</ul>
-</section>
-<section id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline"></a></h2>
-<section id="ability-datatable-initialization">
-<h3>Ability DataTable Initialization<a class="headerlink" href="#ability-datatable-initialization" title="Permalink to this headline"></a></h3>
-<img alt="../../_images/AbilityDataDriven.png" src="../../_images/AbilityDataDriven.png" />
-</section>
-<section id="ability-activation-flow">
-<h3>Ability Activation Flow<a class="headerlink" href="#ability-activation-flow" title="Permalink to this headline"></a></h3>
-<img alt="../../_images/AbilityActivationFlow.png" src="../../_images/AbilityActivationFlow.png" />
-</section>
-<section id="ability-replication-flow">
-<h3>Ability Replication Flow<a class="headerlink" href="#ability-replication-flow" title="Permalink to this headline"></a></h3>
-<img alt="../../_images/AbilityReplicationFlow.png" src="../../_images/AbilityReplicationFlow.png" />
-</section>
-<section id="animations">
-<h3>Animations<a class="headerlink" href="#animations" title="Permalink to this headline"></a></h3>
-<p>To make abilities generic, the animations montage themselves are not specified.
-Instead an animation kind is set (Channelling, Attack, Cast, etc..) which is a single enumerator
-<code class="xref cpp cpp-enumerator docutils literal notranslate"><span class="pre">EGK_AbilityAnimation</span></code> representing the kind of annimation an ability can use.</p>
-<p>The animation montage are specified by the Character itself through its <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">FGKAnimationSet</span></code> (inside <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">FGKUnitStatic</span></code>)
-which our ability can sample from.</p>
-<p>When an ability is activated the <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">FGKAnimationSet</span></code> is fectched from the character to the ability
-and the right animation is then played. This enable us to use the same ability for different
-characters which can have different animation as well.</p>
-<img alt="../../_images/AbilityAnimations.png" src="../../_images/AbilityAnimations.png" />
-</section>
-<section id="ability-queue">
-<h3>Ability Queue<a class="headerlink" href="#ability-queue" title="Permalink to this headline"></a></h3>
-<img alt="../../_images/AbilityQueue.png" src="../../_images/AbilityQueue.png" />
-</section>
-</section>
-<section id="user-interface">
-<h2>User Interface<a class="headerlink" href="#user-interface" title="Permalink to this headline"></a></h2>
-<section id="spell-button-states">
-<h3>Spell Button States<a class="headerlink" href="#spell-button-states" title="Permalink to this headline"></a></h3>
-<p>See <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">UGKAbilityWidget</span></code> for a basic set of implementable event</p>
-<p>Here is a list of states you might want to consider when implementing
-a spell button.</p>
-<ol class="arabic simple">
-<li><p>Ability is available and can be casted (UMG State Normal)</p></li>
-<li><p>Ability is picking a target</p></li>
-<li><p>Ability is being cast (Animation)</p></li>
-<li><p>Ability is on cooldown</p></li>
-<li><p>Backswing animation</p></li>
-<li><p>Ability requirements/cost are not met</p></li>
-<li><p>Ability cannot be cast because of debuff</p></li>
-</ol>
-<figure class="align-default" id="id4">
-<a class="reference internal image-reference" href="../../_images/btn_cooldown.PNG"><img alt="Ability under cooldown" src="../../_images/btn_cooldown.PNG" style="width: 60px;" /></a>
-<figcaption>
-<p><span class="caption-text">Ability under cooldown</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
-</figcaption>
-</figure>
-<figure class="align-default" id="id5">
-<a class="reference internal image-reference" href="../../_images/btn_disabled.PNG"><img alt="../../_images/btn_disabled.PNG" src="../../_images/btn_disabled.PNG" style="width: 60px;" /></a>
-<figcaption>
-<p><span class="caption-text">Ability disabled</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
-</figcaption>
-</figure>
-<figure class="align-default" id="id6">
-<a class="reference internal image-reference" href="../../_images/btn_normal.PNG"><img alt="../../_images/btn_normal.PNG" src="../../_images/btn_normal.PNG" style="width: 60px;" /></a>
-<figcaption>
-<p><span class="caption-text">Ability ready</span><a class="headerlink" href="#id6" title="Permalink to this image"></a></p>
-</figcaption>
-</figure>
-<figure class="align-default" id="id7">
-<a class="reference internal image-reference" href="../../_images/btn_targetting.PNG"><img alt="../../_images/btn_targetting.PNG" src="../../_images/btn_targetting.PNG" style="width: 60px;" /></a>
-<figcaption>
-<p><span class="caption-text">Ability selecting a target</span><a class="headerlink" href="#id7" title="Permalink to this image"></a></p>
-</figcaption>
-</figure>
-<figure class="align-default" id="id8">
-<a class="reference internal image-reference" href="../../_images/btn_oom.PNG"><img alt="../../_images/btn_oom.PNG" src="../../_images/btn_oom.PNG" style="width: 60px;" /></a>
-<figcaption>
-<p><span class="caption-text">Ability out of mana</span><a class="headerlink" href="#id8" title="Permalink to this image"></a></p>
-</figcaption>
-</figure>
-<figure class="align-default" id="id9">
-<a class="reference internal image-reference" href="../../_images/btn_mute.png"><img alt="../../_images/btn_mute.png" src="../../_images/btn_mute.png" style="width: 60px;" /></a>
-<figcaption>
-<p><span class="caption-text">Ability disabled by gameplay effect</span><a class="headerlink" href="#id9" title="Permalink to this image"></a></p>
-</figcaption>
-</figure>
-<figure class="align-default" id="id10">
-<a class="reference internal image-reference" href="../../_images/btn_charges.png"><img alt="../../_images/btn_charges.png" src="../../_images/btn_charges.png" style="width: 60px;" /></a>
-<figcaption>
-<p><span class="caption-text">Ability with activation charges</span><a class="headerlink" href="#id10" title="Permalink to this image"></a></p>
-</figcaption>
-</figure>
-</section>
-<section id="ui-ability-state">
-<h3>UI &amp; Ability State<a class="headerlink" href="#ui-ability-state" title="Permalink to this headline"></a></h3>
-<p>The easiest way to bind the ability is to leverage the <code class="docutils literal notranslate"><span class="pre">UGKAbilityWidget</span></code> coupled with <code class="docutils literal notranslate"><span class="pre">UGKAbilitySystemEventManager</span></code>.</p>
-<ol class="arabic simple">
-<li><p>Instantiate a new <code class="docutils literal notranslate"><span class="pre">UGKAbilitySystemEventManager</span></code>, call <code class="docutils literal notranslate"><span class="pre">SetupDelegates</span></code> to start listenning to events from the <code class="docutils literal notranslate"><span class="pre">UAbilitySystemComponent</span></code></p></li>
-<li><p>Register <code class="docutils literal notranslate"><span class="pre">UGKAbilityWidget</span></code> to the event manager using <code class="docutils literal notranslate"><span class="pre">AddAbilityWidget</span></code> then <code class="docutils literal notranslate"><span class="pre">SetupAbilityWidgetDelegates</span></code> to start receiving events.</p></li>
-</ol>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p><code class="docutils literal notranslate"><span class="pre">AddAbilityWidget</span></code> expects an interger as ID, by default it uses <code class="docutils literal notranslate"><span class="pre">FGameplayAbilitySpec.InputID</span></code>.
-The behaviour can be overiden by implementing <code class="docutils literal notranslate"><span class="pre">GetWidgetIDFromAbilitySpecHandle</span></code> and <code class="docutils literal notranslate"><span class="pre">GetWidgetIDFromAbilitySpec</span></code>.</p>
-<p>Currently <code class="docutils literal notranslate"><span class="pre">InputID</span></code> was used over <code class="docutils literal notranslate"><span class="pre">FGameplayAbilitySpecHandle</span></code> because it allows us to create Ability widget before the
-ability is even granted.</p>
-</div>
-</section>
-</section>
-<section id="builtin-abilities">
-<h2>Builtin Abilities<a class="headerlink" href="#builtin-abilities" title="Permalink to this headline"></a></h2>
-<ul class="simple">
-<li><p>Base Ability: Basic ability with activation logic</p></li>
-<li><p>Cancel Ability: Cancel all the current abilities</p></li>
-<li><p>Move Ability: Move to destination or Actor</p></li>
-<li><p>Base Skill: Ability that is disabled when silenced</p></li>
-<li><dl class="simple">
-<dt>Base Item: Ability that is disabled when muted</dt><dd><ul>
-<li><p>with an optional item slot (Gloves, ring, etc…)</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-</ul>
-</section>
-<section id="builtin-effects">
-<h2>Builtin Effects<a class="headerlink" href="#builtin-effects" title="Permalink to this headline"></a></h2>
-<ul class="simple">
-<li><p>Cooldown: block the casting of an ability for a given amount of time</p></li>
-<li><p>Death: Remove all active effects and set health to zero</p></li>
-<li><p>Dispel: Remove all debuffs and disables</p></li>
-<li><p>Heal: Heal ocne</p></li>
-<li><p>HealOvertime: Heals over time</p></li>
-<li><p>Damage: Deals damage once</p></li>
-<li><p>DamageOvertime: Deals damage overtime</p></li>
-<li><p>Immunity: Grant immunity against all debuffs and disables</p></li>
-<li><p>IncreaseHealth: Increase health</p></li>
-<li><p>ManaCost: Remove mana from character</p></li>
-<li><p>MoveHaste: Increase movement speed</p></li>
-<li><p>Root: Prevent the character from moving</p></li>
-<li><p>Silence: Prevent the character from casting spells</p></li>
-<li><p>Stun: Completely disables the character</p></li>
-</ul>
-</section>
-<section id="builtin-attribute-set">
-<h2>Builtin Attribute Set<a class="headerlink" href="#builtin-attribute-set" title="Permalink to this headline"></a></h2>
-<ul class="simple">
-<li><p>Health</p></li>
-<li><p>Mana</p></li>
-<li><p>Experience</p></li>
-<li><p>Gold</p></li>
-</ul>
-<section id="extending-gameplay-ability-system">
-<h3>Extending Gameplay Ability system<a class="headerlink" href="#extending-gameplay-ability-system" title="Permalink to this headline"></a></h3>
-<ul class="simple">
-<li><p>Add delegates to the component</p></li>
-</ul>
-</section>
-<section id="ai">
-<h3>AI<a class="headerlink" href="#ai" title="Permalink to this headline"></a></h3>
-<ul class="simple">
-<li><p>You can use <code class="docutils literal notranslate"><span class="pre">TriggerAbilityFromGameplayEvent</span></code> to trigger abilities without going though target selection</p></li>
-</ul>
-</section>
-<section id="id2">
-<h3>Ability Queue<a class="headerlink" href="#id2" title="Permalink to this headline"></a></h3>
-<p>The ability queue is build by the AbilityQueue Ability, it is its own ability.
-It is only available on the client</p>
-</section>
-<section id="resources">
-<h3>Resources<a class="headerlink" href="#resources" title="Permalink to this headline"></a></h3>
-<dl class="footnote brackets">
-<dt class="label" id="id3"><span class="brackets">1</span></dt>
-<dd><p>Gameplay Ability System <a class="reference external" href="https://github.com/tranek/GASDocumentation">GAS</a>.</p>
-</dd>
-</dl>
-</section>
-</section>
-</section>
 
 
-           </div>
-          </div>
-          <footer>
 
-  <hr/>
 
-  <div role="contentinfo">
-    <p>&#169; Copyright 2024.</p>
-  </div>
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
 
-</footer>
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Abilities</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
         </div>
-      </div>
-    </section>
-  </div>
-  <script>
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script> 
+    </div>
+</div>
 
-</body>
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="abilities">
+<h1>Abilities<a class="headerlink" href="#abilities" title="Link to this heading">#</a></h1>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Pierre Delaunay
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
 </html>

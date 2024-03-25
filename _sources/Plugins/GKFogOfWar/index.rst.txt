@@ -42,16 +42,21 @@ Useful Links
 * `Twitter <https://twitter.com/SetepenreKit>`_
 
 
+Getting Started
+---------------
+
 .. toctree::
-   :caption: Welcome
 
    Welcome/Installations
    Welcome/GettingStarted
    Welcome/FrequentQuestions
    Welcome/Changelog
 
+
+API
+---
+
 .. toctree::
-   :caption: C++ API
 
    API/classAGKFogOfWarCharacter.rst 
    API/classAGKFogOfWarGameMode.rst 

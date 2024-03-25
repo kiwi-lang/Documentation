@@ -1,0 +1,466 @@
+Getting Started
+===============
+
+This tutorial is available on `youtube <https://www.youtube.com/watch?v=>`_
+
+.. contents:: Table of contents
+    :local:
+    :backlinks: entry
+    :depth: 2
+
+
+Verify Installation
+--------------------
+
+.. raw:: html
+
+   <iframe width="696" height="391" src="https://www.youtube.com/embed/" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+1. Open a new project
+
+2. Make sure Plugin content is visible
+      ``Content Drawer / Settings / Show Engine Content [X]``
+      ``Content Drawer / Settings / Show Plugins Content [X]``
+
+3. Load Example Map
+      ``Plugins / GKAbility Content / Example / GKAbility``
+
+4. Set Game Mode Override
+      ``WorldSettings / GameMode Override / GKAbility_GameMode``
+
+
+Setup
+-----
+
+#. Create inputs use an EnhancedInputContext
+	* Gamekit provided a few predefine action you can reuse including `ConfirmTarget` & `CancelTarget` input/Action
+
+#. Create a new enum with the same action/input names (see :cpp:enum:`EGK_MOBA_AbilityInputID` as an example)
+
+#. Create a Character from :cpp:class:`GKCharacterBase`
+
+#. Extend the On Setup Player Input Component event, use to register your input to the ability system component
+   (See :cpp:func:`AGKCharacterBase::BindAbilityActivationFromInputEnum`)
+
+   .. warning::
+
+	  :cpp:member:`FGKGameplayAbilityInputBinds::CancelCommand` and :cpp:member:`FGKGameplayAbilityInputBinds::ConfirmCommand`
+	  are the named defined in the input's project setting NOT the enum name.
+
+
+#. You are ready to grant abilities using :cpp:func:`AGKCharacterBase::GrantAbility`
+   In Gamekit abilities are granted to a character for a given slot, each ability populates a slot.
+   Slots can then be assigned an input. Gamekit defines 22 default slots (6 Skills, 8 Items, 7 Basic Abilities).
+   Under the hood slots are simple integer, users can add as many slots as they want.
+
+   .. note::
+
+	  Granting ablities can only be done by the authority
+
+#. During Gameplay, you can press inputs and the abilities will activate.
+
+
+
+Example
+^^^^^^^
+
+* 'Legacy' Player Input
+
+.. raw:: html
+
+   <iframe width="100%" height="500px" src="https://blueprintue.com/render/_rsbezu-/" scrolling="no" allowfullscreen></iframe>
+
+
+* Enhanced Player Input
+
+.. raw:: html
+
+   <iframe width="100%" height="500px" src="https://blueprintue.com/render/-vzz0tb5/" scrolling="no" allowfullscreen></iframe>
+
+
+Creating Abilities
+------------------
+
+* Create a new DataTable using the `GKAbilityStatic` struct
+
+* Insert a row, give the row a name (the row name is used to generate the ability asset)
+
+* Click the generate button
+
+.. warning::
+
+   Python Editor Scripting plugin needs to be enabled & configured
+
+
+GameTags
+^^^^^^^^
+
+Gametags are used to mark the current state of a player/ability/effect, it is used to control
+transition between different states. It is the core of the gameplay ability system, some effects
+are exclusively implemented through gameplaytags.
+
+For example, Stun, Silences, Roots are all gameplay effects that simply prevent the character
+from using certain abilities, they can all be implemented using gameplaytag alone.
+
+Gamekit automatically defines base gametags for its abilities.
+
+* Ability: use to tag abilities
+	* Exclusive: Used to prevent activation of multiple abilities witht the `Exclusive` tag
+	* Move: Used to tag abilities performing movement operation
+	* Passive: tag passive abilities
+
+* Animation: used to tag animation
+	* CastPoint: Tag is sent when the animation reach the point where projectile/effect should be
+	  spawned.
+
+* Cooldown: used to tag cooldowns
+	* Prevents the same ability from being casted all the time
+
+* Buff: Improves the effectiveness of a character
+	* Immunity: protects against debuff and disables
+	* Armor increase
+	* Damage
+	* Health bonus
+	* Haste: increase movement speed
+	* Level: level of the buff
+		* Minor
+		* Medium
+		* Strong
+
+* Debuff: reduce the effectiveness of a character
+	* Level: level of the debuff
+		* Minor
+		* Medium
+		* Strong
+	* Armor reduction
+	* Health Penalty
+	* Damage decrease
+
+* Disable: prevent character for performing certain actions
+	* Level: level of the disable
+		* Minor
+		* Medium
+		* Strong
+	* Stun: prevents movement, spell casting and item usage
+	* Silence: prevents spell casting
+	* Mute: prevent item usage
+	* Root: prevent all movements
+	* Break: disable passive abilities
+	* Dead: removes all buffs, debuffs and disables
+		* Death is both a disable and a dispel, on depth all active effects are removed
+		  but all actions are disabled.
+	* Etheral: cannot do physical damage, cannot be damaged by physical attacks [TODO]
+	* Disarmed: cannot do physical attacks [TODO]
+
+* Dispel: removes debuff and disables
+	* Level: level of the dispel
+		* Minor
+		* Medium
+		* Strong
+
+* Failure: used to report errors back to the users
+	* Blocked:  Ability is blocked by a disable
+	* Cost: Resource level does not meet the ability cost
+	* Missing:  Ability has missing requirement
+	* Network: Internal error due to networking
+	* NotLearned: Ability was not learned yet
+	* Cooldown: Ability is still in cooldown
+	* Dead: Character is dead
+
+* GameplayCue: used to spawn effect in reseponse to gameplay effects, all disables will have an effect so players can see it easily
+	* Immunity
+	* Stun
+	* Silence
+	* Mute
+	* Root
+	* Break
+
+* Quest: used to tag objectives for the quest system
+
+Creating GameplayEffect
+-----------------------
+
+* For simple gameplay effect that modify attributes you should configure the magniture to be set by caller
+  using the tag "Ability.Magnitude". By default, `UGKGameplayAbility` will populate the data from the `FGKAbilityStatic` data.
+
+
+Define Abilities
+----------------
+
+Abilities are define inside a json file.
+The list of customizable properties can be found here :class:`FGKAbilityStatic`.
+Gameplay designer can create new abilities by simply adding new abilities inside the ability data file.
+To create the new abilities in unreal engine you need to generate them using a python script.
+
+#. Enable python scripting for UnrealEngine
+#. Add ``Gamekit/Script`` to your python path
+#. Go to ``Gamekit/Content/Editor/Ability_Generator`` right click on it and ``Run Editor Utility Widget``.
+   A widget should pop up with a bit "Generate Default Abilities" button
+#. Click on the button, this will generate all the missing abilities
+
+Example
+^^^^^^^
+
+.. code-block:: json
+
+	{
+		"Name": "Fireball",
+		"AbilityKind": "Skill",
+		"LocalName": "NSLOCTEXT(\"[0A85C43C484A243EF7B6B7B642AD2ACB]\", \"EC9BA0DD417F0C07C07E3DBB00F88785\", \"Fire Ball\")",
+		"LocalDescription": "NSLOCTEXT(\"[0A85C43C484A243EF7B6B7B642AD2ACB]\", \"9CB2744E447BF19F751B929142E6F484\", \"Launch a roaring ball of fire in a straight line\")",
+		"Icon": "Texture2D'/Gamekit/Textures/IconsSkills/fireball-red-1.fireball-red-1'",
+		"MaxLevel": 4,
+		"Duration": 0,
+		"AbilityEffects":
+		{
+		},
+		"Cost":
+		{
+			"Attribute":
+			{
+				"AttributeName": "Mana",
+				"Attribute": "/Script/Gamekit.GKAttributeSet:Mana",
+				"AttributeOwner": "Class'/Script/Gamekit.GKAttributeSet'"
+			},
+			"Value": [ 10, 9, 8, 7 ]
+		},
+		"Cooldown": [ 0.5, 9, 8, 5 ],
+		"Price": 0,
+		"MaxStack": 1,
+		"AreaOfEffect": 50,
+		"CastMaxRange": 500,
+		"CastMinRange": 0,
+		"AbilityBehavior": "PointTarget",
+		"AbilityTargetActorClass": "BlueprintGeneratedClass'/Game/Abilities/TargetActors/ControllerTrace.ControllerTrace_C'",
+		"TargetObjectTypes": [],
+		"CastTime": 0.20000000298023224,
+		"ChannelTime": 0,
+		"AbilityAnimation": "Attack",
+		"ProjectileActorClass": "BlueprintGeneratedClass'/Game/Abilities/Projectiles/BP_GA_Projectile.BP_GA_Projectile_C'",
+		"ProjectileSpeed": 1000,
+		"ProjectileBehavior": "Directional",
+		"ProjectileRange": 1600,
+		"AOEActorClass": "None"
+	}
+
+
+Ability Kinds
+^^^^^^^^^^^^^
+
+MaxLevel = HeroLevel / 2
+UltimateMaxLevel = HeroLevel / 6
+
+* Standard Ability
+	* 4 Levels, Every 2 level character increase their maximum basic level ability by 1
+
+* Ultimate Ability
+	* 3 Levels, every 6 level
+
+* Abilities with charges
+	* Ability consume charges, charges are given by an effect periodically
+
+* Passive abilities
+	* Ability simply provide a permanent effect that can be temporarlly disabled with breaks
+
+* Linked Abilities [TODO]
+* Sub abilities [TODO]
+* Autocast abilities [TODO]
+* Modifier abilities [TODO]
+
+
+Overview
+--------
+
+Ability DataTable Initialization
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. image:: /_static/Abilities/AbilityDataDriven.png
+
+
+Ability Activation Flow
+^^^^^^^^^^^^^^^^^^^^^^^
+
+.. image:: /_static/Abilities/AbilityActivationFlow.png
+
+
+Ability Replication Flow
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. image:: /_static/Abilities/AbilityReplicationFlow.png
+
+Animations
+^^^^^^^^^^
+
+To make abilities generic, the animations montage themselves are not specified.
+Instead an animation kind is set (Channelling, Attack, Cast, etc..) which is a single enumerator
+:cpp:enumerator:`EGK_AbilityAnimation` representing the kind of annimation an ability can use.
+
+The animation montage are specified by the Character itself through its :cpp:class:`FGKAnimationSet` (inside :cpp:class:`FGKUnitStatic`)
+which our ability can sample from.
+
+When an ability is activated the :cpp:class:`FGKAnimationSet` is fectched from the character to the ability
+and the right animation is then played. This enable us to use the same ability for different
+characters which can have different animation as well.
+
+
+.. image:: /_static/Abilities/AbilityAnimations.png
+
+Ability Queue
+^^^^^^^^^^^^^
+
+.. image:: /_static/Abilities/AbilityQueue.png
+
+User Interface
+--------------
+
+Spell Button States
+^^^^^^^^^^^^^^^^^^^
+
+See :class:`UGKAbilityWidget` for a basic set of implementable event
+
+Here is a list of states you might want to consider when implementing
+a spell button.
+
+#. Ability is available and can be casted (UMG State Normal)
+
+#. Ability is picking a target
+
+#. Ability is being cast (Animation)
+
+#. Ability is on cooldown
+
+#. Backswing animation
+
+#. Ability requirements/cost are not met
+
+#. Ability cannot be cast because of debuff
+
+.. figure:: /_static/Abilities/btn_cooldown.PNG
+   :alt: Ability under cooldown
+   :width: 60
+
+   Ability under cooldown
+
+.. figure:: /_static/Abilities/btn_disabled.PNG
+   :width: 60
+
+   Ability disabled
+
+.. figure:: /_static/Abilities/btn_normal.PNG
+   :width: 60
+
+   Ability ready
+
+.. figure:: /_static/Abilities/btn_targetting.PNG
+   :width: 60
+
+   Ability selecting a target
+
+.. figure:: /_static/Abilities/btn_oom.PNG
+   :width: 60
+
+   Ability out of mana
+
+.. figure:: /_static/Abilities/btn_mute.png
+   :width: 60
+
+   Ability disabled by gameplay effect
+
+.. figure:: /_static/Abilities/btn_charges.png
+   :width: 60
+
+   Ability with activation charges
+
+
+UI & Ability State
+^^^^^^^^^^^^^^^^^^
+
+The easiest way to bind the ability is to leverage the ``UGKAbilityWidget`` coupled with ``UGKAbilitySystemEventManager``.
+
+#. Instantiate a new ``UGKAbilitySystemEventManager``, call ``SetupDelegates`` to start listenning to events from the ``UAbilitySystemComponent``
+
+#. Register ``UGKAbilityWidget`` to the event manager using ``AddAbilityWidget`` then ``SetupAbilityWidgetDelegates`` to start receiving events.
+
+
+.. note::
+
+	``AddAbilityWidget`` expects an interger as ID, by default it uses ``FGameplayAbilitySpec.InputID``.
+	The behaviour can be overiden by implementing ``GetWidgetIDFromAbilitySpecHandle`` and ``GetWidgetIDFromAbilitySpec``.
+
+	Currently ``InputID`` was used over ``FGameplayAbilitySpecHandle`` because it allows us to create Ability widget before the
+	ability is even granted.
+
+
+Builtin Abilities
+-----------------
+
+* Base Ability: Basic ability with activation logic
+* Cancel Ability: Cancel all the current abilities
+* Move Ability: Move to destination or Actor
+* Base Skill: Ability that is disabled when silenced
+* Base Item: Ability that is disabled when muted
+	* with an optional item slot (Gloves, ring, etc...)
+
+Builtin Effects
+---------------
+
+* Cooldown: block the casting of an ability for a given amount of time
+* Death: Remove all active effects and set health to zero
+* Dispel: Remove all debuffs and disables
+* Heal: Heal ocne
+* HealOvertime: Heals over time
+* Damage: Deals damage once
+* DamageOvertime: Deals damage overtime
+* Immunity: Grant immunity against all debuffs and disables
+* IncreaseHealth: Increase health
+* ManaCost: Remove mana from character
+* MoveHaste: Increase movement speed
+* Root: Prevent the character from moving
+* Silence: Prevent the character from casting spells
+* Stun: Completely disables the character
+
+Builtin Attribute Set
+---------------------
+
+* Health
+* Mana
+* Experience
+* Gold
+
+
+Extending Gameplay Ability system
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* Add delegates to the component
+
+AI
+^^
+
+* You can use ``TriggerAbilityFromGameplayEvent`` to trigger abilities without going though target selection
+
+
+Ability Queue
+^^^^^^^^^^^^^
+
+The ability queue is build by the AbilityQueue Ability, it is its own ability.
+It is only available on the client
+
+
+Classes
+-------
+
+Relevant classes:
+
+* :class:`UGKGameplayAbility`: basic Gameplay Ability for skills and items, implements a few top down casting options
+* :class:`FGKAbilityStatic`: configurable settings for abilities
+* :class:`AGKAbilityTarget_Actor`: used to select a target for a given ability
+* :class:`UGKAbilitySystemComponent`
+* :class:`UGKCastPointAnimNotify`: used to notify the ability when the animation reached a given point
+* :class:`UGKAttributeSet`: defines a set of attributes for characters (Health, Mana, Stamina, etc...)
+* :class:`UGKAbilityWidget`: defines a basic interface for widget representing an ability state
+
+Resources
+---------
+
+.. [1] Gameplay Ability System `GAS <https://github.com/tranek/GASDocumentation>`_.

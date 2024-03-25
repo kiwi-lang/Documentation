@@ -1,224 +1,557 @@
-<!DOCTYPE html>
-<html class="writer-html5" lang="en" >
-<head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Class AGKFogOfWarGameMode &mdash; Gamekit  documentation</title>
-      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/collapsible-lists\css\tree_view.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="../../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>AGKFogOfWarGameMode &#8212; Gamekit</title>
   
-        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-        <script src="../../../_static/jquery.js"></script>
-        <script src="../../../_static/underscore.js"></script>
-        <script src="../../../_static/doctools.js"></script>
-        <script src="../../../_static/collapsible-lists\js\CollapsibleLists.compressed.js"></script>
-        <script src="../../../_static/collapsible-lists\js\apply-collapsible-lists.js"></script>
-    <script src="../../../_static/js/theme.js"></script>
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/collapsible-lists\css\tree_view.css?v=a885cde7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=71c9e0a5" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="../../../_static/collapsible-lists\js\CollapsibleLists.compressed.js?v=73120307"></script>
+    <script src="../../../_static/collapsible-lists\js\apply-collapsible-lists.js?v=660e4f45"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Plugins/GKFogOfWar/API/classAGKFogOfWarGameMode';</script>
+    <link rel="icon" href="../../../_static/GamekitDev.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Class AGKFogOfWarGameState" href="classAGKFogOfWarGameState.html" />
-    <link rel="prev" title="Class AGKFogOfWarCharacter" href="classAGKFogOfWarCharacter.html" /> 
-</head>
+    <link rel="next" title="AGKFogOfWarGameState" href="classAGKFogOfWarGameState.html" />
+    <link rel="prev" title="AGKFogOfWarCharacter" href="classAGKFogOfWarCharacter.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
 
-<body class="wy-body-for-nav"> 
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
-            <a href="../../../index.html" class="icon icon-home"> Gamekit
-          </a>
-              <div class="version">
-                6c15b89
-              </div>
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Welcome</span></p>
-<ul>
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+    
+    
+    
+    <img src="../../../_static/GamekitDev.png" class="logo__image only-light" alt="Gamekit - Home"/>
+    <script>document.write(`<img src="../../../_static/GamekitDev.png" class="logo__image only-dark" alt="Gamekit - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Welcome</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../../Welcome/Roadmap.html">RoadMap</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Plugins</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Fog of War</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../index.html#features">Features</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../index.html#useful-links">Useful Links</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="../Welcome/Installations.html">Installations</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Welcome/GettingStarted.html">Getting Started</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Welcome/FrequentQuestions.html">Frequently Asked Questions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Welcome/Changelog.html">Changelog</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classAGKFogOfWarCharacter.html">Class AGKFogOfWarCharacter</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Class AGKFogOfWarGameMode</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#inheritance-relationships">Inheritance Relationships</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#class-documentation">Class Documentation</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="classAGKFogOfWarGameState.html">Class AGKFogOfWarGameState</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classAGKFogOfWarObstacle.html">Class AGKFogOfWarObstacle</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classAGKFogOfWarPawn.html">Class AGKFogOfWarPawn</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classAGKFogOfWarPlayerController.html">Class AGKFogOfWarPlayerController</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classAGKFogOfWarPlayerState.html">Class AGKFogOfWarPlayerState</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classAGKFogOfWarPrivatePlayerState.html">Class AGKFogOfWarPrivatePlayerState</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classAGKFogOfWarTeam.html">Class AGKFogOfWarTeam</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classAGKFogOfWarVolume.html">Class AGKFogOfWarVolume</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classFGKFogOfWarModule.html">Class FGKFogOfWarModule</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classFGKFogOfWarShaderModule.html">Class FGKFogOfWarShaderModule</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classIGKFogOfWarAgentInterface.html">Class IGKFogOfWarAgentInterface</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classIGKFogOfWarGameStateInterface.html">Class IGKFogOfWarGameStateInterface</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classIGKFogOfWarTestModule.html">Class IGKFogOfWarTestModule</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classUGKCanvasUpscaler.html">Class UGKCanvasUpscaler</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classUGKCPUUpscalerStrategy.html">Class UGKCPUUpscalerStrategy</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classUGKExplorationTransform.html">Class UGKExplorationTransform</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classUGKFogOfWarComponent.html">Class UGKFogOfWarComponent</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classUGKFogOfWarLibrary.html">Class UGKFogOfWarLibrary</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classUGKFogOfWarStrategy.html">Class UGKFogOfWarStrategy</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classUGKGPUUpscalerStrategy.html">Class UGKGPUUpscalerStrategy</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classUGKRayCasting__Less.html">Class UGKRayCasting_Less</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classUGKRayCasting__Line.html">Class UGKRayCasting_Line</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classUGKRayCasting__Triangle.html">Class UGKRayCasting_Triangle</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classUGKShadowCasting.html">Class UGKShadowCasting</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classUGKSharedBlueprint.html">Class UGKSharedBlueprint</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classUGKTransformerStrategy.html">Class UGKTransformerStrategy</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classUGKTransformerStrategyCanvas.html">Class UGKTransformerStrategyCanvas</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classUGKTransformerStrategyTexture2D.html">Class UGKTransformerStrategyTexture2D</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../index.html#indices-and-tables">Indices and tables</a></li>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Plugins</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">Fog of War</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../Welcome/Installations.html">Installations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Welcome/GettingStarted.html">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Welcome/FrequentQuestions.html">Frequently Asked Questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Welcome/Changelog.html">Changelog</a></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="../api.html">API</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="classAGKFogOfWarCharacter.html">AGKFogOfWarCharacter</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">AGKFogOfWarGameMode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAGKFogOfWarGameState.html">AGKFogOfWarGameState</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAGKFogOfWarObstacle.html">AGKFogOfWarObstacle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAGKFogOfWarPawn.html">AGKFogOfWarPawn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAGKFogOfWarPlayerController.html">AGKFogOfWarPlayerController</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAGKFogOfWarPlayerState.html">AGKFogOfWarPlayerState</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAGKFogOfWarPrivatePlayerState.html">AGKFogOfWarPrivatePlayerState</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAGKFogOfWarTeam.html">AGKFogOfWarTeam</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAGKFogOfWarVolume.html">AGKFogOfWarVolume</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classFGKFogOfWarModule.html">FGKFogOfWarModule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classFGKFogOfWarShaderModule.html">FGKFogOfWarShaderModule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classIGKFogOfWarAgentInterface.html">IGKFogOfWarAgentInterface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classIGKFogOfWarGameStateInterface.html">IGKFogOfWarGameStateInterface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classIGKFogOfWarTestModule.html">IGKFogOfWarTestModule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKCanvasUpscaler.html">UGKCanvasUpscaler</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKCPUUpscalerStrategy.html">UGKCPUUpscalerStrategy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKExplorationTransform.html">UGKExplorationTransform</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKFogOfWarComponent.html">UGKFogOfWarComponent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKFogOfWarLibrary.html">UGKFogOfWarLibrary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKFogOfWarStrategy.html">UGKFogOfWarStrategy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKGPUUpscalerStrategy.html">UGKGPUUpscalerStrategy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKRayCasting__Less.html">UGKRayCasting_Less</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKRayCasting__Line.html">UGKRayCasting_Line</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKRayCasting__Triangle.html">UGKRayCasting_Triangle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKShadowCasting.html">UGKShadowCasting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKSharedBlueprint.html">UGKSharedBlueprint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKTransformerStrategy.html">UGKTransformerStrategy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKTransformerStrategyCanvas.html">UGKTransformerStrategyCanvas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKTransformerStrategyTexture2D.html">UGKTransformerStrategyTexture2D</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../GKAbility/index.html">Ability</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../GKLobby/index.html">Lobby</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../GKChat/index.html">Chat</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../GKMinimap/index.html">Minimap</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../GKML/index.html">Machine Learning</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../GKAbility/index.html">GKAbility</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../GKAbility/Welcome/Installations.html">Installations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GKAbility/Welcome/GettingStarted.html">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GKAbility/Welcome/FrequentQuestions.html">Frequently Asked Questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GKAbility/Welcome/Changelog.html">Changelog</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../GKAbility/api.html">API</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
 </ul>
-<p class="caption" role="heading"><span class="caption-text">UnrealEngine</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../UnrealEngine/index.html">Developer Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../UnrealEngine/index.html#game">Game</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../UnrealEngine/index.html#online">Online</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../UnrealEngine/index.html#others">Others</a></li>
+</li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Tools</span></p>
-<ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../GKLobby/index.html">Lobby</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../GKLobby/Welcome/Installations.html">Installations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GKLobby/Welcome/GettingStarted.html">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GKLobby/Welcome/FrequentQuestions.html">Frequently Asked Questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GKLobby/Welcome/Changelog.html">Changelog</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../GKLobby/api.html">API</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../GKChat/index.html">Chat</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../GKChat/Welcome/Installations.html">Installations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GKChat/Welcome/GettingStarted.html">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GKChat/Welcome/FrequentQuestions.html">Frequently Asked Questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GKChat/Welcome/Changelog.html">Changelog</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../GKChat/api.html">API</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../GKMinimap/index.html">Minimap</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../GKMinimap/Welcome/Installations.html">Installations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GKMinimap/Welcome/GettingStarted.html">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GKMinimap/Welcome/FrequentQuestions.html">Frequently Asked Questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GKMinimap/Welcome/Changelog.html">Changelog</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../GKMinimap/api.html">API</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../GKML/index.html">Machine Learning</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../GKML/cartpole/1_Introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GKML/cartpole/2_Setup.html">Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GKML/cartpole/3_MLAdapter.html">MLAdapter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GKML/cartpole/4_Game.html">Make the game</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GKML/cartpole/5_Launching.html">Cartpole as a gym environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GKML/cartpole/6_Training.html">Training</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GKML/cartpole/7_Packaging.html">Packaging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GKML/issues.html">Known Issues</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">UnrealEngine</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../UnrealEngine/Developer.html">Developer Guide</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../UnrealEngine/Developer/Docs.html">Documentation Generation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../UnrealEngine/Developer/Compilation.html">Compilation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../UnrealEngine/Developer/Shaders/index.html">Shaders</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../UnrealEngine/Developer/Doxygen.html">Doxygen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../UnrealEngine/Developer/Contribution.html">Contributions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../UnrealEngine/Developer/ci.html">Continuous Integration</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../UnrealEngine/Game.html">Game</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../UnrealEngine/Game/GameFlow.html">GameFlow</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../UnrealEngine/Level/index.html">Level</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../UnrealEngine/Level/landscape.html">Landscape Creation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../UnrealEngine/Level/procedural.html">Procedural Level Generation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../UnrealEngine/Online.html">Online</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../UnrealEngine/Online/Multiplayer.html">Multiplayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../UnrealEngine/Online/MMO.html">Massively Multiplayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../UnrealEngine/Online/Competitive.html">Competitive</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../UnrealEngine/Online/Cheating.html">Cheating</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../UnrealEngine/Others.html">Others</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-16"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../UnrealEngine/Tips/index.html">Tips &amp; Tricks</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-17"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../UnrealEngine/Tips/Controllers/index.html">Controllers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../UnrealEngine/Tips/Cameras/index.html">Cameras</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../UnrealEngine/Tips/Cameras/configure.html">Cameras</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../UnrealEngine/Modding/index.html">Modding &amp; DLC</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Tools</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../../Tools/uetools.html">uetools</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../Tools/ranked.html">ranked</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../Tools/resources.html">Resources</a></li>
 </ul>
 
-        </div>
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
       </div>
-    </nav>
+      
+      <main id="main-content" class="bd-main">
+        
+        
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../../index.html">Gamekit</a>
-      </nav>
+<div class="sbt-scroll-pixel-helper"></div>
 
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
-  <ul class="wy-breadcrumbs">
-      <li><a href="../../../index.html" class="icon icon-home"></a></li>
-          <li class="breadcrumb-item"><a href="../../index.html">&lt;no title&gt;</a></li>
-          <li class="breadcrumb-item"><a href="../index.html">Fog of War</a></li>
-      <li class="breadcrumb-item active">Class AGKFogOfWarGameMode</li>
-      <li class="wy-breadcrumbs-aside">
-            <a href="../../../_sources/Plugins/GKFogOfWar/API/classAGKFogOfWarGameMode.rst.txt" rel="nofollow"> View page source</a>
-      </li>
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/Plugins/GKFogOfWar/API/classAGKFogOfWarGameMode.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
   </ul>
-  <hr/>
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-             
-  <section id="class-agkfogofwargamemode">
-<span id="exhale-class-classagkfogofwargamemode"></span><h1>Class AGKFogOfWarGameMode<a class="headerlink" href="#class-agkfogofwargamemode" title="Permalink to this headline"></a></h1>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>AGKFogOfWarGameMode</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inheritance-relationships">Inheritance Relationships</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#class-documentation">Class Documentation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv419AGKFogOfWarGameMode"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarGameMode</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N19AGKFogOfWarGameMode19AGKFogOfWarGameModeEv"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarGameMode::AGKFogOfWarGameMode()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N19AGKFogOfWarGameMode15K2_FinalizePawnEP11AControllerP5APawn"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarGameMode::K2_FinalizePawn()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N19AGKFogOfWarGameMode13AssignTeamForEP11AControllerP12APlayerStart"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarGameMode::AssignTeamFor()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N19AGKFogOfWarGameMode20GetTeamFromStartSpotEP11AControllerP12APlayerStart"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarGameMode::GetTeamFromStartSpot()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N19AGKFogOfWarGameMode34SpawnDefaultPawnFor_ImplementationEP11AControllerP6AActor"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarGameMode::SpawnDefaultPawnFor_Implementation()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N19AGKFogOfWarGameMode42SpawnDefaultPawnAtTransform_ImplementationEP11AControllerRK10FTransform"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarGameMode::SpawnDefaultPawnAtTransform_Implementation()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N19AGKFogOfWarGameMode12FinalizePawnEP11AControllerP5APawn"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarGameMode::FinalizePawn()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N19AGKFogOfWarGameMode31SetGenericTeamIdFromPlayerStartEP11AControllerP6AActor"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarGameMode::SetGenericTeamIdFromPlayerStart()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N19AGKFogOfWarGameMode28AssignTeamFor_ImplementationEP11AControllerP12APlayerStart"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarGameMode::AssignTeamFor_Implementation()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N19AGKFogOfWarGameMode9StartPlayEv"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarGameMode::StartPlay()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="agkfogofwargamemode">
+<span id="exhale-class-classagkfogofwargamemode"></span><h1>AGKFogOfWarGameMode<a class="headerlink" href="#agkfogofwargamemode" title="Link to this heading">#</a></h1>
 <ul class="simple">
 <li><p>Defined in <a class="reference internal" href="../../../_build/exhale/file_Source_GKFogOfWar_Public_GKFogOfWarGameMode.h.html#file-source-gkfogofwar-public-gkfogofwargamemode-h"><span class="std std-ref">File GKFogOfWarGameMode.h</span></a></p></li>
 </ul>
 <section id="inheritance-relationships">
-<h2>Inheritance Relationships<a class="headerlink" href="#inheritance-relationships" title="Permalink to this headline"></a></h2>
+<h2>Inheritance Relationships<a class="headerlink" href="#inheritance-relationships" title="Link to this heading">#</a></h2>
 <section id="base-type">
-<h3>Base Type<a class="headerlink" href="#base-type" title="Permalink to this headline"></a></h3>
+<h3>Base Type<a class="headerlink" href="#base-type" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">AGameMode</span></code></p></li>
 </ul>
 </section>
 </section>
 <section id="class-documentation">
-<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this headline"></a></h2>
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Link to this heading">#</a></h2>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv419AGKFogOfWarGameMode">
-<span id="_CPPv319AGKFogOfWarGameMode"></span><span id="_CPPv219AGKFogOfWarGameMode"></span><span id="AGKFogOfWarGameMode"></span><span class="target" id="classAGKFogOfWarGameMode"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AGKFogOfWarGameMode</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">AGameMode</span></span><a class="headerlink" href="#_CPPv419AGKFogOfWarGameMode" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv319AGKFogOfWarGameMode"></span><span id="_CPPv219AGKFogOfWarGameMode"></span><span id="AGKFogOfWarGameMode"></span><span class="target" id="classAGKFogOfWarGameMode"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AGKFogOfWarGameMode</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">AGameMode</span></span><a class="headerlink" href="#_CPPv419AGKFogOfWarGameMode" title="Link to this definition">#</a><br /></dt>
 <dd><p>Game Mode is in charge of assigning a team to each new player joining the game.</p>
 <p>The default implementation reads <code class="docutils literal notranslate"><span class="pre">APlayerStart::PlayerStartTag</span></code> to know which team should be assigned to the character and the controller. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N19AGKFogOfWarGameMode19AGKFogOfWarGameModeEv">
-<span id="_CPPv3N19AGKFogOfWarGameMode19AGKFogOfWarGameModeEv"></span><span id="_CPPv2N19AGKFogOfWarGameMode19AGKFogOfWarGameModeEv"></span><span id="AGKFogOfWarGameMode::AGKFogOfWarGameMode"></span><span class="target" id="classAGKFogOfWarGameMode_1a7c2f5ce904db495b95ef649aa218127d"></span><span class="sig-name descname"><span class="n"><span class="pre">AGKFogOfWarGameMode</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19AGKFogOfWarGameMode19AGKFogOfWarGameModeEv" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N19AGKFogOfWarGameMode19AGKFogOfWarGameModeEv"></span><span id="_CPPv2N19AGKFogOfWarGameMode19AGKFogOfWarGameModeEv"></span><span id="AGKFogOfWarGameMode::AGKFogOfWarGameMode"></span><span class="target" id="classAGKFogOfWarGameMode_1a7c2f5ce904db495b95ef649aa218127d"></span><span class="sig-name descname"><span class="n"><span class="pre">AGKFogOfWarGameMode</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19AGKFogOfWarGameMode19AGKFogOfWarGameModeEv" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N19AGKFogOfWarGameMode15K2_FinalizePawnEP11AControllerP5APawn">
-<span id="_CPPv3N19AGKFogOfWarGameMode15K2_FinalizePawnEP11AControllerP5APawn"></span><span id="_CPPv2N19AGKFogOfWarGameMode15K2_FinalizePawnEP11AControllerP5APawn"></span><span id="AGKFogOfWarGameMode::K2_FinalizePawn__AControllerP.APawnP"></span><span class="target" id="classAGKFogOfWarGameMode_1a091f3657745463fa9db5002f51b85b48"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">K2_FinalizePawn</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">AController</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">NewPlayer</span></span>, <span class="n"><span class="pre">APawn</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">NewPawn</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19AGKFogOfWarGameMode15K2_FinalizePawnEP11AControllerP5APawn" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N19AGKFogOfWarGameMode15K2_FinalizePawnEP11AControllerP5APawn"></span><span id="_CPPv2N19AGKFogOfWarGameMode15K2_FinalizePawnEP11AControllerP5APawn"></span><span id="AGKFogOfWarGameMode::K2_FinalizePawn__AControllerP.APawnP"></span><span class="target" id="classAGKFogOfWarGameMode_1a091f3657745463fa9db5002f51b85b48"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">K2_FinalizePawn</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">AController</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">NewPlayer</span></span>, <span class="n"><span class="pre">APawn</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">NewPawn</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19AGKFogOfWarGameMode15K2_FinalizePawnEP11AControllerP5APawn" title="Link to this definition">#</a><br /></dt>
 <dd><p>Called when the pawn is spawned, right before FinishSpawning is called this can be used to set critical data right before the spawn gets replicated </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N19AGKFogOfWarGameMode13AssignTeamForEP11AControllerP12APlayerStart">
-<span id="_CPPv3N19AGKFogOfWarGameMode13AssignTeamForEP11AControllerP12APlayerStart"></span><span id="_CPPv2N19AGKFogOfWarGameMode13AssignTeamForEP11AControllerP12APlayerStart"></span><span id="AGKFogOfWarGameMode::AssignTeamFor__AControllerP.APlayerStartP"></span><span class="target" id="classAGKFogOfWarGameMode_1af74549f8b91348f93103eccde7cf5cbc"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AssignTeamFor</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="n"><span class="pre">AController</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">NewPlayer</span></span>, <span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="n"><span class="pre">APlayerStart</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">StartSpot</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19AGKFogOfWarGameMode13AssignTeamForEP11AControllerP12APlayerStart" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N19AGKFogOfWarGameMode13AssignTeamForEP11AControllerP12APlayerStart"></span><span id="_CPPv2N19AGKFogOfWarGameMode13AssignTeamForEP11AControllerP12APlayerStart"></span><span id="AGKFogOfWarGameMode::AssignTeamFor__AControllerP.APlayerStartP"></span><span class="target" id="classAGKFogOfWarGameMode_1af74549f8b91348f93103eccde7cf5cbc"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AssignTeamFor</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="n"><span class="pre">AController</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">NewPlayer</span></span>, <span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="n"><span class="pre">APlayerStart</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">StartSpot</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19AGKFogOfWarGameMode13AssignTeamForEP11AControllerP12APlayerStart" title="Link to this definition">#</a><br /></dt>
 <dd><p>Assign a team for a given player Note: default implementation relies on <code class="docutils literal notranslate"><span class="pre">APlayerStart</span></code> using the team name as tag </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N19AGKFogOfWarGameMode20GetTeamFromStartSpotEP11AControllerP12APlayerStart">
-<span id="_CPPv3N19AGKFogOfWarGameMode20GetTeamFromStartSpotEP11AControllerP12APlayerStart"></span><span id="_CPPv2N19AGKFogOfWarGameMode20GetTeamFromStartSpotEP11AControllerP12APlayerStart"></span><span id="AGKFogOfWarGameMode::GetTeamFromStartSpot__AControllerP.APlayerStartP"></span><span class="target" id="classAGKFogOfWarGameMode_1a528846bfde38e4d4e4bbe7f2f7ea0679"></span><a class="reference internal" href="../../../_build/exhale/structFGKFogTeamInfo.html#_CPPv414FGKFogTeamInfo" title="FGKFogTeamInfo"><span class="n"><span class="pre">FGKFogTeamInfo</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GetTeamFromStartSpot</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">AController</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">NewPlayer</span></span>, <span class="n"><span class="pre">APlayerStart</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">StartSpot</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19AGKFogOfWarGameMode20GetTeamFromStartSpotEP11AControllerP12APlayerStart" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N19AGKFogOfWarGameMode20GetTeamFromStartSpotEP11AControllerP12APlayerStart"></span><span id="_CPPv2N19AGKFogOfWarGameMode20GetTeamFromStartSpotEP11AControllerP12APlayerStart"></span><span id="AGKFogOfWarGameMode::GetTeamFromStartSpot__AControllerP.APlayerStartP"></span><span class="target" id="classAGKFogOfWarGameMode_1a528846bfde38e4d4e4bbe7f2f7ea0679"></span><a class="reference internal" href="../../../_build/exhale/structFGKFogTeamInfo.html#_CPPv414FGKFogTeamInfo" title="FGKFogTeamInfo"><span class="n"><span class="pre">FGKFogTeamInfo</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GetTeamFromStartSpot</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">AController</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">NewPlayer</span></span>, <span class="n"><span class="pre">APlayerStart</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">StartSpot</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19AGKFogOfWarGameMode20GetTeamFromStartSpotEP11AControllerP12APlayerStart" title="Link to this definition">#</a><br /></dt>
 <dd><p>Find the team assigned to a starting spot. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N19AGKFogOfWarGameMode34SpawnDefaultPawnFor_ImplementationEP11AControllerP6AActor">
-<span id="_CPPv3N19AGKFogOfWarGameMode34SpawnDefaultPawnFor_ImplementationEP11AControllerP6AActor"></span><span id="_CPPv2N19AGKFogOfWarGameMode34SpawnDefaultPawnFor_ImplementationEP11AControllerP6AActor"></span><span id="AGKFogOfWarGameMode::SpawnDefaultPawnFor_Implementation__AControllerP.AActorP"></span><span class="target" id="classAGKFogOfWarGameMode_1aeb457605f4da7bb0bb2b170f53636943"></span><span class="n"><span class="pre">APawn</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">SpawnDefaultPawnFor_Implementation</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">AController</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">NewPlayer</span></span>, <span class="n"><span class="pre">AActor</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">StartSpot</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N19AGKFogOfWarGameMode34SpawnDefaultPawnFor_ImplementationEP11AControllerP6AActor" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N19AGKFogOfWarGameMode34SpawnDefaultPawnFor_ImplementationEP11AControllerP6AActor"></span><span id="_CPPv2N19AGKFogOfWarGameMode34SpawnDefaultPawnFor_ImplementationEP11AControllerP6AActor"></span><span id="AGKFogOfWarGameMode::SpawnDefaultPawnFor_Implementation__AControllerP.AActorP"></span><span class="target" id="classAGKFogOfWarGameMode_1aeb457605f4da7bb0bb2b170f53636943"></span><span class="n"><span class="pre">APawn</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">SpawnDefaultPawnFor_Implementation</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">AController</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">NewPlayer</span></span>, <span class="n"><span class="pre">AActor</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">StartSpot</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N19AGKFogOfWarGameMode34SpawnDefaultPawnFor_ImplementationEP11AControllerP6AActor" title="Link to this definition">#</a><br /></dt>
 <dd><p>Spawn the default pawn for a given player &amp; set the team assignment. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N19AGKFogOfWarGameMode42SpawnDefaultPawnAtTransform_ImplementationEP11AControllerRK10FTransform">
-<span id="_CPPv3N19AGKFogOfWarGameMode42SpawnDefaultPawnAtTransform_ImplementationEP11AControllerRK10FTransform"></span><span id="_CPPv2N19AGKFogOfWarGameMode42SpawnDefaultPawnAtTransform_ImplementationEP11AControllerRK10FTransform"></span><span id="AGKFogOfWarGameMode::SpawnDefaultPawnAtTransform_Implementation__AControllerP.FTransformCR"></span><span class="target" id="classAGKFogOfWarGameMode_1ac302a1b8590c577e0c40e130b6c44dcc"></span><span class="n"><span class="pre">APawn</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">SpawnDefaultPawnAtTransform_Implementation</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">AController</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">NewPlayer</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">FTransform</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">SpawnTransform</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N19AGKFogOfWarGameMode42SpawnDefaultPawnAtTransform_ImplementationEP11AControllerRK10FTransform" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N19AGKFogOfWarGameMode42SpawnDefaultPawnAtTransform_ImplementationEP11AControllerRK10FTransform"></span><span id="_CPPv2N19AGKFogOfWarGameMode42SpawnDefaultPawnAtTransform_ImplementationEP11AControllerRK10FTransform"></span><span id="AGKFogOfWarGameMode::SpawnDefaultPawnAtTransform_Implementation__AControllerP.FTransformCR"></span><span class="target" id="classAGKFogOfWarGameMode_1ac302a1b8590c577e0c40e130b6c44dcc"></span><span class="n"><span class="pre">APawn</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">SpawnDefaultPawnAtTransform_Implementation</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">AController</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">NewPlayer</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">FTransform</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">SpawnTransform</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N19AGKFogOfWarGameMode42SpawnDefaultPawnAtTransform_ImplementationEP11AControllerRK10FTransform" title="Link to this definition">#</a><br /></dt>
 <dd><p>Spawn the default pawn and finilize spawning. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N19AGKFogOfWarGameMode12FinalizePawnEP11AControllerP5APawn">
-<span id="_CPPv3N19AGKFogOfWarGameMode12FinalizePawnEP11AControllerP5APawn"></span><span id="_CPPv2N19AGKFogOfWarGameMode12FinalizePawnEP11AControllerP5APawn"></span><span id="AGKFogOfWarGameMode::FinalizePawn__AControllerP.APawnP"></span><span class="target" id="classAGKFogOfWarGameMode_1a0fa01b5be7a5ddeb1818ab9d7530f316"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FinalizePawn</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">AController</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">NewPlayer</span></span>, <span class="n"><span class="pre">APawn</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">NewPawn</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19AGKFogOfWarGameMode12FinalizePawnEP11AControllerP5APawn" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N19AGKFogOfWarGameMode12FinalizePawnEP11AControllerP5APawn"></span><span id="_CPPv2N19AGKFogOfWarGameMode12FinalizePawnEP11AControllerP5APawn"></span><span id="AGKFogOfWarGameMode::FinalizePawn__AControllerP.APawnP"></span><span class="target" id="classAGKFogOfWarGameMode_1a0fa01b5be7a5ddeb1818ab9d7530f316"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FinalizePawn</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">AController</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">NewPlayer</span></span>, <span class="n"><span class="pre">APawn</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">NewPawn</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19AGKFogOfWarGameMode12FinalizePawnEP11AControllerP5APawn" title="Link to this definition">#</a><br /></dt>
 <dd><p>Called before the pawn is entirely constructed this can be used to set additional attributes </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N19AGKFogOfWarGameMode31SetGenericTeamIdFromPlayerStartEP11AControllerP6AActor">
-<span id="_CPPv3N19AGKFogOfWarGameMode31SetGenericTeamIdFromPlayerStartEP11AControllerP6AActor"></span><span id="_CPPv2N19AGKFogOfWarGameMode31SetGenericTeamIdFromPlayerStartEP11AControllerP6AActor"></span><span id="AGKFogOfWarGameMode::SetGenericTeamIdFromPlayerStart__AControllerP.AActorP"></span><span class="target" id="classAGKFogOfWarGameMode_1ad5e47e08fd915c87109f41b5f7178b13"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SetGenericTeamIdFromPlayerStart</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">AController</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">NewPlayer</span></span>, <span class="n"><span class="pre">AActor</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">StartSpot</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19AGKFogOfWarGameMode31SetGenericTeamIdFromPlayerStartEP11AControllerP6AActor" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N19AGKFogOfWarGameMode31SetGenericTeamIdFromPlayerStartEP11AControllerP6AActor"></span><span id="_CPPv2N19AGKFogOfWarGameMode31SetGenericTeamIdFromPlayerStartEP11AControllerP6AActor"></span><span id="AGKFogOfWarGameMode::SetGenericTeamIdFromPlayerStart__AControllerP.AActorP"></span><span class="target" id="classAGKFogOfWarGameMode_1ad5e47e08fd915c87109f41b5f7178b13"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SetGenericTeamIdFromPlayerStart</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">AController</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">NewPlayer</span></span>, <span class="n"><span class="pre">AActor</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">StartSpot</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19AGKFogOfWarGameMode31SetGenericTeamIdFromPlayerStartEP11AControllerP6AActor" title="Link to this definition">#</a><br /></dt>
 <dd><p>Default implementation of team assignment logic Interprets the <code class="docutils literal notranslate"><span class="pre">APlayerStart::PlayerStartTag</span></code> as the team name to be assigned </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N19AGKFogOfWarGameMode28AssignTeamFor_ImplementationEP11AControllerP12APlayerStart">
-<span id="_CPPv3N19AGKFogOfWarGameMode28AssignTeamFor_ImplementationEP11AControllerP12APlayerStart"></span><span id="_CPPv2N19AGKFogOfWarGameMode28AssignTeamFor_ImplementationEP11AControllerP12APlayerStart"></span><span id="AGKFogOfWarGameMode::AssignTeamFor_Implementation__AControllerP.APlayerStartP"></span><span class="target" id="classAGKFogOfWarGameMode_1aa594e6a273b25aa27798df40cfde68f2"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AssignTeamFor_Implementation</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="n"><span class="pre">AController</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">NewPlayer</span></span>, <span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="n"><span class="pre">APlayerStart</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">StartSpot</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19AGKFogOfWarGameMode28AssignTeamFor_ImplementationEP11AControllerP12APlayerStart" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N19AGKFogOfWarGameMode28AssignTeamFor_ImplementationEP11AControllerP12APlayerStart"></span><span id="_CPPv2N19AGKFogOfWarGameMode28AssignTeamFor_ImplementationEP11AControllerP12APlayerStart"></span><span id="AGKFogOfWarGameMode::AssignTeamFor_Implementation__AControllerP.APlayerStartP"></span><span class="target" id="classAGKFogOfWarGameMode_1aa594e6a273b25aa27798df40cfde68f2"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AssignTeamFor_Implementation</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="n"><span class="pre">AController</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">NewPlayer</span></span>, <span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="n"><span class="pre">APlayerStart</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">StartSpot</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19AGKFogOfWarGameMode28AssignTeamFor_ImplementationEP11AControllerP12APlayerStart" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N19AGKFogOfWarGameMode9StartPlayEv">
-<span id="_CPPv3N19AGKFogOfWarGameMode9StartPlayEv"></span><span id="_CPPv2N19AGKFogOfWarGameMode9StartPlayEv"></span><span id="AGKFogOfWarGameMode::StartPlay"></span><span class="target" id="classAGKFogOfWarGameMode_1a10d140a50d7b639e5f3a707318109d76"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">StartPlay</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N19AGKFogOfWarGameMode9StartPlayEv" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N19AGKFogOfWarGameMode9StartPlayEv"></span><span id="_CPPv2N19AGKFogOfWarGameMode9StartPlayEv"></span><span id="AGKFogOfWarGameMode::StartPlay"></span><span class="target" id="classAGKFogOfWarGameMode_1a10d140a50d7b639e5f3a707318109d76"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">StartPlay</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N19AGKFogOfWarGameMode9StartPlayEv" title="Link to this definition">#</a><br /></dt>
 <dd><p>Initialize the fog of war. </p>
 </dd></dl>
 
@@ -229,34 +562,122 @@
 </section>
 
 
-           </div>
-          </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="classAGKFogOfWarCharacter.html" class="btn btn-neutral float-left" title="Class AGKFogOfWarCharacter" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="classAGKFogOfWarGameState.html" class="btn btn-neutral float-right" title="Class AGKFogOfWarGameState" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
+                </article>
+              
 
-  <hr/>
-
-  <div role="contentinfo">
-    <p>&#169; Copyright 2024.</p>
-  </div>
-
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   
-
-</footer>
-        </div>
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="classAGKFogOfWarCharacter.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">AGKFogOfWarCharacter</p>
       </div>
-    </section>
-  </div>
-  <script>
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script> 
+    </a>
+    <a class="right-next"
+       href="classAGKFogOfWarGameState.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">AGKFogOfWarGameState</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
-</body>
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inheritance-relationships">Inheritance Relationships</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#class-documentation">Class Documentation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv419AGKFogOfWarGameMode"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarGameMode</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N19AGKFogOfWarGameMode19AGKFogOfWarGameModeEv"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarGameMode::AGKFogOfWarGameMode()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N19AGKFogOfWarGameMode15K2_FinalizePawnEP11AControllerP5APawn"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarGameMode::K2_FinalizePawn()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N19AGKFogOfWarGameMode13AssignTeamForEP11AControllerP12APlayerStart"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarGameMode::AssignTeamFor()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N19AGKFogOfWarGameMode20GetTeamFromStartSpotEP11AControllerP12APlayerStart"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarGameMode::GetTeamFromStartSpot()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N19AGKFogOfWarGameMode34SpawnDefaultPawnFor_ImplementationEP11AControllerP6AActor"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarGameMode::SpawnDefaultPawnFor_Implementation()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N19AGKFogOfWarGameMode42SpawnDefaultPawnAtTransform_ImplementationEP11AControllerRK10FTransform"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarGameMode::SpawnDefaultPawnAtTransform_Implementation()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N19AGKFogOfWarGameMode12FinalizePawnEP11AControllerP5APawn"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarGameMode::FinalizePawn()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N19AGKFogOfWarGameMode31SetGenericTeamIdFromPlayerStartEP11AControllerP6AActor"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarGameMode::SetGenericTeamIdFromPlayerStart()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N19AGKFogOfWarGameMode28AssignTeamFor_ImplementationEP11AControllerP12APlayerStart"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarGameMode::AssignTeamFor_Implementation()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N19AGKFogOfWarGameMode9StartPlayEv"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarGameMode::StartPlay()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Pierre Delaunay
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
 </html>

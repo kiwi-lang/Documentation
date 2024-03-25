@@ -1,0 +1,23 @@
+digraph "FGKAbilityStaticHandle"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="FGKAbilityStaticHandle",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" Data" ,fontname="Helvetica"];
+  Node2 [label="FGKAbilityStatic",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structFGKAbilityStatic.html",tooltip=" "];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="FTableRowBase",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",tooltip=" "];
+  Node4 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" Cost" ,fontname="Helvetica"];
+  Node4 [label="FGKAbilityCost",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structFGKAbilityCost.html",tooltip=" "];
+  Node5 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" Cooldown" ,fontname="Helvetica"];
+  Node5 [label="FGKAbilityCooldown",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structFGKAbilityCooldown.html",tooltip=" "];
+  Node6 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" Targeting" ,fontname="Helvetica"];
+  Node6 [label="FGKAbilityTarget",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structFGKAbilityTarget.html",tooltip=" "];
+  Node7 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" ProjectileData" ,fontname="Helvetica"];
+  Node7 [label="FGKProjectileStatic",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structFGKProjectileStatic.html",tooltip=" "];
+  Node3 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" EffectActorData" ,fontname="Helvetica"];
+  Node8 [label="FGKEffectActorData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structFGKEffectActorData.html",tooltip=" "];
+}

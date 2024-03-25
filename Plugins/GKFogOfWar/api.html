@@ -1,0 +1,1335 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>API &#8212; Gamekit</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/collapsible-lists\css\tree_view.css?v=a885cde7" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=71c9e0a5" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="../../_static/collapsible-lists\js\CollapsibleLists.compressed.js?v=73120307"></script>
+    <script src="../../_static/collapsible-lists\js\apply-collapsible-lists.js?v=660e4f45"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Plugins/GKFogOfWar/api';</script>
+    <link rel="icon" href="../../_static/GamekitDev.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="AGKFogOfWarCharacter" href="API/classAGKFogOfWarCharacter.html" />
+    <link rel="prev" title="Changelog" href="Welcome/Changelog.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+    
+    <img src="../../_static/GamekitDev.png" class="logo__image only-light" alt="Gamekit - Home"/>
+    <script>document.write(`<img src="../../_static/GamekitDev.png" class="logo__image only-dark" alt="Gamekit - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Welcome</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../Welcome/Roadmap.html">RoadMap</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Plugins</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Fog of War</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Welcome/Installations.html">Installations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Welcome/GettingStarted.html">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Welcome/FrequentQuestions.html">Frequently Asked Questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Welcome/Changelog.html">Changelog</a></li>
+<li class="toctree-l2 current active has-children"><a class="current reference internal" href="#">API</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="API/classAGKFogOfWarCharacter.html">AGKFogOfWarCharacter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="API/classAGKFogOfWarGameMode.html">AGKFogOfWarGameMode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="API/classAGKFogOfWarGameState.html">AGKFogOfWarGameState</a></li>
+<li class="toctree-l3"><a class="reference internal" href="API/classAGKFogOfWarObstacle.html">AGKFogOfWarObstacle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="API/classAGKFogOfWarPawn.html">AGKFogOfWarPawn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="API/classAGKFogOfWarPlayerController.html">AGKFogOfWarPlayerController</a></li>
+<li class="toctree-l3"><a class="reference internal" href="API/classAGKFogOfWarPlayerState.html">AGKFogOfWarPlayerState</a></li>
+<li class="toctree-l3"><a class="reference internal" href="API/classAGKFogOfWarPrivatePlayerState.html">AGKFogOfWarPrivatePlayerState</a></li>
+<li class="toctree-l3"><a class="reference internal" href="API/classAGKFogOfWarTeam.html">AGKFogOfWarTeam</a></li>
+<li class="toctree-l3"><a class="reference internal" href="API/classAGKFogOfWarVolume.html">AGKFogOfWarVolume</a></li>
+<li class="toctree-l3"><a class="reference internal" href="API/classFGKFogOfWarModule.html">FGKFogOfWarModule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="API/classFGKFogOfWarShaderModule.html">FGKFogOfWarShaderModule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="API/classIGKFogOfWarAgentInterface.html">IGKFogOfWarAgentInterface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="API/classIGKFogOfWarGameStateInterface.html">IGKFogOfWarGameStateInterface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="API/classIGKFogOfWarTestModule.html">IGKFogOfWarTestModule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="API/classUGKCanvasUpscaler.html">UGKCanvasUpscaler</a></li>
+<li class="toctree-l3"><a class="reference internal" href="API/classUGKCPUUpscalerStrategy.html">UGKCPUUpscalerStrategy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="API/classUGKExplorationTransform.html">UGKExplorationTransform</a></li>
+<li class="toctree-l3"><a class="reference internal" href="API/classUGKFogOfWarComponent.html">UGKFogOfWarComponent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="API/classUGKFogOfWarLibrary.html">UGKFogOfWarLibrary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="API/classUGKFogOfWarStrategy.html">UGKFogOfWarStrategy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="API/classUGKGPUUpscalerStrategy.html">UGKGPUUpscalerStrategy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="API/classUGKRayCasting__Less.html">UGKRayCasting_Less</a></li>
+<li class="toctree-l3"><a class="reference internal" href="API/classUGKRayCasting__Line.html">UGKRayCasting_Line</a></li>
+<li class="toctree-l3"><a class="reference internal" href="API/classUGKRayCasting__Triangle.html">UGKRayCasting_Triangle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="API/classUGKShadowCasting.html">UGKShadowCasting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="API/classUGKSharedBlueprint.html">UGKSharedBlueprint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="API/classUGKTransformerStrategy.html">UGKTransformerStrategy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="API/classUGKTransformerStrategyCanvas.html">UGKTransformerStrategyCanvas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="API/classUGKTransformerStrategyTexture2D.html">UGKTransformerStrategyTexture2D</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../GKAbility/index.html">GKAbility</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../GKAbility/Welcome/Installations.html">Installations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GKAbility/Welcome/GettingStarted.html">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GKAbility/Welcome/FrequentQuestions.html">Frequently Asked Questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GKAbility/Welcome/Changelog.html">Changelog</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../GKAbility/api.html">API</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../GKLobby/index.html">Lobby</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../GKLobby/Welcome/Installations.html">Installations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GKLobby/Welcome/GettingStarted.html">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GKLobby/Welcome/FrequentQuestions.html">Frequently Asked Questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GKLobby/Welcome/Changelog.html">Changelog</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../GKLobby/api.html">API</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../GKChat/index.html">Chat</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../GKChat/Welcome/Installations.html">Installations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GKChat/Welcome/GettingStarted.html">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GKChat/Welcome/FrequentQuestions.html">Frequently Asked Questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GKChat/Welcome/Changelog.html">Changelog</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../GKChat/api.html">API</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../GKMinimap/index.html">Minimap</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../GKMinimap/Welcome/Installations.html">Installations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GKMinimap/Welcome/GettingStarted.html">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GKMinimap/Welcome/FrequentQuestions.html">Frequently Asked Questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GKMinimap/Welcome/Changelog.html">Changelog</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../GKMinimap/api.html">API</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../GKML/index.html">Machine Learning</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../GKML/cartpole/1_Introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GKML/cartpole/2_Setup.html">Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GKML/cartpole/3_MLAdapter.html">MLAdapter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GKML/cartpole/4_Game.html">Make the game</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GKML/cartpole/5_Launching.html">Cartpole as a gym environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GKML/cartpole/6_Training.html">Training</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GKML/cartpole/7_Packaging.html">Packaging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GKML/issues.html">Known Issues</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">UnrealEngine</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../UnrealEngine/Developer.html">Developer Guide</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../UnrealEngine/Developer/Docs.html">Documentation Generation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../UnrealEngine/Developer/Compilation.html">Compilation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../UnrealEngine/Developer/Shaders/index.html">Shaders</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../UnrealEngine/Developer/Doxygen.html">Doxygen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../UnrealEngine/Developer/Contribution.html">Contributions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../UnrealEngine/Developer/ci.html">Continuous Integration</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../UnrealEngine/Game.html">Game</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../UnrealEngine/Game/GameFlow.html">GameFlow</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../UnrealEngine/Level/index.html">Level</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../UnrealEngine/Level/landscape.html">Landscape Creation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../UnrealEngine/Level/procedural.html">Procedural Level Generation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../UnrealEngine/Online.html">Online</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../UnrealEngine/Online/Multiplayer.html">Multiplayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../UnrealEngine/Online/MMO.html">Massively Multiplayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../UnrealEngine/Online/Competitive.html">Competitive</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../UnrealEngine/Online/Cheating.html">Cheating</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../UnrealEngine/Others.html">Others</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-16"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../UnrealEngine/Tips/index.html">Tips &amp; Tricks</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-17"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../UnrealEngine/Tips/Controllers/index.html">Controllers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../UnrealEngine/Tips/Cameras/index.html">Cameras</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../UnrealEngine/Tips/Cameras/configure.html">Cameras</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../UnrealEngine/Modding/index.html">Modding &amp; DLC</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Tools</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../Tools/uetools.html">uetools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Tools/ranked.html">ranked</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Tools/resources.html">Resources</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/Plugins/GKFogOfWar/api.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>API</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="api">
+<h1>API<a class="headerlink" href="#api" title="Link to this heading">#</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="API/classAGKFogOfWarCharacter.html">AGKFogOfWarCharacter</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="API/classAGKFogOfWarCharacter.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="API/classAGKFogOfWarCharacter.html#base-types">Base Types</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="API/classAGKFogOfWarCharacter.html#class-documentation">Class Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="API/classAGKFogOfWarCharacter.html#_CPPv420AGKFogOfWarCharacter"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarCharacter</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarCharacter.html#_CPPv4N20AGKFogOfWarCharacter20AGKFogOfWarCharacterERK18FObjectInitializer"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarCharacter::AGKFogOfWarCharacter()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarCharacter.html#_CPPv4N20AGKFogOfWarCharacter4TickEf"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarCharacter::Tick()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarCharacter.html#_CPPv4N20AGKFogOfWarCharacter25SetupPlayerInputComponentEP15UInputComponent"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarCharacter::SetupPlayerInputComponent()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarCharacter.html#_CPPv4N20AGKFogOfWarCharacter16SetGenericTeamIdERK14FGenericTeamId"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarCharacter::SetGenericTeamId()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarCharacter.html#_CPPv4NK20AGKFogOfWarCharacter16GetGenericTeamIdEv"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarCharacter::GetGenericTeamId()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarCharacter.html#_CPPv4N20AGKFogOfWarCharacter12OnTeamChangeE14FGenericTeamId"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarCharacter::OnTeamChange()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarCharacter.html#_CPPv4N20AGKFogOfWarCharacter20OnWorldMatchStartingEv"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarCharacter::OnWorldMatchStarting()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarCharacter.html#_CPPv4N20AGKFogOfWarCharacter32IsReplicationPausedForConnectionERK10FNetViewer"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarCharacter::IsReplicationPausedForConnection()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarCharacter.html#_CPPv4N20AGKFogOfWarCharacter26OnReplicationPausedChangedEb"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarCharacter::OnReplicationPausedChanged()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarCharacter.html#_CPPv4NK20AGKFogOfWarCharacter26GetLifetimeReplicatedPropsER6TArrayI17FLifetimePropertyE"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarCharacter::GetLifetimeReplicatedProps()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarCharacter.html#_CPPv4N20AGKFogOfWarCharacter17OnVisilityChangedEb"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarCharacter::OnVisilityChanged()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarCharacter.html#_CPPv4N20AGKFogOfWarCharacter9BeginPlayEv"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarCharacter::BeginPlay()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarCharacter.html#_CPPv4N20AGKFogOfWarCharacter16OnRep_TeamChangeEv"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarCharacter::OnRep_TeamChange()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarCharacter.html#_CPPv4N20AGKFogOfWarCharacter4TeamE"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarCharacter::Team</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="API/classAGKFogOfWarGameMode.html">AGKFogOfWarGameMode</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="API/classAGKFogOfWarGameMode.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="API/classAGKFogOfWarGameMode.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="API/classAGKFogOfWarGameMode.html#class-documentation">Class Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="API/classAGKFogOfWarGameMode.html#_CPPv419AGKFogOfWarGameMode"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarGameMode</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarGameMode.html#_CPPv4N19AGKFogOfWarGameMode19AGKFogOfWarGameModeEv"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarGameMode::AGKFogOfWarGameMode()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarGameMode.html#_CPPv4N19AGKFogOfWarGameMode15K2_FinalizePawnEP11AControllerP5APawn"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarGameMode::K2_FinalizePawn()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarGameMode.html#_CPPv4N19AGKFogOfWarGameMode13AssignTeamForEP11AControllerP12APlayerStart"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarGameMode::AssignTeamFor()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarGameMode.html#_CPPv4N19AGKFogOfWarGameMode20GetTeamFromStartSpotEP11AControllerP12APlayerStart"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarGameMode::GetTeamFromStartSpot()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarGameMode.html#_CPPv4N19AGKFogOfWarGameMode34SpawnDefaultPawnFor_ImplementationEP11AControllerP6AActor"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarGameMode::SpawnDefaultPawnFor_Implementation()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarGameMode.html#_CPPv4N19AGKFogOfWarGameMode42SpawnDefaultPawnAtTransform_ImplementationEP11AControllerRK10FTransform"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarGameMode::SpawnDefaultPawnAtTransform_Implementation()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarGameMode.html#_CPPv4N19AGKFogOfWarGameMode12FinalizePawnEP11AControllerP5APawn"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarGameMode::FinalizePawn()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarGameMode.html#_CPPv4N19AGKFogOfWarGameMode31SetGenericTeamIdFromPlayerStartEP11AControllerP6AActor"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarGameMode::SetGenericTeamIdFromPlayerStart()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarGameMode.html#_CPPv4N19AGKFogOfWarGameMode28AssignTeamFor_ImplementationEP11AControllerP12APlayerStart"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarGameMode::AssignTeamFor_Implementation()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarGameMode.html#_CPPv4N19AGKFogOfWarGameMode9StartPlayEv"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarGameMode::StartPlay()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="API/classAGKFogOfWarGameState.html">AGKFogOfWarGameState</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="API/classAGKFogOfWarGameState.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="API/classAGKFogOfWarGameState.html#base-types">Base Types</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="API/classAGKFogOfWarGameState.html#class-documentation">Class Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="API/classAGKFogOfWarGameState.html#_CPPv420AGKFogOfWarGameState"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarGameState</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarGameState.html#_CPPv4N20AGKFogOfWarGameState31GetFogOfWarTeams_ImplementationEv"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarGameState::GetFogOfWarTeams_Implementation()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarGameState.html#_CPPv4NK20AGKFogOfWarGameState26GetLifetimeReplicatedPropsER6TArrayI17FLifetimePropertyE"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarGameState::GetLifetimeReplicatedProps()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarGameState.html#_CPPv4N20AGKFogOfWarGameState26GetTeamName_ImplementationE14FGenericTeamId"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarGameState::GetTeamName_Implementation()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarGameState.html#_CPPv4N20AGKFogOfWarGameState32GetTeamInfoHandle_ImplementationE14FGenericTeamId"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarGameState::GetTeamInfoHandle_Implementation()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarGameState.html#_CPPv4N20AGKFogOfWarGameState26GetTeamInfo_ImplementationE14FGenericTeamId"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarGameState::GetTeamInfo_Implementation()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarGameState.html#_CPPv4N20AGKFogOfWarGameState13FogOfWarTeamsE"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarGameState::FogOfWarTeams</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="API/classAGKFogOfWarObstacle.html">AGKFogOfWarObstacle</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="API/classAGKFogOfWarObstacle.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="API/classAGKFogOfWarObstacle.html#base-types">Base Types</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="API/classAGKFogOfWarObstacle.html#class-documentation">Class Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="API/classAGKFogOfWarObstacle.html#_CPPv419AGKFogOfWarObstacle"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarObstacle</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarObstacle.html#_CPPv4N19AGKFogOfWarObstacle19AGKFogOfWarObstacleEv"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarObstacle::AGKFogOfWarObstacle()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarObstacle.html#_CPPv4N19AGKFogOfWarObstacle35GetFogOfWarComponent_ImplementationEv"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarObstacle::GetFogOfWarComponent_Implementation()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarObstacle.html#_CPPv4N19AGKFogOfWarObstacle12FoWComponentE"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarObstacle::FoWComponent</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="API/classAGKFogOfWarPawn.html">AGKFogOfWarPawn</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="API/classAGKFogOfWarPawn.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="API/classAGKFogOfWarPawn.html#base-types">Base Types</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="API/classAGKFogOfWarPawn.html#class-documentation">Class Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="API/classAGKFogOfWarPawn.html#_CPPv415AGKFogOfWarPawn"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarPawn</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarPawn.html#_CPPv4N15AGKFogOfWarPawn15AGKFogOfWarPawnERK18FObjectInitializer"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarPawn::AGKFogOfWarPawn()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarPawn.html#_CPPv4N15AGKFogOfWarPawn4TickEf"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarPawn::Tick()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarPawn.html#_CPPv4N15AGKFogOfWarPawn25SetupPlayerInputComponentEP15UInputComponent"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarPawn::SetupPlayerInputComponent()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarPawn.html#_CPPv4N15AGKFogOfWarPawn35GetFogOfWarComponent_ImplementationEv"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarPawn::GetFogOfWarComponent_Implementation()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarPawn.html#_CPPv4NK15AGKFogOfWarPawn26GetLifetimeReplicatedPropsER6TArrayI17FLifetimePropertyE"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarPawn::GetLifetimeReplicatedProps()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarPawn.html#_CPPv4N15AGKFogOfWarPawn32IsReplicationPausedForConnectionERK10FNetViewer"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarPawn::IsReplicationPausedForConnection()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarPawn.html#_CPPv4NK15AGKFogOfWarPawn16GetGenericTeamIdEv"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarPawn::GetGenericTeamId()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarPawn.html#_CPPv4N15AGKFogOfWarPawn26OnReplicationPausedChangedEb"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarPawn::OnReplicationPausedChanged()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarPawn.html#_CPPv4N15AGKFogOfWarPawn4TeamE"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarPawn::Team</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarPawn.html#_CPPv4N15AGKFogOfWarPawn9BeginPlayEv"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarPawn::BeginPlay()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarPawn.html#_CPPv4N15AGKFogOfWarPawn12FoWComponentE"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarPawn::FoWComponent</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="API/classAGKFogOfWarPlayerController.html">AGKFogOfWarPlayerController</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="API/classAGKFogOfWarPlayerController.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="API/classAGKFogOfWarPlayerController.html#base-types">Base Types</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="API/classAGKFogOfWarPlayerController.html#class-documentation">Class Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="API/classAGKFogOfWarPlayerController.html#_CPPv427AGKFogOfWarPlayerController"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarPlayerController</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarPlayerController.html#_CPPv4N27AGKFogOfWarPlayerController16OnRep_TeamChangeEv"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarPlayerController::OnRep_TeamChange()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarPlayerController.html#_CPPv4N27AGKFogOfWarPlayerController16SetGenericTeamIdERK14FGenericTeamId"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarPlayerController::SetGenericTeamId()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarPlayerController.html#_CPPv4NK27AGKFogOfWarPlayerController16GetGenericTeamIdEv"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarPlayerController::GetGenericTeamId()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarPlayerController.html#_CPPv4N27AGKFogOfWarPlayerController12OnTeamChangeE14FGenericTeamId"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarPlayerController::OnTeamChange()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarPlayerController.html#_CPPv4NK27AGKFogOfWarPlayerController26GetLifetimeReplicatedPropsER6TArrayI17FLifetimePropertyE"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarPlayerController::GetLifetimeReplicatedProps()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarPlayerController.html#_CPPv4NK27AGKFogOfWarPlayerController12IsPossessingEP5APawn"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarPlayerController::IsPossessing()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarPlayerController.html#_CPPv4N27AGKFogOfWarPlayerController6TeamIdE"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarPlayerController::TeamId</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="API/classAGKFogOfWarPlayerState.html">AGKFogOfWarPlayerState</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="API/classAGKFogOfWarPlayerState.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="API/classAGKFogOfWarPlayerState.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="API/classAGKFogOfWarPlayerState.html#class-documentation">Class Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="API/classAGKFogOfWarPlayerState.html#_CPPv422AGKFogOfWarPlayerState"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarPlayerState</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarPlayerState.html#_CPPv4NK22AGKFogOfWarPlayerState26GetLifetimeReplicatedPropsER6TArrayI17FLifetimePropertyE"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarPlayerState::GetLifetimeReplicatedProps()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarPlayerState.html#_CPPv4N22AGKFogOfWarPlayerState12PrivateStateE"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarPlayerState::PrivateState</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="API/classAGKFogOfWarPrivatePlayerState.html">AGKFogOfWarPrivatePlayerState</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="API/classAGKFogOfWarPrivatePlayerState.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="API/classAGKFogOfWarPrivatePlayerState.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="API/classAGKFogOfWarPrivatePlayerState.html#class-documentation">Class Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="API/classAGKFogOfWarPrivatePlayerState.html#_CPPv429AGKFogOfWarPrivatePlayerState"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarPrivatePlayerState</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarPrivatePlayerState.html#_CPPv4N29AGKFogOfWarPrivatePlayerState29AGKFogOfWarPrivatePlayerStateEv"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarPrivatePlayerState::AGKFogOfWarPrivatePlayerState()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarPrivatePlayerState.html#_CPPv4NK29AGKFogOfWarPrivatePlayerState16IsNetRelevantForEPK6AActorPK6AActorRK7FVector"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarPrivatePlayerState::IsNetRelevantFor()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarPrivatePlayerState.html#_CPPv4NK29AGKFogOfWarPrivatePlayerState16GetGenericTeamIdEv"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarPrivatePlayerState::GetGenericTeamId()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarPrivatePlayerState.html#_CPPv4NK29AGKFogOfWarPrivatePlayerState26GetLifetimeReplicatedPropsER6TArrayI17FLifetimePropertyE"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarPrivatePlayerState::GetLifetimeReplicatedProps()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="API/classAGKFogOfWarTeam.html">AGKFogOfWarTeam</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="API/classAGKFogOfWarTeam.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="API/classAGKFogOfWarTeam.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="API/classAGKFogOfWarTeam.html#class-documentation">Class Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="API/classAGKFogOfWarTeam.html#_CPPv415AGKFogOfWarTeam"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarTeam</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarTeam.html#_CPPv4N15AGKFogOfWarTeam15AGKFogOfWarTeamEv"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarTeam::AGKFogOfWarTeam()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarTeam.html#_CPPv4NK15AGKFogOfWarTeam16IsNetRelevantForEPK6AActorPK6AActorRK7FVector"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarTeam::IsNetRelevantFor()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarTeam.html#_CPPv4NK15AGKFogOfWarTeam26GetLifetimeReplicatedPropsER6TArrayI17FLifetimePropertyE"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarTeam::GetLifetimeReplicatedProps()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarTeam.html#_CPPv4N15AGKFogOfWarTeam9GetBufferEv"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarTeam::GetBuffer()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarTeam.html#_CPPv4N15AGKFogOfWarTeam14GetExplorationEv"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarTeam::GetExploration()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarTeam.html#_CPPv4N15AGKFogOfWarTeam9GetVisionEv"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarTeam::GetVision()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarTeam.html#_CPPv4N15AGKFogOfWarTeam17GetUpscaledVisionEv"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarTeam::GetUpscaledVision()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarTeam.html#_CPPv4NK15AGKFogOfWarTeam18GetAllVisibleUnitsEv"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarTeam::GetAllVisibleUnits()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarTeam.html#_CPPv4N15AGKFogOfWarTeam6BufferE"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarTeam::Buffer</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarTeam.html#_CPPv4N15AGKFogOfWarTeam12AllyTeamHashE"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarTeam::AllyTeamHash</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarTeam.html#_CPPv4N15AGKFogOfWarTeam12AllyFogOfWarE"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarTeam::AllyFogOfWar</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarTeam.html#_CPPv4N15AGKFogOfWarTeam11ExplorationE"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarTeam::Exploration</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarTeam.html#_CPPv4N15AGKFogOfWarTeam6VisionE"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarTeam::Vision</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarTeam.html#_CPPv4N15AGKFogOfWarTeam14UpScaledVisionE"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarTeam::UpScaledVision</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarTeam.html#_CPPv4N15AGKFogOfWarTeam9bDiscreteE"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarTeam::bDiscrete</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarTeam.html#_CPPv4N15AGKFogOfWarTeam4NameE"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarTeam::Name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarTeam.html#_CPPv4N15AGKFogOfWarTeam6TeamIdE"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarTeam::TeamId</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarTeam.html#_CPPv4N15AGKFogOfWarTeam10FriendliesE"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarTeam::Friendlies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarTeam.html#_CPPv4N15AGKFogOfWarTeam5UnitsE"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarTeam::Units</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarTeam.html#_CPPv4N15AGKFogOfWarTeam8BlockingE"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarTeam::Blocking</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarTeam.html#_CPPv4N15AGKFogOfWarTeam8DrawLockE"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarTeam::DrawLock</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarTeam.html#_CPPv4N15AGKFogOfWarTeam6VolumeE"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarTeam::Volume</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="API/classAGKFogOfWarVolume.html">AGKFogOfWarVolume</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#class-documentation">Class Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv417AGKFogOfWarVolume"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4N17AGKFogOfWarVolume17AGKFogOfWarVolumeEv"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::AGKFogOfWarVolume()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4N17AGKFogOfWarVolume39InitializeAuthorityFromTeamInfoProviderE16TScriptInterfaceI29IGKFogOfWarGameStateInterfaceE"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::InitializeAuthorityFromTeamInfoProvider()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4N17AGKFogOfWarVolume23PreInitializeComponentsEv"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::PreInitializeComponents()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4N17AGKFogOfWarVolume16InitializeServerEv"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::InitializeServer()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4N17AGKFogOfWarVolume16InitializeClientEv"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::InitializeClient()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4N17AGKFogOfWarVolume10SetupActorEP20UGKFogOfWarComponent"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::SetupActor()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4N17AGKFogOfWarVolume9BeginPlayEv"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::BeginPlay()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4N17AGKFogOfWarVolume4TickEf"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::Tick()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4N17AGKFogOfWarVolume7EndPlayEKN14EEndPlayReason4TypeE"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::EndPlay()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4NK17AGKFogOfWarVolume26GetLifetimeReplicatedPropsER6TArrayI17FLifetimePropertyE"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::GetLifetimeReplicatedProps()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4N17AGKFogOfWarVolume17GetFactionTextureE14FGenericTeamId"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::GetFactionTexture()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4N17AGKFogOfWarVolume17GetFactionTextureE5FName"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::GetFactionTexture()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4N17AGKFogOfWarVolume25GetOriginalFactionTextureE14FGenericTeamId"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::GetOriginalFactionTexture()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4N17AGKFogOfWarVolume25GetOriginalFactionTextureE5FName"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::GetOriginalFactionTexture()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4N17AGKFogOfWarVolume28GetFactionExplorationTextureE14FGenericTeamId"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::GetFactionExplorationTexture()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4N17AGKFogOfWarVolume28GetFactionExplorationTextureE5FName"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::GetFactionExplorationTexture()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4N17AGKFogOfWarVolume30GetFogOfWarPostprocessMaterialE16TScriptInterfaceI26IGenericTeamAgentInterfaceE"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::GetFogOfWarPostprocessMaterial()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4N17AGKFogOfWarVolume30GetFogOfWarPostprocessMaterialEP26IGenericTeamAgentInterface"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::GetFogOfWarPostprocessMaterial()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4N17AGKFogOfWarVolume37SetSpecatorFogOfWarMaterialParametersEP24UMaterialInstanceDynamic"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::SetSpecatorFogOfWarMaterialParameters()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4N17AGKFogOfWarVolume28SetCameraPostprocessMaterialE16TScriptInterfaceI26IGenericTeamAgentInterfaceEP16UCameraComponent"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::SetCameraPostprocessMaterial()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4N17AGKFogOfWarVolume28SetCameraPostprocessMaterialEP26IGenericTeamAgentInterfaceP16UCameraComponent"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::SetCameraPostprocessMaterial()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4N17AGKFogOfWarVolume19GetFogOfWarMaterialE16TScriptInterfaceI26IGenericTeamAgentInterfaceEP18UMaterialInterface"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::GetFogOfWarMaterial()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4N17AGKFogOfWarVolume19GetFogOfWarMaterialEP26IGenericTeamAgentInterfaceP18UMaterialInterface"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::GetFogOfWarMaterial()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4NK17AGKFogOfWarVolume11GetBlockingEv"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::GetBlocking()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4N17AGKFogOfWarVolume10DebugTraceEv"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::DebugTrace()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4N17AGKFogOfWarVolume24FinishedDrawingComponentEf"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::FinishedDrawingComponent()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4NK17AGKFogOfWarVolume10GetMapSizeEv"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::GetMapSize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4N17AGKFogOfWarVolume14SetTextureSizeE9FVector2D"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::SetTextureSize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4N17AGKFogOfWarVolume14GetTextureSizeEv"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::GetTextureSize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4N17AGKFogOfWarVolume20GetTextureCoordinateE7FVector"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::GetTextureCoordinate()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4N17AGKFogOfWarVolume13ToGridTextureE10FIntVector"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::ToGridTexture()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4N17AGKFogOfWarVolume17FromTextureToGridE10FIntVector"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::FromTextureToGrid()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4NK17AGKFogOfWarVolume12GetTeamCountEv"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::GetTeamCount()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4NK17AGKFogOfWarVolume9IsVisibleE14FGenericTeamId7FVector"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::IsVisible()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4NK17AGKFogOfWarVolume9IsVisibleEPK6AActorPK6AActor"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::IsVisible()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4NK17AGKFogOfWarVolume9IsVisibleE14FGenericTeamIdPK6AActor"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::IsVisible()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4NK17AGKFogOfWarVolume15GetVolumeOffsetEv"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::GetVolumeOffset()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4NK17AGKFogOfWarVolume16GetWorldLocationE7FVector"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::GetWorldLocation()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4NK17AGKFogOfWarVolume17GetVolumeLocationE7FVector"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::GetVolumeLocation()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4NK17AGKFogOfWarVolume22GetActorVolumeLocationEPK6AActor"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::GetActorVolumeLocation()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4NK17AGKFogOfWarVolume22GetActorVolumeLocationEPK20UGKFogOfWarComponent"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::GetActorVolumeLocation()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4NK17AGKFogOfWarVolume20HasCanHandleCosmeticEv"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::HasCanHandleCosmetic()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4NK17AGKFogOfWarVolume11GetTeamNameE14FGenericTeamId"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::GetTeamName()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4NK17AGKFogOfWarVolume15GetFogOfWarTeamE14FGenericTeamId"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::GetFogOfWarTeam()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4N17AGKFogOfWarVolume15K2_GetTeamCountEv"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::K2_GetTeamCount()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4N17AGKFogOfWarVolume18SetShareVisibilityE14FGenericTeamId14FGenericTeamIdb"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::SetShareVisibility()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4NK17AGKFogOfWarVolume15DoesShareVisionE14FGenericTeamId14FGenericTeamId"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::DoesShareVision()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4N17AGKFogOfWarVolume30OnTeamVisibilitySharingChangedEv"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::OnTeamVisibilitySharingChanged()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4N17AGKFogOfWarVolume30OnTeamVisibilitySharingChangedE14FGenericTeamId14FGenericTeamIdb"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::OnTeamVisibilitySharingChanged()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4N17AGKFogOfWarVolume26ClientLimitFramePerSecondsE"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::ClientLimitFramePerSeconds</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4N17AGKFogOfWarVolume26ServerLimitFramePerSecondsE"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::ServerLimitFramePerSeconds</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4N17AGKFogOfWarVolume15FramePerSecondsE"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::FramePerSeconds</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4N17AGKFogOfWarVolume10bAsyncDrawE"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::bAsyncDraw</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4N17AGKFogOfWarVolume8StrategyE"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::Strategy</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4N17AGKFogOfWarVolume4GridE"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::Grid</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4N17AGKFogOfWarVolume8UpscalerE"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::Upscaler</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4N17AGKFogOfWarVolume11ExplorationE"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::Exploration</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4N17AGKFogOfWarVolume21FogMaterialParametersE"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::FogMaterialParameters</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4N17AGKFogOfWarVolume23BasePostProcessMaterialE"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::BasePostProcessMaterial</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4N17AGKFogOfWarVolume16bFogOfWarEnabledE"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::bFogOfWarEnabled</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4N17AGKFogOfWarVolume5StatsE"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::Stats</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4N17AGKFogOfWarVolume7MapSizeE"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::MapSize</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4N17AGKFogOfWarVolume7OnReadyE"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::OnReady</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4N17AGKFogOfWarVolume6bDebugE"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::bDebug</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4N17AGKFogOfWarVolume23bCacheSimilarAllyVisionE"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::bCacheSimilarAllyVision</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4N17AGKFogOfWarVolume24bBroadcastSightingEventsE"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::bBroadcastSightingEvents</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4N17AGKFogOfWarVolume20VisionSharingSettingE"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::VisionSharingSetting</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4N17AGKFogOfWarVolume14DrawFactionFogEv"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::DrawFactionFog()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4N17AGKFogOfWarVolume22DrawFactionFogParallelEv"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::DrawFactionFogParallel()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4N17AGKFogOfWarVolume26DrawFactionFogSingleThreadEv"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::DrawFactionFogSingleThread()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4N17AGKFogOfWarVolume32DrawFactionFogParallel_AsyncTaskEv"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::DrawFactionFogParallel_AsyncTask()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4N17AGKFogOfWarVolume14UpdateTexturesEv"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::UpdateTextures()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4N17AGKFogOfWarVolume15UpdateVisbilityEv"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::UpdateVisbility()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4N17AGKFogOfWarVolume13GetBrushSizesER9FVector2DR7FVector"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::GetBrushSizes()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4N17AGKFogOfWarVolume17UpdateVolumeSizesEv"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::UpdateVolumeSizes()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4N17AGKFogOfWarVolume30GetMaterialParameterCollectionEv"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::GetMaterialParameterCollection()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4N17AGKFogOfWarVolume29UpdateMaterialParamCollectionEv"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::UpdateMaterialParamCollection()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4N17AGKFogOfWarVolume18InitializeStrategyEv"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::InitializeStrategy()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4N17AGKFogOfWarVolume18InitializeUpscalerEv"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::InitializeUpscaler()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4N17AGKFogOfWarVolume21InitializeExplorationEv"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::InitializeExploration()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4N17AGKFogOfWarVolume14OnRep_TeamFogsEv"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::OnRep_TeamFogs()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4N17AGKFogOfWarVolume22UpdateTrackedMaterialsEb"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::UpdateTrackedMaterials()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4N17AGKFogOfWarVolume32UpdateFogOfWarMaterialParametersEP15AGKFogOfWarTeamP24UMaterialInstanceDynamic"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::UpdateFogOfWarMaterialParameters()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4N17AGKFogOfWarVolume15ActorComponentsE"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::ActorComponents</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4N17AGKFogOfWarVolume8TeamFogsE"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::TeamFogs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4N17AGKFogOfWarVolume8BlockingE"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::Blocking</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4N17AGKFogOfWarVolume10NameToFogsE"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::NameToFogs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4N17AGKFogOfWarVolume12bClientReadyE"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::bClientReady</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4N17AGKFogOfWarVolume6bReadyE"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::bReady</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4N17AGKFogOfWarVolume16PendingMaterialsE"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::PendingMaterials</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classAGKFogOfWarVolume.html#_CPPv4N17AGKFogOfWarVolume16TrackedMaterialsE"><code class="docutils literal notranslate"><span class="pre">AGKFogOfWarVolume::TrackedMaterials</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="API/classFGKFogOfWarModule.html">FGKFogOfWarModule</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="API/classFGKFogOfWarModule.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="API/classFGKFogOfWarModule.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="API/classFGKFogOfWarModule.html#class-documentation">Class Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="API/classFGKFogOfWarModule.html#_CPPv417FGKFogOfWarModule"><code class="docutils literal notranslate"><span class="pre">FGKFogOfWarModule</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="API/classFGKFogOfWarModule.html#_CPPv4N17FGKFogOfWarModule13StartupModuleEv"><code class="docutils literal notranslate"><span class="pre">FGKFogOfWarModule::StartupModule()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classFGKFogOfWarModule.html#_CPPv4N17FGKFogOfWarModule14ShutdownModuleEv"><code class="docutils literal notranslate"><span class="pre">FGKFogOfWarModule::ShutdownModule()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="API/classFGKFogOfWarShaderModule.html">FGKFogOfWarShaderModule</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="API/classFGKFogOfWarShaderModule.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="API/classFGKFogOfWarShaderModule.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="API/classFGKFogOfWarShaderModule.html#class-documentation">Class Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="API/classFGKFogOfWarShaderModule.html#_CPPv423FGKFogOfWarShaderModule"><code class="docutils literal notranslate"><span class="pre">FGKFogOfWarShaderModule</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="API/classFGKFogOfWarShaderModule.html#_CPPv4N23FGKFogOfWarShaderModule13StartupModuleEv"><code class="docutils literal notranslate"><span class="pre">FGKFogOfWarShaderModule::StartupModule()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classFGKFogOfWarShaderModule.html#_CPPv4N23FGKFogOfWarShaderModule14ShutdownModuleEv"><code class="docutils literal notranslate"><span class="pre">FGKFogOfWarShaderModule::ShutdownModule()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="API/classIGKFogOfWarAgentInterface.html">IGKFogOfWarAgentInterface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="API/classIGKFogOfWarAgentInterface.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="API/classIGKFogOfWarAgentInterface.html#derived-types">Derived Types</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="API/classIGKFogOfWarAgentInterface.html#class-documentation">Class Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="API/classIGKFogOfWarAgentInterface.html#_CPPv425IGKFogOfWarAgentInterface"><code class="docutils literal notranslate"><span class="pre">IGKFogOfWarAgentInterface</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="API/classIGKFogOfWarGameStateInterface.html">IGKFogOfWarGameStateInterface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="API/classIGKFogOfWarGameStateInterface.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="API/classIGKFogOfWarGameStateInterface.html#derived-type">Derived Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="API/classIGKFogOfWarGameStateInterface.html#class-documentation">Class Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="API/classIGKFogOfWarGameStateInterface.html#_CPPv429IGKFogOfWarGameStateInterface"><code class="docutils literal notranslate"><span class="pre">IGKFogOfWarGameStateInterface</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="API/classIGKFogOfWarGameStateInterface.html#_CPPv4N29IGKFogOfWarGameStateInterface16GetFogOfWarTeamsEv"><code class="docutils literal notranslate"><span class="pre">IGKFogOfWarGameStateInterface::GetFogOfWarTeams()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classIGKFogOfWarGameStateInterface.html#_CPPv4N29IGKFogOfWarGameStateInterface11GetTeamNameE14FGenericTeamId"><code class="docutils literal notranslate"><span class="pre">IGKFogOfWarGameStateInterface::GetTeamName()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classIGKFogOfWarGameStateInterface.html#_CPPv4N29IGKFogOfWarGameStateInterface11GetTeamInfoE14FGenericTeamId"><code class="docutils literal notranslate"><span class="pre">IGKFogOfWarGameStateInterface::GetTeamInfo()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classIGKFogOfWarGameStateInterface.html#_CPPv4N29IGKFogOfWarGameStateInterface17GetTeamInfoHandleE14FGenericTeamId"><code class="docutils literal notranslate"><span class="pre">IGKFogOfWarGameStateInterface::GetTeamInfoHandle()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="API/classIGKFogOfWarTestModule.html">IGKFogOfWarTestModule</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="API/classIGKFogOfWarTestModule.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="API/classIGKFogOfWarTestModule.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="API/classIGKFogOfWarTestModule.html#class-documentation">Class Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="API/classIGKFogOfWarTestModule.html#_CPPv421IGKFogOfWarTestModule"><code class="docutils literal notranslate"><span class="pre">IGKFogOfWarTestModule</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="API/classIGKFogOfWarTestModule.html#_CPPv4N21IGKFogOfWarTestModule3GetEv"><code class="docutils literal notranslate"><span class="pre">IGKFogOfWarTestModule::Get()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classIGKFogOfWarTestModule.html#_CPPv4N21IGKFogOfWarTestModule11IsAvailableEv"><code class="docutils literal notranslate"><span class="pre">IGKFogOfWarTestModule::IsAvailable()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="API/classUGKCanvasUpscaler.html">UGKCanvasUpscaler</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="API/classUGKCanvasUpscaler.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="API/classUGKCanvasUpscaler.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="API/classUGKCanvasUpscaler.html#class-documentation">Class Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="API/classUGKCanvasUpscaler.html#_CPPv417UGKCanvasUpscaler"><code class="docutils literal notranslate"><span class="pre">UGKCanvasUpscaler</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKCanvasUpscaler.html#_CPPv4N17UGKCanvasUpscaler17UGKCanvasUpscalerEv"><code class="docutils literal notranslate"><span class="pre">UGKCanvasUpscaler::UGKCanvasUpscaler()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKCanvasUpscaler.html#_CPPv4N17UGKCanvasUpscaler9TransformEP15AGKFogOfWarTeam"><code class="docutils literal notranslate"><span class="pre">UGKCanvasUpscaler::Transform()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKCanvasUpscaler.html#_CPPv4N17UGKCanvasUpscaler10InitializeEP17AGKFogOfWarVolume"><code class="docutils literal notranslate"><span class="pre">UGKCanvasUpscaler::Initialize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKCanvasUpscaler.html#_CPPv4N17UGKCanvasUpscaler26GetFactionMaterialInstanceE5FName"><code class="docutils literal notranslate"><span class="pre">UGKCanvasUpscaler::GetFactionMaterialInstance()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKCanvasUpscaler.html#_CPPv4N17UGKCanvasUpscaler23UpscaleMaterialInstanceE"><code class="docutils literal notranslate"><span class="pre">UGKCanvasUpscaler::UpscaleMaterialInstance</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKCanvasUpscaler.html#_CPPv4N17UGKCanvasUpscaler17UpscalingMaterialE"><code class="docutils literal notranslate"><span class="pre">UGKCanvasUpscaler::UpscalingMaterial</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="API/classUGKCPUUpscalerStrategy.html">UGKCPUUpscalerStrategy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="API/classUGKCPUUpscalerStrategy.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="API/classUGKCPUUpscalerStrategy.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="API/classUGKCPUUpscalerStrategy.html#class-documentation">Class Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="API/classUGKCPUUpscalerStrategy.html#_CPPv422UGKCPUUpscalerStrategy"><code class="docutils literal notranslate"><span class="pre">UGKCPUUpscalerStrategy</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKCPUUpscalerStrategy.html#_CPPv4N22UGKCPUUpscalerStrategy22UGKCPUUpscalerStrategyEv"><code class="docutils literal notranslate"><span class="pre">UGKCPUUpscalerStrategy::UGKCPUUpscalerStrategy()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKCPUUpscalerStrategy.html#_CPPv4N22UGKCPUUpscalerStrategy10InitializeEP17AGKFogOfWarVolume"><code class="docutils literal notranslate"><span class="pre">UGKCPUUpscalerStrategy::Initialize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKCPUUpscalerStrategy.html#_CPPv4N22UGKCPUUpscalerStrategy8GetTexelERK10MatrixByte10FIntVector"><code class="docutils literal notranslate"><span class="pre">UGKCPUUpscalerStrategy::GetTexel()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKCPUUpscalerStrategy.html#_CPPv4N22UGKCPUUpscalerStrategy9TransformEP15AGKFogOfWarTeam"><code class="docutils literal notranslate"><span class="pre">UGKCPUUpscalerStrategy::Transform()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKCPUUpscalerStrategy.html#_CPPv4NK22UGKCPUUpscalerStrategy19UpscaledTextureSizeEv"><code class="docutils literal notranslate"><span class="pre">UGKCPUUpscalerStrategy::UpscaledTextureSize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKCPUUpscalerStrategy.html#_CPPv4N22UGKCPUUpscalerStrategy17bSmoothingEnabledE"><code class="docutils literal notranslate"><span class="pre">UGKCPUUpscalerStrategy::bSmoothingEnabled</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKCPUUpscalerStrategy.html#_CPPv4N22UGKCPUUpscalerStrategy14SmoothingAlphaE"><code class="docutils literal notranslate"><span class="pre">UGKCPUUpscalerStrategy::SmoothingAlpha</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="API/classUGKExplorationTransform.html">UGKExplorationTransform</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="API/classUGKExplorationTransform.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="API/classUGKExplorationTransform.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="API/classUGKExplorationTransform.html#class-documentation">Class Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="API/classUGKExplorationTransform.html#_CPPv423UGKExplorationTransform"><code class="docutils literal notranslate"><span class="pre">UGKExplorationTransform</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKExplorationTransform.html#_CPPv4N23UGKExplorationTransform23UGKExplorationTransformEv"><code class="docutils literal notranslate"><span class="pre">UGKExplorationTransform::UGKExplorationTransform()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKExplorationTransform.html#_CPPv4N23UGKExplorationTransform10InitializeEP17AGKFogOfWarVolume"><code class="docutils literal notranslate"><span class="pre">UGKExplorationTransform::Initialize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKExplorationTransform.html#_CPPv4N23UGKExplorationTransform9TransformEP15AGKFogOfWarTeam"><code class="docutils literal notranslate"><span class="pre">UGKExplorationTransform::Transform()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKExplorationTransform.html#_CPPv4N23UGKExplorationTransform10IsExploredE14FGenericTeamId7FVector"><code class="docutils literal notranslate"><span class="pre">UGKExplorationTransform::IsExplored()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKExplorationTransform.html#_CPPv4N23UGKExplorationTransform9BlendModeE"><code class="docutils literal notranslate"><span class="pre">UGKExplorationTransform::BlendMode</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKExplorationTransform.html#_CPPv4N23UGKExplorationTransform18bUseUpscaledVisionE"><code class="docutils literal notranslate"><span class="pre">UGKExplorationTransform::bUseUpscaledVision</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKExplorationTransform.html#_CPPv4N23UGKExplorationTransform12bUseMaterialE"><code class="docutils literal notranslate"><span class="pre">UGKExplorationTransform::bUseMaterial</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKExplorationTransform.html#_CPPv4N23UGKExplorationTransform19ExplorationMaterialE"><code class="docutils literal notranslate"><span class="pre">UGKExplorationTransform::ExplorationMaterial</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="API/classUGKFogOfWarComponent.html">UGKFogOfWarComponent</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="API/classUGKFogOfWarComponent.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="API/classUGKFogOfWarComponent.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="API/classUGKFogOfWarComponent.html#class-documentation">Class Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="API/classUGKFogOfWarComponent.html#_CPPv420UGKFogOfWarComponent"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarComponent</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarComponent.html#_CPPv4N20UGKFogOfWarComponent20UGKFogOfWarComponentEv"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarComponent::UGKFogOfWarComponent()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarComponent.html#_CPPv4NK20UGKFogOfWarComponent26GetLifetimeReplicatedPropsER6TArrayI17FLifetimePropertyE"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarComponent::GetLifetimeReplicatedProps()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarComponent.html#_CPPv4N20UGKFogOfWarComponent16GetVisionTextureEv"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarComponent::GetVisionTexture()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarComponent.html#_CPPv4N20UGKFogOfWarComponent21GetExplorationTextureEv"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarComponent::GetExplorationTexture()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarComponent.html#_CPPv4N20UGKFogOfWarComponent17GetFogOfWarVolumeEv"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarComponent::GetFogOfWarVolume()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarComponent.html#_CPPv4NK20UGKFogOfWarComponent10GetFactionEv"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarComponent::GetFaction()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarComponent.html#_CPPv4N20UGKFogOfWarComponent19GetFogOfWarMaterialEP18UMaterialInterface"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarComponent::GetFogOfWarMaterial()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarComponent.html#_CPPv4N20UGKFogOfWarComponent30GetFogOfWarPostprocessMaterialEv"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarComponent::GetFogOfWarPostprocessMaterial()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarComponent.html#_CPPv4N20UGKFogOfWarComponent28SetCameraPostprocessMaterialEP16UCameraComponent"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarComponent::SetCameraPostprocessMaterial()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarComponent.html#_CPPv4N20UGKFogOfWarComponent20RegisterFogComponentEv"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarComponent::RegisterFogComponent()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarComponent.html#_CPPv4N20UGKFogOfWarComponent22UnregisterFogComponentEv"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarComponent::UnregisterFogComponent()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarComponent.html#_CPPv4NK20UGKFogOfWarComponent16GetGenericTeamIdEv"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarComponent::GetGenericTeamId()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarComponent.html#_CPPv4NK20UGKFogOfWarComponent9IsVisibleEPK6AActor"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarComponent::IsVisible()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarComponent.html#_CPPv4NK20UGKFogOfWarComponent9IsVisibleE7FVector"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarComponent::IsVisible()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarComponent.html#_CPPv4NK20UGKFogOfWarComponent11IsVisibleByEPK6AActor"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarComponent::IsVisibleBy()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarComponent.html#_CPPv4NK20UGKFogOfWarComponent11IsVisibleByE14FGenericTeamId"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarComponent::IsVisibleBy()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarComponent.html#_CPPv4N20UGKFogOfWarComponent26GenerateTransientConeBlockEv"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarComponent::GenerateTransientConeBlock()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarComponent.html#_CPPv4N20UGKFogOfWarComponent13IsConeBlockedERK10FIntVector"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarComponent::IsConeBlocked()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarComponent.html#_CPPv4N20UGKFogOfWarComponent16OnSighted_NativeE14FGenericTeamId"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarComponent::OnSighted_Native()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarComponent.html#_CPPv4N20UGKFogOfWarComponent19OnOutOfSight_NativeE14FGenericTeamId"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarComponent::OnOutOfSight_Native()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarComponent.html#_CPPv4NK20UGKFogOfWarComponent16BecameOutOfSightE14FGenericTeamId"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarComponent::BecameOutOfSight()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarComponent.html#_CPPv4NK20UGKFogOfWarComponent10BecameSeenE14FGenericTeamId"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarComponent::BecameSeen()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarComponent.html#_CPPv4N20UGKFogOfWarComponent11InnerRadiusE"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarComponent::InnerRadius</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarComponent.html#_CPPv4N20UGKFogOfWarComponent18UnobstructedVisionE"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarComponent::UnobstructedVision</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarComponent.html#_CPPv4N20UGKFogOfWarComponent12LineTicknessE"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarComponent::LineTickness</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarComponent.html#_CPPv4N20UGKFogOfWarComponent10TraceCountE"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarComponent::TraceCount</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarComponent.html#_CPPv4N20UGKFogOfWarComponent11FieldOfViewE"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarComponent::FieldOfView</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarComponent.html#_CPPv4N20UGKFogOfWarComponent6RadiusE"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarComponent::Radius</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarComponent.html#_CPPv4N20UGKFogOfWarComponent11GivesVisionE"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarComponent::GivesVision</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarComponent.html#_CPPv4N20UGKFogOfWarComponent12BlocksVisionE"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarComponent::BlocksVision</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarComponent.html#_CPPv4N20UGKFogOfWarComponent23bOverrideObstacleConfigE"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarComponent::bOverrideObstacleConfig</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarComponent.html#_CPPv4N20UGKFogOfWarComponent14ObstacleConfigE"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarComponent::ObstacleConfig</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarComponent.html#_CPPv4N20UGKFogOfWarComponent11DefaultTeamE"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarComponent::DefaultTeam</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarComponent.html#_CPPv4N20UGKFogOfWarComponent10ConeConfigE"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarComponent::ConeConfig</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarComponent.html#_CPPv4N20UGKFogOfWarComponent18TransientConeBlockE"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarComponent::TransientConeBlock</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarComponent.html#_CPPv4N20UGKFogOfWarComponent9OnSightedE"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarComponent::OnSighted</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarComponent.html#_CPPv4N20UGKFogOfWarComponent12OnOutOfSightE"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarComponent::OnOutOfSight</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarComponent.html#_CPPv4N20UGKFogOfWarComponent9BeginPlayEv"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarComponent::BeginPlay()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarComponent.html#_CPPv4N20UGKFogOfWarComponent7EndPlayEKN14EEndPlayReason4TypeE"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarComponent::EndPlay()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarComponent.html#_CPPv4N20UGKFogOfWarComponent14bWasRegisteredE"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarComponent::bWasRegistered</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="API/classUGKFogOfWarLibrary.html">UGKFogOfWarLibrary</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="API/classUGKFogOfWarLibrary.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="API/classUGKFogOfWarLibrary.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="API/classUGKFogOfWarLibrary.html#class-documentation">Class Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="API/classUGKFogOfWarLibrary.html#_CPPv418UGKFogOfWarLibrary"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarLibrary</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarLibrary.html#_CPPv4N18UGKFogOfWarLibrary19ConvertToObjectTypeE17ECollisionChannelR6TArrayI11TEnumAsByteI16EObjectTypeQueryEE"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarLibrary::ConvertToObjectType()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarLibrary.html#_CPPv4N18UGKFogOfWarLibrary9IsVisibleEP7UObjectPK6AActor"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarLibrary::IsVisible()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarLibrary.html#_CPPv4N18UGKFogOfWarLibrary17GetFogOfWarVolumeEP7UObject"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarLibrary::GetFogOfWarVolume()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarLibrary.html#_CPPv4N18UGKFogOfWarLibrary18SampleRenderTargetEP22UTextureRenderTarget2D9FVector2D"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarLibrary::SampleRenderTarget()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarLibrary.html#_CPPv4N18UGKFogOfWarLibrary23SamplePixelRenderTargetEP22UTextureRenderTarget2D9FVector2D"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarLibrary::SamplePixelRenderTarget()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarLibrary.html#_CPPv4N18UGKFogOfWarLibrary19ToTextureCoordinateE7FVector9FVector2D"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarLibrary::ToTextureCoordinate()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarLibrary.html#_CPPv4N18UGKFogOfWarLibrary21ToTextureCoordinate2DE9FVector2D9FVector2D"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarLibrary::ToTextureCoordinate2D()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarLibrary.html#_CPPv4N18UGKFogOfWarLibrary6GetYawE7FVector7FVector"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarLibrary::GetYaw()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarLibrary.html#_CPPv4N18UGKFogOfWarLibrary16GetVisibleBoundsE7FVectorP6AActorR7FVectorR7FVector"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarLibrary::GetVisibleBounds()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarLibrary.html#_CPPv4N18UGKFogOfWarLibrary11WorldToGridE7FVector7FVector"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarLibrary::WorldToGrid()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarLibrary.html#_CPPv4N18UGKFogOfWarLibrary10SnapToGridE7FVector7FVector"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarLibrary::SnapToGrid()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarLibrary.html#_CPPv4N18UGKFogOfWarLibrary11GridToWorldE7FVector10FIntVector"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarLibrary::GridToWorld()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarLibrary.html#_CPPv4N18UGKFogOfWarLibrary18GetLocalControllerEP7UObject"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarLibrary::GetLocalController()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarLibrary.html#_CPPv4N18UGKFogOfWarLibrary12GetLocalTeamEP7UObject"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarLibrary::GetLocalTeam()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarLibrary.html#_CPPv4N18UGKFogOfWarLibrary11GetTeamInfoEP7UObject"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarLibrary::GetTeamInfo()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarLibrary.html#_CPPv4N18UGKFogOfWarLibrary12GetTeamCountEP7UObject"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarLibrary::GetTeamCount()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarLibrary.html#_CPPv4N18UGKFogOfWarLibrary25GetFogOfWarTeamFromHandleE26FGKFogOfWarTeamsInfoHandle"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarLibrary::GetFogOfWarTeamFromHandle()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarLibrary.html#_CPPv4N18UGKFogOfWarLibrary18GetMutableTeamInfoEP7UObjectRb"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarLibrary::GetMutableTeamInfo()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarLibrary.html#_CPPv4N18UGKFogOfWarLibrary19GetFogOfWarTeamInfoE16TScriptInterfaceI29IGKFogOfWarGameStateInterfaceE14FGenericTeamIdR14FGKFogTeamInfo"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarLibrary::GetFogOfWarTeamInfo()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarLibrary.html#_CPPv4N18UGKFogOfWarLibrary24GetGKFogOfWarVersionInfoEv"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarLibrary::GetGKFogOfWarVersionInfo()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarLibrary.html#_CPPv4N18UGKFogOfWarLibrary19GetFogOfWarTeamNameE25FGKFogOfWarTeamInfoHandle"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarLibrary::GetFogOfWarTeamName()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarLibrary.html#_CPPv4N18UGKFogOfWarLibrary26GetFogOfWarTeamDescriptionE25FGKFogOfWarTeamInfoHandle"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarLibrary::GetFogOfWarTeamDescription()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarLibrary.html#_CPPv4N18UGKFogOfWarLibrary24GetFogOfWarTeamLocalNameE25FGKFogOfWarTeamInfoHandle"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarLibrary::GetFogOfWarTeamLocalName()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarLibrary.html#_CPPv4N18UGKFogOfWarLibrary20GetFogOfWarTeamColorE25FGKFogOfWarTeamInfoHandle"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarLibrary::GetFogOfWarTeamColor()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarLibrary.html#_CPPv4N18UGKFogOfWarLibrary27GetFogOfWarTeamInfoFromNameEP7UObject5FName"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarLibrary::GetFogOfWarTeamInfoFromName()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="API/classUGKFogOfWarStrategy.html">UGKFogOfWarStrategy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="API/classUGKFogOfWarStrategy.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="API/classUGKFogOfWarStrategy.html#base-type">Base Type</a></li>
+<li class="toctree-l3"><a class="reference internal" href="API/classUGKFogOfWarStrategy.html#derived-types">Derived Types</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="API/classUGKFogOfWarStrategy.html#class-documentation">Class Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="API/classUGKFogOfWarStrategy.html#_CPPv419UGKFogOfWarStrategy"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarStrategy</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarStrategy.html#_CPPv4N19UGKFogOfWarStrategy19UGKFogOfWarStrategyEv"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarStrategy::UGKFogOfWarStrategy()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarStrategy.html#_CPPv4NK19UGKFogOfWarStrategy21SupportVisbilityQueryEv"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarStrategy::SupportVisbilityQuery()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarStrategy.html#_CPPv4NK19UGKFogOfWarStrategy9IsVisibleE14FGenericTeamIdPK6AActor"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarStrategy::IsVisible()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarStrategy.html#_CPPv4NK19UGKFogOfWarStrategy9IsVisibleE14FGenericTeamId7FVector"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarStrategy::IsVisible()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarStrategy.html#_CPPv4N19UGKFogOfWarStrategy10InitializeEP17AGKFogOfWarVolume"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarStrategy::Initialize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarStrategy.html#_CPPv4N19UGKFogOfWarStrategy10SetupActorEP20UGKFogOfWarComponent"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarStrategy::SetupActor()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarStrategy.html#_CPPv4N19UGKFogOfWarStrategy25SupportsParallelExecutionEv"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarStrategy::SupportsParallelExecution()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarStrategy.html#_CPPv4N19UGKFogOfWarStrategy4StopEv"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarStrategy::Stop()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarStrategy.html#_CPPv4N19UGKFogOfWarStrategy17PreFactionFogDrawEv"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarStrategy::PreFactionFogDraw()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarStrategy.html#_CPPv4N19UGKFogOfWarStrategy19DrawFactionFogDebugEP15AGKFogOfWarTeam"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarStrategy::DrawFactionFogDebug()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarStrategy.html#_CPPv4N19UGKFogOfWarStrategy14DrawFactionFogEP15AGKFogOfWarTeam"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarStrategy::DrawFactionFog()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarStrategy.html#_CPPv4N19UGKFogOfWarStrategy18PostFactionFogDrawEP15AGKFogOfWarTeam"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarStrategy::PostFactionFogDraw()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarStrategy.html#_CPPv4N19UGKFogOfWarStrategy15DrawLineOfSightEP15AGKFogOfWarTeamP20UGKFogOfWarComponent"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarStrategy::DrawLineOfSight()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarStrategy.html#_CPPv4N19UGKFogOfWarStrategy18DebugDrawComponentEP20UGKFogOfWarComponent"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarStrategy::DebugDrawComponent()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarStrategy.html#_CPPv4N19UGKFogOfWarStrategy14DebugDrawPointE7FVector12FLinearColorf"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarStrategy::DebugDrawPoint()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarStrategy.html#_CPPv4NK19UGKFogOfWarStrategy20GetFactionTextureCPUE5FName"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarStrategy::GetFactionTextureCPU()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarStrategy.html#_CPPv4N19UGKFogOfWarStrategy17GetFactionTextureE5FNameb"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarStrategy::GetFactionTexture()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarStrategy.html#_CPPv4N19UGKFogOfWarStrategy30GetPreviousFrameFactionTextureE5FNameb"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarStrategy::GetPreviousFrameFactionTexture()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarStrategy.html#_CPPv4N19UGKFogOfWarStrategy12OnNewFactionE5FName"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarStrategy::OnNewFaction()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarStrategy.html#_CPPv4N19UGKFogOfWarStrategy15AddVisibleActorEP15AGKFogOfWarTeamP20UGKFogOfWarComponentP6AActor"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarStrategy::AddVisibleActor()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarStrategy.html#_CPPv4N19UGKFogOfWarStrategy19AddVisibleComponentEP15AGKFogOfWarTeamP20UGKFogOfWarComponentP20UGKFogOfWarComponent"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarStrategy::AddVisibleComponent()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarStrategy.html#_CPPv4N19UGKFogOfWarStrategy23RetrieveBlockingTextureEP10UTexture2D"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarStrategy::RetrieveBlockingTexture()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarStrategy.html#_CPPv4NK19UGKFogOfWarStrategy13IsInitializedEv"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarStrategy::IsInitialized()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarStrategy.html#_CPPv4N19UGKFogOfWarStrategy14FogOfWarVolumeE"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarStrategy::FogOfWarVolume</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKFogOfWarStrategy.html#_CPPv4N19UGKFogOfWarStrategy12bInitializedE"><code class="docutils literal notranslate"><span class="pre">UGKFogOfWarStrategy::bInitialized</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="API/classUGKGPUUpscalerStrategy.html">UGKGPUUpscalerStrategy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="API/classUGKGPUUpscalerStrategy.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="API/classUGKGPUUpscalerStrategy.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="API/classUGKGPUUpscalerStrategy.html#class-documentation">Class Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="API/classUGKGPUUpscalerStrategy.html#_CPPv422UGKGPUUpscalerStrategy"><code class="docutils literal notranslate"><span class="pre">UGKGPUUpscalerStrategy</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKGPUUpscalerStrategy.html#_CPPv4N22UGKGPUUpscalerStrategy22UGKGPUUpscalerStrategyEv"><code class="docutils literal notranslate"><span class="pre">UGKGPUUpscalerStrategy::UGKGPUUpscalerStrategy()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKGPUUpscalerStrategy.html#_CPPv4N22UGKGPUUpscalerStrategy10InitializeEP17AGKFogOfWarVolume"><code class="docutils literal notranslate"><span class="pre">UGKGPUUpscalerStrategy::Initialize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKGPUUpscalerStrategy.html#_CPPv4N22UGKGPUUpscalerStrategy4StopEv"><code class="docutils literal notranslate"><span class="pre">UGKGPUUpscalerStrategy::Stop()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKGPUUpscalerStrategy.html#_CPPv4N22UGKGPUUpscalerStrategy9TransformEP15AGKFogOfWarTeam"><code class="docutils literal notranslate"><span class="pre">UGKGPUUpscalerStrategy::Transform()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKGPUUpscalerStrategy.html#_CPPv4NK22UGKGPUUpscalerStrategy19UpscaledTextureSizeEv"><code class="docutils literal notranslate"><span class="pre">UGKGPUUpscalerStrategy::UpscaledTextureSize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKGPUUpscalerStrategy.html#_CPPv4N22UGKGPUUpscalerStrategy17bSmoothingEnabledE"><code class="docutils literal notranslate"><span class="pre">UGKGPUUpscalerStrategy::bSmoothingEnabled</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKGPUUpscalerStrategy.html#_CPPv4N22UGKGPUUpscalerStrategy14SmoothingAlphaE"><code class="docutils literal notranslate"><span class="pre">UGKGPUUpscalerStrategy::SmoothingAlpha</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="API/classUGKRayCasting__Less.html">UGKRayCasting_Less</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="API/classUGKRayCasting__Less.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="API/classUGKRayCasting__Less.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="API/classUGKRayCasting__Less.html#class-documentation">Class Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="API/classUGKRayCasting__Less.html#_CPPv418UGKRayCasting_Less"><code class="docutils literal notranslate"><span class="pre">UGKRayCasting_Less</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKRayCasting__Less.html#_CPPv4N18UGKRayCasting_Less18UGKRayCasting_LessEv"><code class="docutils literal notranslate"><span class="pre">UGKRayCasting_Less::UGKRayCasting_Less()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKRayCasting__Less.html#_CPPv4N18UGKRayCasting_Less6MarginE"><code class="docutils literal notranslate"><span class="pre">UGKRayCasting_Less::Margin</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKRayCasting__Less.html#_CPPv4N18UGKRayCasting_Less25DrawObstructedLineOfSightEP15AGKFogOfWarTeamP20UGKFogOfWarComponent"><code class="docutils literal notranslate"><span class="pre">UGKRayCasting_Less::DrawObstructedLineOfSight()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKRayCasting__Less.html#_CPPv4N18UGKRayCasting_Less19CastLinesFromAnglesEP15AGKFogOfWarTeamP20UGKFogOfWarComponentR6TArrayIfE"><code class="docutils literal notranslate"><span class="pre">UGKRayCasting_Less::CastLinesFromAngles()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKRayCasting__Less.html#_CPPv4N18UGKRayCasting_Less17FillMissingAnglesEP20UGKFogOfWarComponentR6TArrayIfE"><code class="docutils literal notranslate"><span class="pre">UGKRayCasting_Less::FillMissingAngles()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKRayCasting__Less.html#_CPPv4N18UGKRayCasting_Less18Generate3TrianglesEP15AGKFogOfWarTeamP20UGKFogOfWarComponentRK8FVector4"><code class="docutils literal notranslate"><span class="pre">UGKRayCasting_Less::Generate3Triangles()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKRayCasting__Less.html#_CPPv4N18UGKRayCasting_Less17CastLineFromAngleEP15AGKFogOfWarTeamP20UGKFogOfWarComponentf"><code class="docutils literal notranslate"><span class="pre">UGKRayCasting_Less::CastLineFromAngle()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKRayCasting__Less.html#_CPPv4N18UGKRayCasting_Less16GenerateTriangleEP20UGKFogOfWarComponent7FVector7FVector7FVector"><code class="docutils literal notranslate"><span class="pre">UGKRayCasting_Less::GenerateTriangle()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKRayCasting__Less.html#_CPPv4N18UGKRayCasting_Less8CoverageE"><code class="docutils literal notranslate"><span class="pre">UGKRayCasting_Less::Coverage</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="API/classUGKRayCasting__Line.html">UGKRayCasting_Line</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="API/classUGKRayCasting__Line.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="API/classUGKRayCasting__Line.html#base-type">Base Type</a></li>
+<li class="toctree-l3"><a class="reference internal" href="API/classUGKRayCasting__Line.html#derived-type">Derived Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="API/classUGKRayCasting__Line.html#class-documentation">Class Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="API/classUGKRayCasting__Line.html#_CPPv418UGKRayCasting_Line"><code class="docutils literal notranslate"><span class="pre">UGKRayCasting_Line</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKRayCasting__Line.html#_CPPv4N18UGKRayCasting_Line18UGKRayCasting_LineEv"><code class="docutils literal notranslate"><span class="pre">UGKRayCasting_Line::UGKRayCasting_Line()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKRayCasting__Line.html#_CPPv4N18UGKRayCasting_Line10InitializeEP17AGKFogOfWarVolume"><code class="docutils literal notranslate"><span class="pre">UGKRayCasting_Line::Initialize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKRayCasting__Line.html#_CPPv4NK18UGKRayCasting_Line21SupportVisbilityQueryEv"><code class="docutils literal notranslate"><span class="pre">UGKRayCasting_Line::SupportVisbilityQuery()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKRayCasting__Line.html#_CPPv4N18UGKRayCasting_Line10SetupActorEP20UGKFogOfWarComponent"><code class="docutils literal notranslate"><span class="pre">UGKRayCasting_Line::SetupActor()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKRayCasting__Line.html#_CPPv4N18UGKRayCasting_Line23SetCollisionFoWResponseEP20UGKFogOfWarComponentP19UPrimitiveComponent17ECollisionChannel"><code class="docutils literal notranslate"><span class="pre">UGKRayCasting_Line::SetCollisionFoWResponse()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKRayCasting__Line.html#_CPPv4NK18UGKRayCasting_Line9IsVisibleE14FGenericTeamId7FVector"><code class="docutils literal notranslate"><span class="pre">UGKRayCasting_Line::IsVisible()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKRayCasting__Line.html#_CPPv4N18UGKRayCasting_Line14DrawFactionFogEP15AGKFogOfWarTeam"><code class="docutils literal notranslate"><span class="pre">UGKRayCasting_Line::DrawFactionFog()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKRayCasting__Line.html#_CPPv4N18UGKRayCasting_Line15DrawLineOfSightEP15AGKFogOfWarTeamP20UGKFogOfWarComponent"><code class="docutils literal notranslate"><span class="pre">UGKRayCasting_Line::DrawLineOfSight()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKRayCasting__Line.html#_CPPv4N18UGKRayCasting_Line17GetFactionTextureE5FNameb"><code class="docutils literal notranslate"><span class="pre">UGKRayCasting_Line::GetFactionTexture()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKRayCasting__Line.html#_CPPv4N18UGKRayCasting_Line22GetFactionRenderTargetE5FNameb"><code class="docutils literal notranslate"><span class="pre">UGKRayCasting_Line::GetFactionRenderTarget()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKRayCasting__Line.html#_CPPv4NK18UGKRayCasting_Line22GetFactionRenderTargetE5FName"><code class="docutils literal notranslate"><span class="pre">UGKRayCasting_Line::GetFactionRenderTarget()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKRayCasting__Line.html#_CPPv4N18UGKRayCasting_Line24FogOfWarCollisionChannelE"><code class="docutils literal notranslate"><span class="pre">UGKRayCasting_Line::FogOfWarCollisionChannel</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKRayCasting__Line.html#_CPPv4N18UGKRayCasting_Line26UnobstructedVisionMaterialE"><code class="docutils literal notranslate"><span class="pre">UGKRayCasting_Line::UnobstructedVisionMaterial</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKRayCasting__Line.html#_CPPv4N18UGKRayCasting_Line25DrawObstructedLineOfSightEP15AGKFogOfWarTeamP20UGKFogOfWarComponent"><code class="docutils literal notranslate"><span class="pre">UGKRayCasting_Line::DrawObstructedLineOfSight()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKRayCasting__Line.html#_CPPv4N18UGKRayCasting_Line27DrawUnobstructedLineOfSightEP15AGKFogOfWarTeamP20UGKFogOfWarComponent"><code class="docutils literal notranslate"><span class="pre">UGKRayCasting_Line::DrawUnobstructedLineOfSight()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKRayCasting__Line.html#_CPPv4N18UGKRayCasting_Line32DrawUnobstructedLineOfSight_DrawEP15AGKFogOfWarTeamP20UGKFogOfWarComponent"><code class="docutils literal notranslate"><span class="pre">UGKRayCasting_Line::DrawUnobstructedLineOfSight_Draw()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKRayCasting__Line.html#_CPPv4N18UGKRayCasting_Line9DrawLinesEP20UGKFogOfWarComponent"><code class="docutils literal notranslate"><span class="pre">UGKRayCasting_Line::DrawLines()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKRayCasting__Line.html#_CPPv4N18UGKRayCasting_Line18CreateRenderTargetEv"><code class="docutils literal notranslate"><span class="pre">UGKRayCasting_Line::CreateRenderTarget()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKRayCasting__Line.html#_CPPv4N18UGKRayCasting_Line5LinesE"><code class="docutils literal notranslate"><span class="pre">UGKRayCasting_Line::Lines</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKRayCasting__Line.html#_CPPv4N18UGKRayCasting_Line11FogFactionsE"><code class="docutils literal notranslate"><span class="pre">UGKRayCasting_Line::FogFactions</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKRayCasting__Line.html#_CPPv4N18UGKRayCasting_Line14ActorsToIgnoreE"><code class="docutils literal notranslate"><span class="pre">UGKRayCasting_Line::ActorsToIgnore</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKRayCasting__Line.html#_CPPv4N18UGKRayCasting_Line10DrawingFogE"><code class="docutils literal notranslate"><span class="pre">UGKRayCasting_Line::DrawingFog</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="API/classUGKRayCasting__Triangle.html">UGKRayCasting_Triangle</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="API/classUGKRayCasting__Triangle.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="API/classUGKRayCasting__Triangle.html#base-type">Base Type</a></li>
+<li class="toctree-l3"><a class="reference internal" href="API/classUGKRayCasting__Triangle.html#derived-type">Derived Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="API/classUGKRayCasting__Triangle.html#class-documentation">Class Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="API/classUGKRayCasting__Triangle.html#_CPPv422UGKRayCasting_Triangle"><code class="docutils literal notranslate"><span class="pre">UGKRayCasting_Triangle</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKRayCasting__Triangle.html#_CPPv4N22UGKRayCasting_Triangle22UGKRayCasting_TriangleEv"><code class="docutils literal notranslate"><span class="pre">UGKRayCasting_Triangle::UGKRayCasting_Triangle()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKRayCasting__Triangle.html#_CPPv4N22UGKRayCasting_Triangle17TrianglesMaterialE"><code class="docutils literal notranslate"><span class="pre">UGKRayCasting_Triangle::TrianglesMaterial</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKRayCasting__Triangle.html#_CPPv4N22UGKRayCasting_Triangle17GenerateTrianglesEP20UGKFogOfWarComponent"><code class="docutils literal notranslate"><span class="pre">UGKRayCasting_Triangle::GenerateTriangles()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKRayCasting__Triangle.html#_CPPv4N22UGKRayCasting_Triangle13DrawTrianglesEP20UGKFogOfWarComponent"><code class="docutils literal notranslate"><span class="pre">UGKRayCasting_Triangle::DrawTriangles()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKRayCasting__Triangle.html#_CPPv4N22UGKRayCasting_Triangle25DrawObstructedLineOfSightEP15AGKFogOfWarTeamP20UGKFogOfWarComponent"><code class="docutils literal notranslate"><span class="pre">UGKRayCasting_Triangle::DrawObstructedLineOfSight()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKRayCasting__Triangle.html#_CPPv4N22UGKRayCasting_Triangle9TrianglesE"><code class="docutils literal notranslate"><span class="pre">UGKRayCasting_Triangle::Triangles</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="API/classUGKShadowCasting.html">UGKShadowCasting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="API/classUGKShadowCasting.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="API/classUGKShadowCasting.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="API/classUGKShadowCasting.html#class-documentation">Class Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="API/classUGKShadowCasting.html#_CPPv416UGKShadowCasting"><code class="docutils literal notranslate"><span class="pre">UGKShadowCasting</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKShadowCasting.html#_CPPv4N16UGKShadowCasting16UGKShadowCastingEv"><code class="docutils literal notranslate"><span class="pre">UGKShadowCasting::UGKShadowCasting()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKShadowCasting.html#_CPPv4NK16UGKShadowCasting21SupportVisbilityQueryEv"><code class="docutils literal notranslate"><span class="pre">UGKShadowCasting::SupportVisbilityQuery()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKShadowCasting.html#_CPPv4NK16UGKShadowCasting9IsVisibleE14FGenericTeamId7FVector"><code class="docutils literal notranslate"><span class="pre">UGKShadowCasting::IsVisible()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKShadowCasting.html#_CPPv4NK16UGKShadowCasting20IsVisible3x3ExtendedE14FGenericTeamId7FVector"><code class="docutils literal notranslate"><span class="pre">UGKShadowCasting::IsVisible3x3Extended()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKShadowCasting.html#_CPPv4N16UGKShadowCasting10InitializeEP17AGKFogOfWarVolume"><code class="docutils literal notranslate"><span class="pre">UGKShadowCasting::Initialize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKShadowCasting.html#_CPPv4N16UGKShadowCasting17PreFactionFogDrawEv"><code class="docutils literal notranslate"><span class="pre">UGKShadowCasting::PreFactionFogDraw()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKShadowCasting.html#_CPPv4N16UGKShadowCasting19DrawFactionFogDebugEP15AGKFogOfWarTeam"><code class="docutils literal notranslate"><span class="pre">UGKShadowCasting::DrawFactionFogDebug()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKShadowCasting.html#_CPPv4N16UGKShadowCasting14DrawFactionFogEP15AGKFogOfWarTeam"><code class="docutils literal notranslate"><span class="pre">UGKShadowCasting::DrawFactionFog()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKShadowCasting.html#_CPPv4N16UGKShadowCasting26DrawFactionFogSingleThreadEP15AGKFogOfWarTeam"><code class="docutils literal notranslate"><span class="pre">UGKShadowCasting::DrawFactionFogSingleThread()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKShadowCasting.html#_CPPv4N16UGKShadowCasting22DrawFactionFogParallelEP15AGKFogOfWarTeam"><code class="docutils literal notranslate"><span class="pre">UGKShadowCasting::DrawFactionFogParallel()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKShadowCasting.html#_CPPv4N16UGKShadowCasting32DrawFactionFogParallel_AsyncTaskEP15AGKFogOfWarTeam"><code class="docutils literal notranslate"><span class="pre">UGKShadowCasting::DrawFactionFogParallel_AsyncTask()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKShadowCasting.html#_CPPv4N16UGKShadowCasting18PostFactionFogDrawEP15AGKFogOfWarTeam"><code class="docutils literal notranslate"><span class="pre">UGKShadowCasting::PostFactionFogDraw()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKShadowCasting.html#_CPPv4N16UGKShadowCasting25SupportsParallelExecutionEv"><code class="docutils literal notranslate"><span class="pre">UGKShadowCasting::SupportsParallelExecution()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKShadowCasting.html#_CPPv4N16UGKShadowCasting4StopEv"><code class="docutils literal notranslate"><span class="pre">UGKShadowCasting::Stop()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKShadowCasting.html#_CPPv4N16UGKShadowCasting15DrawLineOfSightEP15AGKFogOfWarTeamP20UGKFogOfWarComponent"><code class="docutils literal notranslate"><span class="pre">UGKShadowCasting::DrawLineOfSight()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKShadowCasting.html#_CPPv4N16UGKShadowCasting14UpdateBlockingEP20UGKFogOfWarComponent"><code class="docutils literal notranslate"><span class="pre">UGKShadowCasting::UpdateBlocking()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKShadowCasting.html#_CPPv4N16UGKShadowCasting14UpdateTexturesEP15AGKFogOfWarTeam"><code class="docutils literal notranslate"><span class="pre">UGKShadowCasting::UpdateTextures()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKShadowCasting.html#_CPPv4N16UGKShadowCasting23RetrieveBlockingTextureEP10UTexture2D"><code class="docutils literal notranslate"><span class="pre">UGKShadowCasting::RetrieveBlockingTexture()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKShadowCasting.html#_CPPv4N16UGKShadowCasting25ExtractLandscapeHeightMapEv"><code class="docutils literal notranslate"><span class="pre">UGKShadowCasting::ExtractLandscapeHeightMap()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKShadowCasting.html#_CPPv4N16UGKShadowCasting17GetFactionTextureE5FNameb"><code class="docutils literal notranslate"><span class="pre">UGKShadowCasting::GetFactionTexture()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKShadowCasting.html#_CPPv4N16UGKShadowCasting19GetFactionTexture2DE5FNameb"><code class="docutils literal notranslate"><span class="pre">UGKShadowCasting::GetFactionTexture2D()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKShadowCasting.html#_CPPv4N16UGKShadowCasting32GetPreviousFrameFactionTexture2DE5FNameb"><code class="docutils literal notranslate"><span class="pre">UGKShadowCasting::GetPreviousFrameFactionTexture2D()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKShadowCasting.html#_CPPv4N16UGKShadowCasting15CreateTexture2DEv"><code class="docutils literal notranslate"><span class="pre">UGKShadowCasting::CreateTexture2D()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKShadowCasting.html#_CPPv4N16UGKShadowCasting30GetPreviousFrameFactionTextureE5FNameb"><code class="docutils literal notranslate"><span class="pre">UGKShadowCasting::GetPreviousFrameFactionTexture()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKShadowCasting.html#_CPPv4N16UGKShadowCasting30UpdatePreviousFrameTexturesTexEP15AGKFogOfWarTeam"><code class="docutils literal notranslate"><span class="pre">UGKShadowCasting::UpdatePreviousFrameTexturesTex()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKShadowCasting.html#_CPPv4N16UGKShadowCasting27UpdatePreviousFrameTexturesEP15AGKFogOfWarTeam"><code class="docutils literal notranslate"><span class="pre">UGKShadowCasting::UpdatePreviousFrameTextures()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKShadowCasting.html#_CPPv4N16UGKShadowCasting10SetVisibleE10FIntVector5uint8"><code class="docutils literal notranslate"><span class="pre">UGKShadowCasting::SetVisible()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKShadowCasting.html#_CPPv4N16UGKShadowCasting15IsBlockingLightE10FIntVector"><code class="docutils literal notranslate"><span class="pre">UGKShadowCasting::IsBlockingLight()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKShadowCasting.html#_CPPv4N16UGKShadowCasting11GetDistanceE10FIntVector10FIntVector"><code class="docutils literal notranslate"><span class="pre">UGKShadowCasting::GetDistance()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKShadowCasting.html#_CPPv4N16UGKShadowCasting18GetDistanceSquaredE10FIntVector10FIntVector"><code class="docutils literal notranslate"><span class="pre">UGKShadowCasting::GetDistanceSquared()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKShadowCasting.html#_CPPv4NK16UGKShadowCasting15IsPositionValidE10FIntVector"><code class="docutils literal notranslate"><span class="pre">UGKShadowCasting::IsPositionValid()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKShadowCasting.html#_CPPv4N16UGKShadowCasting9LandscapeE"><code class="docutils literal notranslate"><span class="pre">UGKShadowCasting::Landscape</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKShadowCasting.html#_CPPv4NK16UGKShadowCasting22TextureQuery_IsVisibleE14FGenericTeamId10FIntVector"><code class="docutils literal notranslate"><span class="pre">UGKShadowCasting::TextureQuery_IsVisible()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="API/classUGKSharedBlueprint.html">UGKSharedBlueprint</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="API/classUGKSharedBlueprint.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="API/classUGKSharedBlueprint.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="API/classUGKSharedBlueprint.html#class-documentation">Class Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="API/classUGKSharedBlueprint.html#_CPPv418UGKSharedBlueprint"><code class="docutils literal notranslate"><span class="pre">UGKSharedBlueprint</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKSharedBlueprint.html#_CPPv4N18UGKSharedBlueprint17GetNetworkMetricsEPK7UObjectR5int32RfRfRf"><code class="docutils literal notranslate"><span class="pre">UGKSharedBlueprint::GetNetworkMetrics()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKSharedBlueprint.html#_CPPv4N18UGKSharedBlueprint10GetNetModeEPK6AActor"><code class="docutils literal notranslate"><span class="pre">UGKSharedBlueprint::GetNetMode()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKSharedBlueprint.html#_CPPv4N18UGKSharedBlueprint18GetFramePerSecondsEv"><code class="docutils literal notranslate"><span class="pre">UGKSharedBlueprint::GetFramePerSeconds()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKSharedBlueprint.html#_CPPv4N18UGKSharedBlueprint22EnableEngineStatisticsEPK7UObject"><code class="docutils literal notranslate"><span class="pre">UGKSharedBlueprint::EnableEngineStatistics()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKSharedBlueprint.html#_CPPv4N18UGKSharedBlueprint19GetEngineStatisticsEPK7UObjectRfRfRfRfRfRf"><code class="docutils literal notranslate"><span class="pre">UGKSharedBlueprint::GetEngineStatistics()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKSharedBlueprint.html#_CPPv4N18UGKSharedBlueprint12FixLandscapeEP7UObjectP17APlayerController"><code class="docutils literal notranslate"><span class="pre">UGKSharedBlueprint::FixLandscape()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="API/classUGKTransformerStrategy.html">UGKTransformerStrategy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="API/classUGKTransformerStrategy.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="API/classUGKTransformerStrategy.html#base-type">Base Type</a></li>
+<li class="toctree-l3"><a class="reference internal" href="API/classUGKTransformerStrategy.html#derived-types">Derived Types</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="API/classUGKTransformerStrategy.html#class-documentation">Class Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="API/classUGKTransformerStrategy.html#_CPPv422UGKTransformerStrategy"><code class="docutils literal notranslate"><span class="pre">UGKTransformerStrategy</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKTransformerStrategy.html#_CPPv4N22UGKTransformerStrategy22UGKTransformerStrategyEv"><code class="docutils literal notranslate"><span class="pre">UGKTransformerStrategy::UGKTransformerStrategy()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKTransformerStrategy.html#_CPPv4N22UGKTransformerStrategy10InitializeEP17AGKFogOfWarVolume"><code class="docutils literal notranslate"><span class="pre">UGKTransformerStrategy::Initialize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKTransformerStrategy.html#_CPPv4N22UGKTransformerStrategy4StopEv"><code class="docutils literal notranslate"><span class="pre">UGKTransformerStrategy::Stop()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKTransformerStrategy.html#_CPPv4N22UGKTransformerStrategy9TransformEP15AGKFogOfWarTeam"><code class="docutils literal notranslate"><span class="pre">UGKTransformerStrategy::Transform()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKTransformerStrategy.html#_CPPv4N22UGKTransformerStrategy17GetFactionTextureE5FNameb"><code class="docutils literal notranslate"><span class="pre">UGKTransformerStrategy::GetFactionTexture()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKTransformerStrategy.html#_CPPv4NK22UGKTransformerStrategy19UpscaledTextureSizeEv"><code class="docutils literal notranslate"><span class="pre">UGKTransformerStrategy::UpscaledTextureSize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKTransformerStrategy.html#_CPPv4N22UGKTransformerStrategy12OnNewFactionE5FName"><code class="docutils literal notranslate"><span class="pre">UGKTransformerStrategy::OnNewFaction()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKTransformerStrategy.html#_CPPv4N22UGKTransformerStrategy12bInitializedE"><code class="docutils literal notranslate"><span class="pre">UGKTransformerStrategy::bInitialized</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKTransformerStrategy.html#_CPPv4N22UGKTransformerStrategy14FogOfWarVolumeE"><code class="docutils literal notranslate"><span class="pre">UGKTransformerStrategy::FogOfWarVolume</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKTransformerStrategy.html#_CPPv4N22UGKTransformerStrategy12UpdateRegionE"><code class="docutils literal notranslate"><span class="pre">UGKTransformerStrategy::UpdateRegion</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKTransformerStrategy.html#_CPPv4N22UGKTransformerStrategy11TextureSizeE"><code class="docutils literal notranslate"><span class="pre">UGKTransformerStrategy::TextureSize</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="API/classUGKTransformerStrategyCanvas.html">UGKTransformerStrategyCanvas</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="API/classUGKTransformerStrategyCanvas.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="API/classUGKTransformerStrategyCanvas.html#base-type">Base Type</a></li>
+<li class="toctree-l3"><a class="reference internal" href="API/classUGKTransformerStrategyCanvas.html#derived-types">Derived Types</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="API/classUGKTransformerStrategyCanvas.html#class-documentation">Class Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="API/classUGKTransformerStrategyCanvas.html#_CPPv428UGKTransformerStrategyCanvas"><code class="docutils literal notranslate"><span class="pre">UGKTransformerStrategyCanvas</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKTransformerStrategyCanvas.html#_CPPv4N28UGKTransformerStrategyCanvas28UGKTransformerStrategyCanvasEv"><code class="docutils literal notranslate"><span class="pre">UGKTransformerStrategyCanvas::UGKTransformerStrategyCanvas()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKTransformerStrategyCanvas.html#_CPPv4N28UGKTransformerStrategyCanvas10InitializeEP17AGKFogOfWarVolume"><code class="docutils literal notranslate"><span class="pre">UGKTransformerStrategyCanvas::Initialize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKTransformerStrategyCanvas.html#_CPPv4N28UGKTransformerStrategyCanvas17GetFactionTextureE5FNameb"><code class="docutils literal notranslate"><span class="pre">UGKTransformerStrategyCanvas::GetFactionTexture()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKTransformerStrategyCanvas.html#_CPPv4NK28UGKTransformerStrategyCanvas19UpscaledTextureSizeEv"><code class="docutils literal notranslate"><span class="pre">UGKTransformerStrategyCanvas::UpscaledTextureSize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKTransformerStrategyCanvas.html#_CPPv4N28UGKTransformerStrategyCanvas25GetFactionTransformTargetE5FNameb"><code class="docutils literal notranslate"><span class="pre">UGKTransformerStrategyCanvas::GetFactionTransformTarget()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKTransformerStrategyCanvas.html#_CPPv4N28UGKTransformerStrategyCanvas21CreateTransformTargetEv"><code class="docutils literal notranslate"><span class="pre">UGKTransformerStrategyCanvas::CreateTransformTarget()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKTransformerStrategyCanvas.html#_CPPv4N28UGKTransformerStrategyCanvas17TransformedTargetE"><code class="docutils literal notranslate"><span class="pre">UGKTransformerStrategyCanvas::TransformedTarget</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKTransformerStrategyCanvas.html#_CPPv4N28UGKTransformerStrategyCanvas11TextureSizeE"><code class="docutils literal notranslate"><span class="pre">UGKTransformerStrategyCanvas::TextureSize</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="API/classUGKTransformerStrategyTexture2D.html">UGKTransformerStrategyTexture2D</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="API/classUGKTransformerStrategyTexture2D.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="API/classUGKTransformerStrategyTexture2D.html#base-type">Base Type</a></li>
+<li class="toctree-l3"><a class="reference internal" href="API/classUGKTransformerStrategyTexture2D.html#derived-types">Derived Types</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="API/classUGKTransformerStrategyTexture2D.html#class-documentation">Class Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="API/classUGKTransformerStrategyTexture2D.html#_CPPv431UGKTransformerStrategyTexture2D"><code class="docutils literal notranslate"><span class="pre">UGKTransformerStrategyTexture2D</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKTransformerStrategyTexture2D.html#_CPPv4N31UGKTransformerStrategyTexture2D10InitializeEP17AGKFogOfWarVolume"><code class="docutils literal notranslate"><span class="pre">UGKTransformerStrategyTexture2D::Initialize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKTransformerStrategyTexture2D.html#_CPPv4N31UGKTransformerStrategyTexture2D17GetFactionTextureE5FNameb"><code class="docutils literal notranslate"><span class="pre">UGKTransformerStrategyTexture2D::GetFactionTexture()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKTransformerStrategyTexture2D.html#_CPPv4N31UGKTransformerStrategyTexture2D25GetFactionTransformTargetE5FNameb"><code class="docutils literal notranslate"><span class="pre">UGKTransformerStrategyTexture2D::GetFactionTransformTarget()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKTransformerStrategyTexture2D.html#_CPPv4N31UGKTransformerStrategyTexture2D21CreateTransformTargetEv"><code class="docutils literal notranslate"><span class="pre">UGKTransformerStrategyTexture2D::CreateTransformTarget()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="API/classUGKTransformerStrategyTexture2D.html#_CPPv4N31UGKTransformerStrategyTexture2D17TransformedTargetE"><code class="docutils literal notranslate"><span class="pre">UGKTransformerStrategyTexture2D::TransformedTarget</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Welcome/Changelog.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Changelog</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="API/classAGKFogOfWarCharacter.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">AGKFogOfWarCharacter</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Pierre Delaunay
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

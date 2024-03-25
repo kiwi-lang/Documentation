@@ -1,0 +1,32 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="ACharacter",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node0 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 [label="AGKAbilityCharacter",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classAGKAbilityCharacter.html",tooltip=" "];
+  Node2 [label="IAbilitySystemInterface",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="IGenericTeamAgentInterface",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node3 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="IGKDataDrivenInterface",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classIGKDataDrivenInterface.html",tooltip=" "];
+  Node4 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="UGKGameplayAbility",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classUGKGameplayAbility.html",tooltip=" "];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="UGKAbilityQueueAbility",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classUGKAbilityQueueAbility.html",tooltip=" "];
+  Node5 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="UGKAttackAbility",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classUGKAttackAbility.html",tooltip=" "];
+  Node5 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="UGKCancelAbility",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classUGKCancelAbility.html",tooltip=" "];
+  Node5 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="UGKItemAbility",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classUGKItemAbility.html",tooltip=" "];
+  Node5 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="UGKMovementAbility",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classUGKMovementAbility.html",tooltip=" "];
+  Node5 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="UGKSkillAbility",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classUGKSkillAbility.html",tooltip=" "];
+  Node12 [label="UGameplayAbility",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node12 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

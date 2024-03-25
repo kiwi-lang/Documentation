@@ -1,0 +1,6 @@
+.. toctree::
+
+   uetools
+   ranked
+   resources
+

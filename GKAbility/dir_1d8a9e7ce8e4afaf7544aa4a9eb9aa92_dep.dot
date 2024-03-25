@@ -1,0 +1,16 @@
+digraph "Source/GKAbilityShader"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  compound=true
+  subgraph clusterdir_74389ed8173ad57b461b9d623a1f3867 {
+    graph [ bgcolor="#edf0f7", pencolor="grey25", style="filled,dashed,", label="Source", fontname="Helvetica", fontsize="10", URL="dir_74389ed8173ad57b461b9d623a1f3867.html"]
+  subgraph clusterdir_1d8a9e7ce8e4afaf7544aa4a9eb9aa92 {
+    graph [ bgcolor="#edf0f7", pencolor="grey25", style="filled,bold,", label="", fontname="Helvetica", fontsize="10", URL="dir_1d8a9e7ce8e4afaf7544aa4a9eb9aa92.html"]
+    dir_1d8a9e7ce8e4afaf7544aa4a9eb9aa92 [shape=plaintext, label="GKAbilityShader"];
+  dir_fc1992a3b06544b823b95d11352c2d1a [shape=box, label="Private", style="filled,", fillcolor="#a2b4d6", color="grey25", URL="dir_fc1992a3b06544b823b95d11352c2d1a.html"];
+  dir_3b6b5850902cd4dac52c02f57c965907 [shape=box, label="Public", style="filled,", fillcolor="#a2b4d6", color="grey25", URL="dir_3b6b5850902cd4dac52c02f57c965907.html"];
+  }
+  }
+}

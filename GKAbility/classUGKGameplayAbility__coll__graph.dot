@@ -1,0 +1,52 @@
+digraph "UGKGameplayAbility"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="UGKGameplayAbility",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="UGameplayAbility",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",tooltip=" "];
+  Node3 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="IGKDataDrivenInterface",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classIGKDataDrivenInterface.html",tooltip=" "];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" AbilityStatic" ,fontname="Helvetica"];
+  Node4 [label="FGKAbilityStatic",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structFGKAbilityStatic.html",tooltip=" "];
+  Node5 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="FTableRowBase",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",tooltip=" "];
+  Node6 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" Cost" ,fontname="Helvetica"];
+  Node6 [label="FGKAbilityCost",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structFGKAbilityCost.html",tooltip=" "];
+  Node7 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" Cooldown" ,fontname="Helvetica"];
+  Node7 [label="FGKAbilityCooldown",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structFGKAbilityCooldown.html",tooltip=" "];
+  Node8 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" Targeting" ,fontname="Helvetica"];
+  Node8 [label="FGKAbilityTarget",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structFGKAbilityTarget.html",tooltip=" "];
+  Node9 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" ProjectileData" ,fontname="Helvetica"];
+  Node9 [label="FGKProjectileStatic",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structFGKProjectileStatic.html",tooltip=" "];
+  Node5 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" EffectActorData" ,fontname="Helvetica"];
+  Node10 [label="FGKEffectActorData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structFGKEffectActorData.html",tooltip=" "];
+  Node11 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" AnimMontages" ,fontname="Helvetica"];
+  Node11 [label="FGKAnimationArray",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structFGKAnimationArray.html",tooltip=" "];
+  Node12 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" AnimTask" ,fontname="Helvetica"];
+  Node12 [label="UGKAbilityTask_PlayMontage\lAndWaitForEvent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classUGKAbilityTask__PlayMontageAndWaitForEvent.html",tooltip=" "];
+  Node13 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="UAbilityTask",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",tooltip=" "];
+  Node14 -> Node12 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" Notify" ,fontname="Helvetica"];
+  Node14 [label="UGKCastPointAnimNotify",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classUGKCastPointAnimNotify.html",tooltip=" "];
+  Node15 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="UAnimNotify",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",tooltip=" "];
+  Node16 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" MoveToTargetTask" ,fontname="Helvetica"];
+  Node16 [label="UGKAbilityTask_MoveToDestination",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classUGKAbilityTask__MoveToDestination.html",tooltip=" "];
+  Node13 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" TargetTask" ,fontname="Helvetica"];
+  Node17 [label="UGKAbilityTask_WaitForTargetData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classUGKAbilityTask__WaitForTargetData.html",tooltip=" "];
+  Node13 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node18 -> Node17 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" TargetActor" ,fontname="Helvetica"];
+  Node18 [label="AGKAbilityTarget_Actor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classAGKAbilityTarget__Actor.html",tooltip=" "];
+  Node19 -> Node18 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node19 [label="AGameplayAbilityTargetActor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",tooltip=" "];
+  Node8 -> Node18 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" TargetingData" ,fontname="Helvetica"];
+  Node20 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" ChargeActivationTask" ,fontname="Helvetica"];
+  Node20 [label="UGKActivationChargeTask",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classUGKActivationChargeTask.html",tooltip=" "];
+  Node21 -> Node20 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node21 [label="UGameplayTask",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",tooltip=" "];
+}

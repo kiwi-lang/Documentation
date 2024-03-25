@@ -1,0 +1,24 @@
+digraph "UGKMinimapComponent"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="UGKMinimapComponent",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="UActorComponent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",tooltip=" "];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" Config" ,fontname="Helvetica"];
+  Node3 [label="FGKMinimapConfig",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structFGKMinimapConfig.html",tooltip=" "];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" MinimapVolume" ,fontname="Helvetica"];
+  Node4 [label="AGKMinimapVolume",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classAGKMinimapVolume.html",tooltip=" "];
+  Node5 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="AVolume",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",tooltip=" "];
+  Node6 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" FieldOfView" ,fontname="Helvetica"];
+  Node6 [label="FGKMinimapFieldOfViewConfig",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structFGKMinimapFieldOfViewConfig.html",tooltip=" "];
+  Node7 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" DrawingConfig" ,fontname="Helvetica"];
+  Node7 [label="FGKMinimapDrawingConfig",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structFGKMinimapDrawingConfig.html",tooltip=" "];
+  Node8 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" AdaptiveConfig" ,fontname="Helvetica"];
+  Node8 [label="FGKMinimapAdaptiveSizeConfig",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structFGKMinimapAdaptiveSizeConfig.html",tooltip=" "];
+  Node9 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" CurrentDrawing" ,fontname="Helvetica"];
+  Node9 [label="FGKMinimapDrawing",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structFGKMinimapDrawing.html",tooltip=" "];
+}

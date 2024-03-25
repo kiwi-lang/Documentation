@@ -1,118 +1,484 @@
-<!DOCTYPE html>
-<html class="writer-html5" lang="en" >
-<head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Competitive &mdash; Gamekit  documentation</title>
-      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/collapsible-lists\css\tree_view.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Competitive &#8212; Gamekit</title>
   
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/underscore.js"></script>
-        <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/collapsible-lists\js\CollapsibleLists.compressed.js"></script>
-        <script src="../../_static/collapsible-lists\js\apply-collapsible-lists.js"></script>
-    <script src="../../_static/js/theme.js"></script>
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/collapsible-lists\css\tree_view.css?v=a885cde7" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=71c9e0a5" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="../../_static/collapsible-lists\js\CollapsibleLists.compressed.js?v=73120307"></script>
+    <script src="../../_static/collapsible-lists\js\apply-collapsible-lists.js?v=660e4f45"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'UnrealEngine/Online/Competitive';</script>
+    <link rel="icon" href="../../_static/GamekitDev.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Cheating" href="Cheating.html" />
-    <link rel="prev" title="Massively Multiplayer" href="MMO.html" /> 
-</head>
+    <link rel="prev" title="Massively Multiplayer" href="MMO.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
 
-<body class="wy-body-for-nav"> 
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
-            <a href="../../index.html" class="icon icon-home"> Gamekit
-          </a>
-              <div class="version">
-                6c15b89
-              </div>
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Welcome</span></p>
-<ul>
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+    
+    <img src="../../_static/GamekitDev.png" class="logo__image only-light" alt="Gamekit - Home"/>
+    <script>document.write(`<img src="../../_static/GamekitDev.png" class="logo__image only-dark" alt="Gamekit - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Welcome</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../Welcome/Roadmap.html">RoadMap</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Plugins</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../Plugins/GKFogOfWar/index.html">Fog of War</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Plugins/GKAbility/index.html">Ability</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Plugins/GKLobby/index.html">Lobby</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Plugins/GKChat/index.html">Chat</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Plugins/GKMinimap/index.html">Minimap</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Plugins/GKML/index.html">Machine Learning</a></li>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Plugins</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Plugins/GKFogOfWar/index.html">Fog of War</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Plugins/GKFogOfWar/Welcome/Installations.html">Installations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Plugins/GKFogOfWar/Welcome/GettingStarted.html">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Plugins/GKFogOfWar/Welcome/FrequentQuestions.html">Frequently Asked Questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Plugins/GKFogOfWar/Welcome/Changelog.html">Changelog</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../Plugins/GKFogOfWar/api.html">API</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Plugins/GKFogOfWar/API/classAGKFogOfWarCharacter.html">AGKFogOfWarCharacter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Plugins/GKFogOfWar/API/classAGKFogOfWarGameMode.html">AGKFogOfWarGameMode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Plugins/GKFogOfWar/API/classAGKFogOfWarGameState.html">AGKFogOfWarGameState</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Plugins/GKFogOfWar/API/classAGKFogOfWarObstacle.html">AGKFogOfWarObstacle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Plugins/GKFogOfWar/API/classAGKFogOfWarPawn.html">AGKFogOfWarPawn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Plugins/GKFogOfWar/API/classAGKFogOfWarPlayerController.html">AGKFogOfWarPlayerController</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Plugins/GKFogOfWar/API/classAGKFogOfWarPlayerState.html">AGKFogOfWarPlayerState</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Plugins/GKFogOfWar/API/classAGKFogOfWarPrivatePlayerState.html">AGKFogOfWarPrivatePlayerState</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Plugins/GKFogOfWar/API/classAGKFogOfWarTeam.html">AGKFogOfWarTeam</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Plugins/GKFogOfWar/API/classAGKFogOfWarVolume.html">AGKFogOfWarVolume</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Plugins/GKFogOfWar/API/classFGKFogOfWarModule.html">FGKFogOfWarModule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Plugins/GKFogOfWar/API/classFGKFogOfWarShaderModule.html">FGKFogOfWarShaderModule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Plugins/GKFogOfWar/API/classIGKFogOfWarAgentInterface.html">IGKFogOfWarAgentInterface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Plugins/GKFogOfWar/API/classIGKFogOfWarGameStateInterface.html">IGKFogOfWarGameStateInterface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Plugins/GKFogOfWar/API/classIGKFogOfWarTestModule.html">IGKFogOfWarTestModule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Plugins/GKFogOfWar/API/classUGKCanvasUpscaler.html">UGKCanvasUpscaler</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Plugins/GKFogOfWar/API/classUGKCPUUpscalerStrategy.html">UGKCPUUpscalerStrategy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Plugins/GKFogOfWar/API/classUGKExplorationTransform.html">UGKExplorationTransform</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Plugins/GKFogOfWar/API/classUGKFogOfWarComponent.html">UGKFogOfWarComponent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Plugins/GKFogOfWar/API/classUGKFogOfWarLibrary.html">UGKFogOfWarLibrary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Plugins/GKFogOfWar/API/classUGKFogOfWarStrategy.html">UGKFogOfWarStrategy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Plugins/GKFogOfWar/API/classUGKGPUUpscalerStrategy.html">UGKGPUUpscalerStrategy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Plugins/GKFogOfWar/API/classUGKRayCasting__Less.html">UGKRayCasting_Less</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Plugins/GKFogOfWar/API/classUGKRayCasting__Line.html">UGKRayCasting_Line</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Plugins/GKFogOfWar/API/classUGKRayCasting__Triangle.html">UGKRayCasting_Triangle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Plugins/GKFogOfWar/API/classUGKShadowCasting.html">UGKShadowCasting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Plugins/GKFogOfWar/API/classUGKSharedBlueprint.html">UGKSharedBlueprint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Plugins/GKFogOfWar/API/classUGKTransformerStrategy.html">UGKTransformerStrategy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Plugins/GKFogOfWar/API/classUGKTransformerStrategyCanvas.html">UGKTransformerStrategyCanvas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Plugins/GKFogOfWar/API/classUGKTransformerStrategyTexture2D.html">UGKTransformerStrategyTexture2D</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">UnrealEngine</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../index.html">Developer Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../index.html#game">Game</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html#online">Online</a><ul class="current">
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Plugins/GKAbility/index.html">GKAbility</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Plugins/GKAbility/Welcome/Installations.html">Installations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Plugins/GKAbility/Welcome/GettingStarted.html">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Plugins/GKAbility/Welcome/FrequentQuestions.html">Frequently Asked Questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Plugins/GKAbility/Welcome/Changelog.html">Changelog</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../Plugins/GKAbility/api.html">API</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Plugins/GKLobby/index.html">Lobby</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Plugins/GKLobby/Welcome/Installations.html">Installations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Plugins/GKLobby/Welcome/GettingStarted.html">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Plugins/GKLobby/Welcome/FrequentQuestions.html">Frequently Asked Questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Plugins/GKLobby/Welcome/Changelog.html">Changelog</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../Plugins/GKLobby/api.html">API</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Plugins/GKChat/index.html">Chat</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Plugins/GKChat/Welcome/Installations.html">Installations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Plugins/GKChat/Welcome/GettingStarted.html">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Plugins/GKChat/Welcome/FrequentQuestions.html">Frequently Asked Questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Plugins/GKChat/Welcome/Changelog.html">Changelog</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../Plugins/GKChat/api.html">API</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Plugins/GKMinimap/index.html">Minimap</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Plugins/GKMinimap/Welcome/Installations.html">Installations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Plugins/GKMinimap/Welcome/GettingStarted.html">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Plugins/GKMinimap/Welcome/FrequentQuestions.html">Frequently Asked Questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Plugins/GKMinimap/Welcome/Changelog.html">Changelog</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../Plugins/GKMinimap/api.html">API</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Plugins/GKML/index.html">Machine Learning</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Plugins/GKML/cartpole/1_Introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Plugins/GKML/cartpole/2_Setup.html">Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Plugins/GKML/cartpole/3_MLAdapter.html">MLAdapter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Plugins/GKML/cartpole/4_Game.html">Make the game</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Plugins/GKML/cartpole/5_Launching.html">Cartpole as a gym environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Plugins/GKML/cartpole/6_Training.html">Training</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Plugins/GKML/cartpole/7_Packaging.html">Packaging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Plugins/GKML/issues.html">Known Issues</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">UnrealEngine</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Developer.html">Developer Guide</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Developer/Docs.html">Documentation Generation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Developer/Compilation.html">Compilation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Developer/Shaders/index.html">Shaders</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Developer/Doxygen.html">Doxygen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Developer/Contribution.html">Contributions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Developer/ci.html">Continuous Integration</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Game.html">Game</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Game/GameFlow.html">GameFlow</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../Level/index.html">Level</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Level/landscape.html">Landscape Creation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Level/procedural.html">Procedural Level Generation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../Online.html">Online</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="Multiplayer.html">Multiplayer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="MMO.html">Massively Multiplayer</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Competitive</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#system-overview">System Overview</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#the-game-coordinator">The game coordinator</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#ranking-systems">Ranking Systems</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#concerns">Concerns</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#team-assignment">Team Assignment</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#references">References</a></li>
-</ul>
-</li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Competitive</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Cheating.html">Cheating</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../index.html#others">Others</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Others.html">Others</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-16"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../Tips/index.html">Tips &amp; Tricks</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-17"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Tips/Controllers/index.html">Controllers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tips/Cameras/index.html">Cameras</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tips/Cameras/configure.html">Cameras</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Tools</span></p>
-<ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Modding/index.html">Modding &amp; DLC</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Tools</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../Tools/uetools.html">uetools</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Tools/ranked.html">ranked</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Tools/resources.html">Resources</a></li>
 </ul>
 
-        </div>
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
       </div>
-    </nav>
+      
+      <main id="main-content" class="bd-main">
+        
+        
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Gamekit</a>
-      </nav>
+<div class="sbt-scroll-pixel-helper"></div>
 
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
-  <ul class="wy-breadcrumbs">
-      <li><a href="../../index.html" class="icon icon-home"></a></li>
-          <li class="breadcrumb-item"><a href="../index.html">Developer Guide</a></li>
-      <li class="breadcrumb-item active">Competitive</li>
-      <li class="wy-breadcrumbs-aside">
-            <a href="../../_sources/UnrealEngine/Online/Competitive.rst.txt" rel="nofollow"> View page source</a>
-      </li>
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/UnrealEngine/Online/Competitive.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
   </ul>
-  <hr/>
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-             
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Competitive</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#system-overview">System Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-game-coordinator">The game coordinator</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ranking-systems">Ranking Systems</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#initialization">Initialization</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#elo-systems">Elo Systems</a><ul class="nav section-nav flex-column">
+<li class="toc-h6 nav-item toc-entry"><a class="reference internal nav-link" href="#updates">Updates</a></li>
+<li class="toc-h6 nav-item toc-entry"><a class="reference internal nav-link" href="#issues">Issues</a></li>
+</ul>
+</li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#glicko-2">Glicko-2</a><ul class="nav section-nav flex-column">
+<li class="toc-h6 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Initialization</a></li>
+</ul>
+</li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#trueskill-like">TrueSkill Like</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#concerns">Concerns</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#team-assignment">Team Assignment</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
   <section id="competitive">
-<h1>Competitive<a class="headerlink" href="#competitive" title="Permalink to this headline"></a></h1>
+<h1>Competitive<a class="headerlink" href="#competitive" title="Link to this heading">#</a></h1>
 <ul class="simple">
 <li><p>Small number of players on a single instance (10-100)</p></li>
 <li><p>Teams of players (2-10)</p></li>
@@ -127,7 +493,7 @@
 <li><p>Avoid latency spikes at all cost</p></li>
 </ul>
 <section id="system-overview">
-<h2>System Overview<a class="headerlink" href="#system-overview" title="Permalink to this headline"></a></h2>
+<h2>System Overview<a class="headerlink" href="#system-overview" title="Link to this heading">#</a></h2>
 <img alt="../../_images/CompetitiveOverview.png" src="../../_images/CompetitiveOverview.png" />
 <ol class="arabic simple">
 <li><p>Client start matchaming by sending a matchmaking request to the game coordinator</p></li>
@@ -140,7 +506,7 @@
 </ol>
 </section>
 <section id="the-game-coordinator">
-<h2>The game coordinator<a class="headerlink" href="#the-game-coordinator" title="Permalink to this headline"></a></h2>
+<h2>The game coordinator<a class="headerlink" href="#the-game-coordinator" title="Link to this heading">#</a></h2>
 <img alt="../../_images/SkilDistribution.png" src="../../_images/SkilDistribution.png" />
 <p>Its goal is to group players with similar skill, to provide interesting games;
 To group players it needs first to estimate skill of each players using a rating system.</p>
@@ -148,15 +514,15 @@ To group players it needs first to estimate skill of each players using a rating
 Typically servers will be able to handle multiple instance of a dedicated server,
 but spliting the load accross many servers will improve the experience (lower latency).</p>
 <section id="ranking-systems">
-<h3>Ranking Systems<a class="headerlink" href="#ranking-systems" title="Permalink to this headline"></a></h3>
+<h3>Ranking Systems<a class="headerlink" href="#ranking-systems" title="Link to this heading">#</a></h3>
 <p>Goals:</p>
 <ul class="simple">
 <li><p>Put players of similar skills together to create interesting matches</p></li>
 <li><p>Avoid low quality match (stomps)</p></li>
-<li><p><a class="reference external" href="https://github.com/Delaunay/Ranked">https://github.com/Delaunay/Ranked</a></p></li>
+<li><p><a class="github reference external" href="https://github.com/Delaunay/Ranked">Delaunay/Ranked</a></p></li>
 </ul>
 <section id="initialization">
-<h4>Initialization<a class="headerlink" href="#initialization" title="Permalink to this headline"></a></h4>
+<h4>Initialization<a class="headerlink" href="#initialization" title="Link to this heading">#</a></h4>
 <ol class="arabic simple">
 <li><p>Give new players a fixed amount of points</p></li>
 </ol>
@@ -195,50 +561,50 @@ to estimate the rank from match data <code class="docutils literal notranslate">
 boostraping a new game.</p>
 </div>
 <section id="elo-systems">
-<h5>Elo Systems<a class="headerlink" href="#elo-systems" title="Permalink to this headline"></a></h5>
+<h5>Elo Systems<a class="headerlink" href="#elo-systems" title="Link to this heading">#</a></h5>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This system is considered outdated</p>
 </div>
 <section id="updates">
-<h6>Updates<a class="headerlink" href="#updates" title="Permalink to this headline"></a></h6>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span>pi ~ N(ui, s ** 2)  # Performance is normally distributed around their skill
+<h6>Updates<a class="headerlink" href="#updates" title="Link to this heading">#</a></h6>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">pi</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">N</span><span class="p">(</span><span class="n">ui</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">**</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w">  </span><span class="err">#</span><span class="w"> </span><span class="n">Performance</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">normally</span><span class="w"> </span><span class="n">distributed</span><span class="w"> </span><span class="n">around</span><span class="w"> </span><span class="n">their</span><span class="w"> </span><span class="n">skill</span>
 
-Probbility of winning is:
+<span class="n">Probbility</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">winning</span><span class="w"> </span><span class="n">is</span><span class="o">:</span>
 
-   P(p1 &gt; p2 | u1, u2) = CDF((s1 - s2) / sqrt(2 * s))
+<span class="w">   </span><span class="n">P</span><span class="p">(</span><span class="n">p1</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">p2</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">u1</span><span class="p">,</span><span class="w"> </span><span class="n">u2</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CDF</span><span class="p">((</span><span class="n">s1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">s2</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">s</span><span class="p">))</span>
 
-On match result y (1, 0, -1) for win, draw, loss, score is updated as
+<span class="n">On</span><span class="w"> </span><span class="n">match</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">-1</span><span class="p">)</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">win</span><span class="p">,</span><span class="w"> </span><span class="n">draw</span><span class="p">,</span><span class="w"> </span><span class="n">loss</span><span class="p">,</span><span class="w"> </span><span class="n">score</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">updated</span><span class="w"> </span><span class="n">as</span>
 
-   K = alpha * s * sqrt(pi)
+<span class="w">   </span><span class="n">K</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">alpha</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">sqrt</span><span class="p">(</span><span class="n">pi</span><span class="p">)</span>
 
-   delta = K * ((y + 1) / 2 - CDF((s1 - s2) / sqrt(2 * s)))
+<span class="w">   </span><span class="n">delta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">K</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">((</span><span class="n">y</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">CDF</span><span class="p">((</span><span class="n">s1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">s2</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">s</span><span class="p">)))</span>
 
-   s1 = s1 + y * delta
-   s2 = s2 - y * delta
+<span class="w">   </span><span class="n">s1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">delta</span>
+<span class="w">   </span><span class="n">s2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">delta</span>
 
-where alpha is a weighting factor, which is often summerized as K
+<span class="n">where</span><span class="w"> </span><span class="n">alpha</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">weighting</span><span class="w"> </span><span class="n">factor</span><span class="p">,</span><span class="w"> </span><span class="n">which</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">often</span><span class="w"> </span><span class="n">summerized</span><span class="w"> </span><span class="n">as</span><span class="w"> </span><span class="n">K</span>
 
-The normal distribution can be substituted by the logistic distribution which
-has a easier cdf than the normal distribution.
+<span class="n">The</span><span class="w"> </span><span class="n">normal</span><span class="w"> </span><span class="n">distribution</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">substituted</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">logistic</span><span class="w"> </span><span class="n">distribution</span><span class="w"> </span><span class="n">which</span>
+<span class="n">has</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">easier</span><span class="w"> </span><span class="n">cdf</span><span class="w"> </span><span class="n">than</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">normal</span><span class="w"> </span><span class="n">distribution</span><span class="p">.</span>
 </pre></div>
 </div>
 <p>For chess;</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">R</span><span class="p">(</span><span class="k">new</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">R</span><span class="p">(</span><span class="n">old</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">K</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">W</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">We</span><span class="p">)</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">R</span><span class="p">(</span><span class="k">new</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">R</span><span class="p">(</span><span class="n">old</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">K</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">W</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">We</span><span class="p">)</span>
 
-<span class="n">We</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="o">^</span><span class="w"> </span><span class="p">((</span><span class="n">R</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">OR</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">400</span><span class="p">))</span><span class="w"></span>
-<span class="n">We</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Q</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="n">Q</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">QO</span><span class="p">)</span><span class="w"></span>
+<span class="n">We</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="o">^</span><span class="w"> </span><span class="p">((</span><span class="n">R</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">OR</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">400</span><span class="p">))</span>
+<span class="n">We</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Q</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="n">Q</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">QO</span><span class="p">)</span>
 
-<span class="n">Q</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="o">^</span><span class="w"> </span><span class="p">(</span><span class="n">R</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">400</span><span class="p">)</span><span class="w"></span>
-<span class="n">QO</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="o">^</span><span class="w"> </span><span class="p">(</span><span class="n">RO</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">400</span><span class="p">)</span><span class="w"></span>
+<span class="n">Q</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="o">^</span><span class="w"> </span><span class="p">(</span><span class="n">R</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">400</span><span class="p">)</span>
+<span class="n">QO</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="o">^</span><span class="w"> </span><span class="p">(</span><span class="n">RO</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">400</span><span class="p">)</span>
 
-<span class="nl">R</span><span class="p">:</span><span class="w"> </span><span class="n">Rating</span><span class="w"></span>
-<span class="nl">OR</span><span class="p">:</span><span class="w"> </span><span class="n">Oponents</span><span class="w"> </span><span class="n">Rating</span><span class="w"></span>
-<span class="nl">C</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="w"></span>
-<span class="nl">K</span><span class="p">:</span><span class="w"> </span><span class="mi">32</span><span class="w"></span>
-<span class="nl">W</span><span class="p">:</span><span class="w"> </span><span class="n">Actual</span><span class="w"> </span><span class="n">Result</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">win</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">loss</span><span class="p">)</span><span class="w"></span>
-<span class="nl">We</span><span class="p">:</span><span class="w"> </span><span class="n">Expected</span><span class="w"> </span><span class="n">result</span><span class="w"></span>
-<span class="nl">K</span><span class="p">:</span><span class="w"> </span><span class="mi">32</span><span class="w"></span>
+<span class="nl">R</span><span class="p">:</span><span class="w"> </span><span class="n">Rating</span>
+<span class="nl">OR</span><span class="p">:</span><span class="w"> </span><span class="n">Oponents</span><span class="w"> </span><span class="n">Rating</span>
+<span class="nl">C</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span>
+<span class="nl">K</span><span class="p">:</span><span class="w"> </span><span class="mi">32</span>
+<span class="nl">W</span><span class="p">:</span><span class="w"> </span><span class="n">Actual</span><span class="w"> </span><span class="n">Result</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">win</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">loss</span><span class="p">)</span>
+<span class="nl">We</span><span class="p">:</span><span class="w"> </span><span class="n">Expected</span><span class="w"> </span><span class="n">result</span>
+<span class="nl">K</span><span class="p">:</span><span class="w"> </span><span class="mi">32</span>
 </pre></div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">K</span></code> is a constant that can be tweaked, it sets the maximum adjustmnent
@@ -251,7 +617,7 @@ rank increase, so high skill player will quickly climb the ladder
 to the high skill stage.</p>
 </section>
 <section id="issues">
-<h6>Issues<a class="headerlink" href="#issues" title="Permalink to this headline"></a></h6>
+<h6>Issues<a class="headerlink" href="#issues" title="Link to this heading">#</a></h6>
 <ul class="simple">
 <li><dl class="simple">
 <dt>Inflation/Deflation: Elo has a fixed amount of points in its pool (win-loss) is a zero sum game so inflation/deflation should not happen</dt><dd><ul>
@@ -270,24 +636,24 @@ to the high skill stage.</p>
 </section>
 </section>
 <section id="glicko-2">
-<h5>Glicko-2<a class="headerlink" href="#glicko-2" title="Permalink to this headline"></a></h5>
+<h5>Glicko-2<a class="headerlink" href="#glicko-2" title="Link to this heading">#</a></h5>
 <p>The <a class="reference external" href="http://www.glicko.net/glicko/glicko2.pdf">paper</a> goes in great details how to implement such a ranking system.</p>
 <section id="id1">
-<h6>Initialization<a class="headerlink" href="#id1" title="Permalink to this headline"></a></h6>
+<h6>Initialization<a class="headerlink" href="#id1" title="Link to this heading">#</a></h6>
 <ul>
 <li><p>Starts with calibration matches (n=~10)</p></li>
 <li><p>Unrated player starts with</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span># Starting values, Glicko-1 Scale
-r = 1500
-rd = 350
-s = 0.06  # Tweakable
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp"># Starting values, Glicko-1 Scale</span>
+<span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1500</span>
+<span class="n">rd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">350</span>
+<span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.06</span><span class="w">  </span><span class="err">#</span><span class="w"> </span><span class="n">Tweakable</span>
 
-## Glicko-2 Scale
-# Rating location
-mu = (r - 1500) / 173.7178
+<span class="cp">## Glicko-2 Scale</span>
+<span class="cp"># Rating location</span>
+<span class="n">mu</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">r</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1500</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">173.7178</span>
 
-# Rating deviation
-phi = RD / 173.7178
+<span class="cp"># Rating deviation</span>
+<span class="n">phi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RD</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">173.7178</span>
 </pre></div>
 </div>
 </li>
@@ -295,68 +661,68 @@ phi = RD / 173.7178
 </section>
 </section>
 <section id="trueskill-like">
-<h5>TrueSkill Like<a class="headerlink" href="#trueskill-like" title="Permalink to this headline"></a></h5>
+<h5>TrueSkill Like<a class="headerlink" href="#trueskill-like" title="Link to this heading">#</a></h5>
 <p>Baysian Generative Model for skill</p>
 <ul class="simple">
 <li><p>Takes into account teams, so performance is function of the teammates permutation</p></li>
 <li><p><a class="reference external" href="https://papers.nips.cc/paper/2006/file/f44ee263952e65b3610b8ba51229d1f9-Paper.pdf">TrueSkill</a></p></li>
 <li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Factor_graph">https://en.wikipedia.org/wiki/Factor_graph</a></p></li>
 </ul>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span>Skill ~ N(mu, sigma)  # Skill inside the game
-                      # sigma models the consistency of the player
-                      # To infer
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Skill</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">N</span><span class="p">(</span><span class="n">mu</span><span class="p">,</span><span class="w"> </span><span class="n">sigma</span><span class="p">)</span><span class="w">  </span><span class="err">#</span><span class="w"> </span><span class="n">Skill</span><span class="w"> </span><span class="n">inside</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">game</span>
+<span class="w">                      </span><span class="cp"># sigma models the consistency of the player</span>
+<span class="w">                      </span><span class="cp"># To infer</span>
 
-Perf ~ N(s, Beta)     # Performance for a specific match
-                      # with Beta modeling the randomness inherent to the game
-                      # Observed
+<span class="n">Perf</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">N</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">Beta</span><span class="p">)</span><span class="w">     </span><span class="err">#</span><span class="w"> </span><span class="n">Performance</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">specific</span><span class="w"> </span><span class="n">match</span>
+<span class="w">                      </span><span class="cp"># with Beta modeling the randomness inherent to the game</span>
+<span class="w">                      </span><span class="cp"># Observed</span>
 
-Team ~ Sum(Perf for each Teammate)  # Performance of the team
-                                    # Observed
+<span class="n">Team</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">Sum</span><span class="p">(</span><span class="n">Perf</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">Teammate</span><span class="p">)</span><span class="w">  </span><span class="err">#</span><span class="w"> </span><span class="n">Performance</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">team</span>
+<span class="w">                                    </span><span class="cp"># Observed</span>
 
-Rank = (Team_i - Team_(i - 1))      # Rank
-                                    # Observed
+<span class="n">Rank</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">Team_i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">Team_</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">))</span><span class="w">      </span><span class="err">#</span><span class="w"> </span><span class="n">Rank</span>
+<span class="w">                                    </span><span class="cp"># Observed</span>
 </pre></div>
 </div>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Posterior</span><span class="w"> </span><span class="nf">distribution</span><span class="w"> </span><span class="p">(</span><span class="n">assumed</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">gaussian</span><span class="p">)</span><span class="o">:</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Posterior</span><span class="w"> </span><span class="n">distribution</span><span class="w"> </span><span class="p">(</span><span class="n">assumed</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">gaussian</span><span class="p">)</span><span class="o">:</span>
 
-<span class="w">   </span><span class="n">p</span><span class="p">(</span><span class="n">s</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="n">A</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">P</span><span class="p">(</span><span class="n">r</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">A</span><span class="p">)</span><span class="w"> </span><span class="n">P</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">P</span><span class="p">(</span><span class="n">r</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">A</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="n">p</span><span class="p">(</span><span class="n">s</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="n">A</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">P</span><span class="p">(</span><span class="n">r</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">A</span><span class="p">)</span><span class="w"> </span><span class="n">P</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">P</span><span class="p">(</span><span class="n">r</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">A</span><span class="p">)</span>
 
-<span class="nl">r</span><span class="p">:</span><span class="w"> </span><span class="n">Team</span><span class="w"> </span><span class="n">rank</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="n">k</span><span class="p">}</span><span class="w"> </span><span class="p">(</span><span class="n">r</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="k">case</span><span class="w"> </span><span class="no">of</span><span class="w"> </span><span class="no">draws</span><span class="p">)</span><span class="w"></span>
-<span class="no">A</span><span class="p">:</span><span class="w"> </span><span class="n">Team</span><span class="w"> </span><span class="n">assignment</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="n">n</span><span class="p">}</span><span class="w"></span>
-<span class="nl">k</span><span class="p">:</span><span class="w"> </span><span class="n">Number</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">Teams</span><span class="w"></span>
-<span class="nl">n</span><span class="p">:</span><span class="w"> </span><span class="n">Number</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">Players</span><span class="w"></span>
-
-
-<span class="w">   </span><span class="n">p</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">prod</span><span class="p">({</span><span class="mi">1</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="n">n</span><span class="p">},</span><span class="w"> </span><span class="n">N</span><span class="p">(</span><span class="n">s_i</span><span class="p">,</span><span class="w"> </span><span class="n">mu_i</span><span class="p">,</span><span class="w"> </span><span class="n">sigma_i</span><span class="w"> </span><span class="o">^</span><span class="w"> </span><span class="mi">2</span><span class="p">))</span><span class="w"></span>
+<span class="nl">r</span><span class="p">:</span><span class="w"> </span><span class="n">Team</span><span class="w"> </span><span class="n">rank</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="n">k</span><span class="p">}</span><span class="w"> </span><span class="p">(</span><span class="n">r</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="k">case</span><span class="w"> </span><span class="no">of</span><span class="w"> </span><span class="no">draws</span><span class="p">)</span>
+<span class="no">A</span><span class="p">:</span><span class="w"> </span><span class="n">Team</span><span class="w"> </span><span class="n">assignment</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="n">n</span><span class="p">}</span>
+<span class="nl">k</span><span class="p">:</span><span class="w"> </span><span class="n">Number</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">Teams</span>
+<span class="nl">n</span><span class="p">:</span><span class="w"> </span><span class="n">Number</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">Players</span>
 
 
-<span class="n">Player</span><span class="w"> </span><span class="n">performance</span><span class="w"> </span><span class="n">is</span><span class="w"></span>
+<span class="w">   </span><span class="n">p</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">prod</span><span class="p">({</span><span class="mi">1</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="n">n</span><span class="p">},</span><span class="w"> </span><span class="n">N</span><span class="p">(</span><span class="n">s_i</span><span class="p">,</span><span class="w"> </span><span class="n">mu_i</span><span class="p">,</span><span class="w"> </span><span class="n">sigma_i</span><span class="w"> </span><span class="o">^</span><span class="w"> </span><span class="mi">2</span><span class="p">))</span>
 
-<span class="w">   </span><span class="n">p_i</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">N</span><span class="p">(</span><span class="n">p_i</span><span class="p">;</span><span class="w"> </span><span class="n">s_i</span><span class="p">,</span><span class="w"> </span><span class="n">Beta</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
 
-<span class="n">Team</span><span class="w"> </span><span class="n">performance</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">players</span><span class="w"> </span><span class="n">performance</span><span class="w"></span>
+<span class="n">Player</span><span class="w"> </span><span class="n">performance</span><span class="w"> </span><span class="n">is</span>
 
-<span class="w">   </span><span class="n">t_j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sum</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">A_j</span><span class="p">,</span><span class="w"> </span><span class="n">p_i</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="n">p_i</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">N</span><span class="p">(</span><span class="n">p_i</span><span class="p">;</span><span class="w"> </span><span class="n">s_i</span><span class="p">,</span><span class="w"> </span><span class="n">Beta</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span>
 
-<span class="n">Reorder</span><span class="w"> </span><span class="n">teams</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">ascending</span><span class="w"> </span><span class="n">order</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">rank</span><span class="w"></span>
+<span class="n">Team</span><span class="w"> </span><span class="n">performance</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">players</span><span class="w"> </span><span class="n">performance</span>
 
-<span class="n">Probability</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">game</span><span class="w"> </span><span class="n">rank</span><span class="w"> </span><span class="n">r</span><span class="w"></span>
+<span class="w">   </span><span class="n">t_j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sum</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">A_j</span><span class="p">,</span><span class="w"> </span><span class="n">p_i</span><span class="p">)</span>
 
-<span class="w">   </span><span class="n">P</span><span class="p">(</span><span class="n">r</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">{</span><span class="n">t_1</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="n">t_k</span><span class="p">})</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">P</span><span class="p">(</span><span class="n">t_r1</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">t_r2</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">t_rk</span><span class="p">)</span><span class="w"></span>
+<span class="n">Reorder</span><span class="w"> </span><span class="n">teams</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">ascending</span><span class="w"> </span><span class="n">order</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">rank</span>
 
-<span class="n">The</span><span class="w"> </span><span class="n">training</span><span class="w"> </span><span class="n">needs</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">online</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="p">.</span><span class="n">e</span><span class="w"> </span><span class="n">realtime</span><span class="w"> </span><span class="n">player</span><span class="w"> </span><span class="n">skill</span><span class="w"> </span><span class="n">update</span><span class="p">)</span><span class="w"></span>
+<span class="n">Probability</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">game</span><span class="w"> </span><span class="n">rank</span><span class="w"> </span><span class="n">r</span>
 
-<span class="o">*</span><span class="w"> </span><span class="n">Gaussian</span><span class="w"> </span><span class="n">density</span><span class="w"> </span><span class="n">filtering</span><span class="w"></span>
-<span class="o">*</span><span class="w"> </span><span class="n">message</span><span class="o">-</span><span class="n">passing</span><span class="w"></span>
-<span class="o">*</span><span class="w"> </span><span class="n">sum</span><span class="o">-</span><span class="n">product</span><span class="w"> </span><span class="n">algorithm</span><span class="w"></span>
-<span class="o">*</span><span class="w"> </span><span class="n">Expectation</span><span class="w"> </span><span class="n">propagation</span><span class="w"></span>
+<span class="w">   </span><span class="n">P</span><span class="p">(</span><span class="n">r</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">{</span><span class="n">t_1</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="n">t_k</span><span class="p">})</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">P</span><span class="p">(</span><span class="n">t_r1</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">t_r2</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">t_rk</span><span class="p">)</span>
+
+<span class="n">The</span><span class="w"> </span><span class="n">training</span><span class="w"> </span><span class="n">needs</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">online</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="p">.</span><span class="n">e</span><span class="w"> </span><span class="n">realtime</span><span class="w"> </span><span class="n">player</span><span class="w"> </span><span class="n">skill</span><span class="w"> </span><span class="n">update</span><span class="p">)</span>
+
+<span class="o">*</span><span class="w"> </span><span class="n">Gaussian</span><span class="w"> </span><span class="n">density</span><span class="w"> </span><span class="n">filtering</span>
+<span class="o">*</span><span class="w"> </span><span class="n">message</span><span class="o">-</span><span class="n">passing</span>
+<span class="o">*</span><span class="w"> </span><span class="n">sum</span><span class="o">-</span><span class="n">product</span><span class="w"> </span><span class="n">algorithm</span>
+<span class="o">*</span><span class="w"> </span><span class="n">Expectation</span><span class="w"> </span><span class="n">propagation</span>
 </pre></div>
 </div>
 </section>
 </section>
 </section>
 <section id="concerns">
-<h3>Concerns<a class="headerlink" href="#concerns" title="Permalink to this headline"></a></h3>
+<h3>Concerns<a class="headerlink" href="#concerns" title="Link to this heading">#</a></h3>
 <ul>
 <li><p>Alternate accounts; as the score of player increase match becomes fair
 Some player will be actively looking for easier matches by creating
@@ -415,7 +781,7 @@ a simple sum of their solo skills.</p></li>
 </section>
 </section>
 <section id="team-assignment">
-<h2>Team Assignment<a class="headerlink" href="#team-assignment" title="Permalink to this headline"></a></h2>
+<h2>Team Assignment<a class="headerlink" href="#team-assignment" title="Link to this heading">#</a></h2>
 <p>The game mode is in charge of the team assignment, teams need to be assigned to Pawn (for targeting)
 and PlayerControllers. PlayerController team assignment will drive all the logic.
 The team assignment needs to be on both the pawn &amp; the controller for effect like Possession
@@ -431,62 +797,160 @@ as possible</p></li>
 </ul>
 </section>
 <section id="references">
-<h2>References<a class="headerlink" href="#references" title="Permalink to this headline"></a></h2>
-<dl class="footnote brackets">
-<dt class="label" id="id2"><span class="brackets">1</span></dt>
-<dd><p><a class="reference external" href="https://en.wikipedia.org/wiki/Elo_rating_system">Elo rating</a></p>
-</dd>
-<dt class="label" id="id3"><span class="brackets">2</span></dt>
-<dd><p><a class="reference external" href="https://en.wikipedia.org/wiki/TrueSkill">TrueSkill</a></p>
-</dd>
-<dt class="label" id="id5"><span class="brackets">3</span></dt>
-<dd><p><a class="reference external" href="https://en.wikipedia.org/wiki/Glicko_rating_system">Glicko</a></p>
-</dd>
-<dt class="label" id="id6"><span class="brackets">4</span></dt>
-<dd><p><a class="reference external" href="https://en.wikipedia.org/wiki/Bradley%E2%80%93Terry_model">Bradley-Terry model</a></p>
-</dd>
-<dt class="label" id="id7"><span class="brackets">5</span></dt>
-<dd><p><a class="reference external" href="https://en.wikipedia.org/wiki/Chess_rating_system">Chess rating</a></p>
-</dd>
-<dt class="label" id="id8"><span class="brackets">6</span></dt>
-<dd><p><a class="reference external" href="https://github.com/Delaunay/Ranked">Ranked</a></p>
-</dd>
-<dt class="label" id="id9"><span class="brackets">7</span></dt>
-<dd><p><a class="reference external" href="https://docs.unrealengine.com/4.27/en-US/ProgrammingAndScripting/Online/SessionInterface/">Online Session &amp; Matchmaking</a></p>
-</dd>
-</dl>
+<h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id2" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Elo_rating_system">Elo rating</a></p>
+</aside>
+<aside class="footnote brackets" id="id3" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/TrueSkill">TrueSkill</a></p>
+</aside>
+<aside class="footnote brackets" id="id5" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Glicko_rating_system">Glicko</a></p>
+</aside>
+<aside class="footnote brackets" id="id6" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Bradley%E2%80%93Terry_model">Bradley-Terry model</a></p>
+</aside>
+<aside class="footnote brackets" id="id7" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Chess_rating_system">Chess rating</a></p>
+</aside>
+<aside class="footnote brackets" id="id8" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>6<span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://github.com/Delaunay/Ranked">Ranked</a></p>
+</aside>
+<aside class="footnote brackets" id="id9" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>7<span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://docs.unrealengine.com/4.27/en-US/ProgrammingAndScripting/Online/SessionInterface/">Online Session &amp; Matchmaking</a></p>
+</aside>
+</aside>
 </section>
 </section>
 
 
-           </div>
-          </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="MMO.html" class="btn btn-neutral float-left" title="Massively Multiplayer" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="Cheating.html" class="btn btn-neutral float-right" title="Cheating" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
+                </article>
+              
 
-  <hr/>
-
-  <div role="contentinfo">
-    <p>&#169; Copyright 2024.</p>
-  </div>
-
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   
-
-</footer>
-        </div>
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="MMO.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Massively Multiplayer</p>
       </div>
-    </section>
-  </div>
-  <script>
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script> 
+    </a>
+    <a class="right-next"
+       href="Cheating.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Cheating</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
-</body>
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#system-overview">System Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-game-coordinator">The game coordinator</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ranking-systems">Ranking Systems</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#initialization">Initialization</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#elo-systems">Elo Systems</a><ul class="nav section-nav flex-column">
+<li class="toc-h6 nav-item toc-entry"><a class="reference internal nav-link" href="#updates">Updates</a></li>
+<li class="toc-h6 nav-item toc-entry"><a class="reference internal nav-link" href="#issues">Issues</a></li>
+</ul>
+</li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#glicko-2">Glicko-2</a><ul class="nav section-nav flex-column">
+<li class="toc-h6 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Initialization</a></li>
+</ul>
+</li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#trueskill-like">TrueSkill Like</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#concerns">Concerns</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#team-assignment">Team Assignment</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Pierre Delaunay
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
 </html>

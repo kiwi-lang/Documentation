@@ -1,0 +1,12 @@
+digraph "UGKAbilitySettings::GENERATED_UCLASS_BODY"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="UGKAbilitySettings\l::GENERATED_UCLASS_BODY",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="IGKAbilityModule::Get",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classIGKAbilityModule.html#a56381707b0b989ef0382edfd1d6f428d",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="IGKAbilityModule::GetSettings",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classIGKAbilityModule.html#a5f087eb8a1ce727a8deb09e56b62716c",tooltip=" "];
+}

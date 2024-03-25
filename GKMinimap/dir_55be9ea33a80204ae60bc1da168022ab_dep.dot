@@ -1,0 +1,11 @@
+digraph "Source/GKMinimap/Public"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  compound=true
+  subgraph clusterdir_2f64ff492c16a04c7970444738b59868 {
+    graph [ bgcolor="#edf0f7", pencolor="grey50", style="filled,dashed,", label="GKMinimap", fontname="Helvetica", fontsize="10", URL="dir_2f64ff492c16a04c7970444738b59868.html"]
+  dir_55be9ea33a80204ae60bc1da168022ab [shape=box, label="Public", style="filled,bold,", fillcolor="#edf0f7", color="grey25", URL="dir_55be9ea33a80204ae60bc1da168022ab.html"];
+  }
+}

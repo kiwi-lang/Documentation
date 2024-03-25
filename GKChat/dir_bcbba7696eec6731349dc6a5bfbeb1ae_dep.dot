@@ -1,0 +1,11 @@
+digraph "Source/GKChat/Private"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  compound=true
+  subgraph clusterdir_13381b2a03fca14506eac55d9e718e31 {
+    graph [ bgcolor="#edf0f7", pencolor="grey50", style="filled,dashed,", label="GKChat", fontname="Helvetica", fontsize="10", URL="dir_13381b2a03fca14506eac55d9e718e31.html"]
+  dir_bcbba7696eec6731349dc6a5bfbeb1ae [shape=box, label="Private", style="filled,bold,", fillcolor="#edf0f7", color="grey25", URL="dir_bcbba7696eec6731349dc6a5bfbeb1ae.html"];
+  }
+}

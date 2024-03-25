@@ -1,170 +1,502 @@
-<!DOCTYPE html>
-<html class="writer-html5" lang="en" >
-<head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Class UGKRayCasting_Less &mdash; Gamekit  documentation</title>
-      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/collapsible-lists\css\tree_view.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="../../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>UGKRayCasting_Less &#8212; Gamekit</title>
   
-        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-        <script src="../../../_static/jquery.js"></script>
-        <script src="../../../_static/underscore.js"></script>
-        <script src="../../../_static/doctools.js"></script>
-        <script src="../../../_static/collapsible-lists\js\CollapsibleLists.compressed.js"></script>
-        <script src="../../../_static/collapsible-lists\js\apply-collapsible-lists.js"></script>
-    <script src="../../../_static/js/theme.js"></script>
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/collapsible-lists\css\tree_view.css?v=a885cde7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=71c9e0a5" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="../../../_static/collapsible-lists\js\CollapsibleLists.compressed.js?v=73120307"></script>
+    <script src="../../../_static/collapsible-lists\js\apply-collapsible-lists.js?v=660e4f45"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Plugins/GKFogOfWar/API/classUGKRayCasting__Less';</script>
+    <link rel="icon" href="../../../_static/GamekitDev.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Class UGKRayCasting_Line" href="classUGKRayCasting__Line.html" />
-    <link rel="prev" title="Class UGKGPUUpscalerStrategy" href="classUGKGPUUpscalerStrategy.html" /> 
-</head>
+    <link rel="next" title="UGKRayCasting_Line" href="classUGKRayCasting__Line.html" />
+    <link rel="prev" title="UGKGPUUpscalerStrategy" href="classUGKGPUUpscalerStrategy.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
 
-<body class="wy-body-for-nav"> 
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
-            <a href="../../../index.html" class="icon icon-home"> Gamekit
-          </a>
-              <div class="version">
-                6c15b89
-              </div>
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Welcome</span></p>
-<ul>
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+    
+    
+    
+    <img src="../../../_static/GamekitDev.png" class="logo__image only-light" alt="Gamekit - Home"/>
+    <script>document.write(`<img src="../../../_static/GamekitDev.png" class="logo__image only-dark" alt="Gamekit - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Welcome</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../../Welcome/Roadmap.html">RoadMap</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Plugins</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Fog of War</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../index.html#features">Features</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../index.html#useful-links">Useful Links</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="../Welcome/Installations.html">Installations</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Welcome/GettingStarted.html">Getting Started</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Welcome/FrequentQuestions.html">Frequently Asked Questions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Welcome/Changelog.html">Changelog</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classAGKFogOfWarCharacter.html">Class AGKFogOfWarCharacter</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classAGKFogOfWarGameMode.html">Class AGKFogOfWarGameMode</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classAGKFogOfWarGameState.html">Class AGKFogOfWarGameState</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classAGKFogOfWarObstacle.html">Class AGKFogOfWarObstacle</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classAGKFogOfWarPawn.html">Class AGKFogOfWarPawn</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classAGKFogOfWarPlayerController.html">Class AGKFogOfWarPlayerController</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classAGKFogOfWarPlayerState.html">Class AGKFogOfWarPlayerState</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classAGKFogOfWarPrivatePlayerState.html">Class AGKFogOfWarPrivatePlayerState</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classAGKFogOfWarTeam.html">Class AGKFogOfWarTeam</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classAGKFogOfWarVolume.html">Class AGKFogOfWarVolume</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classFGKFogOfWarModule.html">Class FGKFogOfWarModule</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classFGKFogOfWarShaderModule.html">Class FGKFogOfWarShaderModule</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classIGKFogOfWarAgentInterface.html">Class IGKFogOfWarAgentInterface</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classIGKFogOfWarGameStateInterface.html">Class IGKFogOfWarGameStateInterface</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classIGKFogOfWarTestModule.html">Class IGKFogOfWarTestModule</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classUGKCanvasUpscaler.html">Class UGKCanvasUpscaler</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classUGKCPUUpscalerStrategy.html">Class UGKCPUUpscalerStrategy</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classUGKExplorationTransform.html">Class UGKExplorationTransform</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classUGKFogOfWarComponent.html">Class UGKFogOfWarComponent</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classUGKFogOfWarLibrary.html">Class UGKFogOfWarLibrary</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classUGKFogOfWarStrategy.html">Class UGKFogOfWarStrategy</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classUGKGPUUpscalerStrategy.html">Class UGKGPUUpscalerStrategy</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Class UGKRayCasting_Less</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#inheritance-relationships">Inheritance Relationships</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#class-documentation">Class Documentation</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="classUGKRayCasting__Line.html">Class UGKRayCasting_Line</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classUGKRayCasting__Triangle.html">Class UGKRayCasting_Triangle</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classUGKShadowCasting.html">Class UGKShadowCasting</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classUGKSharedBlueprint.html">Class UGKSharedBlueprint</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classUGKTransformerStrategy.html">Class UGKTransformerStrategy</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classUGKTransformerStrategyCanvas.html">Class UGKTransformerStrategyCanvas</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classUGKTransformerStrategyTexture2D.html">Class UGKTransformerStrategyTexture2D</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../index.html#indices-and-tables">Indices and tables</a></li>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Plugins</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">Fog of War</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../Welcome/Installations.html">Installations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Welcome/GettingStarted.html">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Welcome/FrequentQuestions.html">Frequently Asked Questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Welcome/Changelog.html">Changelog</a></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="../api.html">API</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="classAGKFogOfWarCharacter.html">AGKFogOfWarCharacter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAGKFogOfWarGameMode.html">AGKFogOfWarGameMode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAGKFogOfWarGameState.html">AGKFogOfWarGameState</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAGKFogOfWarObstacle.html">AGKFogOfWarObstacle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAGKFogOfWarPawn.html">AGKFogOfWarPawn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAGKFogOfWarPlayerController.html">AGKFogOfWarPlayerController</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAGKFogOfWarPlayerState.html">AGKFogOfWarPlayerState</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAGKFogOfWarPrivatePlayerState.html">AGKFogOfWarPrivatePlayerState</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAGKFogOfWarTeam.html">AGKFogOfWarTeam</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAGKFogOfWarVolume.html">AGKFogOfWarVolume</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classFGKFogOfWarModule.html">FGKFogOfWarModule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classFGKFogOfWarShaderModule.html">FGKFogOfWarShaderModule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classIGKFogOfWarAgentInterface.html">IGKFogOfWarAgentInterface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classIGKFogOfWarGameStateInterface.html">IGKFogOfWarGameStateInterface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classIGKFogOfWarTestModule.html">IGKFogOfWarTestModule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKCanvasUpscaler.html">UGKCanvasUpscaler</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKCPUUpscalerStrategy.html">UGKCPUUpscalerStrategy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKExplorationTransform.html">UGKExplorationTransform</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKFogOfWarComponent.html">UGKFogOfWarComponent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKFogOfWarLibrary.html">UGKFogOfWarLibrary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKFogOfWarStrategy.html">UGKFogOfWarStrategy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKGPUUpscalerStrategy.html">UGKGPUUpscalerStrategy</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">UGKRayCasting_Less</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKRayCasting__Line.html">UGKRayCasting_Line</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKRayCasting__Triangle.html">UGKRayCasting_Triangle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKShadowCasting.html">UGKShadowCasting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKSharedBlueprint.html">UGKSharedBlueprint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKTransformerStrategy.html">UGKTransformerStrategy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKTransformerStrategyCanvas.html">UGKTransformerStrategyCanvas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUGKTransformerStrategyTexture2D.html">UGKTransformerStrategyTexture2D</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../GKAbility/index.html">Ability</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../GKLobby/index.html">Lobby</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../GKChat/index.html">Chat</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../GKMinimap/index.html">Minimap</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../GKML/index.html">Machine Learning</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../GKAbility/index.html">GKAbility</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../GKAbility/Welcome/Installations.html">Installations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GKAbility/Welcome/GettingStarted.html">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GKAbility/Welcome/FrequentQuestions.html">Frequently Asked Questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GKAbility/Welcome/Changelog.html">Changelog</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../GKAbility/api.html">API</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
 </ul>
-<p class="caption" role="heading"><span class="caption-text">UnrealEngine</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../UnrealEngine/index.html">Developer Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../UnrealEngine/index.html#game">Game</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../UnrealEngine/index.html#online">Online</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../UnrealEngine/index.html#others">Others</a></li>
+</li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Tools</span></p>
-<ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../GKLobby/index.html">Lobby</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../GKLobby/Welcome/Installations.html">Installations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GKLobby/Welcome/GettingStarted.html">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GKLobby/Welcome/FrequentQuestions.html">Frequently Asked Questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GKLobby/Welcome/Changelog.html">Changelog</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../GKLobby/api.html">API</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../GKChat/index.html">Chat</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../GKChat/Welcome/Installations.html">Installations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GKChat/Welcome/GettingStarted.html">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GKChat/Welcome/FrequentQuestions.html">Frequently Asked Questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GKChat/Welcome/Changelog.html">Changelog</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../GKChat/api.html">API</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../GKMinimap/index.html">Minimap</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../GKMinimap/Welcome/Installations.html">Installations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GKMinimap/Welcome/GettingStarted.html">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GKMinimap/Welcome/FrequentQuestions.html">Frequently Asked Questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GKMinimap/Welcome/Changelog.html">Changelog</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../GKMinimap/api.html">API</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../GKML/index.html">Machine Learning</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../GKML/cartpole/1_Introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GKML/cartpole/2_Setup.html">Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GKML/cartpole/3_MLAdapter.html">MLAdapter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GKML/cartpole/4_Game.html">Make the game</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GKML/cartpole/5_Launching.html">Cartpole as a gym environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GKML/cartpole/6_Training.html">Training</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GKML/cartpole/7_Packaging.html">Packaging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GKML/issues.html">Known Issues</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">UnrealEngine</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../UnrealEngine/Developer.html">Developer Guide</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../UnrealEngine/Developer/Docs.html">Documentation Generation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../UnrealEngine/Developer/Compilation.html">Compilation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../UnrealEngine/Developer/Shaders/index.html">Shaders</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../UnrealEngine/Developer/Doxygen.html">Doxygen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../UnrealEngine/Developer/Contribution.html">Contributions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../UnrealEngine/Developer/ci.html">Continuous Integration</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../UnrealEngine/Game.html">Game</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../UnrealEngine/Game/GameFlow.html">GameFlow</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../UnrealEngine/Level/index.html">Level</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../UnrealEngine/Level/landscape.html">Landscape Creation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../UnrealEngine/Level/procedural.html">Procedural Level Generation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../UnrealEngine/Online.html">Online</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../UnrealEngine/Online/Multiplayer.html">Multiplayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../UnrealEngine/Online/MMO.html">Massively Multiplayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../UnrealEngine/Online/Competitive.html">Competitive</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../UnrealEngine/Online/Cheating.html">Cheating</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../UnrealEngine/Others.html">Others</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-16"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../UnrealEngine/Tips/index.html">Tips &amp; Tricks</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-17"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../UnrealEngine/Tips/Controllers/index.html">Controllers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../UnrealEngine/Tips/Cameras/index.html">Cameras</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../UnrealEngine/Tips/Cameras/configure.html">Cameras</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../UnrealEngine/Modding/index.html">Modding &amp; DLC</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Tools</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../../Tools/uetools.html">uetools</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../Tools/ranked.html">ranked</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../Tools/resources.html">Resources</a></li>
 </ul>
 
-        </div>
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
       </div>
-    </nav>
+      
+      <main id="main-content" class="bd-main">
+        
+        
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../../index.html">Gamekit</a>
-      </nav>
+<div class="sbt-scroll-pixel-helper"></div>
 
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
-  <ul class="wy-breadcrumbs">
-      <li><a href="../../../index.html" class="icon icon-home"></a></li>
-          <li class="breadcrumb-item"><a href="../../index.html">&lt;no title&gt;</a></li>
-          <li class="breadcrumb-item"><a href="../index.html">Fog of War</a></li>
-      <li class="breadcrumb-item active">Class UGKRayCasting_Less</li>
-      <li class="wy-breadcrumbs-aside">
-            <a href="../../../_sources/Plugins/GKFogOfWar/API/classUGKRayCasting__Less.rst.txt" rel="nofollow"> View page source</a>
-      </li>
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/Plugins/GKFogOfWar/API/classUGKRayCasting__Less.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
   </ul>
-  <hr/>
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-             
-  <section id="class-ugkraycasting-less">
-<span id="exhale-class-classugkraycasting-less"></span><h1>Class UGKRayCasting_Less<a class="headerlink" href="#class-ugkraycasting-less" title="Permalink to this headline"></a></h1>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>UGKRayCasting_Less</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inheritance-relationships">Inheritance Relationships</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#class-documentation">Class Documentation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv418UGKRayCasting_Less"><code class="docutils literal notranslate"><span class="pre">UGKRayCasting_Less</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N18UGKRayCasting_Less18UGKRayCasting_LessEv"><code class="docutils literal notranslate"><span class="pre">UGKRayCasting_Less::UGKRayCasting_Less()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N18UGKRayCasting_Less6MarginE"><code class="docutils literal notranslate"><span class="pre">UGKRayCasting_Less::Margin</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N18UGKRayCasting_Less25DrawObstructedLineOfSightEP15AGKFogOfWarTeamP20UGKFogOfWarComponent"><code class="docutils literal notranslate"><span class="pre">UGKRayCasting_Less::DrawObstructedLineOfSight()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N18UGKRayCasting_Less19CastLinesFromAnglesEP15AGKFogOfWarTeamP20UGKFogOfWarComponentR6TArrayIfE"><code class="docutils literal notranslate"><span class="pre">UGKRayCasting_Less::CastLinesFromAngles()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N18UGKRayCasting_Less17FillMissingAnglesEP20UGKFogOfWarComponentR6TArrayIfE"><code class="docutils literal notranslate"><span class="pre">UGKRayCasting_Less::FillMissingAngles()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N18UGKRayCasting_Less18Generate3TrianglesEP15AGKFogOfWarTeamP20UGKFogOfWarComponentRK8FVector4"><code class="docutils literal notranslate"><span class="pre">UGKRayCasting_Less::Generate3Triangles()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N18UGKRayCasting_Less17CastLineFromAngleEP15AGKFogOfWarTeamP20UGKFogOfWarComponentf"><code class="docutils literal notranslate"><span class="pre">UGKRayCasting_Less::CastLineFromAngle()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N18UGKRayCasting_Less16GenerateTriangleEP20UGKFogOfWarComponent7FVector7FVector7FVector"><code class="docutils literal notranslate"><span class="pre">UGKRayCasting_Less::GenerateTriangle()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N18UGKRayCasting_Less8CoverageE"><code class="docutils literal notranslate"><span class="pre">UGKRayCasting_Less::Coverage</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="ugkraycasting-less">
+<span id="exhale-class-classugkraycasting-less"></span><h1>UGKRayCasting_Less<a class="headerlink" href="#ugkraycasting-less" title="Link to this heading">#</a></h1>
 <ul class="simple">
 <li><p>Defined in <a class="reference internal" href="../../../_build/exhale/file_Source_GKFogOfWar_Public_Strategy_GK_FoW_RayCasting_V3.h.html#file-source-gkfogofwar-public-strategy-gk-fow-raycasting-v3-h"><span class="std std-ref">File GK_FoW_RayCasting_V3.h</span></a></p></li>
 </ul>
 <section id="inheritance-relationships">
-<h2>Inheritance Relationships<a class="headerlink" href="#inheritance-relationships" title="Permalink to this headline"></a></h2>
+<h2>Inheritance Relationships<a class="headerlink" href="#inheritance-relationships" title="Link to this heading">#</a></h2>
 <section id="base-type">
-<h3>Base Type<a class="headerlink" href="#base-type" title="Permalink to this headline"></a></h3>
+<h3>Base Type<a class="headerlink" href="#base-type" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">UGKRayCasting_Triangle</span></code> (<a class="reference internal" href="../../../_build/exhale/classUGKRayCasting__Triangle.html#exhale-class-classugkraycasting-triangle"><span class="std std-ref">Class UGKRayCasting_Triangle</span></a>)</p></li>
 </ul>
 </section>
 </section>
 <section id="class-documentation">
-<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this headline"></a></h2>
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Link to this heading">#</a></h2>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv418UGKRayCasting_Less">
-<span id="_CPPv318UGKRayCasting_Less"></span><span id="_CPPv218UGKRayCasting_Less"></span><span id="UGKRayCasting_Less"></span><span class="target" id="classUGKRayCasting__Less"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">UGKRayCasting_Less</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><a class="reference internal" href="classUGKRayCasting__Triangle.html#_CPPv422UGKRayCasting_Triangle" title="UGKRayCasting_Triangle"><span class="n"><span class="pre">UGKRayCasting_Triangle</span></span></a><a class="headerlink" href="#_CPPv418UGKRayCasting_Less" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv318UGKRayCasting_Less"></span><span id="_CPPv218UGKRayCasting_Less"></span><span id="UGKRayCasting_Less"></span><span class="target" id="classUGKRayCasting__Less"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">UGKRayCasting_Less</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><a class="reference internal" href="classUGKRayCasting__Triangle.html#_CPPv422UGKRayCasting_Triangle" title="UGKRayCasting_Triangle"><span class="n"><span class="pre">UGKRayCasting_Triangle</span></span></a><a class="headerlink" href="#_CPPv418UGKRayCasting_Less" title="Link to this definition">#</a><br /></dt>
 <dd><div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N18UGKRayCasting_Less18UGKRayCasting_LessEv">
-<span id="_CPPv3N18UGKRayCasting_Less18UGKRayCasting_LessEv"></span><span id="_CPPv2N18UGKRayCasting_Less18UGKRayCasting_LessEv"></span><span id="UGKRayCasting_Less::UGKRayCasting_Less"></span><span class="target" id="classUGKRayCasting__Less_1a6ad76c7adedbadff7f19323836d49607"></span><span class="sig-name descname"><span class="n"><span class="pre">UGKRayCasting_Less</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N18UGKRayCasting_Less18UGKRayCasting_LessEv" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N18UGKRayCasting_Less18UGKRayCasting_LessEv"></span><span id="_CPPv2N18UGKRayCasting_Less18UGKRayCasting_LessEv"></span><span id="UGKRayCasting_Less::UGKRayCasting_Less"></span><span class="target" id="classUGKRayCasting__Less_1a6ad76c7adedbadff7f19323836d49607"></span><span class="sig-name descname"><span class="n"><span class="pre">UGKRayCasting_Less</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N18UGKRayCasting_Less18UGKRayCasting_LessEv" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -172,7 +504,7 @@
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N18UGKRayCasting_Less6MarginE">
-<span id="_CPPv3N18UGKRayCasting_Less6MarginE"></span><span id="_CPPv2N18UGKRayCasting_Less6MarginE"></span><span id="UGKRayCasting_Less::Margin__float"></span><span class="target" id="classUGKRayCasting__Less_1a211052da360290c00855805d424d8102"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Margin</span></span></span><a class="headerlink" href="#_CPPv4N18UGKRayCasting_Less6MarginE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N18UGKRayCasting_Less6MarginE"></span><span id="_CPPv2N18UGKRayCasting_Less6MarginE"></span><span id="UGKRayCasting_Less::Margin__float"></span><span class="target" id="classUGKRayCasting__Less_1a211052da360290c00855805d424d8102"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Margin</span></span></span><a class="headerlink" href="#_CPPv4N18UGKRayCasting_Less6MarginE" title="Link to this definition">#</a><br /></dt>
 <dd><p>Margin for Actor Rays. </p>
 </dd></dl>
 
@@ -181,13 +513,13 @@
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-protected-functions">Protected Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N18UGKRayCasting_Less25DrawObstructedLineOfSightEP15AGKFogOfWarTeamP20UGKFogOfWarComponent">
-<span id="_CPPv3N18UGKRayCasting_Less25DrawObstructedLineOfSightEP15AGKFogOfWarTeamP20UGKFogOfWarComponent"></span><span id="_CPPv2N18UGKRayCasting_Less25DrawObstructedLineOfSightEP15AGKFogOfWarTeamP20UGKFogOfWarComponent"></span><span id="UGKRayCasting_Less::DrawObstructedLineOfSight__AGKFogOfWarTeamP.UGKFogOfWarComponentP"></span><span class="target" id="classUGKRayCasting__Less_1a96d74930949849af93f508aa1b3ca2ee"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DrawObstructedLineOfSight</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">class</span></span><span class="w"> </span><a class="reference internal" href="classAGKFogOfWarTeam.html#_CPPv415AGKFogOfWarTeam" title="AGKFogOfWarTeam"><span class="n"><span class="pre">AGKFogOfWarTeam</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">FactionFog</span></span>, <a class="reference internal" href="classUGKFogOfWarComponent.html#_CPPv420UGKFogOfWarComponent" title="UGKFogOfWarComponent"><span class="n"><span class="pre">UGKFogOfWarComponent</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">c</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N18UGKRayCasting_Less25DrawObstructedLineOfSightEP15AGKFogOfWarTeamP20UGKFogOfWarComponent" title="Permalink to this definition"></a><br /></dt>
-<dd><p>V3 find all the obstacle and try to draw more traces neat the bounds There is a sorting problem, the angles behaves a bit strangely although they are sorted the triangles are not drawn correctly <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">*</span><span class="w"> </span><span class="n">Generate</span><span class="w"> </span><span class="n">minimum</span><span class="w"> </span><span class="n">Line</span><span class="w"> </span><span class="n">traces</span><span class="w"> </span><span class="o">&lt;----------------------------+</span><span class="w"></span>
-<span class="o">*</span><span class="w"> </span><span class="n">Get</span><span class="w"> </span><span class="n">all</span><span class="w"> </span><span class="n">obstacle</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">radius</span><span class="w">                              </span><span class="o">|</span><span class="w"></span>
-<span class="o">*</span><span class="w"> </span><span class="n">For</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">obstacle</span><span class="w"> </span><span class="n">add</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="n">traces</span><span class="w">                            </span><span class="o">|</span><span class="w"></span>
-<span class="o">*</span><span class="w"> </span><span class="n">Add</span><span class="w"> </span><span class="n">Line</span><span class="w"> </span><span class="n">traces</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">angle</span><span class="w"> </span><span class="n">between</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="n">traces</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">too</span><span class="w"> </span><span class="n">wide</span><span class="w"> </span><span class="o">&lt;--+</span><span class="w"></span>
-<span class="o">*</span><span class="w"> </span><span class="n">Generate</span><span class="w"> </span><span class="n">triangles</span><span class="w"></span>
-<span class="o">*</span><span class="w"> </span><span class="n">Draw</span><span class="w"></span>
+<span id="_CPPv3N18UGKRayCasting_Less25DrawObstructedLineOfSightEP15AGKFogOfWarTeamP20UGKFogOfWarComponent"></span><span id="_CPPv2N18UGKRayCasting_Less25DrawObstructedLineOfSightEP15AGKFogOfWarTeamP20UGKFogOfWarComponent"></span><span id="UGKRayCasting_Less::DrawObstructedLineOfSight__AGKFogOfWarTeamP.UGKFogOfWarComponentP"></span><span class="target" id="classUGKRayCasting__Less_1a96d74930949849af93f508aa1b3ca2ee"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DrawObstructedLineOfSight</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">class</span></span><span class="w"> </span><a class="reference internal" href="classAGKFogOfWarTeam.html#_CPPv415AGKFogOfWarTeam" title="AGKFogOfWarTeam"><span class="n"><span class="pre">AGKFogOfWarTeam</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">FactionFog</span></span>, <a class="reference internal" href="classUGKFogOfWarComponent.html#_CPPv420UGKFogOfWarComponent" title="UGKFogOfWarComponent"><span class="n"><span class="pre">UGKFogOfWarComponent</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">c</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N18UGKRayCasting_Less25DrawObstructedLineOfSightEP15AGKFogOfWarTeamP20UGKFogOfWarComponent" title="Link to this definition">#</a><br /></dt>
+<dd><p>V3 find all the obstacle and try to draw more traces neat the bounds There is a sorting problem, the angles behaves a bit strangely although they are sorted the triangles are not drawn correctly <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">*</span><span class="w"> </span><span class="n">Generate</span><span class="w"> </span><span class="n">minimum</span><span class="w"> </span><span class="n">Line</span><span class="w"> </span><span class="n">traces</span><span class="w"> </span><span class="o">&lt;----------------------------+</span>
+<span class="o">*</span><span class="w"> </span><span class="n">Get</span><span class="w"> </span><span class="n">all</span><span class="w"> </span><span class="n">obstacle</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">radius</span><span class="w">                              </span><span class="o">|</span>
+<span class="o">*</span><span class="w"> </span><span class="n">For</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">obstacle</span><span class="w"> </span><span class="n">add</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="n">traces</span><span class="w">                            </span><span class="o">|</span>
+<span class="o">*</span><span class="w"> </span><span class="n">Add</span><span class="w"> </span><span class="n">Line</span><span class="w"> </span><span class="n">traces</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">angle</span><span class="w"> </span><span class="n">between</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="n">traces</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">too</span><span class="w"> </span><span class="n">wide</span><span class="w"> </span><span class="o">&lt;--+</span>
+<span class="o">*</span><span class="w"> </span><span class="n">Generate</span><span class="w"> </span><span class="n">triangles</span>
+<span class="o">*</span><span class="w"> </span><span class="n">Draw</span>
 </pre></div>
 </div>
  </p>
@@ -195,28 +527,28 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N18UGKRayCasting_Less19CastLinesFromAnglesEP15AGKFogOfWarTeamP20UGKFogOfWarComponentR6TArrayIfE">
-<span id="_CPPv3N18UGKRayCasting_Less19CastLinesFromAnglesEP15AGKFogOfWarTeamP20UGKFogOfWarComponentR6TArrayIfE"></span><span id="_CPPv2N18UGKRayCasting_Less19CastLinesFromAnglesEP15AGKFogOfWarTeamP20UGKFogOfWarComponentR6TArrayIfE"></span><span id="UGKRayCasting_Less::CastLinesFromAngles__AGKFogOfWarTeamP.UGKFogOfWarComponentP.TArray:float:R"></span><span class="target" id="classUGKRayCasting__Less_1a8b38834e356ff4189f39cab5f0d21be8"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CastLinesFromAngles</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">class</span></span><span class="w"> </span><a class="reference internal" href="classAGKFogOfWarTeam.html#_CPPv415AGKFogOfWarTeam" title="AGKFogOfWarTeam"><span class="n"><span class="pre">AGKFogOfWarTeam</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">FactionFog</span></span>, <a class="reference internal" href="classUGKFogOfWarComponent.html#_CPPv420UGKFogOfWarComponent" title="UGKFogOfWarComponent"><span class="n"><span class="pre">UGKFogOfWarComponent</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">c</span></span>, <span class="n"><span class="pre">TArray</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">Angles</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N18UGKRayCasting_Less19CastLinesFromAnglesEP15AGKFogOfWarTeamP20UGKFogOfWarComponentR6TArrayIfE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N18UGKRayCasting_Less19CastLinesFromAnglesEP15AGKFogOfWarTeamP20UGKFogOfWarComponentR6TArrayIfE"></span><span id="_CPPv2N18UGKRayCasting_Less19CastLinesFromAnglesEP15AGKFogOfWarTeamP20UGKFogOfWarComponentR6TArrayIfE"></span><span id="UGKRayCasting_Less::CastLinesFromAngles__AGKFogOfWarTeamP.UGKFogOfWarComponentP.TArray:float:R"></span><span class="target" id="classUGKRayCasting__Less_1a8b38834e356ff4189f39cab5f0d21be8"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CastLinesFromAngles</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">class</span></span><span class="w"> </span><a class="reference internal" href="classAGKFogOfWarTeam.html#_CPPv415AGKFogOfWarTeam" title="AGKFogOfWarTeam"><span class="n"><span class="pre">AGKFogOfWarTeam</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">FactionFog</span></span>, <a class="reference internal" href="classUGKFogOfWarComponent.html#_CPPv420UGKFogOfWarComponent" title="UGKFogOfWarComponent"><span class="n"><span class="pre">UGKFogOfWarComponent</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">c</span></span>, <span class="n"><span class="pre">TArray</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">Angles</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N18UGKRayCasting_Less19CastLinesFromAnglesEP15AGKFogOfWarTeamP20UGKFogOfWarComponentR6TArrayIfE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N18UGKRayCasting_Less17FillMissingAnglesEP20UGKFogOfWarComponentR6TArrayIfE">
-<span id="_CPPv3N18UGKRayCasting_Less17FillMissingAnglesEP20UGKFogOfWarComponentR6TArrayIfE"></span><span id="_CPPv2N18UGKRayCasting_Less17FillMissingAnglesEP20UGKFogOfWarComponentR6TArrayIfE"></span><span id="UGKRayCasting_Less::FillMissingAngles__UGKFogOfWarComponentP.TArray:float:R"></span><span class="target" id="classUGKRayCasting__Less_1a9cd5432b7f9ff9332bf96f08062153b7"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FillMissingAngles</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classUGKFogOfWarComponent.html#_CPPv420UGKFogOfWarComponent" title="UGKFogOfWarComponent"><span class="n"><span class="pre">UGKFogOfWarComponent</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">c</span></span>, <span class="n"><span class="pre">TArray</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">Angles</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N18UGKRayCasting_Less17FillMissingAnglesEP20UGKFogOfWarComponentR6TArrayIfE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N18UGKRayCasting_Less17FillMissingAnglesEP20UGKFogOfWarComponentR6TArrayIfE"></span><span id="_CPPv2N18UGKRayCasting_Less17FillMissingAnglesEP20UGKFogOfWarComponentR6TArrayIfE"></span><span id="UGKRayCasting_Less::FillMissingAngles__UGKFogOfWarComponentP.TArray:float:R"></span><span class="target" id="classUGKRayCasting__Less_1a9cd5432b7f9ff9332bf96f08062153b7"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FillMissingAngles</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classUGKFogOfWarComponent.html#_CPPv420UGKFogOfWarComponent" title="UGKFogOfWarComponent"><span class="n"><span class="pre">UGKFogOfWarComponent</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">c</span></span>, <span class="n"><span class="pre">TArray</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">Angles</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N18UGKRayCasting_Less17FillMissingAnglesEP20UGKFogOfWarComponentR6TArrayIfE" title="Link to this definition">#</a><br /></dt>
 <dd><p>Make sure we do a full turn TODO: support field of view != 360 </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N18UGKRayCasting_Less18Generate3TrianglesEP15AGKFogOfWarTeamP20UGKFogOfWarComponentRK8FVector4">
-<span id="_CPPv3N18UGKRayCasting_Less18Generate3TrianglesEP15AGKFogOfWarTeamP20UGKFogOfWarComponentRK8FVector4"></span><span id="_CPPv2N18UGKRayCasting_Less18Generate3TrianglesEP15AGKFogOfWarTeamP20UGKFogOfWarComponentRK8FVector4"></span><span id="UGKRayCasting_Less::Generate3Triangles__AGKFogOfWarTeamP.UGKFogOfWarComponentP.FVector4CR"></span><span class="target" id="classUGKRayCasting__Less_1aadd63640edfd02fb01747eb282a9177d"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Generate3Triangles</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">class</span></span><span class="w"> </span><a class="reference internal" href="classAGKFogOfWarTeam.html#_CPPv415AGKFogOfWarTeam" title="AGKFogOfWarTeam"><span class="n"><span class="pre">AGKFogOfWarTeam</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">FactionFog</span></span>, <a class="reference internal" href="classUGKFogOfWarComponent.html#_CPPv420UGKFogOfWarComponent" title="UGKFogOfWarComponent"><span class="n"><span class="pre">UGKFogOfWarComponent</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">c</span></span>, <span class="n"><span class="pre">FVector4</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">Angles</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N18UGKRayCasting_Less18Generate3TrianglesEP15AGKFogOfWarTeamP20UGKFogOfWarComponentRK8FVector4" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N18UGKRayCasting_Less18Generate3TrianglesEP15AGKFogOfWarTeamP20UGKFogOfWarComponentRK8FVector4"></span><span id="_CPPv2N18UGKRayCasting_Less18Generate3TrianglesEP15AGKFogOfWarTeamP20UGKFogOfWarComponentRK8FVector4"></span><span id="UGKRayCasting_Less::Generate3Triangles__AGKFogOfWarTeamP.UGKFogOfWarComponentP.FVector4CR"></span><span class="target" id="classUGKRayCasting__Less_1aadd63640edfd02fb01747eb282a9177d"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Generate3Triangles</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">class</span></span><span class="w"> </span><a class="reference internal" href="classAGKFogOfWarTeam.html#_CPPv415AGKFogOfWarTeam" title="AGKFogOfWarTeam"><span class="n"><span class="pre">AGKFogOfWarTeam</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">FactionFog</span></span>, <a class="reference internal" href="classUGKFogOfWarComponent.html#_CPPv420UGKFogOfWarComponent" title="UGKFogOfWarComponent"><span class="n"><span class="pre">UGKFogOfWarComponent</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">c</span></span>, <span class="n"><span class="pre">FVector4</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">Angles</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N18UGKRayCasting_Less18Generate3TrianglesEP15AGKFogOfWarTeamP20UGKFogOfWarComponentRK8FVector4" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N18UGKRayCasting_Less17CastLineFromAngleEP15AGKFogOfWarTeamP20UGKFogOfWarComponentf">
-<span id="_CPPv3N18UGKRayCasting_Less17CastLineFromAngleEP15AGKFogOfWarTeamP20UGKFogOfWarComponentf"></span><span id="_CPPv2N18UGKRayCasting_Less17CastLineFromAngleEP15AGKFogOfWarTeamP20UGKFogOfWarComponentf"></span><span id="UGKRayCasting_Less::CastLineFromAngle__AGKFogOfWarTeamP.UGKFogOfWarComponentP.float"></span><span class="target" id="classUGKRayCasting__Less_1a20dd7df22159cb8bc09619653c824bee"></span><a class="reference internal" href="../../../_build/exhale/structFGKLinePoints.html#_CPPv413FGKLinePoints" title="FGKLinePoints"><span class="n"><span class="pre">FGKLinePoints</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CastLineFromAngle</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">class</span></span><span class="w"> </span><a class="reference internal" href="classAGKFogOfWarTeam.html#_CPPv415AGKFogOfWarTeam" title="AGKFogOfWarTeam"><span class="n"><span class="pre">AGKFogOfWarTeam</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">FactionFog</span></span>, <a class="reference internal" href="classUGKFogOfWarComponent.html#_CPPv420UGKFogOfWarComponent" title="UGKFogOfWarComponent"><span class="n"><span class="pre">UGKFogOfWarComponent</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">c</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">Angle</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N18UGKRayCasting_Less17CastLineFromAngleEP15AGKFogOfWarTeamP20UGKFogOfWarComponentf" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N18UGKRayCasting_Less17CastLineFromAngleEP15AGKFogOfWarTeamP20UGKFogOfWarComponentf"></span><span id="_CPPv2N18UGKRayCasting_Less17CastLineFromAngleEP15AGKFogOfWarTeamP20UGKFogOfWarComponentf"></span><span id="UGKRayCasting_Less::CastLineFromAngle__AGKFogOfWarTeamP.UGKFogOfWarComponentP.float"></span><span class="target" id="classUGKRayCasting__Less_1a20dd7df22159cb8bc09619653c824bee"></span><a class="reference internal" href="../../../_build/exhale/structFGKLinePoints.html#_CPPv413FGKLinePoints" title="FGKLinePoints"><span class="n"><span class="pre">FGKLinePoints</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CastLineFromAngle</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">class</span></span><span class="w"> </span><a class="reference internal" href="classAGKFogOfWarTeam.html#_CPPv415AGKFogOfWarTeam" title="AGKFogOfWarTeam"><span class="n"><span class="pre">AGKFogOfWarTeam</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">FactionFog</span></span>, <a class="reference internal" href="classUGKFogOfWarComponent.html#_CPPv420UGKFogOfWarComponent" title="UGKFogOfWarComponent"><span class="n"><span class="pre">UGKFogOfWarComponent</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">c</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">Angle</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N18UGKRayCasting_Less17CastLineFromAngleEP15AGKFogOfWarTeamP20UGKFogOfWarComponentf" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N18UGKRayCasting_Less16GenerateTriangleEP20UGKFogOfWarComponent7FVector7FVector7FVector">
-<span id="_CPPv3N18UGKRayCasting_Less16GenerateTriangleEP20UGKFogOfWarComponent7FVector7FVector7FVector"></span><span id="_CPPv2N18UGKRayCasting_Less16GenerateTriangleEP20UGKFogOfWarComponent7FVector7FVector7FVector"></span><span id="UGKRayCasting_Less::GenerateTriangle__UGKFogOfWarComponentP.FVector.FVector.FVector"></span><span class="target" id="classUGKRayCasting__Less_1af74721063cc37bcb96ce498e00eb811f"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GenerateTriangle</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classUGKFogOfWarComponent.html#_CPPv420UGKFogOfWarComponent" title="UGKFogOfWarComponent"><span class="n"><span class="pre">UGKFogOfWarComponent</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">c</span></span>, <span class="n"><span class="pre">FVector</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">Start</span></span>, <span class="n"><span class="pre">FVector</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">End1</span></span>, <span class="n"><span class="pre">FVector</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">End2</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N18UGKRayCasting_Less16GenerateTriangleEP20UGKFogOfWarComponent7FVector7FVector7FVector" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N18UGKRayCasting_Less16GenerateTriangleEP20UGKFogOfWarComponent7FVector7FVector7FVector"></span><span id="_CPPv2N18UGKRayCasting_Less16GenerateTriangleEP20UGKFogOfWarComponent7FVector7FVector7FVector"></span><span id="UGKRayCasting_Less::GenerateTriangle__UGKFogOfWarComponentP.FVector.FVector.FVector"></span><span class="target" id="classUGKRayCasting__Less_1af74721063cc37bcb96ce498e00eb811f"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GenerateTriangle</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classUGKFogOfWarComponent.html#_CPPv420UGKFogOfWarComponent" title="UGKFogOfWarComponent"><span class="n"><span class="pre">UGKFogOfWarComponent</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">c</span></span>, <span class="n"><span class="pre">FVector</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">Start</span></span>, <span class="n"><span class="pre">FVector</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">End1</span></span>, <span class="n"><span class="pre">FVector</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">End2</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N18UGKRayCasting_Less16GenerateTriangleEP20UGKFogOfWarComponent7FVector7FVector7FVector" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -224,7 +556,7 @@
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-protected-attributes">Protected Attributes</p>
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N18UGKRayCasting_Less8CoverageE">
-<span id="_CPPv3N18UGKRayCasting_Less8CoverageE"></span><span id="_CPPv2N18UGKRayCasting_Less8CoverageE"></span><span id="UGKRayCasting_Less::Coverage__TArray:FVector2D:"></span><span class="target" id="classUGKRayCasting__Less_1a064f33be25eac6afb1124f59aa6b4940"></span><span class="n"><span class="pre">TArray</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">FVector2D</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Coverage</span></span></span><a class="headerlink" href="#_CPPv4N18UGKRayCasting_Less8CoverageE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N18UGKRayCasting_Less8CoverageE"></span><span id="_CPPv2N18UGKRayCasting_Less8CoverageE"></span><span id="UGKRayCasting_Less::Coverage__TArray:FVector2D:"></span><span class="target" id="classUGKRayCasting__Less_1a064f33be25eac6afb1124f59aa6b4940"></span><span class="n"><span class="pre">TArray</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">FVector2D</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Coverage</span></span></span><a class="headerlink" href="#_CPPv4N18UGKRayCasting_Less8CoverageE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -234,34 +566,121 @@
 </section>
 
 
-           </div>
-          </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="classUGKGPUUpscalerStrategy.html" class="btn btn-neutral float-left" title="Class UGKGPUUpscalerStrategy" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="classUGKRayCasting__Line.html" class="btn btn-neutral float-right" title="Class UGKRayCasting_Line" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
+                </article>
+              
 
-  <hr/>
-
-  <div role="contentinfo">
-    <p>&#169; Copyright 2024.</p>
-  </div>
-
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   
-
-</footer>
-        </div>
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="classUGKGPUUpscalerStrategy.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">UGKGPUUpscalerStrategy</p>
       </div>
-    </section>
-  </div>
-  <script>
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script> 
+    </a>
+    <a class="right-next"
+       href="classUGKRayCasting__Line.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">UGKRayCasting_Line</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
-</body>
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inheritance-relationships">Inheritance Relationships</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#class-documentation">Class Documentation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv418UGKRayCasting_Less"><code class="docutils literal notranslate"><span class="pre">UGKRayCasting_Less</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N18UGKRayCasting_Less18UGKRayCasting_LessEv"><code class="docutils literal notranslate"><span class="pre">UGKRayCasting_Less::UGKRayCasting_Less()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N18UGKRayCasting_Less6MarginE"><code class="docutils literal notranslate"><span class="pre">UGKRayCasting_Less::Margin</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N18UGKRayCasting_Less25DrawObstructedLineOfSightEP15AGKFogOfWarTeamP20UGKFogOfWarComponent"><code class="docutils literal notranslate"><span class="pre">UGKRayCasting_Less::DrawObstructedLineOfSight()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N18UGKRayCasting_Less19CastLinesFromAnglesEP15AGKFogOfWarTeamP20UGKFogOfWarComponentR6TArrayIfE"><code class="docutils literal notranslate"><span class="pre">UGKRayCasting_Less::CastLinesFromAngles()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N18UGKRayCasting_Less17FillMissingAnglesEP20UGKFogOfWarComponentR6TArrayIfE"><code class="docutils literal notranslate"><span class="pre">UGKRayCasting_Less::FillMissingAngles()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N18UGKRayCasting_Less18Generate3TrianglesEP15AGKFogOfWarTeamP20UGKFogOfWarComponentRK8FVector4"><code class="docutils literal notranslate"><span class="pre">UGKRayCasting_Less::Generate3Triangles()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N18UGKRayCasting_Less17CastLineFromAngleEP15AGKFogOfWarTeamP20UGKFogOfWarComponentf"><code class="docutils literal notranslate"><span class="pre">UGKRayCasting_Less::CastLineFromAngle()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N18UGKRayCasting_Less16GenerateTriangleEP20UGKFogOfWarComponent7FVector7FVector7FVector"><code class="docutils literal notranslate"><span class="pre">UGKRayCasting_Less::GenerateTriangle()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N18UGKRayCasting_Less8CoverageE"><code class="docutils literal notranslate"><span class="pre">UGKRayCasting_Less::Coverage</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Pierre Delaunay
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
 </html>
