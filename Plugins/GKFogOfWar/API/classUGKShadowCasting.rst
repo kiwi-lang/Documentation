@@ -1,6 +1,6 @@
 .. _exhale_class_classUGKShadowCasting:
 
-Class UGKShadowCasting
+UGKShadowCasting
 ======================
 
 - Defined in :ref:`file_Source_GKFogOfWar_Public_Strategy_GK_FoW_ShadowCasting.h`

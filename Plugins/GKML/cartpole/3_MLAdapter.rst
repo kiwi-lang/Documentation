@@ -24,7 +24,7 @@ information about the game.
 
 This can be used to train neural networks to play games.
 
-.. image:: /_static/cartpole_setup.png
+.. image:: /_static/ML/cartpole_setup.png
    :width: 100%
 
 
@@ -33,5 +33,5 @@ Architecture
 
 A more detailed overview of MLAdapter
 
-.. image:: /_static/UE4ML_System.png
+.. image:: /_static/ML/UE4ML_System.png
    :width: 100%

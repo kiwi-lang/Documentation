@@ -1,6 +1,6 @@
 .. _exhale_class_classIGKFogOfWarGameStateInterface:
 
-Class IGKFogOfWarGameStateInterface
+IGKFogOfWarGameStateInterface
 ===================================
 
 - Defined in :ref:`file_Source_GKFogOfWar_Public_GKFogOfWarGameState.h`

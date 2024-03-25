@@ -1,7 +1,7 @@
 .. _exhale_class_classAGKFogOfWarGameMode:
 
-Class AGKFogOfWarGameMode
-=========================
+AGKFogOfWarGameMode
+===================
 
 - Defined in :ref:`file_Source_GKFogOfWar_Public_GKFogOfWarGameMode.h`
 

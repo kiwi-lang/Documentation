@@ -1,6 +1,6 @@
 .. _exhale_class_classIGKFogOfWarAgentInterface:
 
-Class IGKFogOfWarAgentInterface
+IGKFogOfWarAgentInterface
 ===============================
 
 - Defined in :ref:`file_Source_GKFogOfWar_Public_GKFogOfWarTypes.h`

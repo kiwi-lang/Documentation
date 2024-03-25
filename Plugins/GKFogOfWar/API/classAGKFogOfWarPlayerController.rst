@@ -1,6 +1,6 @@
 .. _exhale_class_classAGKFogOfWarPlayerController:
 
-Class AGKFogOfWarPlayerController
+AGKFogOfWarPlayerController
 =================================
 
 - Defined in :ref:`file_Source_GKFogOfWar_Public_GKFogOfWarPlayerController.h`

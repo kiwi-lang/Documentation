@@ -1,6 +1,10 @@
 Machine Learning
 ================
 
+* Tag: |GKML_tag|
+* Identifier: |GKML_identifier|
+* Commit: |GKML_commit|
+
 .. image:: https://readthedocs.org/projects/cartpole/badge/?version=latest
    :target: https://delaunay.github.io/GKMachineLearning/
    :alt: Documentation Status
@@ -9,7 +13,7 @@ UE5 plugin providing tools for machine learning.
 This plugin documents how to use the MLAdapter plugin for machine learning
 by reimplementing the Cartpole environment.
 
-.. image:: /_static/Cartpole_big.png
+.. image:: /_static/ML/Cartpole_big.png
 
 
 Requirements

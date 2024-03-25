@@ -1,6 +1,6 @@
 .. _exhale_class_classUGKCanvasUpscaler:
 
-Class UGKCanvasUpscaler
+UGKCanvasUpscaler
 =======================
 
 - Defined in :ref:`file_Source_GKFogOfWar_Public_Upscaler_GKCanvasUpscaler.h`

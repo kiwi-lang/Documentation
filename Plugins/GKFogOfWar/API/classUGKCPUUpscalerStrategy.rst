@@ -1,6 +1,6 @@
 .. _exhale_class_classUGKCPUUpscalerStrategy:
 
-Class UGKCPUUpscalerStrategy
+UGKCPUUpscalerStrategy
 ============================
 
 - Defined in :ref:`file_Source_GKFogOfWar_Public_Upscaler_GK_CPU_Upscaler.h`

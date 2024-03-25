@@ -28,7 +28,7 @@ System Overview
 The game coordinator
 ^^^^^^^^^^^^^^^^^^^^
 
-.. image :: /_static/SkilDistribution.png
+.. image :: /_static/ranked/SkilDistribution.png
 
 Its goal is to group players with similar skill, to provide interesting games;
 To group players it needs first to estimate skill of each players using a rating system.

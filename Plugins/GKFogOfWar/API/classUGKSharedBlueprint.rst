@@ -1,6 +1,6 @@
 .. _exhale_class_classUGKSharedBlueprint:
 
-Class UGKSharedBlueprint
+UGKSharedBlueprint
 ========================
 
 - Defined in :ref:`file_Source_GKFogOfWar_Public_Shared_GKShared_Blueprint.h`

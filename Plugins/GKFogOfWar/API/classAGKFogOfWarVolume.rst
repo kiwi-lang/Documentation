@@ -1,6 +1,6 @@
 .. _exhale_class_classAGKFogOfWarVolume:
 
-Class AGKFogOfWarVolume
+AGKFogOfWarVolume
 =======================
 
 - Defined in :ref:`file_Source_GKFogOfWar_Public_GKFogOfWarVolume.h`

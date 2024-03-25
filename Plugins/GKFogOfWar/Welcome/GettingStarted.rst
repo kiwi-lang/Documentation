@@ -259,10 +259,10 @@ Classes
 Initialization Flow
 ^^^^^^^^^^^^^^^^^^
 
-.. image:: /_static/InitializationFlow.png
+.. image:: /_static/FogOfWar/InitializationFlow.png
 
 
 Replication Flow
 ^^^^^^^^^^^^^^^^
 
-.. image:: /_static/ReplicationFlow.png
+.. image:: /_static/FogOfWar/ReplicationFlow.png

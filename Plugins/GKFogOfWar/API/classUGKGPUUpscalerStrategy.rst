@@ -1,6 +1,6 @@
 .. _exhale_class_classUGKGPUUpscalerStrategy:
 
-Class UGKGPUUpscalerStrategy
+UGKGPUUpscalerStrategy
 ============================
 
 - Defined in :ref:`file_Source_GKFogOfWar_Public_Upscaler_GK_GPU_Upscaler.h`

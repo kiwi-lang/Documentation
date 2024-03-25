@@ -1,6 +1,6 @@
 .. _exhale_class_classFGKFogOfWarShaderModule:
 
-Class FGKFogOfWarShaderModule
+FGKFogOfWarShaderModule
 =============================
 
 - Defined in :ref:`file_Source_GKFogOfWarShader_Public_GKFogOfWarShader.h`

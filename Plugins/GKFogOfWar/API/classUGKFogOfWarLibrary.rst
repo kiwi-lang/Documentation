@@ -1,6 +1,6 @@
 .. _exhale_class_classUGKFogOfWarLibrary:
 
-Class UGKFogOfWarLibrary
+UGKFogOfWarLibrary
 ========================
 
 - Defined in :ref:`file_Source_GKFogOfWar_Public_GKFogOfWarLibrary.h`

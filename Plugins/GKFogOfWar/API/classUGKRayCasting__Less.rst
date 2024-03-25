@@ -1,6 +1,6 @@
 .. _exhale_class_classUGKRayCasting__Less:
 
-Class UGKRayCasting_Less
+UGKRayCasting_Less
 ========================
 
 - Defined in :ref:`file_Source_GKFogOfWar_Public_Strategy_GK_FoW_RayCasting_V3.h`

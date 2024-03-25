@@ -32,7 +32,7 @@ After spawning a few 100 units my FPS drops
     * Select the Game Thread and you will be able to see something like below
 
 
-.. image:: /_static/FAQ/GKFogOfWar_Profiling.PNG
+.. image:: /_static/FogOfWar/FAQ/GKFogOfWar_Profiling.PNG
 
 
 Disable exploration

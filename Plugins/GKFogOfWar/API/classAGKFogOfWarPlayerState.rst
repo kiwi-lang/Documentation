@@ -1,6 +1,6 @@
 .. _exhale_class_classAGKFogOfWarPlayerState:
 
-Class AGKFogOfWarPlayerState
+AGKFogOfWarPlayerState
 ============================
 
 - Defined in :ref:`file_Source_GKFogOfWar_Public_GKFogOfWarPlayerState.h`

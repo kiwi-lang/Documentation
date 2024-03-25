@@ -14,6 +14,6 @@ The colors used are:
 * Green: Active vision
 * Blue: Exploration
 
-.. image:: /_static/DebugView.png
+.. image:: /_static/FogOfWar/DebugView.png
 
 

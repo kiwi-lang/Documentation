@@ -1,7 +1,7 @@
 Make the game
 ~~~~~~~~~~~~~
 
-.. image:: /_static/cartpole_overview.png
+.. image:: /_static/ML/cartpole_overview.png
    :width: 100%
 
 

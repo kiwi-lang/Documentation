@@ -1,6 +1,6 @@
 .. _exhale_class_classUGKExplorationTransform:
 
-Class UGKExplorationTransform
+UGKExplorationTransform
 =============================
 
 - Defined in :ref:`file_Source_GKFogOfWar_Public_Upscaler_GKExplorationTransform.h`

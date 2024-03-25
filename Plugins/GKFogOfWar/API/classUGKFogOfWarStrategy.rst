@@ -1,6 +1,6 @@
 .. _exhale_class_classUGKFogOfWarStrategy:
 
-Class UGKFogOfWarStrategy
+UGKFogOfWarStrategy
 =========================
 
 - Defined in :ref:`file_Source_GKFogOfWar_Public_Strategy_GK_FoW_Strategy.h`

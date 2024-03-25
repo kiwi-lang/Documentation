@@ -1,6 +1,6 @@
 .. _exhale_class_classUGKRayCasting__Triangle:
 
-Class UGKRayCasting_Triangle
+UGKRayCasting_Triangle
 ============================
 
 - Defined in :ref:`file_Source_GKFogOfWar_Public_Strategy_GK_FoW_RayCasting_V2.h`

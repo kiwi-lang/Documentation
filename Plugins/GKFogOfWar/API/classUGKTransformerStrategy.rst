@@ -1,6 +1,6 @@
 .. _exhale_class_classUGKTransformerStrategy:
 
-Class UGKTransformerStrategy
+UGKTransformerStrategy
 ============================
 
 - Defined in :ref:`file_Source_GKFogOfWar_Public_Upscaler_GK_Upscaler_Strategy.h`

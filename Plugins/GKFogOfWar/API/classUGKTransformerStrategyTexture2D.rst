@@ -1,6 +1,6 @@
 .. _exhale_class_classUGKTransformerStrategyTexture2D:
 
-Class UGKTransformerStrategyTexture2D
+UGKTransformerStrategyTexture2D
 =====================================
 
 - Defined in :ref:`file_Source_GKFogOfWar_Public_Upscaler_GK_Upscaler_Strategy.h`

@@ -1,10 +1,13 @@
 Fog of War
 ==========
 
+* Tag: |GKFogOfWar_tag|
+* Identifier: |GKFogOfWar_identifier|
+* Commit: |GKFogOfWar_commit|
+
 .. raw:: html
 
    <iframe width="696" height="391" src="https://www.youtube.com/embed/R84bn8KMARA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
 
 Features
 --------
@@ -42,48 +45,23 @@ Useful Links
 * `Twitter <https://twitter.com/SetepenreKit>`_
 
 
+Getting Started
+---------------
+
 .. toctree::
-   :caption: Welcome
 
    Welcome/Installations
    Welcome/GettingStarted
    Welcome/FrequentQuestions
    Welcome/Changelog
 
+
+API
+---
+
 .. toctree::
-   :caption: C++ API
 
-   API/classAGKFogOfWarCharacter.rst 
-   API/classAGKFogOfWarGameMode.rst 
-   API/classAGKFogOfWarGameState.rst 
-   API/classAGKFogOfWarObstacle.rst 
-   API/classAGKFogOfWarPawn.rst 
-   API/classAGKFogOfWarPlayerController.rst 
-   API/classAGKFogOfWarPlayerState.rst 
-   API/classAGKFogOfWarPrivatePlayerState.rst 
-   API/classAGKFogOfWarTeam.rst 
-   API/classAGKFogOfWarVolume.rst 
-   API/classFGKFogOfWarModule.rst 
-   API/classFGKFogOfWarShaderModule.rst 
-   API/classIGKFogOfWarAgentInterface.rst 
-   API/classIGKFogOfWarGameStateInterface.rst 
-   API/classIGKFogOfWarTestModule.rst
-   API/classUGKCanvasUpscaler.rst 
-   API/classUGKCPUUpscalerStrategy.rst 
-   API/classUGKExplorationTransform.rst 
-   API/classUGKFogOfWarComponent.rst 
-   API/classUGKFogOfWarLibrary.rst 
-   API/classUGKFogOfWarStrategy.rst 
-   API/classUGKGPUUpscalerStrategy.rst 
-   API/classUGKRayCasting__Less.rst 
-   API/classUGKRayCasting__Line.rst 
-   API/classUGKRayCasting__Triangle.rst 
-   API/classUGKShadowCasting.rst 
-   API/classUGKSharedBlueprint.rst 
-   API/classUGKTransformerStrategy.rst 
-   API/classUGKTransformerStrategyCanvas.rst 
-   API/classUGKTransformerStrategyTexture2D.rst
-
+   api
 
 Indices and tables
 ~~~~~~~~~~~~~~~~~~

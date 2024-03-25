@@ -1,6 +1,6 @@
 .. _exhale_class_classFGKFogOfWarModule:
 
-Class FGKFogOfWarModule
+FGKFogOfWarModule
 =======================
 
 - Defined in :ref:`file_Source_GKFogOfWar_Public_GKFogOfWar.h`

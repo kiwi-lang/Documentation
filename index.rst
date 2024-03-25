@@ -4,19 +4,28 @@
    :caption: Welcome
    :maxdepth: 1
 
-   Welcome/index
+   Welcome/Roadmap
 
 .. toctree::
    :caption: Plugins
    :maxdepth: 1
 
-   Plugins/index
+   Plugins/GKFogOfWar/index
+   Plugins/GKAbility/index
+   Plugins/GKLobby/index
+   Plugins/GKChat/index
+   Plugins/GKMinimap/index
+   Plugins/GKML/index
+
 
 .. toctree::
    :caption: UnrealEngine
    :maxdepth: 1
 
-   UnrealEngine/index
+   UnrealEngine/Developer
+   UnrealEngine/Game
+   UnrealEngine/Online
+   UnrealEngine/Others
 
 .. toctree::
    :caption: Gameplay

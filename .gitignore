@@ -1,2 +1,7 @@
 _build/
 generated_api/
+.vscode/
+
+
+out.txt
+build/

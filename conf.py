@@ -14,6 +14,7 @@
 
 import os
 import subprocess
+import sys
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -39,7 +40,10 @@ def plugin(name, plugin_base=None):
 
 projects = {
     "GKFogOfWar": plugin("GKFogOfWar"),
-    #"GKMinimap": plugin("GKMinimap"),
+    "GKMinimap": plugin("GKMinimap"),
+    "GKChat": plugin("GKChat"),
+    "GKAbility": plugin("GKAbility"),
+    "GKLobby": plugin("GKLobby"),
     "GKML": plugin("GKML", "E:/Examples")
 }
 
@@ -65,6 +69,8 @@ def get_versions(cwd=None):
     return version_tag, version_identifier, commit
 
 
+version_replacement = []
+
 def configure_doxyfile(project):
     with open("Doxyfile.in", "r") as file:
         filedata = file.read()
@@ -76,6 +82,14 @@ def configure_doxyfile(project):
     root  = configured["root"]
 
     version_tag, version_identifier, commit = get_versions(root)
+
+    version_replacement.append(f"\n.. |{project}_tag| replace:: {version_tag}\n")
+    version_replacement.append(f"\n.. |{project}_identifier| replace:: {version_identifier}\n")
+    version_replacement.append(f"\n.. |{project}_commit| replace:: {commit}\n")
+
+    configured["tag"] = version_tag
+    configured["identifier"] = version_identifier
+    configured["commit"] = commit
 
     os.makedirs(out, exist_ok=True)
     os.makedirs(html, exist_ok=True)
@@ -110,7 +124,6 @@ def run_doxygen(project):
 
 
 def generate_doxygen_xml(app=None):
-
     should_run_doxygen = not bool(int(os.getenv("SKIP_DOXYGEN", '0')))
 
     if should_run_doxygen:
@@ -127,6 +140,8 @@ def setup(app):
 generate_doxygen_xml()
 version_tag, version_identifier, commit = get_versions()
 
+rst_epilog = "\n".join(version_replacement)
+rst_prolog = rst_epilog
 
 # -- General configuration ------------------------------------------------
 
@@ -269,37 +284,50 @@ todo_include_todos = False
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme = "sphinx_rtd_theme"
+# html_theme = "sphinx_rtd_theme"
+# html_theme = "furo"
+
+html_theme = "sphinx_book_theme"
+
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
-# html_theme_options = {}
+html_theme_options = {
+    "repository_url": "https://github.com/kiwi-lang/Documentation"
+}
 
 # Add any paths that contain custom themes here, relative to this directory.
 # html_theme_path = []
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-# html_title = None
+html_title = "Gamekit"
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
-# html_short_title = None
+html_short_title = "Gamekit"
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
-# html_logo = None
+html_logo = "GamekitDev.png"
 
 # The name of an image file (within the static path) to use as favicon of the
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
 # pixels large.
-# html_favicon = None
+html_favicon = "GamekitDev.ico"
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ["_static"]
+html_css_files = [
+    'custom.css',
+]
 
+html_context = {
+   # ...
+   "default_mode": "light"
+}
 # Add any extra paths that contain custom files (such as robots.txt or
 # .htaccess) here, relative to this directory. These files are copied
 # directly to the root of the documentation.
@@ -336,7 +364,7 @@ html_extra_path = ["_build/doxygen"]
 # html_show_sphinx = True
 
 # If true, "(C) Copyright ..." is shown in the HTML footer. Default is True.
-# html_show_copyright = True
+html_show_copyright = True
 
 # If true, an OpenSearch description file will be output, and all pages will
 # contain a <link> tag referring to it.  The value of this option must be the

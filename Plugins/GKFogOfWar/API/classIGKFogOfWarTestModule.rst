@@ -1,6 +1,6 @@
 .. _exhale_class_classIGKFogOfWarTestModule:
 
-Class IGKFogOfWarTestModule
+IGKFogOfWarTestModule
 ===========================
 
 - Defined in :ref:`file_Source_GKFogOfWarTest_GKFogOfWarTestModule.h`

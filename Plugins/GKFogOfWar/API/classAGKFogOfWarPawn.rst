@@ -1,6 +1,6 @@
 .. _exhale_class_classAGKFogOfWarPawn:
 
-Class AGKFogOfWarPawn
+AGKFogOfWarPawn
 =====================
 
 - Defined in :ref:`file_Source_GKFogOfWar_Public_GKFogOfWarPawn.h`
