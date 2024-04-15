@@ -20,7 +20,6 @@ What our implementation strive for
 * Fast 
 * Plug'n play
 * Replicated
-
    * Standalone
    * ListenServer
    * Dedicated

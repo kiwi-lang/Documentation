@@ -19,19 +19,18 @@ Chat
 Features
 --------
 
-Gameplay Ability System Extension
+* Standalone implementation
+* 100% Unreal Engine
+* Good for simple chats
 
-* Data driven
-* Premade Widget
-* Replicated
 
 Useful Links
 ------------
 
 * `Marketplace <https://www.unrealengine.com/marketplace/en-US/product/91c97c089e004ac69f8fd37566e8b449>`_
-* `Playable demo <https://setepenre.itch.io/gkfogofwar>`_
-* `Bug Tracker <https://gitlab.com/mischievousgame/gkfogofwar/-/issues>`_
-* `Documentation <https://mischievousgame.gitlab.io/gkfogofwar/>`_
+* `Playable demo <https://setepenre.itch.io/gkchat>`_
+* `Bug Tracker <https://gitlab.com/mischievousgame/gkchat/-/issues>`_
+* `Documentation <https://mischievousgame.gitlab.io/gkchat/>`_
 * `Youtube Channel <https://www.youtube.com/@mischievousgame>`_
 * `Discord Server <https://discord.gg/eqb4Egv9b3>`_
 * `Patreon <https://www.patreon.com/setepenre>`_
